@@ -5,10 +5,10 @@
 from setuptools import setup, find_packages
 
 
-with open('../README.md') as f:
+with open('README.md') as f:
     readme = f.read()
 
-with open('../LICENSE') as f:
+with open('LICENSE') as f:
     license = f.read()
 
 setup(
@@ -18,7 +18,7 @@ setup(
     long_description=readme,
     author='Hiromasa Kaneko',
     author_email='hkaneko226@gmail.com',
-    url='https://github.com/hkaneko1985/',
+    url='https://github.com/hkaneko1985/dcekit/',
     license=license,
     install_requires=['numpy', 'pandas', 'scikit-learn', 'scipy', 'math', 'matplotlib', 'time'],
     packages=find_packages()
