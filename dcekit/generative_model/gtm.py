@@ -18,7 +18,7 @@ class GTM:
 
     def __init__(self, shape_of_map=[30, 30], shape_of_rbf_centers=[10, 10],
                  variance_of_rbfs=4, lambda_in_em_algorithm=0.001,
-                 number_of_iterations=200, display_flag=1, sparse_flag=False):
+                 number_of_iterations=200, display_flag=True, sparse_flag=False):
         self.shape_of_map = shape_of_map
         self.shape_of_rbf_centers = shape_of_rbf_centers
         self.variance_of_rbfs = variance_of_rbfs
@@ -349,7 +349,7 @@ class GTM:
                candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, fold_number,
                number_of_iterations):
 
-        self.display_flag = 0
+        self.display_flag = False
         self.number_of_iterations = number_of_iterations
         dataset = np.array(dataset)
         numbers_of_output_variables = np.array(numbers_of_output_variables)
