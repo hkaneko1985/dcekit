@@ -15,7 +15,7 @@ from sklearn.mixture import GaussianMixture
 
 class GMR(GaussianMixture):
 
-    def __init__(self, covariance_type='full', n_components=10, max_iter=100,
+    def __init__(self, n_components=1, covariance_type='full', max_iter=100,
                  random_state=None, display_flag=False):
         super(GMR, self).__init__(n_components=n_components, covariance_type=covariance_type,
                                   max_iter=max_iter, random_state=random_state)
