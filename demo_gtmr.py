@@ -20,7 +20,7 @@ shape_of_rbf_centers = [4, 4]
 variance_of_rbfs = 0.5
 lambda_in_em_algorithm = 0.001
 number_of_iterations = 300
-display_flag = 1
+display_flag = True
 noise_ratio_of_y = 0.1
 random_state_number = 30000
 

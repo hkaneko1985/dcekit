@@ -27,7 +27,7 @@ candidates_of_lambda_in_em_algorithm = 2 ** np.arange(-4, 0, dtype=float)
 
 candidates_of_lambda_in_em_algorithm = np.append(0, candidates_of_lambda_in_em_algorithm)
 number_of_iterations = 200
-display_flag = 1
+display_flag = True
 random_state_number = 30000
 
 number_of_test_samples = 600

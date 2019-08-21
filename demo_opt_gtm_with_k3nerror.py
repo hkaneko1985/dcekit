@@ -20,7 +20,7 @@ candidates_of_variance_of_rbfs = 2 ** np.arange(-5, 4, 2, dtype=float)
 candidates_of_lambda_in_em_algorithm = 2 ** np.arange(-4, 0, dtype=float)
 candidates_of_lambda_in_em_algorithm = np.append(0, candidates_of_lambda_in_em_algorithm)
 number_of_iterations = 300
-display_flag = 0
+display_flag = False
 k_in_k3nerror = 10
 
 # load an iris dataset

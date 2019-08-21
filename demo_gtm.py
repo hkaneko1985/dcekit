@@ -16,7 +16,7 @@ shape_of_rbf_centers = [5, 5]
 variance_of_rbfs = 4
 lambda_in_em_algorithm = 0.001
 number_of_iterations = 300
-display_flag = 1
+display_flag = True
 
 # load an iris dataset
 iris = load_iris()
