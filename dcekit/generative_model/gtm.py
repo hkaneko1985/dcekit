@@ -143,6 +143,31 @@ class GTM:
             'sqeuclidean')
         return distance
 
+    def means_modes(self, input_dataset):
+        """
+        Get means and modes
+
+        Parameters
+        ----------
+        input_dataset : numpy.array or pandas.DataFrame
+             input_dataset must be autoscaled.
+
+        Returns
+        -------
+        means : numpy.array, shape (n_samples, 2)
+            Grid of means of input_dataset for each sample.
+            
+        modes : numpy.array, shape (n_samples, 2)
+            Grid of modes of input_dataset for each sample.
+
+        """
+        input_dataset = np.array(input_dataset)
+        responsibilities = self.responsibility(input_dataset)
+        means = responsibilities.dot(self.map_grids)
+        modes = self.map_grids[responsibilities.argmax(axis=1), :]
+        
+        return means, modes
+    
     def responsibility(self, input_dataset):
         """
         Get responsibilities and likelihood.

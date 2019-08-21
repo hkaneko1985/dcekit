@@ -73,8 +73,7 @@ model.fit(autoscaled_variables_train)
 if model.success_flag:
     # calculate of responsibilities
     responsibilities = model.responsibility(autoscaled_variables_train)
-    means = responsibilities.dot(model.map_grids)
-    modes = model.map_grids[responsibilities.argmax(axis=1), :]
+    means, modes = model.means_modes(autoscaled_variables_train)
 
     plt.rcParams['font.size'] = 18
     for y_number in numbers_of_y:

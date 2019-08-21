@@ -37,10 +37,10 @@ model.fit(input_dataset)
 if model.success_flag:
     # calculate of responsibilities
     responsibilities = model.responsibility(input_dataset)
+    means, modes = model.means_modes(input_dataset)
 
     # plot the mean of responsibilities
     plt.rcParams['font.size'] = 18
-    means = responsibilities.dot(model.map_grids)
     plt.figure(figsize=figure.figaspect(1))
     plt.scatter(means[:, 0], means[:, 1], c=color)
     plt.ylim(-1.1, 1.1)
@@ -50,7 +50,6 @@ if model.success_flag:
     plt.show()
 
     # plot the mode of responsibilities
-    modes = model.map_grids[responsibilities.argmax(axis=1), :]
     plt.figure(figsize=figure.figaspect(1))
     plt.scatter(modes[:, 0], modes[:, 1], c=color)
     plt.ylim(-1.1, 1.1)
