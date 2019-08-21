@@ -55,7 +55,7 @@ autoscaled_variables_test = (variables_test - variables_train.mean(axis=0)) / va
 
 # optimize hyperparameter in GTMR with CV
 model = GTM()
-model.cv_opt(autoscaled_variables_train, numbers_of_y, candidates_of_shape_of_map,
+model.cv_opt(autoscaled_variables_train, numbers_of_x, numbers_of_y, candidates_of_shape_of_map,
              candidates_of_shape_of_rbf_centers, candidates_of_variance_of_rbfs,
              candidates_of_lambda_in_em_algorithm, fold_number, number_of_iterations)
 model.display_flag = display_flag

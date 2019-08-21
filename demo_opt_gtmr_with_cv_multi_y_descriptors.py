@@ -43,6 +43,8 @@ variables_train, variables_test = train_test_split(variables, test_size=number_o
 
 variables_train = variables_train.replace(np.inf, np.nan).fillna(np.nan)  # inf を NaN に置き換え
 nan_variable_flags = variables_train.isnull().any()  # NaN を含む変数
+numbers_of_x = np.arange(variables_train.shape[1])
+numbers_of_x = np.delete(numbers_of_x, numbers_of_y)
 variables_train = variables_train.drop(variables_train.columns[nan_variable_flags], axis=1)  # NaN を含む変数を削除
 variables_test = variables_test.drop(variables_test.columns[nan_variable_flags], axis=1)  # NaN を含む変数を削除
 # 標準偏差が 0 の説明変数を削除
@@ -58,7 +60,7 @@ autoscaled_variables_test = (variables_test - variables_train.mean(axis=0)) / va
 
 # optimize hyperparameter in GTMR with CV
 model = GTM()
-model.cv_opt(autoscaled_variables_train, numbers_of_y, candidates_of_shape_of_map,
+model.cv_opt(autoscaled_variables_train, numbers_of_x, numbers_of_y, candidates_of_shape_of_map,
              candidates_of_shape_of_rbf_centers,
              candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, fold_number,
              number_of_iterations)

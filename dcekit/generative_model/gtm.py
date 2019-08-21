@@ -55,6 +55,10 @@ class GTM:
         input_dataset : numpy.array or pandas.DataFrame
              Training dataset for GTM.
              input_dataset must be autoscaled.
+        
+        Returns
+        ----------
+        self : returns an instance of self.
         """
         input_dataset = np.array(input_dataset)
         self.success_flag = True
@@ -155,7 +159,7 @@ class GTM:
         Returns
         -------
         means : numpy.array, shape (n_samples, 2)
-            Grid of means of input_dataset for each sample.
+            Coordinate of means of input_dataset for each sample.
             
         modes : numpy.array, shape (n_samples, 2)
             Grid of modes of input_dataset for each sample.
@@ -213,7 +217,7 @@ class GTM:
 
         Returns
         -------
-        likelihood : scalar
+        likelihood : float
             likelihood of input_dataset.
         """
         input_dataset = np.array(input_dataset)
@@ -369,17 +373,22 @@ class GTM:
 
         return estimated_y_mean, estimated_y_mode, responsibilities, px
 
-    def cv_opt(self, dataset, numbers_of_output_variables, candidates_of_shape_of_map,
+    def cv_opt(self, dataset, numbers_of_input_variables, numbers_of_output_variables, candidates_of_shape_of_map,
                candidates_of_shape_of_rbf_centers,
                candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, fold_number,
                number_of_iterations):
+        """
+        
+        Optimize hyperparameter values of GTMR model using cross-validation
+    
+        """
 
         self.display_flag = False
         self.number_of_iterations = number_of_iterations
         dataset = np.array(dataset)
         numbers_of_output_variables = np.array(numbers_of_output_variables)
-        numbers_of_input_variables = np.arange(dataset.shape[1])
-        numbers_of_input_variables = np.delete(numbers_of_input_variables, numbers_of_output_variables)
+#        numbers_of_input_variables = np.arange(dataset.shape[1])
+#        numbers_of_input_variables = np.delete(numbers_of_input_variables, numbers_of_output_variables)
 
         min_number = math.floor(dataset.shape[0] / fold_number)
         mod_number = dataset.shape[0] - min_number * fold_number
