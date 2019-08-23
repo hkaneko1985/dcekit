@@ -10,7 +10,7 @@ import time
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
-from dcekit.optimization import fast_opt_svr_hyperparams_midknn
+from dcekit.optimization import fast_opt_svr_hyperparams
 # import pandas as pd
 from sklearn import model_selection, svm, datasets
 from sklearn.model_selection import train_test_split
@@ -40,9 +40,8 @@ autoscaled_x_test = (x_test - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1
 start_time = time.time()
 
 # Hyperparameter optimization
-optimal_c, optimal_epsilon, optimal_gamma = fast_opt_svr_hyperparams_midknn(autoscaled_x_train, autoscaled_y_train, cs,
-                                                                            epsilons,
-                                                                            gammas, fold_number)
+optimal_c, optimal_epsilon, optimal_gamma = fast_opt_svr_hyperparams(autoscaled_x_train, autoscaled_y_train, cs,
+                                                                     epsilons, gammas, 'midknn', fold_number)
 
 # Check time in hyperparameter optimization
 elapsed_time = time.time() - start_time
