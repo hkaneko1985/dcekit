@@ -7,7 +7,7 @@
 import numpy as np
 
 
-def kennard_stone(dataset, k):
+def kennard_stone(dataset, number_of_samples_to_be_selected):
     """
     Sample selection based on Kennard-Stone (KS) algorithm
     
@@ -19,7 +19,7 @@ def kennard_stone(dataset, k):
         (autoscaled) m x n matrix of dataset,
         m is the number of sammples and
         n is the number of (X-)variables
-    k : int
+    number_of_samples_to_be_selected : int
         number of samples to be selected
 
     Returns
@@ -40,7 +40,7 @@ def kennard_stone(dataset, k):
     remaining_sample_numbers = np.arange(0, dataset.shape[0], 1)
     dataset = np.delete(dataset, selected_sample_numbers, 0)
     remaining_sample_numbers = np.delete(remaining_sample_numbers, selected_sample_numbers, 0)
-    for iteration in range(1, k):
+    for iteration in range(1, number_of_samples_to_be_selected):
         selected_samples = original_x[selected_sample_numbers, :]
         min_distance_to_selected_samples = list()
         for min_distance_calculation_number in range(0, dataset.shape[0]):
