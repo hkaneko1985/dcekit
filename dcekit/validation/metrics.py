@@ -7,7 +7,7 @@ import numpy as np
 from scipy.spatial import distance
 
 
-def k3nerror(x1, x2, k):
+def k3nerror(x1, x2, k=10):
     """
     k-nearest neighbor normalized error (k3n-error)
 
@@ -70,7 +70,7 @@ def r2lm(measured_y, estimated_y):
     """
     r^2 based on the latest measured y-values (r2lm)
 
-    Calculate r^2 based on the latest measured y-values measured_y and estimated_y must be vectors.
+    Calculate r^2 based on the latest measured y-values. Measured_y and estimated_y must be vectors.
 
     Parameters
     ----------

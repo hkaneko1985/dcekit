@@ -50,7 +50,7 @@ def make_midknn_dataset(x, y, k):
     """
     Midpoints between k-nearest-neighbor data points (midknn)
 
-    Make dataset of midknn
+    Get dataset of midknn
 
     Parameters
     ----------
@@ -80,7 +80,7 @@ def make_midknn_dataset(x, y, k):
     return x_midknn, y_midknn
 
 
-def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True, random_state=-999):
+def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True, random_state=None):
     """
     Double Cross-Validation (DCV)
 
@@ -101,7 +101,7 @@ def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True,
     do_autoscaling : bool
         flag of autoscaling, if True, do autoscaling
     random_state : int
-        random seed, if seed = -999, random seed is not set
+        random seed, if None, random seed is not set
 
     Returns
     -------
@@ -118,7 +118,7 @@ def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True,
     index = np.matlib.repmat(np.arange(1, outer_fold_number + 1, 1), 1, min_number).ravel()
     if mod_number != 0:
         index = np.r_[index, np.arange(1, mod_number + 1, 1)]
-    if random_state != -999:
+    if random_state != None:
         np.random.seed(random_state)
     fold_index_in_outer_cv = np.random.permutation(index)
     np.random.seed()
@@ -164,11 +164,11 @@ def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True,
     return estimated_y
 
 
-def y_randomization(model, x, y, do_autoscaling=True, random_state=-999):
+def y_randomization(model, x, y, do_autoscaling=True, random_state=None):
     """
     y-randomization
     
-    Estimated y-values after shuffling y-values of dataset
+    Estimated y-values after shuffling y-values of dataset without hyperparameters
 
     Parameters
     ----------
@@ -182,42 +182,42 @@ def y_randomization(model, x, y, do_autoscaling=True, random_state=-999):
     do_autoscaling : bool
         flag of autoscaling, if True, do autoscaling
     random_state : int
-        random seed, if seed = -999, random seed is not set
+        random seed, if None, random seed is not set
 
     Returns
     -------
-    y_rand : numpy.array
-        k x 1 vector of randomized y-values of training data
-    estimated_y_rand : numpy.array
-        k x 1 vector of estimated y-values of randomized training data
+    y_shuffle : numpy.array
+        k x 1 vector of shuffled y-values of training data
+    estimated_y_shuffle : numpy.array
+        k x 1 vector of shuffled y-values of randomized training data
     """
 
     x = np.array(x)
     y = np.array(y)
 
-    if random_state != -999:
+    if random_state != None:
         np.random.seed(random_state)
-    y_rand = np.random.permutation(y)
+    y_shuffle = np.random.permutation(y)
     if do_autoscaling:
         autoscaled_x = (x - x.mean(axis=0)) / x.std(axis=0, ddof=1)
-        autoscaled_y_rand = (y_rand - y_rand.mean()) / y_rand.std(ddof=1)
+        autoscaled_y_shuffle = (y_shuffle - y_shuffle.mean()) / y_shuffle.std(ddof=1)
     else:
         autoscaled_x = x.copy()
-        autoscaled_y_rand = y_rand.copy()
+        autoscaled_y_shuffle = y_shuffle.copy()
 
-    model.fit(autoscaled_x, autoscaled_y_rand)
-    estimated_y_rand = np.ndarray.flatten(model.predict(autoscaled_x))
+    model.fit(autoscaled_x, autoscaled_y_shuffle)
+    estimated_y_shuffle = np.ndarray.flatten(model.predict(autoscaled_x))
     if do_autoscaling:
-        estimated_y_rand = estimated_y_rand * y_rand.std(ddof=1) + y_rand.mean()
+        estimated_y_shuffle = estimated_y_shuffle * y_shuffle.std(ddof=1) + y_shuffle.mean()
 
-    return y_rand, estimated_y_rand
+    return y_shuffle, estimated_y_shuffle
 
 
-def y_randomization_with_hyperparam_opt(gs_cv, x, y, do_autoscaling=True, random_state=-999):
+def y_randomization_with_hyperparam_opt(gs_cv, x, y, do_autoscaling=True, random_state=None):
     """
     y-randomization
     
-    Estimated y-values after shuffling y-values of dataset
+    Estimated y-values after shuffling y-values of dataset with hyperparameters
 
     Parameters
     ----------
@@ -232,50 +232,50 @@ def y_randomization_with_hyperparam_opt(gs_cv, x, y, do_autoscaling=True, random
     do_autoscaling : bool
         flag of autoscaling, if True, do autoscaling
     random_state : int
-        random seed, if seed = -999, random seed is not set
+        random seed, if None, random seed is not set
 
     Returns
     -------
-    y_rand : numpy.array
+    y_shuffle : numpy.array
         k x 1 vector of randomized y-values of training data
-    estimated_y_rand : numpy.array
+    estimated_y_shuffle : numpy.array
         k x 1 vector of estimated y-values of randomized training data
     """
 
     x = np.array(x)
     y = np.array(y)
 
-    if random_state != -999:
+    if random_state != None:
         np.random.seed(random_state)
-    y_rand = np.random.permutation(y)
+    y_shuffle = np.random.permutation(y)
     if do_autoscaling:
         autoscaled_x = (x - x.mean(axis=0)) / x.std(axis=0, ddof=1)
-        autoscaled_y_rand = (y_rand - y_rand.mean()) / y_rand.std(ddof=1)
+        autoscaled_y_shuffle = (y_shuffle - y_shuffle.mean()) / y_shuffle.std(ddof=1)
     else:
         autoscaled_x = x.copy()
-        autoscaled_y_rand = y_rand.copy()
+        autoscaled_y_shuffle = y_shuffle.copy()
 
     # hyperparameter optimiation with cross-validation
-    gs_cv.fit(autoscaled_x, autoscaled_y_rand)
+    gs_cv.fit(autoscaled_x, autoscaled_y_shuffle)
     # modeling
     model = getattr(gs_cv, 'estimator')
     hyperparameters = list(gs_cv.best_params_.keys())
     for hyperparameter in hyperparameters:
         setattr(model, hyperparameter, gs_cv.best_params_[hyperparameter])
 
-    model.fit(autoscaled_x, autoscaled_y_rand)
-    estimated_y_rand = np.ndarray.flatten(model.predict(autoscaled_x))
+    model.fit(autoscaled_x, autoscaled_y_shuffle)
+    estimated_y_shuffle = np.ndarray.flatten(model.predict(autoscaled_x))
     if do_autoscaling:
-        estimated_y_rand = estimated_y_rand * y_rand.std(ddof=1) + y_rand.mean()
+        estimated_y_shuffle = estimated_y_shuffle * y_shuffle.std(ddof=1) + y_shuffle.mean()
 
-    return y_rand, estimated_y_rand
+    return y_shuffle, estimated_y_shuffle
 
 
-def mae_cce(gs_cv, x, y, number_of_y_randomization=30, do_autoscaling=True, random_state=-999):
+def mae_cce(gs_cv, x, y, number_of_y_randomization=30, do_autoscaling=True, random_state=None):
     """
-    y-randomization
+    Chance Correlation‐Excluded Mean Absolute Error (MAEcce)
     
-    Estimated y-values after shuffling y-values of dataset
+    Calculate MAEcce
 
     Parameters
     ----------
@@ -287,12 +287,12 @@ def mae_cce(gs_cv, x, y, number_of_y_randomization=30, do_autoscaling=True, rand
         n is the number of X-variables
     y : numpy.array or pandas.DataFrame
         m x 1 vector of a Y-variable of training data
-    number_of_y_randomization : int
+    number_of_y_randomization : int, default 30
         number of y_randomization
     do_autoscaling : bool
         flag of autoscaling, if True, do autoscaling
     random_state : int
-        random seed, if seed = -999, random seed is not set
+        random seed, if None, random seed is not set
 
     Returns
     -------
@@ -328,7 +328,7 @@ def mae_cce(gs_cv, x, y, number_of_y_randomization=30, do_autoscaling=True, rand
     # y-randomization
     mae_yrand = []
     for y_randomizatoin_number in range(number_of_y_randomization):
-        if random_state != -999:
+        if random_state != None:
             np.random.seed(random_state + y_randomizatoin_number + 1)
         y_rand = np.random.permutation(y)
         if do_autoscaling:
