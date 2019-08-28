@@ -5,15 +5,14 @@
 """
 # Demonstration of Locally-Weighted Partial Least Squares (LWPLS) and decision to set hyperparameters using LWPLS
 
-import math
-
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 import numpy.matlib
 import pandas as pd
-from dcekit.just_in_tme import lwpls
+from dcekit.just_in_tme import LWPLS
 from dcekit.validation import r2lm
+from sklearn.model_selection import GridSearchCV
 
 # settings
 dynamics_max = 10  # if this is 0, no time delayed variables are used
@@ -21,8 +20,9 @@ dynamics_span = 2
 y_measurement_delay = 5
 max_component_number = 20
 candidates_of_lambda_in_similarity = 2 ** np.arange(-9, 6, dtype=float)
-number_of_fold_in_cv = 5
+fold_number = 5
 number_of_training_data = 1000
+random_state_number = 0
 
 # load and pre-process dataset
 dataset = pd.read_csv('debutanizer_y_measurement_span_10.csv')
@@ -50,61 +50,37 @@ y_test_with_999 = dataset_with_dynamics[number_of_training_data:, 0]
 x_train = x_train_with_999[y_train_with_999 != 999, :]
 y_train = y_train_with_999[y_train_with_999 != 999]
 
-autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
-autoscaled_y_train = (y_train - y_train.mean()) / y_train.std(ddof=1)
+np.random.seed(random_state_number)
+suffled_x_train = np.random.permutation(x_train)  # サンプルをシャッフル
+np.random.seed(random_state_number)
+suffled_y_train = np.random.permutation(y_train)  # サンプルをシャッフル
+    
+autoscaled_x_train = (suffled_x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
+autoscaled_y_train = (suffled_y_train - y_train.mean()) / y_train.std(ddof=1)
 
 # grid search + cross-validation
-r2cvs = np.empty(
-    (min(np.linalg.matrix_rank(autoscaled_x_train), max_component_number), len(candidates_of_lambda_in_similarity)))
-min_number = math.floor(x_train.shape[0] / number_of_fold_in_cv)
-mod_numbers = x_train.shape[0] - min_number * number_of_fold_in_cv
-index = np.matlib.repmat(np.arange(1, number_of_fold_in_cv + 1, 1), 1, min_number).ravel()
-if mod_numbers != 0:
-    index = np.r_[index, np.arange(1, mod_numbers + 1, 1)]
-indexes_for_division_in_cv = np.random.permutation(index)
-np.random.seed()
-for parameter_number, lambda_in_similarity in enumerate(candidates_of_lambda_in_similarity):
-    estimated_y_in_cv = np.empty((len(y_train), r2cvs.shape[0]))
-    for fold_number in np.arange(1, number_of_fold_in_cv + 1, 1):
-        autoscaled_x_train_in_cv = autoscaled_x_train[indexes_for_division_in_cv != fold_number, :]
-        autoscaled_y_train_in_cv = autoscaled_y_train[indexes_for_division_in_cv != fold_number]
-        autoscaled_x_validation_in_cv = autoscaled_x_train[indexes_for_division_in_cv == fold_number, :]
-
-        estimated_y_validation_in_cv = lwpls(autoscaled_x_train_in_cv, autoscaled_y_train_in_cv,
-                                             autoscaled_x_validation_in_cv, r2cvs.shape[0], lambda_in_similarity)
-        estimated_y_in_cv[indexes_for_division_in_cv == fold_number, :] = estimated_y_validation_in_cv * y_train.std(
-            ddof=1) + y_train.mean()
-
-    estimated_y_in_cv[np.isnan(estimated_y_in_cv)] = 99999
-    ss = (y_train - y_train.mean()).T.dot(y_train - y_train.mean())
-    press = np.diag(
-        (np.matlib.repmat(y_train.reshape(len(y_train), 1), 1, estimated_y_in_cv.shape[1]) - estimated_y_in_cv).T.dot(
-            np.matlib.repmat(y_train.reshape(len(y_train), 1), 1, estimated_y_in_cv.shape[1]) - estimated_y_in_cv))
-    r2cvs[:, parameter_number] = 1 - press / ss
-
-best_candidate_number = np.where(r2cvs == r2cvs.max())
-
-optimal_component_number = best_candidate_number[0][0] + 1
-optimal_lambda_in_similarity = candidates_of_lambda_in_similarity[best_candidate_number[1][0]]
+lwpls_components = np.arange(1, max_component_number + 1)
+cv_model = GridSearchCV(LWPLS(), {'n_components': lwpls_components, 'lambda_in_similarity': candidates_of_lambda_in_similarity, }, cv=fold_number)
+cv_model.fit(autoscaled_x_train, autoscaled_y_train)
+optimal_component_number = cv_model.best_params_['n_components']
+optimal_lambda_in_similarity = cv_model.best_params_['lambda_in_similarity']
 
 estimated_y_test_with_999 = np.empty((len(y_test_with_999)))
+model = LWPLS(n_components=optimal_component_number, lambda_in_similarity=optimal_lambda_in_similarity)
 for test_sample_number in range(len(y_test_with_999)):
     autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
     autoscaled_y_train = (y_train - y_train.mean()) / y_train.std(ddof=1)
     autoscaled_x_test = (x_test_with_999[test_sample_number:test_sample_number + 1, ] - x_train.mean(
         axis=0)) / x_train.std(axis=0, ddof=1)
-    autoscaled_estimated_y_test = lwpls(autoscaled_x_train, autoscaled_y_train, autoscaled_x_test,
-                                        optimal_component_number,
-                                        optimal_lambda_in_similarity)
-    if np.isnan(autoscaled_estimated_y_test[:, optimal_component_number - 1]):
+    model.fit(autoscaled_x_train, autoscaled_y_train)
+    autoscaled_estimated_y_test = model.predict(autoscaled_x_test)
+    if np.isnan(autoscaled_estimated_y_test):
         if test_sample_number == 0:
-            estimated_y_test_with_999[test_sample_number] = 0
+            estimated_y_test_with_999[test_sample_number] = y_train.mean()
         else:
             estimated_y_test_with_999[test_sample_number] = estimated_y_test_with_999[test_sample_number - 1]
     else:
-        estimated_y_test_with_999[test_sample_number] = autoscaled_estimated_y_test[:,
-                                                        optimal_component_number - 1] * y_train.std(
-            ddof=1) + y_train.mean()
+        estimated_y_test_with_999[test_sample_number] = autoscaled_estimated_y_test * y_train.std(ddof=1) + y_train.mean()
 
     if test_sample_number - y_measurement_delay >= 0:
         if y_test_with_999[test_sample_number - y_measurement_delay] != 999:

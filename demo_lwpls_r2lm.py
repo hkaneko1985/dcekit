@@ -9,7 +9,7 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 
-from dcekit.just_in_tme import lwpls
+from dcekit.just_in_tme import LWPLS
 from dcekit.validation import r2lm
 
 # hyperparameters of LWPLS
@@ -31,9 +31,10 @@ autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof
 autoscaled_y_train = (y_train - y_train.mean()) / y_train.std(ddof=1)
 autoscaled_x_test = (x_test - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
 
-estimated_y_test = lwpls(autoscaled_x_train, autoscaled_y_train, autoscaled_x_test, component_number,
-                         lambda_in_similarity)
-estimated_y_test = estimated_y_test[:, component_number - 1] * y_train.std(ddof=1) + y_train.mean()
+model = LWPLS(n_components=component_number, lambda_in_similarity=lambda_in_similarity)
+model.fit(autoscaled_x_train, autoscaled_y_train)
+estimated_y_test = model.predict(autoscaled_x_test)
+estimated_y_test = estimated_y_test * y_train.std(ddof=1) + y_train.mean()
 
 # yy-plot
 plt.rcParams['font.size'] = 18
