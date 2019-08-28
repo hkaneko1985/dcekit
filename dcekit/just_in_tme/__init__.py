@@ -4,4 +4,5 @@
 @author: Hiromasa Kaneko
 """
 
-from .lwpls import lwpls
+from .lwpls import LWPLS
+from .lwpls import JITPLS
