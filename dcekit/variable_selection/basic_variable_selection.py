@@ -41,7 +41,7 @@ def search_high_rate_of_same_values(x, threshold_of_rate_of_same_values):
 
 def search_highly_correlated_variables(x, threshold_of_r):
     """
-    search variables whose absolute correlation coefficient is higher than threshold_of_r
+    Search variables whose absolute correlation coefficient is higher than threshold_of_r
 
     Parameters
     ----------
@@ -84,7 +84,7 @@ def search_highly_correlated_variables(x, threshold_of_r):
 
 def clustering_based_on_correlation_coefficients(x, threshold_of_r):
     """
-    clustering variables based on absolute correlation coefficient
+    Clustering variables based on absolute correlation coefficient
 
     Parameters
     ----------
