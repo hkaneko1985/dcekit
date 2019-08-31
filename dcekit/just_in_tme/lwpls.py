@@ -38,14 +38,7 @@ class LWPLS(BaseEstimator, RegressorMixin):
             m is the number of training sammples and
             n is the number of X-variables
         y : numpy.array or pandas.DataFrame
-            (autoscaled) m x 1 vector of a Y-variable of training data
-        x_test: numpy.array or pandas.DataFrame
-            k x n matrix of X-variables of test data, which is autoscaled with training data,
-            and k is the number of test samples
-        max_component_number: int
-            number of maximum components
-        lambda_in_similarity: float
-            parameter in similarity matrix
+            (autoscaled) m x 1 vector of a Y-variable of training dat
         """
 
         self.x = X
