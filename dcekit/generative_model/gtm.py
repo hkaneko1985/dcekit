@@ -197,6 +197,30 @@ class GTM:
         else:
             return modes
     
+    def transform(self, x, mean_flag=True):
+        """
+        Transform X using constructed GTM model
+
+        Parameters
+        ----------
+        x : numpy.array or pandas.DataFrame
+            input_dataset must be autoscaled.
+        mean_flag ; boolen, default True
+            If True, output is mean, and if False, output is mode
+
+        Returns
+        -------
+        means or modes : numpy.array, shape (n_samples, 2)
+            Coordinate of means or modes of x for each sample.
+
+        """
+        
+        means, modes = self.means_modes(x)
+        if mean_flag:
+            return means
+        else:
+            return modes
+        
     def responsibility(self, input_dataset):
         """
         Get responsibilities and likelihood.
