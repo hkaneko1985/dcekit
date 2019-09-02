@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from dcekit.learning import DCEBaggingRegressor
+from sklearn.datasets import load_boston
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import WhiteKernel, RBF, ConstantKernel
 from sklearn.model_selection import cross_val_predict, train_test_split
-from sklearn.datasets import load_boston
 
 number_of_test_samples = 200
 number_of_submodels = 50
@@ -91,11 +91,10 @@ if x_test.shape[0]:
     print('r2p: {0}'.format(float(1 - sum((y_test - predicted_y_test) ** 2) / sum((y_test - y_test.mean()) ** 2))))
     print('RMSEp: {0}'.format(float((sum((y_test - predicted_y_test) ** 2) / len(y_test)) ** 0.5)))
     print('MAEp: {0}'.format(float(sum(abs(y_test - predicted_y_test)) / len(y_test))))
-    
+
     plt.scatter(predicted_y_test_std, abs(y_test - predicted_y_test), c='blue')
     y_max = np.max(np.array([np.array(y_test), predicted_y_test]))
     y_min = np.min(np.array([np.array(y_test), predicted_y_test]))
     plt.xlabel('Std. of estimated Y')
     plt.ylabel('Error of Y')
     plt.show()
-    
