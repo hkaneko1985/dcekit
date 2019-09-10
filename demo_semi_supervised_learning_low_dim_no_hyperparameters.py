@@ -28,7 +28,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=x.shape[0] -
 fold_number = min(fold_number, len(y_train))
 
 # Gaussian process regression and PCA
-regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel())
+regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
 low_dimension_model = PCA(n_components=number_of_pca_components)
 model = SemiSupervisedLearningLowDimension(base_estimator=regression_model,
                                            base_dimension_reductioner=low_dimension_model,

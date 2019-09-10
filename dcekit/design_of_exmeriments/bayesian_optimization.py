@@ -54,7 +54,7 @@ def bayesian_optimization(X, y, candidates_of_X, acquisition_function_flag, cumu
     autoscaled_X = (X - X.mean(axis=0)) / X.std(axis=0, ddof=1)
     autoscaled_candidates_of_X = (candidates_of_X - X.mean(axis=0)) / X.std(axis=0, ddof=1)
     autoscaled_y = (y - y.mean(axis=0)) / y.std(axis=0, ddof=1)
-    gaussian_process_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel())
+    gaussian_process_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
     gaussian_process_model.fit(autoscaled_X, autoscaled_y)
     autoscaled_estimated_y_test, autoscaled_std_of_estimated_y_test = gaussian_process_model.predict(
         autoscaled_candidates_of_X, return_std=True)

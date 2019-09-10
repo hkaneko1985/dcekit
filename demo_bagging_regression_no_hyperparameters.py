@@ -27,7 +27,7 @@ x = boston.data
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
 
 # Gaussian process regression
-regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel())
+regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
 model = DCEBaggingRegressor(base_estimator=regression_model, n_estimators=number_of_submodels,
                             max_features=rate_of_selected_variables, autoscaling_flag=True,
                             cv_flag=False, robust_flag=True, random_state=0)

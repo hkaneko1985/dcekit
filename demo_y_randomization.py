@@ -35,7 +35,7 @@ autoscaled_x_test = (x_test - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1
 if regression_method == 'ols':
     model = LinearRegression()
 elif regression_method == 'gpr':
-    model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel())
+    model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
 
 model.fit(autoscaled_x_train, autoscaled_y_train)
 estimated_y_train = np.ndarray.flatten(model.predict(autoscaled_x_train))
