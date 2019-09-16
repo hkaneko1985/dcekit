@@ -8,8 +8,7 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.neighbors import NearestNeighbors
-from sklearn.neighbors import LocalOutlierFactor
+from sklearn.neighbors import NearestNeighbors, LocalOutlierFactor
 
 k = 10
 rate_of_outliers = 0.01

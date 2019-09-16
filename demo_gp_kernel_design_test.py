@@ -88,8 +88,6 @@ for kernel in kernels:
     print('')
 
     plt.scatter(predicted_y_test_std, abs(y_test - predicted_y_test), c='blue')
-    y_max = np.max(np.array([np.array(y_test), predicted_y_test]))
-    y_min = np.min(np.array([np.array(y_test), predicted_y_test]))
     plt.xlabel('Std. of estimated Y')
     plt.ylabel('Error of Y')
     plt.show()
