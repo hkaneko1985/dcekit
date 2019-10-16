@@ -23,7 +23,8 @@ x = boston.data
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
 
-kernels = [ConstantKernel() * RBF() + WhiteKernel(),
+kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
+           ConstantKernel() * RBF() + WhiteKernel(),
            ConstantKernel() * RBF() + WhiteKernel() + DotProduct(),
            ConstantKernel() * RBF(np.ones(x_train.shape[1])) + WhiteKernel(),
            ConstantKernel() * RBF(np.ones(x_train.shape[1])) + WhiteKernel() + DotProduct(),
