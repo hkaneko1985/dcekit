@@ -25,15 +25,15 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_te
 
 kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
            ConstantKernel() * RBF() + WhiteKernel(),
-           ConstantKernel() * RBF() + WhiteKernel() + DotProduct(),
+           ConstantKernel() * RBF() + WhiteKernel() + ConstantKernel() * DotProduct(),
            ConstantKernel() * RBF(np.ones(x_train.shape[1])) + WhiteKernel(),
-           ConstantKernel() * RBF(np.ones(x_train.shape[1])) + WhiteKernel() + DotProduct(),
+           ConstantKernel() * RBF(np.ones(x_train.shape[1])) + WhiteKernel() + ConstantKernel() * DotProduct(),
            ConstantKernel() * Matern(nu=1.5) + WhiteKernel(),
-           ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + DotProduct(),
+           ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
            ConstantKernel() * Matern(nu=0.5) + WhiteKernel(),
-           ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + DotProduct(),
+           ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
            ConstantKernel() * Matern(nu=2.5) + WhiteKernel(),
-           ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + DotProduct()]
+           ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + ConstantKernel() * DotProduct()]
 
 # autoscaling
 autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
