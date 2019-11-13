@@ -28,6 +28,7 @@ for iteration in range(iterations):
     print(iteration + 1, '/', iterations)
     if iteration == 0:
         x = arranged_x.dropna(axis=0)
+        autoscaled_x_arranged = (arranged_x - x.mean(axis=0)) / x.std(axis=0, ddof=1)
     else:
         x = arranged_x.copy()
 
@@ -56,9 +57,14 @@ for iteration in range(iterations):
 
     # interpolation
     for index, sample_number in enumerate(nan_indexes):
-        mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights_for_x = \
-            model.predict(autoscaled_x.iloc[sample_number:sample_number + 1, effective_variables[index]],
-                          effective_variables[index], nan_variables[index])
+        if iteration == 0:
+            mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights_for_x = \
+                model.predict(autoscaled_x_arranged.iloc[sample_number:sample_number + 1, effective_variables[index]],
+                              effective_variables[index], nan_variables[index])
+        else:
+            mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights_for_x = \
+                model.predict(autoscaled_x.iloc[sample_number:sample_number + 1, effective_variables[index]],
+                              effective_variables[index], nan_variables[index])
         interpolated_value = mode_of_estimated_mean[0] * x_std[nan_variables[index]] + x_mean[nan_variables[index]]
         arranged_x.iloc[sample_number, nan_variables[index]] = interpolated_value
 #        print(interpolated_value)
