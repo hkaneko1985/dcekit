@@ -5,4 +5,4 @@
 """
 
 from .lwpls import LWPLS
-from .lwpls import JITPLS
+from .jitpls import JITPLS
