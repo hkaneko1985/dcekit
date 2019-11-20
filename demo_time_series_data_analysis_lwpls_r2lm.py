@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import numpy.matlib
 import pandas as pd
-from dcekit.just_in_tme import LWPLS
+from dcekit.just_in_time import LWPLS
 from dcekit.validation import r2lm
 from sklearn.model_selection import GridSearchCV
 

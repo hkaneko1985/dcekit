@@ -9,7 +9,7 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 
-from dcekit.just_in_tme import LWPLS
+from dcekit.just_in_time import LWPLS
 from dcekit.validation import r2lm
 
 # hyperparameters of LWPLS
