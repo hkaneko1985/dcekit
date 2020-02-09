@@ -79,10 +79,10 @@ class GMR(GaussianMixture):
         elif self.covariance_type == 'tied':
             all_covariances = np.tile(self.covariances_, (self.n_components, 1, 1))
         elif self.covariance_type == 'spherical':
-            all_covariances = np.empty([self.n_components, len(self.means_), len(self.means_)])
+            all_covariances = np.empty([self.n_components, self.means_.shape[1], self.means_.shape[1]])
             for component_number in range(self.n_components):
                 all_covariances[component_number, :, :] = np.diag(
-                    self.covariances_[component_number] * np.ones(len(self.means_)))
+                    self.covariances_[component_number] * np.ones(self.means_.shape[1]))
 
         if all_covariances.shape[2] == len(numbers_of_input_variables) + len(numbers_of_output_variables):
             input_output_covariances = all_covariances[:, numbers_of_input_variables, :]
