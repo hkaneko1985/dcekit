@@ -84,6 +84,7 @@ class GMR(GaussianMixture):
                 all_covariances[component_number, :, :] = np.diag(
                     self.covariances_[component_number] * np.ones(self.means_.shape[1]))
 
+#        print(all_covariances.shape[2], len(numbers_of_input_variables), len(numbers_of_output_variables))
         if all_covariances.shape[2] == len(numbers_of_input_variables) + len(numbers_of_output_variables):
             input_output_covariances = all_covariances[:, numbers_of_input_variables, :]
             input_covariances = input_output_covariances[:, :, numbers_of_input_variables]
@@ -102,7 +103,8 @@ class GMR(GaussianMixture):
                                                multivariate_normal.pdf(dataset,
                                                                        input_means[component_number, :],
                                                                        input_covariances[component_number, :, :])
-
+            if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
+                weights = np.ones(weights.shape)
             weights = weights / weights.sum(axis=0)
 
             # calculate mode of estimated means and weighted estimated means
@@ -171,7 +173,7 @@ class GMR(GaussianMixture):
                 index = np.matlib.repmat(np.arange(1, fold_number + 1, 1), 1, min_number).ravel()
                 if mod_number != 0:
                     index = np.r_[index, np.arange(1, mod_number + 1, 1)]
-                #            np.random.seed(999)
+#                np.random.seed(999)
                 fold_index_in_cv = np.random.permutation(index)
                 np.random.seed()
                 for fold_number_in_cv in np.arange(1, fold_number + 1, 1):
@@ -193,6 +195,7 @@ class GMR(GaussianMixture):
                 r2cvs.append(r2)
                 if self.display_flag:
                     print(covariance_type, number_of_components + 1)
+        r2cvs = np.nan_to_num(r2cvs, nan=-10**10)
         max_r2cv_number = np.where(r2cvs == np.max(r2cvs))[0][0]
         best_covariance_type = covariance_types[max_r2cv_number // max_number_of_components]
         best_number_of_components = max_r2cv_number % max_number_of_components + 1
