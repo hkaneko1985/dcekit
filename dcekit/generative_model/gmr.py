@@ -105,6 +105,8 @@ class GMR(GaussianMixture):
                                                                        input_covariances[component_number, :, :])
             if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
                 weights = np.ones(weights.shape)
+            if np.isnan(weights.sum(axis=0)).any():
+                weights = np.ones(weights.shape)
             weights = weights / weights.sum(axis=0)
 
             # calculate mode of estimated means and weighted estimated means
