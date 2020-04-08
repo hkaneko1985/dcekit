@@ -107,6 +107,8 @@ class GMR(GaussianMixture):
                 weights = np.ones(weights.shape)
             if np.isnan(weights.sum(axis=0)).any():
                 weights = np.ones(weights.shape)
+            if np.isinf(weights.sum(axis=0)).any():
+                weights = np.ones(weights.shape)
             weights = weights / weights.sum(axis=0)
 
             # calculate mode of estimated means and weighted estimated means
