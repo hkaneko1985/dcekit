@@ -12,8 +12,9 @@ from dcekit.generative_model import GMR
 from sklearn.model_selection import train_test_split
 
 # Settings
-max_number_of_components = 20
-covariance_types = ['full', 'diag', 'tied', 'spherical']
+numbers_of_components = np.arange(2, 30, 2)
+#covariance_types = ['full', 'diag', 'tied', 'spherical']
+covariance_types = ['full', 'diag']
 fold_number = 5
 
 number_of_all_samples = 500
@@ -40,25 +41,22 @@ autoscaled_variables_test = (variables_test - variables_train.mean(axis=0)) / va
 # GMR
 model = GMR()
 # Grid search with cross-validation
-model.cv_opt(autoscaled_variables_train, numbers_of_X, numbers_of_y, covariance_types, max_number_of_components,
-            fold_number)
+model.cv_opt(autoscaled_variables_train, numbers_of_X, numbers_of_y, covariance_types, numbers_of_components,
+             fold_number)
 # Modeling
 model.fit(autoscaled_variables_train)
 
 # Forward analysis (regression)
-mode_of_estimated_mean_of_y, weighted_estimated_mean_of_y, estimated_mean_of_y_for_all_components, weights_for_x = \
-    model.predict(autoscaled_variables_test[:, numbers_of_X], numbers_of_X, numbers_of_y)
+predicted_y_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_X], numbers_of_X, numbers_of_y)
 
 # Inverse analysis
-mode_of_estimated_mean_of_x, weighted_estimated_mean_of_x, estimated_mean_of_x_for_all_components, weights_for_y = \
-    model.predict(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_X)
+predicted_x_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_X)
 
 # Check results of forward analysis (regression)
 print('Results of forward analysis (regression)')
-predicted_ytest_all = mode_of_estimated_mean_of_y
 plt.rcParams['font.size'] = 18
 for Y_number in range(len(numbers_of_y)):
-    predicted_ytest = np.ndarray.flatten(predicted_ytest_all[:, Y_number])
+    predicted_ytest = np.ndarray.flatten(predicted_y_test_all[:, Y_number])
     predicted_ytest = predicted_ytest * variables_train[:, numbers_of_y[Y_number]].std(ddof=1) + \
                       variables_train[:, numbers_of_y[Y_number]].mean()
     # yy-plot
@@ -84,7 +82,7 @@ for Y_number in range(len(numbers_of_y)):
 # Check results of inverse analysis
 print('---------------------------')
 print('Results of inverse analysis')
-estimated_X_test = mode_of_estimated_mean_of_x * variables_train[:, numbers_of_X].std(ddof=1) + \
+estimated_X_test = predicted_x_test_all * variables_train[:, numbers_of_X].std(ddof=1) + \
                    variables_train[:, numbers_of_X].mean()
 calculated_Y_from_estimated_X_test = np.empty([number_of_test_samples, 2])
 calculated_Y_from_estimated_X_test[:, 0:1] = 3 * estimated_X_test[:, 0:1] - 2 * estimated_X_test[:,
