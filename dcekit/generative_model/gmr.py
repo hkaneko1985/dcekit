@@ -320,3 +320,4 @@ class GMR(GaussianMixture):
         self.covariance_type = max_r2cv_hyperparameter[0]
         self.n_components = max_r2cv_hyperparameter[1]
         self.rep = max_r2cv_hyperparameter[2]
+        self.r2cv = r2cvs[max_r2cv_number]

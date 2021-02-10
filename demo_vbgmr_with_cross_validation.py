@@ -46,6 +46,8 @@ model = VBGMR()
 # Grid search with cross-validation
 model.cv_opt(autoscaled_variables_train, numbers_of_X, numbers_of_y, covariance_types, numbers_of_components,
              weight_concentration_prior_types, weight_concentration_priors, fold_number)
+print('max r2cv :', model.r2cv)
+
 # Modeling
 model.fit(autoscaled_variables_train)
 

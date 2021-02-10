@@ -338,4 +338,5 @@ class VBGMR(BayesianGaussianMixture):
         self.weight_concentration_prior_type = max_r2cv_hyperparameter[2]
         self.weight_concentration_prior = max_r2cv_hyperparameter[3]
         self.rep = max_r2cv_hyperparameter[4]
+        self.r2cv = r2cvs[max_r2cv_number]
         
