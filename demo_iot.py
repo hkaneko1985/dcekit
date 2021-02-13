@@ -6,7 +6,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import minimize, LinearConstraint
-from dcekit.optimization import obj_func
+from dcekit.optimization import iot_obj_func
 
 # settings
 number_of_raw_spectra = 6  # number of raw spectra
@@ -52,7 +52,7 @@ bounds = []
 for i in range(number_of_raw_spectra):
     bounds.append([0, 1])
 init_mol_fracs = np.zeros(number_of_raw_spectra)
-pred_results = minimize(obj_func,
+pred_results = minimize(iot_obj_func,
                         x0=init_mol_fracs,
                         args=(mixture_spectra, raw_spectra),
                         bounds=bounds,
