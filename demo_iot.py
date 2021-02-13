@@ -8,7 +8,7 @@ import numpy as np
 from dcekit.optimization import iot
 
 # settings
-number_of_pure_spectra = 6  # number of raw spectra
+number_of_pure_spectra = 6  # number of pure spectra
 
 number_of_norm_dist = 10
 number_of_mixture_spectra = 1
@@ -19,7 +19,7 @@ stds = np.random.rand(number_of_pure_spectra, number_of_norm_dist) * 100 + 10
 means = np.random.rand(number_of_pure_spectra, number_of_norm_dist) * 1000 + 1000
 intensities = np.random.rand(number_of_pure_spectra, number_of_norm_dist) * 30
 
-# make and plot raw spectra
+# make and plot pure spectra
 x_axis = np.arange(1100, 2200)
 pure_spectra = np.zeros([number_of_pure_spectra, len(x_axis)])
 for raw_spectra_number in range(number_of_pure_spectra):
@@ -27,7 +27,7 @@ for raw_spectra_number in range(number_of_pure_spectra):
         pure_spectra[raw_spectra_number, :] += intensities[raw_spectra_number, dist] * (1 / (2 * np.pi * stds[raw_spectra_number, dist] ** 2) ** (0.5) * np.exp(-(x_axis - means[raw_spectra_number, dist]) ** 2 / 2 / stds[raw_spectra_number, dist] ** 2))
 plt.rcParams['font.size'] = 18
 for pure_spectra_number in range(number_of_pure_spectra):
-    plt.plot(x_axis, pure_spectra[pure_spectra_number, :], color='b', label='raw spectra {0}'.format(pure_spectra_number + 1))
+    plt.plot(x_axis, pure_spectra[pure_spectra_number, :], color='b', label='pure spectra {0}'.format(pure_spectra_number + 1))
     plt.xlabel('wavelength [nm]')
     plt.ylabel('intensity')
     plt.legend()
