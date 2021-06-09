@@ -62,7 +62,7 @@ def iot(x_mix, x_pure):
     for i in range(x_mix.shape[0]):
         pred_results = minimize(iot_obj_func,
                                 x0=init_mol_fracs,
-                                args=(x_mix, x_pure),
+                                args=(x_mix[i, :], x_pure),
                                 bounds=bounds,
                                 constraints=LinearConstraint(np.ones(number_of_pure_materials), 1, 1),
                                 method='SLSQP')
