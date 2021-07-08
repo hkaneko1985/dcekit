@@ -18,12 +18,13 @@ class GTM:
 
     def __init__(self, shape_of_map=[30, 30], shape_of_rbf_centers=[10, 10],
                  variance_of_rbfs=4, lambda_in_em_algorithm=0.001,
-                 number_of_iterations=200, display_flag=True, sparse_flag=False):
+                 number_of_iterations=200, rep='mean', display_flag=True, sparse_flag=False):
         self.shape_of_map = shape_of_map
         self.shape_of_rbf_centers = shape_of_rbf_centers
         self.variance_of_rbfs = variance_of_rbfs
         self.lambda_in_em_algorithm = lambda_in_em_algorithm
         self.number_of_iterations = number_of_iterations
+        self.rep = rep
         self.display_flag = display_flag
         self.sparse_flag = sparse_flag
 
@@ -174,13 +175,13 @@ class GTM:
     
     def fit_transform(self, x, mean_flag=True):
         """
-        Fit GTN model and transform X
+        Fit GTM model and transform X
 
         Parameters
         ----------
         x : numpy.array or pandas.DataFrame
             input_dataset must be autoscaled.
-        mean_flag ; boolen, default True
+        mean_flag ; boolean, default True
             If True, output is mean, and if False, output is mode
 
         Returns
@@ -422,6 +423,49 @@ class GTM:
 
         return estimated_y_mean, estimated_y_mode, responsibilities, px
 
+    def predict_rep(self, input_variables, numbers_of_input_variables, numbers_of_output_variables):
+        """
+        
+        Predict values of variables for forward analysis (regression) and inverse analysis. The way to calculate representative values can be set with 'rep' 
+    
+        Parameters
+        ----------
+        input_variables: numpy.array or pandas.DataFrame
+            (autoscaled) m x n matrix of input variables of training data or test data,
+            m is the number of sammples and
+            n is the number of input variables
+            When this is X-variables, it is forward analysis (regression) and
+            when this is Y-variables, it is inverse analysis
+        numbers_of_input_variables: list or numpy.array
+            vector of numbers of input variables
+            When this is numbers of X-variables, it is forward analysis (regression) and
+            when this is numbers of Y-variables, it is inverse analysis
+        numbers_of_output_variables: list or numpy.array
+            vector of numbers of output variables
+            When this is numbers of Y-variables, it is forward analysis (regression) and
+            when this is numbers of X-variables, it is inverse analysis
+    
+        Returns
+        -------
+        mode_of_estimated_mean : numpy.array
+            (autoscaled) m x k matrix of output variables estimated using mode of weights,
+            k is the number of output variables
+        weighted_estimated_mean : numpy.array
+            (autoscaled) m x k matrix of output variables estimated using weighted mean,
+        estimated_mean_for_all_components : numpy.array
+            (autoscaled) l x m x k matrix of output variables estimated for all components,
+        weights : numpy.array
+            m x l matrix of weights,
+        """
+
+        estimated_y_mean, estimated_y_mode, responsibilities, px = self.predict(input_variables, numbers_of_input_variables, numbers_of_output_variables)
+        if self.rep == 'mean':
+            values = estimated_y_mean.copy()
+        elif self.rep == 'mode':
+            values = estimated_y_mode.copy()
+
+        return values
+    
     def cv_opt(self, dataset, numbers_of_input_variables, numbers_of_output_variables, candidates_of_shape_of_map,
                candidates_of_shape_of_rbf_centers,
                candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, fold_number,
@@ -438,7 +482,8 @@ class GTM:
         numbers_of_output_variables = np.array(numbers_of_output_variables)
 #        numbers_of_input_variables = np.arange(dataset.shape[1])
 #        numbers_of_input_variables = np.delete(numbers_of_input_variables, numbers_of_output_variables)
-
+        reps = ['mean', 'mode']
+        
         min_number = math.floor(dataset.shape[0] / fold_number)
         mod_number = dataset.shape[0] - min_number * fold_number
         index = np.matlib.repmat(np.arange(1, fold_number + 1, 1), 1, min_number).ravel()
@@ -458,44 +503,45 @@ class GTM:
             for shape_of_rbf_centers_grid in candidates_of_shape_of_rbf_centers:
                 for variance_of_rbfs_grid in candidates_of_variance_of_rbfs:
                     for lambda_in_em_algorithm_grid in candidates_of_lambda_in_em_algorithm:
-                        calculation_number += 1
-                        estimated_y_in_cv = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
-                        success_flag_cv = True
-                        for fold_number_in_cv in np.arange(1, fold_number + 1, 1):
-                            dataset_train_in_cv = dataset[fold_index_in_cv != fold_number_in_cv, :]
-                            dataset_test_in_cv = dataset[fold_index_in_cv == fold_number_in_cv, :]
-                            self.shape_of_map = [shape_of_map_grid, shape_of_map_grid]
-                            self.shape_of_rbf_centers = [shape_of_rbf_centers_grid, shape_of_rbf_centers_grid]
-                            self.variance_of_rbfs = variance_of_rbfs_grid
-                            self.lambda_in_em_algorithm = lambda_in_em_algorithm_grid
-                            self.fit(dataset_train_in_cv)
-                            if self.success_flag:
-                                estimated_y_mean, estimated_y_mode, responsibilities, px = self.predict(
-                                    dataset_test_in_cv[:, numbers_of_input_variables], numbers_of_input_variables,
-                                    numbers_of_output_variables)
-                                estimated_y_in_cv[fold_index_in_cv == fold_number_in_cv, :] = estimated_y_mode
+                        for rep in reps:
+                            calculation_number += 1
+                            estimated_y_in_cv = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
+                            success_flag_cv = True
+                            for fold_number_in_cv in np.arange(1, fold_number + 1, 1):
+                                dataset_train_in_cv = dataset[fold_index_in_cv != fold_number_in_cv, :]
+                                dataset_test_in_cv = dataset[fold_index_in_cv == fold_number_in_cv, :]
+                                self.shape_of_map = [shape_of_map_grid, shape_of_map_grid]
+                                self.shape_of_rbf_centers = [shape_of_rbf_centers_grid, shape_of_rbf_centers_grid]
+                                self.variance_of_rbfs = variance_of_rbfs_grid
+                                self.lambda_in_em_algorithm = lambda_in_em_algorithm_grid
+                                self.rep = rep
+                                self.fit(dataset_train_in_cv)
+                                if self.success_flag:
+                                    values = self.predict_rep(dataset_test_in_cv[:, numbers_of_input_variables],
+                                                              numbers_of_input_variables, numbers_of_output_variables)
+                                    estimated_y_in_cv[fold_index_in_cv == fold_number_in_cv, :] = values
+                                else:
+                                    success_flag_cv = False
+                                    break
+    
+                            if success_flag_cv:
+                                y_pred = np.ravel(estimated_y_in_cv)
+                                r2_cv = float(1 - sum((y - y_pred) ** 2) / sum((y - y.mean()) ** 2))
                             else:
-                                success_flag_cv = False
-                                break
-
-                        if success_flag_cv:
-                            y_pred = np.ravel(estimated_y_in_cv)
-                            r2_cv = float(1 - sum((y - y_pred) ** 2) / sum((y - y.mean()) ** 2))
-                        else:
-                            r2_cv = -10 ** 10
-                        parameters_and_r2_cv.append(
-                            [shape_of_map_grid, shape_of_rbf_centers_grid, variance_of_rbfs_grid,
-                             lambda_in_em_algorithm_grid,
-                             r2_cv])
-                        print([calculation_number, all_calculation_numbers, r2_cv])
+                                r2_cv = -10 ** 10
+                            parameters_and_r2_cv.append(
+                                [shape_of_map_grid, shape_of_rbf_centers_grid, variance_of_rbfs_grid,
+                                 lambda_in_em_algorithm_grid, rep, r2_cv])
+                            print([calculation_number, all_calculation_numbers, r2_cv])
 
         # optimized GTMR
         parameters_and_r2_cv = np.array(parameters_and_r2_cv)
         optimized_hyperparameter_number = \
-            np.where(parameters_and_r2_cv[:, 4] == np.max(parameters_and_r2_cv[:, 4]))[0][0]
+            np.where(parameters_and_r2_cv[:, 5] == np.max(parameters_and_r2_cv[:, 5]))[0][0]
         self.shape_of_map = [int(parameters_and_r2_cv[optimized_hyperparameter_number, 0]),
                              int(parameters_and_r2_cv[optimized_hyperparameter_number, 0])]
         self.shape_of_rbf_centers = [int(parameters_and_r2_cv[optimized_hyperparameter_number, 1]),
                                      int(parameters_and_r2_cv[optimized_hyperparameter_number, 1])]
         self.variance_of_rbfs = parameters_and_r2_cv[optimized_hyperparameter_number, 2]
         self.lambda_in_em_algorithm = parameters_and_r2_cv[optimized_hyperparameter_number, 3]
+        self.rep = parameters_and_r2_cv[optimized_hyperparameter_number, 4]
