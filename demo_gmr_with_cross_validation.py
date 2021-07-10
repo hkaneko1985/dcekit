@@ -12,7 +12,7 @@ from dcekit.generative_model import GMR
 from sklearn.model_selection import train_test_split
 
 # Settings
-numbers_of_components = np.arange(2, 30, 2)
+numbers_of_components = np.arange(2, 31, 2)
 #covariance_types = ['full', 'diag', 'tied', 'spherical']
 covariance_types = ['full', 'diag']
 fold_number = 5
