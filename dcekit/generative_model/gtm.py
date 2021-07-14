@@ -18,15 +18,15 @@ class GTM:
 
     def __init__(self, shape_of_map=[30, 30], shape_of_rbf_centers=[10, 10],
                  variance_of_rbfs=4, lambda_in_em_algorithm=0.001,
-                 number_of_iterations=200, rep='mean', display_flag=True, sparse_flag=False):
+                 number_of_iterations=200, display_flag=True, sparse_flag=False, rep='mean'):
         self.shape_of_map = shape_of_map
         self.shape_of_rbf_centers = shape_of_rbf_centers
         self.variance_of_rbfs = variance_of_rbfs
         self.lambda_in_em_algorithm = lambda_in_em_algorithm
         self.number_of_iterations = number_of_iterations
-        self.rep = rep
         self.display_flag = display_flag
         self.sparse_flag = sparse_flag
+        self.rep = rep
 
     def calculate_grids(self, num_x, num_y):
         """
