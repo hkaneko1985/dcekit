@@ -250,8 +250,8 @@ class GTM:
 
         reponsibilities = rbf_for_responsibility / np.reshape(sum_of_rbf_for_responsibility,
                                                               (rbf_for_responsibility.shape[0], 1))
-        self.likelihood_value = (np.log((self.beta / 2.0 / np.pi) ** (input_dataset.shape[1] / 2.0) /
-                                        np.prod(self.shape_of_map) * rbf_for_responsibility.sum(axis=1))).sum()
+        likelihood_value_tmp = (input_dataset.shape[1] / 2.0) * np.log(self.beta / 2.0 / np.pi) + np.log(sum_of_rbf_for_responsibility)
+        self.likelihood_value = likelihood_value_tmp.sum()
 
         return reponsibilities
 
@@ -272,8 +272,11 @@ class GTM:
         """
         input_dataset = np.array(input_dataset)
         distance = self.calculate_distance_between_phi_w_and_input_distances(input_dataset)
-        return (np.log((self.beta / 2.0 / np.pi) ** (input_dataset.shape[1] / 2.0) *
-                       (np.exp(-self.beta / 2.0 * distance) * self.mixing_coefficients).sum(axis=1))).sum()
+        
+        rbf_for_responsibility = np.exp(-self.beta / 2.0 * distance) * self.mixing_coefficients
+        sum_of_rbf_for_responsibility = rbf_for_responsibility.sum(axis=1)
+        likelihood_value_tmp = (input_dataset.shape[1] / 2.0) * np.log(self.beta / 2.0 / np.pi) + np.log(sum_of_rbf_for_responsibility)
+        return likelihood_value_tmp.sum()
 
     def mlr(self, X, y):
         """
