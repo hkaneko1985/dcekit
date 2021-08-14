@@ -248,10 +248,6 @@ class GMR(GaussianMixture):
             output_covariances = output_input_covariances[:, :, numbers_of_output_variables]
             output_input_covariances = output_input_covariances[:, :, numbers_of_input_variables]
             
-            print(output_input_covariances)
-            print(output_covariances)
-            print(output_input_covariances)
-            
             # estimated means and weights for all components
             weights = np.empty([self.n_components, dataset.shape[0]])
             for component_number in range(self.n_components):
