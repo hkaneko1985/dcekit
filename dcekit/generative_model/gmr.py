@@ -237,8 +237,9 @@ class GMR(GaussianMixture):
                 all_covariances[component_number, :, :] = np.diag(
                     self.covariances_[component_number] * np.ones(self.means_.shape[1]))
 
-        estimated_means = []
-        estimated_covariances = []
+        estimated_means = np.zeros([self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
+        estimated_covariances = np.zeros([self.n_components, len(numbers_of_output_variables), len(numbers_of_output_variables)])
+        weights = np.zeros([self.n_components, dataset.shape[0]])
 #        print(all_covariances.shape[2], len(numbers_of_input_variables), len(numbers_of_output_variables))
         if all_covariances.shape[2] == len(numbers_of_input_variables) + len(numbers_of_output_variables):
             input_output_covariances = all_covariances[:, numbers_of_input_variables, :]
@@ -249,14 +250,13 @@ class GMR(GaussianMixture):
             output_input_covariances = output_input_covariances[:, :, numbers_of_input_variables]
             
             # estimated means and weights for all components
-            weights = np.empty([self.n_components, dataset.shape[0]])
             for component_number in range(self.n_components):
-                estimated_means.append(output_means[component_number, :] + (
+                estimated_means[component_number, :, :] = output_means[component_number, :] + (
                         dataset - input_means[component_number, :]).dot(
                     np.linalg.inv(input_covariances[component_number, :, :])).dot(
-                    input_output_covariances[component_number, :, :]))
-                estimated_covariances.append(output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
-                        np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :]))
+                    input_output_covariances[component_number, :, :])
+                estimated_covariances[component_number, :, :] = output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
+                        np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :])
                 weights[component_number, :] = self.weights_[component_number] * \
                                                multivariate_normal.pdf(dataset,
                                                                        input_means[component_number, :],
@@ -271,9 +271,7 @@ class GMR(GaussianMixture):
 
         else:
             for component_number in range(self.n_components):
-                estimated_means.append(np.zeros([dataset.shape[0], len(numbers_of_output_variables)]))
                 estimated_covariances.append(np.zeros([len(numbers_of_output_variables), len(numbers_of_output_variables)]))
-            weights = np.zeros([self.n_components, dataset.shape[0]])
 
         return estimated_means, estimated_covariances, weights
     
