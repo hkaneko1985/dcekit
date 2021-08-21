@@ -10,6 +10,7 @@ import math
 import numpy as np
 import numpy.matlib
 from scipy.stats import multivariate_normal
+from scipy.special import logsumexp
 from sklearn.mixture import GaussianMixture
 
 
@@ -60,74 +61,19 @@ class GMR(GaussianMixture):
             m x l matrix of weights,
         """
 
-        dataset = np.array(dataset)
-        if dataset.ndim == 0:
-            dataset = np.reshape(dataset, (1, 1))
-        elif dataset.ndim == 1:
-            dataset = np.reshape(dataset, (1, dataset.shape[0]))
-
-        input_means = self.means_[:, numbers_of_input_variables]
-        output_means = self.means_[:, numbers_of_output_variables]
-
-        if self.covariance_type == 'full':
-            all_covariances = self.covariances_
-        elif self.covariance_type == 'diag':
-            all_covariances = np.empty(
-                [self.n_components, self.covariances_.shape[1], self.covariances_.shape[1]])
-            for component_number in range(self.n_components):
-                all_covariances[component_number, :, :] = np.diag(self.covariances_[component_number, :])
-        elif self.covariance_type == 'tied':
-            all_covariances = np.tile(self.covariances_, (self.n_components, 1, 1))
-        elif self.covariance_type == 'spherical':
-            all_covariances = np.empty([self.n_components, self.means_.shape[1], self.means_.shape[1]])
-            for component_number in range(self.n_components):
-                all_covariances[component_number, :, :] = np.diag(
-                    self.covariances_[component_number] * np.ones(self.means_.shape[1]))
-
-#        print(all_covariances.shape[2], len(numbers_of_input_variables), len(numbers_of_output_variables))
-        if all_covariances.shape[2] == len(numbers_of_input_variables) + len(numbers_of_output_variables):
-            input_output_covariances = all_covariances[:, numbers_of_input_variables, :]
-            input_covariances = input_output_covariances[:, :, numbers_of_input_variables]
-            input_output_covariances = input_output_covariances[:, :, numbers_of_output_variables]
-
-            # estimated means and weights for all components
-            estimated_mean_for_all_components = np.empty(
-                [self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
-            weights = np.empty([self.n_components, dataset.shape[0]])
-            for component_number in range(self.n_components):
-                estimated_mean_for_all_components[component_number, :, :] = output_means[component_number, :] + (
-                        dataset - input_means[component_number, :]).dot(
-                    np.linalg.inv(input_covariances[component_number, :, :])).dot(
-                    input_output_covariances[component_number, :, :])
-                weights[component_number, :] = self.weights_[component_number] * \
-                                               multivariate_normal.pdf(dataset,
-                                                                       input_means[component_number, :],
-                                                                       input_covariances[component_number, :, :])
-            if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
-                weights = np.ones(weights.shape)
-            if np.isnan(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            if np.isinf(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            weights = weights / weights.sum(axis=0)
-
-            # calculate mode of estimated means and weighted estimated means
-            mode_of_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
-            weighted_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
-            index_for_mode = np.argmax(weights, axis=0)
-            for sample_number in range(dataset.shape[0]):
-                mode_of_estimated_mean[sample_number, :] = estimated_mean_for_all_components[
-                                                           index_for_mode[sample_number],
-                                                           sample_number, :]
-                weighted_estimated_mean[sample_number, :] = weights[:, sample_number].dot(
-                    estimated_mean_for_all_components[:, sample_number, :])
-        else:
-            mode_of_estimated_mean = np.ones([dataset.shape[0], len(numbers_of_output_variables)]) * -99999
-            weighted_estimated_mean = np.ones([dataset.shape[0], len(numbers_of_output_variables)]) * -99999
-            weights = np.zeros([self.n_components, dataset.shape[0]])
-            estimated_mean_for_all_components = np.zeros(
-                [self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
-
+        estimated_mean_for_all_components, _, weights = self.predict_mog(dataset, numbers_of_input_variables, numbers_of_output_variables)
+        
+        # calculate mode of estimated means and weighted estimated means
+        mode_of_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
+        weighted_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
+        index_for_mode = np.argmax(weights, axis=0)
+        for sample_number in range(dataset.shape[0]):
+            mode_of_estimated_mean[sample_number, :] = estimated_mean_for_all_components[
+                                                       index_for_mode[sample_number],
+                                                       sample_number, :]
+            weighted_estimated_mean[sample_number, :] = weights[:, sample_number].dot(
+                estimated_mean_for_all_components[:, sample_number, :])
+        
         return mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights
     
     def predict_rep(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
@@ -175,7 +121,7 @@ class GMR(GaussianMixture):
             values = weighted_estimated_mean.copy()
         return values
     
-    def predict_pdf(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
+    def predict_logpdf(self, dataset, numbers_of_input_variables, numbers_of_output_variables, estimated_results):
         """
         Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
         
@@ -202,15 +148,104 @@ class GMR(GaussianMixture):
     
         Returns
         -------
-        mode_of_estimated_mean : numpy.array
-            (autoscaled) m x k matrix of output variables estimated using mode of weights,
-            k is the number of output variables
-        weighted_estimated_mean : numpy.array
-            (autoscaled) m x k matrix of output variables estimated using weighted mean,
-        estimated_mean_for_all_components : numpy.array
+        logpdf : numpy.array
+            (autoscaled) m vector of log of probability density function,
+        """
+        
+        dataset = np.array(dataset)
+        if dataset.ndim == 0:
+            dataset = np.reshape(dataset, (1, 1))
+        elif dataset.ndim == 1:
+            dataset = np.reshape(dataset, (1, dataset.shape[0]))
+        estimated_means_all, estimated_covariances, weights_all = self.predict_mog(dataset, numbers_of_input_variables, numbers_of_output_variables)
+
+        estimated_results = np.array(estimated_results)
+        if estimated_results.ndim == 0:
+            estimated_results = np.reshape(estimated_results, (1, 1))
+        elif estimated_results.ndim == 1:
+            estimated_results = np.reshape(estimated_results, (1, estimated_results.shape[0]))
+            
+        logpdf = np.zeros(estimated_results.shape[0])
+        for sample_number in range(estimated_results.shape[0]):
+            estimated_means = estimated_means_all[:, sample_number, :]
+            weights = weights_all[:, sample_number]        
+            tmps = []
+            for component_number in range(estimated_covariances.shape[0]):
+                tmp = np.log(weights[component_number]) + multivariate_normal.logpdf(estimated_results[sample_number, :], mean=estimated_means[component_number, :], cov=estimated_covariances[component_number, :, :])
+                tmps.append(tmp)
+            logpdf[sample_number] = logsumexp(tmps)
+
+        return logpdf
+    
+    def predict_pdf(self, dataset, numbers_of_input_variables, numbers_of_output_variables, estimated_results):
+        """
+        Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
+        
+        Predict values of variables for forward analysis (regression) and inverse analysis. Predition results are given as probability density function
+    
+        Parameters
+        ----------
+        gmm_model: mixture.gaussian_mixture.GaussianMixture
+            GMM model constructed using scikit-learn
+        dataset: numpy.array or pandas.DataFrame
+            (autoscaled) m x n matrix of dataset of training data or test data,
+            m is the number of sammples and
+            n is the number of input variables
+            When this is X-variables, it is forward analysis (regression) and
+            when this is Y-variables, it is inverse analysis
+        numbers_of_input_variables: list
+            vector of numbers of input variables
+            When this is numbers of X-variables, it is forward analysis (regression) and
+            when this is numbers of Y-variables, it is inverse analysis
+        numbers_of_output_variables: list
+            vector of numbers of output variables
+            When this is numbers of Y-variables, it is forward analysis (regression) and
+            when this is numbers of X-variables, it is inverse analysis
+    
+        Returns
+        -------
+        pdf : numpy.array
+            (autoscaled) m vector of probability density function,
+        """
+        
+        logpdf = self.predict_logpdf(dataset, numbers_of_input_variables, numbers_of_output_variables, estimated_results)
+
+        return np.exp(logpdf)
+    
+    def predict_mog(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
+        """
+        Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
+        
+        Predict values of variables for forward analysis (regression) and inverse analysis. Predition results are given as mixture of Gaussians
+    
+        Parameters
+        ----------
+        gmm_model: mixture.gaussian_mixture.GaussianMixture
+            GMM model constructed using scikit-learn
+        dataset: numpy.array or pandas.DataFrame
+            (autoscaled) m x n matrix of dataset of training data or test data,
+            m is the number of sammples and
+            n is the number of input variables
+            When this is X-variables, it is forward analysis (regression) and
+            when this is Y-variables, it is inverse analysis
+        numbers_of_input_variables: list
+            vector of numbers of input variables
+            When this is numbers of X-variables, it is forward analysis (regression) and
+            when this is numbers of Y-variables, it is inverse analysis
+        numbers_of_output_variables: list
+            vector of numbers of output variables
+            When this is numbers of Y-variables, it is forward analysis (regression) and
+            when this is numbers of X-variables, it is inverse analysis
+    
+        Returns
+        -------
+        estimated_means : numpy.array
             (autoscaled) l x m x k matrix of output variables estimated for all components,
+            k is the number of output variables
+        estimated_covariances : numpy.array
+            (autoscaled) l x k x k variance-covariance matrix of output variables estimated for all components,
         weights : numpy.array
-            m x l matrix of weights,
+            l x m matrix of weights,
         """
 
         dataset = np.array(dataset)
