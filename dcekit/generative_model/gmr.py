@@ -304,10 +304,6 @@ class GMR(GaussianMixture):
                 weights = np.ones(weights.shape)
             weights = weights / weights.sum(axis=0)
 
-        else:
-            for component_number in range(self.n_components):
-                estimated_covariances.append(np.zeros([len(numbers_of_output_variables), len(numbers_of_output_variables)]))
-
         return estimated_means, estimated_covariances, weights
     
     def cv_opt(self, dataset, numbers_of_input_variables, numbers_of_output_variables, covariance_types,
