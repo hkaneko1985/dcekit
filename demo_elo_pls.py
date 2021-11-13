@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from dcekit.learning import ensemble_outlier_sample_detection
 from sklearn.cross_decomposition import PLSRegression
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV, KFold
 
 # Demonstration of Ensemble Learning Outlier sample detection (ELO)
 # https://datachemeng.com/ensembleoutliersampledetection/
@@ -24,7 +24,8 @@ x = dataset.iloc[:, 1:]
 
 # PLS
 pls_components = np.arange(1, min(max_pls_component_number, x.shape[1]) + 1)
-cv_regressor = GridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=fold_number)
+cross_validation = KFold(n_splits=fold_number, random_state=9, shuffle=True)
+cv_regressor = GridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=cross_validation)
 outlier_sample_flags = ensemble_outlier_sample_detection(cv_regressor, x, y, cv_flag=True,
                                                          n_estimators=number_of_submodels,
                                                          iteration=max_iteration_number, autoscaling_flag=True,
