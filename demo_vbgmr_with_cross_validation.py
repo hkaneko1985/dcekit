@@ -13,8 +13,8 @@ from sklearn.model_selection import train_test_split
 
 # Settings
 numbers_of_components = np.arange(2, 31, 2)
-#covariance_types = ['full', 'diag', 'tied', 'spherical']
-covariance_types = ['full', 'diag']
+covariance_types = ['full', 'diag', 'tied', 'spherical']
+#covariance_types = ['full', 'diag']
 weight_concentration_prior_types = ['dirichlet_process', 'dirichlet_distribution']
 weight_concentration_priors = 10 ** np.arange(-4, 2, 2, dtype=float)
 fold_number = 5
