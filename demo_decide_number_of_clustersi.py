@@ -46,7 +46,7 @@ for number_of_clusters in range(1, number_of_max_clusters + 1):
     true_rate.append(true_number / (knn_ind_all.shape[0] * knn_ind_all.shape[1]))
 
 plt.scatter(range(1, number_of_max_clusters + 1), true_rate, c='blue')  # 散布図の作成。クラスター番号ごとにプロットの色を変えています
-plt.xlabel('cluster number')
+plt.xlabel('number of cluster')
 plt.ylabel('matching ratio')
 plt.show()
 
