@@ -54,7 +54,7 @@ for shape_of_map_grid in candidates_of_shape_of_map:
                     # calculate the mean of responsibilities
                     means = responsibilities.dot(model.map_grids)
                     # calculate k3n-error
-                    k3nerror_of_gtm = k3nerror(input_dataset, means, k_in_k3nerror)
+                    k3nerror_of_gtm = k3nerror(input_dataset, means, k_in_k3nerror) + k3nerror(means, input_dataset, k_in_k3nerror)
                 else:
                     k3nerror_of_gtm = 10 ** 100
                 parameters_and_k3nerror.append(
