@@ -40,9 +40,7 @@ for number_of_clusters in range(1, number_of_max_clusters + 1):
     cluster_numbers = fcluster(clustering_results, number_of_clusters, criterion='maxclust')  # クラスターの数で分割し、クラスター番号を出力
     true_number = 0
     for i in range(knn_ind_all.shape[0]):
-        for j in range(knn_ind_all.shape[1]):
-            if cluster_numbers[i] == cluster_numbers[knn_ind_all[i, j]]:
-                true_number += 1
+        true_number += len(np.where(cluster_numbers[knn_ind_all[i, :]] == cluster_numbers[i])[0])
     true_rate.append(true_number / (knn_ind_all.shape[0] * knn_ind_all.shape[1]))
 
 plt.scatter(range(1, number_of_max_clusters + 1), true_rate, c='blue')  # 散布図の作成。クラスター番号ごとにプロットの色を変えています
