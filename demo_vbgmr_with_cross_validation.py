@@ -8,6 +8,7 @@
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
+import numpy.matlib
 from dcekit.generative_model import VBGMR
 from sklearn.model_selection import train_test_split
 
@@ -87,6 +88,8 @@ for Y_number in range(len(numbers_of_y)):
 # Check results of inverse analysis
 print('---------------------------')
 print('Results of inverse analysis')
+estimated_X_test = predicted_x_test_all * np.matlib.repmat(variables_train[:, numbers_of_X].std(ddof=1, axis=0), predicted_x_test_all.shape[0], 1) + \
+                   np.matlib.repmat(variables_train[:, numbers_of_X].mean(axis=0), predicted_x_test_all.shape[0], 1)
 estimated_X_test = predicted_x_test_all * variables_train[:, numbers_of_X].std(ddof=1) + \
                    variables_train[:, numbers_of_X].mean()
 calculated_Y_from_estimated_X_test = np.empty([number_of_test_samples, 2])
