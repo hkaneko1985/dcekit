@@ -33,7 +33,7 @@ cv_model = GridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=fo
 low_dimension_model = PCA(n_components=number_of_pca_components)
 model = SemiSupervisedLearningLowDimension(base_estimator=cv_model,
                                            base_dimension_reductioner=low_dimension_model,
-                                           x_unsupervised=x_test, autoscaling_flag=True, cv_flag=False,
+                                           x_unsupervised=x_test, autoscaling_flag=True, cv_flag=True,
                                            ad_flag=True)
 model.fit(x_train, y_train)
 
