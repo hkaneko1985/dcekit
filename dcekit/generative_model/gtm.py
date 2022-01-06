@@ -47,7 +47,7 @@ class GTM:
         grids[:, 1] = 2 * (grids[:, 1] - max_grids[1] / 2) / max_grids[1]
         return grids
 
-    def fit(self, input_dataset):
+    def fit(self, input_dataset, y=None):
         """
         Train the GTM map
                 
@@ -56,7 +56,8 @@ class GTM:
         input_dataset : numpy.array or pandas.DataFrame
              Training dataset for GTM.
              input_dataset must be autoscaled.
-        
+        y : None
+            Ignored.
         Returns
         ----------
         self : returns an instance of self.
@@ -173,7 +174,7 @@ class GTM:
         
         return means, modes
     
-    def fit_transform(self, x, mean_flag=True):
+    def fit_transform(self, x, y=None, mean_flag=True):
         """
         Fit GTM model and transform X
 
@@ -181,6 +182,8 @@ class GTM:
         ----------
         x : numpy.array or pandas.DataFrame
             input_dataset must be autoscaled.
+        y : None
+            Ignored.
         mean_flag ; boolean, default True
             If True, output is mean, and if False, output is mode
 
@@ -198,7 +201,7 @@ class GTM:
         else:
             return modes
     
-    def transform(self, x, mean_flag=True):
+    def transform(self, x, y=None, mean_flag=True):
         """
         Transform X using constructed GTM model
 
@@ -206,6 +209,8 @@ class GTM:
         ----------
         x : numpy.array or pandas.DataFrame
             input_dataset must be autoscaled.
+        y : None
+            Ignored.
         mean_flag ; boolen, default True
             If True, output is mean, and if False, output is mode
 
