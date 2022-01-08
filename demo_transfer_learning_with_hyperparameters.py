@@ -42,7 +42,7 @@ fold_number = min(fold_number, len(y_train))
 pls_components = np.arange(1, min(max_pls_component_number, np.linalg.matrix_rank(x_train) * 3) + 1)
 cv_model = GridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=fold_number)
 model = TransferLearningSample(base_estimator=cv_model, x_supporting=x_supporting, y_supporting=y_supporting,
-                               autoscaling_flag=True, cv_flag=True)
+                               autoscaling_flag=False, cv_flag=True)
 model.fit(x_train, y_train)
 
 # calculate y in training data

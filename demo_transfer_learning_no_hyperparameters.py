@@ -37,7 +37,7 @@ fold_number = min(fold_number, len(y_train))
 # Gaussian process regression
 regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
 model = TransferLearningSample(base_estimator=regression_model, x_supporting=x_supporting, y_supporting=y_supporting,
-                               autoscaling_flag=True, cv_flag=False)
+                               autoscaling_flag=False, cv_flag=False)
 model.fit(x_train, y_train)
 
 # calculate y in training data
