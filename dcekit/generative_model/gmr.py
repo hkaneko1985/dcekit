@@ -12,7 +12,7 @@ import numpy.matlib
 from scipy.stats import multivariate_normal
 from scipy.special import logsumexp
 from sklearn.mixture import GaussianMixture
-
+from scipy.optimize import minimize, LinearConstraint
 
 class GMR(GaussianMixture):
 
@@ -75,12 +75,12 @@ class GMR(GaussianMixture):
                 estimated_mean_for_all_components[:, sample_number, :])
         
         return mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights
-    
+
     def predict_rep(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
         """
         Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
         
-        Predict values of variables for forward analysis (regression) and inverse analysis. The way to calculate representative values can be set with 'rep' 
+        Predict values of variables for forward analysis (regression) and inverse analysis to maximize PDF 
     
         Parameters
         ----------
@@ -120,6 +120,113 @@ class GMR(GaussianMixture):
         elif self.rep == 'mode':
             values = weighted_estimated_mean.copy()
         return values
+    
+    def predict_true(self, dataset, numbers_of_input_variables, numbers_of_output_variables, bounds=[]):
+        """
+        Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
+        
+        Predict values of variables for forward analysis (regression) and inverse analysis. The way to calculate representative values can be set with 'rep' 
+    
+        Parameters
+        ----------
+        gmm_model: mixture.gaussian_mixture.GaussianMixture
+            GMM model constructed using scikit-learn
+        dataset: numpy.array or pandas.DataFrame
+            (autoscaled) m x n matrix of dataset of training data or test data,
+            m is the number of sammples and
+            n is the number of input variables
+            When this is X-variables, it is forward analysis (regression) and
+            when this is Y-variables, it is inverse analysis
+        numbers_of_input_variables: list
+            vector of numbers of input variables
+            When this is numbers of X-variables, it is forward analysis (regression) and
+            when this is numbers of Y-variables, it is inverse analysis
+        numbers_of_output_variables: list
+            vector of numbers of output variables
+            When this is numbers of Y-variables, it is forward analysis (regression) and
+            when this is numbers of X-variables, it is inverse analysis
+        bounds : list
+            (does not work) upper and lower bounds of output variables
+    
+        Returns
+        -------
+        estimated_values : numpy.array
+            (autoscaled) m x k matrix of output variables estimated using true GMR,
+            k is the number of output variables
+        """
+        
+        if len(bounds) == 0:
+            for i in range(len(numbers_of_output_variables)):
+                bounds.append([-float('inf'), float('inf')])
+        
+        mode_of_estimated_mean_of_y, weighted_estimated_mean_of_y, _, _ = \
+                self.predict(dataset, numbers_of_input_variables, numbers_of_output_variables)
+        estimated_means, estimated_covariances, weights = self.predict_mog(dataset, numbers_of_input_variables, numbers_of_output_variables)
+        
+        estimated_values_mode = self.true_gmr(estimated_means, estimated_covariances, weights, mode_of_estimated_mean_of_y)
+        estimated_values_mean = self.true_gmr(estimated_means, estimated_covariances, weights, weighted_estimated_mean_of_y)
+        
+        estimated_values = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
+        for i in range(dataset.shape[0]):
+            tmp_func = np.zeros(4)
+            tmp_estimated_values = []
+            tmp_func[0] = self.true_gmr_obj_func(mode_of_estimated_mean_of_y[i, :], estimated_means[:, i, :], estimated_covariances, weights[:, i])
+            tmp_estimated_values.append(mode_of_estimated_mean_of_y[i, :])
+            tmp_func[1] = self.true_gmr_obj_func(weighted_estimated_mean_of_y[i, :], estimated_means[:, i, :], estimated_covariances, weights[:, i])
+            tmp_estimated_values.append(weighted_estimated_mean_of_y[i, :])
+            tmp_func[2] = self.true_gmr_obj_func(estimated_values_mode[i, :], estimated_means[:, i, :], estimated_covariances, weights[:, i])
+            tmp_estimated_values.append(estimated_values_mode[i, :])
+            tmp_func[3] = self.true_gmr_obj_func(estimated_values_mean[i, :], estimated_means[:, i, :], estimated_covariances, weights[:, i])
+            tmp_estimated_values.append(estimated_values_mean[i, :])
+            best = np.where(tmp_func == min(tmp_func))[0][0]
+            estimated_values[i, :] = tmp_estimated_values[best]
+
+        return estimated_values
+    
+    def true_gmr_obj_func(self, variable, means, covariances, weights):
+        """
+        Objective function of True GMR
+        
+        Parameters
+        ----------
+    
+        Returns
+        -------
+        -logsumexp : float
+        
+        """
+        
+        tmps = []
+        for i in range(covariances.shape[0]):
+            tmp = np.log(weights[i]) + multivariate_normal.logpdf(variable, mean=means[i, :], cov=covariances[i, :, :])
+            tmps.append(tmp)
+        value = -logsumexp(tmps)
+        
+        return value
+    
+    def true_gmr(self, means_all, covariances, weights_all, init_values, bounds=[]):
+        means_all = np.array(means_all)
+        covariances = np.array(covariances)
+        weights_all = np.array(weights_all)
+        init_values = np.array(init_values)
+        number_of_samples = means_all.shape[1]
+        predicted_results = np.zeros([number_of_samples, init_values.shape[1]])
+        for i in range(number_of_samples):
+            means = means_all[:, i, :]
+            weights = weights_all[:, i]
+            init_value = init_values[i, :]
+            if len(bounds) == 0:
+                pred_results = minimize(self.true_gmr_obj_func,
+                                        x0=init_value,
+                                        args=(means, covariances, weights),
+    #                                    bounds=bounds,
+    #                                    constraints=LinearConstraint(np.ones(init_values.shape[1]), 1, 1),
+                                        method='SLSQP'
+                                        )
+
+            predicted_results[i, :] = pred_results.x.copy()
+
+        return predicted_results
     
     def predict_logpdf(self, dataset, numbers_of_input_variables, numbers_of_output_variables, estimated_results):
         """
