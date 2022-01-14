@@ -553,3 +553,26 @@ class GTM:
         self.variance_of_rbfs = parameters_and_r2_cv[optimized_hyperparameter_number, 2]
         self.lambda_in_em_algorithm = parameters_and_r2_cv[optimized_hyperparameter_number, 3]
         self.rep = parameters_and_r2_cv[optimized_hyperparameter_number, 4]
+
+    def set_params(self, **parameters):
+        for parameter, value in parameters.items():
+            setattr(self, parameter, value)
+        return self
+
+    def get_params(self, deep=True):
+        """
+        Parameters
+        ----------
+        deep : Ignored. (for compatibility with sklearn)
+
+        Returns
+        ----------
+        self : returns an dictionary of parameters.
+        """
+        
+        params = {'shape_of_map' : self.shape_of_map,
+                  'shape_of_rbf_centers' : self.shape_of_rbf_centers,
+                  'variance_of_rbfs' : self.variance_of_rbfs,
+                  'lambda_in_em_algorithm' : self.lambda_in_em_algorithm,
+                   'number_of_iterations' : self.number_of_iterations}
+        return params
