@@ -382,8 +382,11 @@ class VBGMR(BayesianGaussianMixture):
                                     
                                     self.fit(dataset_train_in_cv)
                 
-                                    values = self.predict_rep(dataset_test_in_cv[:, numbers_of_input_variables],
-                                                              numbers_of_input_variables, numbers_of_output_variables)
+                                    try:
+                                        values = self.predict_rep(dataset_test_in_cv[:, numbers_of_input_variables],
+                                                                  numbers_of_input_variables, numbers_of_output_variables)
+                                    except:
+                                        values = np.ones([dataset_test_in_cv.shape[0], len(numbers_of_output_variables)]) * (- 10 ** 10)
                 
                                     estimated_y_in_cv[fold_index_in_cv == fold_number_in_cv, :] = values  # 格納
                 
