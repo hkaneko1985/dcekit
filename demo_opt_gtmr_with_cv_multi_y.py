@@ -9,7 +9,7 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 from dcekit.generative_model import GTM
-from sklearn.datasets.samples_generator import make_s_curve
+from sklearn.datasets import make_s_curve
 from sklearn.model_selection import train_test_split
 
 # settings

@@ -505,7 +505,7 @@ class GTM:
         y = np.ravel(dataset[:, numbers_of_output_variables])
         parameters_and_r2_cv = []
         all_calculation_numbers = len(candidates_of_shape_of_map) * len(candidates_of_shape_of_rbf_centers) * len(
-            candidates_of_variance_of_rbfs) * len(candidates_of_lambda_in_em_algorithm)
+            candidates_of_variance_of_rbfs) * len(candidates_of_lambda_in_em_algorithm) * len(reps)
         calculation_number = 0
         for shape_of_map_grid in candidates_of_shape_of_map:
             for shape_of_rbf_centers_grid in candidates_of_shape_of_rbf_centers:
@@ -544,14 +544,14 @@ class GTM:
 
         # optimized GTMR
         parameters_and_r2_cv = np.array(parameters_and_r2_cv)
-        optimized_hyperparameter_number = \
-            np.where(parameters_and_r2_cv[:, 5] == np.max(parameters_and_r2_cv[:, 5]))[0][0]
+        r2_cv = np.array(list(map(float, parameters_and_r2_cv[:, 5])))
+        optimized_hyperparameter_number = np.where(r2_cv == np.max(r2_cv))[0][0]
         self.shape_of_map = [int(parameters_and_r2_cv[optimized_hyperparameter_number, 0]),
                              int(parameters_and_r2_cv[optimized_hyperparameter_number, 0])]
         self.shape_of_rbf_centers = [int(parameters_and_r2_cv[optimized_hyperparameter_number, 1]),
                                      int(parameters_and_r2_cv[optimized_hyperparameter_number, 1])]
-        self.variance_of_rbfs = parameters_and_r2_cv[optimized_hyperparameter_number, 2]
-        self.lambda_in_em_algorithm = parameters_and_r2_cv[optimized_hyperparameter_number, 3]
+        self.variance_of_rbfs = float(parameters_and_r2_cv[optimized_hyperparameter_number, 2])
+        self.lambda_in_em_algorithm = float(parameters_and_r2_cv[optimized_hyperparameter_number, 3])
         self.rep = parameters_and_r2_cv[optimized_hyperparameter_number, 4]
 
     def set_params(self, **parameters):
