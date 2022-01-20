@@ -545,6 +545,7 @@ class GTM:
         # optimized GTMR
         parameters_and_r2_cv = np.array(parameters_and_r2_cv)
         r2_cv = np.array(list(map(float, parameters_and_r2_cv[:, 5])))
+        r2_cv[np.isnan(r2_cv)] = -10 ** 10
         optimized_hyperparameter_number = np.where(r2_cv == np.max(r2_cv))[0][0]
         self.shape_of_map = [int(parameters_and_r2_cv[optimized_hyperparameter_number, 0]),
                              int(parameters_and_r2_cv[optimized_hyperparameter_number, 0])]
