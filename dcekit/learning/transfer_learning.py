@@ -11,7 +11,7 @@ from sklearn.base import BaseEstimator, RegressorMixin
 
 
 class TransferLearningSample(BaseEstimator, RegressorMixin):
-    def __init__(self, base_estimator=None, x_supporting=None, y_supporting=None, autoscaling_flag=True, cv_flag=False):
+    def __init__(self, base_estimator=None, x_source=None, y_source=None, autoscaling_flag=False, cv_flag=False):
         """
         Transfer Learning based on samples
         
@@ -19,9 +19,9 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
         ----------
         base_estimator: object
             The base estimator in scikit-learn. If cv_flag is True, this must be the object of GridSearchCV
-        x_supporting : numpy.array or pandas.DataFrame, shape (n_samples, n_features)
+        x_source : numpy.array or pandas.DataFrame, shape (n_samples, n_features)
             Dataset of x to transfer samples
-        y_supporting : numpy.array or pandas.DataFrame, shape (n_samples,)
+        y_source : numpy.array or pandas.DataFrame, shape (n_samples,)
             Dataset of y to transfer samples
         autoscaling_flag : boolen, default True
             If True, autoscaling is done, and if False, autoscaling is not done 
@@ -29,8 +29,8 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
             If this is True, base_estimator must be the object of GridSearchCV
         """
         self.base_estimator = base_estimator
-        self.x_supporting = x_supporting
-        self.y_supporting = y_supporting
+        self.x_source = x_source
+        self.y_source = y_source
         self.autoscaling_flag = autoscaling_flag
         self.cv_flag = cv_flag
         self.model = None
@@ -57,15 +57,15 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
             m x 1 vector of a Y-variable of training data
         """
 
-        x_supporting = np.array(self.x_supporting)
-        y_supporting = np.array(self.y_supporting)
+        x_source = np.array(self.x_source)
+        y_source = np.array(self.y_source)
         x_train_target = np.array(x)
         y_train_target = np.array(y)
 
-        x_supporting_arranged = np.c_[x_supporting, x_supporting, np.zeros(x_supporting.shape)]
+        x_source_arranged = np.c_[x_source, x_source, np.zeros(x_source.shape)]
         x_train_target_arranged = np.c_[x_train_target, np.zeros(x_train_target.shape), x_train_target]
-        x = np.r_[x_supporting_arranged, x_train_target_arranged]
-        y = np.r_[y_supporting, y_train_target]
+        x = np.r_[x_source_arranged, x_train_target_arranged]
+        y = np.r_[y_source, y_train_target]
         
         self.combined_x = x
         self.combined_y = y
@@ -110,7 +110,7 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
         x : numpy.array or pandas.DataFrame
             k x n matrix of X-variables of test data, which is autoscaled with training data,
             and k is the number of test samples
-        target_flag : boolen, default True
+        target_flag : boolean, default True
             if this is True, x of target test data is estimated,
             if this is False, x of supporing test data is estimated
     

@@ -3,6 +3,9 @@
 @author: Hiromasa Kaneko
 """
 
+# Demonstration of transfer learning with frustratingly easy domain adaptation (FEDA) [no hyperparameter for a regression method]
+# If autoscaling is required, please autoscale target domain and source domain separately.
+
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,16 +17,16 @@ from sklearn.model_selection import cross_val_predict, train_test_split
 
 number_of_training_samples = 3
 number_of_test_samples = 100
-number_of_supporting_samples = 100
+number_of_source_samples = 100
 number_of_samples = number_of_training_samples + number_of_test_samples
 noise_ratio_in_simulation = 0.1
 fold_number = 3
 
-# generate samples in simulation                              
+# generate samples in simulation
 np.random.seed(0)
-x_supporting = np.random.rand(number_of_supporting_samples, 2)
-y_supporting = 2 * x_supporting[:, 0] + 3 * x_supporting[:, 1] + 1
-y_supporting = y_supporting + noise_ratio_in_simulation * y_supporting.std() * np.random.rand(len(y_supporting))
+x_source = np.random.rand(number_of_source_samples, 2)
+y_source = 2 * x_source[:, 0] + 3 * x_source[:, 1] + 1
+y_source = y_source + noise_ratio_in_simulation * y_source.std() * np.random.rand(len(y_source))
 x_target = np.random.rand(number_of_samples, 2)
 y_target = 2 * x_target[:, 0] + 4 * x_target[:, 1] + 1
 y_target = y_target + noise_ratio_in_simulation * y_target.std() * np.random.rand(len(y_target))
@@ -36,8 +39,7 @@ fold_number = min(fold_number, len(y_train))
 
 # Gaussian process regression
 regression_model = GaussianProcessRegressor(ConstantKernel() * RBF() + WhiteKernel(), alpha=0)
-model = TransferLearningSample(base_estimator=regression_model, x_supporting=x_supporting, y_supporting=y_supporting,
-                               autoscaling_flag=False, cv_flag=False)
+model = TransferLearningSample(base_estimator=regression_model, x_source=x_source, y_source=y_source, cv_flag=False)
 model.fit(x_train, y_train)
 
 # calculate y in training data
