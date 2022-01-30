@@ -20,7 +20,8 @@ class GMR(GaussianMixture):
                  max_iter=100, random_state=None, display_flag=False):
         super(GMR, self).__init__(n_components=n_components, covariance_type=covariance_type,
                                   max_iter=max_iter, random_state=random_state)
-
+        
+        self.rep = rep
         self.display_flag = display_flag
 
     def predict(self, dataset, numbers_of_input_variables, numbers_of_output_variables):

@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 # Settings
 number_of_components = 9
 covariance_type = 'full'  # 'full', 'diag', 'tied', 'spherical'
+rep = 'mode'  # 'mode', 'mean'
 
 number_of_all_samples = 500
 number_of_test_samples = 200
@@ -37,23 +38,20 @@ autoscaled_variables_train = (variables_train - variables_train.mean(axis=0)) / 
 autoscaled_variables_test = (variables_test - variables_train.mean(axis=0)) / variables_train.std(axis=0, ddof=1)
 
 # GMR
-model = GMR(n_components=number_of_components, covariance_type=covariance_type)
+model = GMR(n_components=number_of_components, covariance_type=covariance_type, rep=rep)
 model.fit(autoscaled_variables_train)
 
 # Forward analysis (regression)
-mode_of_estimated_mean_of_y, weighted_estimated_mean_of_y, estimated_mean_of_y_for_all_components, weights_for_x = \
-    model.predict(autoscaled_variables_test[:, numbers_of_x], numbers_of_x, numbers_of_y)
+predicted_y_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_x], numbers_of_x, numbers_of_y)
 
 # Inverse analysis
-mode_of_estimated_mean_of_x, weighted_estimated_mean_of_x, estimated_mean_of_x_for_all_components, weights_for_y = \
-    model.predict(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_x)
+estimated_x_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_x)
 
 # Check results of forward analysis (regression)
 print('Results of forward analysis (regression)')
-predicted_ytest_all = mode_of_estimated_mean_of_y
 plt.rcParams['font.size'] = 18
 for y_number in range(len(numbers_of_y)):
-    predicted_ytest = np.ndarray.flatten(predicted_ytest_all[:, y_number])
+    predicted_ytest = np.ndarray.flatten(predicted_y_test_all[:, y_number])
     predicted_ytest = predicted_ytest * variables_train[:, numbers_of_y[y_number]].std(ddof=1) + \
                       variables_train[:, numbers_of_y[y_number]].mean()
     # yy-plot
@@ -79,8 +77,8 @@ for y_number in range(len(numbers_of_y)):
 # Check results of inverse analysis
 print('---------------------------')
 print('Results of inverse analysis')
-estimated_X_test = mode_of_estimated_mean_of_x * np.matlib.repmat(variables_train[:, numbers_of_x].std(ddof=1, axis=0), mode_of_estimated_mean_of_x.shape[0], 1) + \
-                   np.matlib.repmat(variables_train[:, numbers_of_x].mean(axis=0), mode_of_estimated_mean_of_x.shape[0], 1)
+estimated_X_test = estimated_x_test_all * np.matlib.repmat(variables_train[:, numbers_of_x].std(ddof=1, axis=0), estimated_x_test_all.shape[0], 1) + \
+                   np.matlib.repmat(variables_train[:, numbers_of_x].mean(axis=0), estimated_x_test_all.shape[0], 1)
 calculated_Y_from_estimated_X_test = np.empty([number_of_test_samples, 2])
 calculated_Y_from_estimated_X_test[:, 0:1] = 3 * estimated_X_test[:, 0:1] - 2 * estimated_X_test[:, 1:2] \
                                              + 0.5 * estimated_X_test[:, 2:3]

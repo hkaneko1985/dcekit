@@ -25,6 +25,7 @@ class VBGMR(BayesianGaussianMixture):
                                     weight_concentration_prior=weight_concentration_prior,
                                     max_iter=max_iter, random_state=random_state)
 
+        self.rep = rep
         self.display_flag = display_flag
 
     def predict(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
