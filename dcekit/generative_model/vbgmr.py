@@ -65,19 +65,25 @@ class VBGMR(BayesianGaussianMixture):
         weights : numpy.array
             m x l matrix of weights,
         """
-
-        estimated_mean_for_all_components, _, weights = self.predict_mog(dataset, numbers_of_input_variables, numbers_of_output_variables)
         
-        # calculate mode of estimated means and weighted estimated means
-        mode_of_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
-        weighted_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
-        index_for_mode = np.argmax(weights, axis=0)
-        for sample_number in range(dataset.shape[0]):
-            mode_of_estimated_mean[sample_number, :] = estimated_mean_for_all_components[
-                                                       index_for_mode[sample_number],
-                                                       sample_number, :]
-            weighted_estimated_mean[sample_number, :] = weights[:, sample_number].dot(
-                estimated_mean_for_all_components[:, sample_number, :])
+        try:
+            estimated_mean_for_all_components, _, weights = self.predict_mog(dataset, numbers_of_input_variables, numbers_of_output_variables)
+            
+            # calculate mode of estimated means and weighted estimated means
+            mode_of_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
+            weighted_estimated_mean = np.empty([dataset.shape[0], len(numbers_of_output_variables)])
+            index_for_mode = np.argmax(weights, axis=0)
+            for sample_number in range(dataset.shape[0]):
+                mode_of_estimated_mean[sample_number, :] = estimated_mean_for_all_components[
+                                                           index_for_mode[sample_number],
+                                                           sample_number, :]
+                weighted_estimated_mean[sample_number, :] = weights[:, sample_number].dot(
+                    estimated_mean_for_all_components[:, sample_number, :])
+        except:
+            mode_of_estimated_mean = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
+            weighted_estimated_mean = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
+            estimated_mean_for_all_components = np.zeros([self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
+            weights = np.zeros([dataset.shape[0], self.n_components])
 
         return mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights
 

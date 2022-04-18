@@ -50,7 +50,7 @@ model.fit(autoscaled_variables_train)
 predicted_y_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_x], numbers_of_x, numbers_of_y)
 
 # Inverse analysis
-estimated_x_test_all = model.predict(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_x)
+estimated_x_test_all = model.predict_rep(autoscaled_variables_test[:, numbers_of_y], numbers_of_y, numbers_of_x)
 
 # Check results of forward analysis (regression)
 print('Results of forward analysis (regression)')
