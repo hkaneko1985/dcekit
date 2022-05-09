@@ -6,8 +6,9 @@
 import sys
 
 import numpy as np
-from sklearn import svm
-from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVR
+from sklearn.model_selection import KFold, cross_val_predict
+from sklearn.metrics import r2_score
 from ..validation import make_midknn_dataset
 
 def fast_opt_svr_hyperparams(x, y, cs, epsilons, gammas, validation_method, parameter):
@@ -67,13 +68,20 @@ def fast_opt_svr_hyperparams(x, y, cs, epsilons, gammas, validation_method, para
     # Optimize epsilon with cross-validation
     print('2/4 ... optimization of epsilon')
     if validation_method == 'cv':
-        model = GridSearchCV(svm.SVR(kernel='rbf', C=3, gamma=optimal_gamma), {'epsilon': epsilons}, cv=parameter)
-        model.fit(x, y)
-        optimal_epsilon = model.best_params_['epsilon']
+        cross_validation = KFold(n_splits=parameter, random_state=9, shuffle=True)
+        r2cvs = []
+        for epsilon in epsilons:
+            model = SVR(kernel='rbf', C=3, epsilon=epsilon, gamma=optimal_gamma)
+            estimated_y_in_cv = cross_val_predict(model, x, y, cv=cross_validation)
+            r2cvs.append(r2_score(y, estimated_y_in_cv))
+        optimal_epsilon = epsilons[np.where(r2cvs==np.max(r2cvs))[0][0]]
+#        model = GridSearchCV(SVR(kernel='rbf', C=3, gamma=optimal_gamma), {'epsilon': epsilons}, cv=parameter)
+#        model.fit(x, y)
+#        optimal_epsilon = model.best_params_['epsilon']
     elif validation_method == 'midknn':
         r2_midknns = []
         for epsilon in epsilons:
-            model = svm.SVR(kernel='rbf', C=3, epsilon=epsilon, gamma=optimal_gamma)
+            model = SVR(kernel='rbf', C=3, epsilon=epsilon, gamma=optimal_gamma)
             model.fit(x, y)
             estimated_y_midknn = np.ndarray.flatten(model.predict(x_midknn))
             r2_midknns.append(float(1 - sum((y_midknn - estimated_y_midknn) ** 2) / sum((y_midknn - y_midknn.mean()) ** 2)))
@@ -82,13 +90,19 @@ def fast_opt_svr_hyperparams(x, y, cs, epsilons, gammas, validation_method, para
     # Optimize C with cross-validation
     print('3/4 ... optimization of c')
     if validation_method == 'cv':
-        model = GridSearchCV(svm.SVR(kernel='rbf', epsilon=optimal_epsilon, gamma=optimal_gamma), {'C': cs}, cv=parameter)
-        model.fit(x, y)
-        optimal_c = model.best_params_['C']
+        r2cvs = []
+        for c in cs:
+            model = SVR(kernel='rbf', C=c, epsilon=optimal_epsilon, gamma=optimal_gamma)
+            estimated_y_in_cv = cross_val_predict(model, x, y, cv=cross_validation)
+            r2cvs.append(r2_score(y, estimated_y_in_cv))
+        optimal_c = cs[np.where(r2cvs==np.max(r2cvs))[0][0]]
+#        model = GridSearchCV(SVR(kernel='rbf', epsilon=optimal_epsilon, gamma=optimal_gamma), {'C': cs}, cv=parameter)
+#        model.fit(x, y)
+#        optimal_c = model.best_params_['C']
     elif validation_method == 'midknn':
         r2_midknns = []
         for c in cs:
-            model = svm.SVR(kernel='rbf', C=c, epsilon=optimal_epsilon, gamma=optimal_gamma)
+            model = SVR(kernel='rbf', C=c, epsilon=optimal_epsilon, gamma=optimal_gamma)
             model.fit(x, y)
             estimated_y_midknn = np.ndarray.flatten(model.predict(x_midknn))
             r2_midknns.append(float(1 - sum((y_midknn - estimated_y_midknn) ** 2) / sum((y_midknn - y_midknn.mean()) ** 2)))
@@ -97,13 +111,19 @@ def fast_opt_svr_hyperparams(x, y, cs, epsilons, gammas, validation_method, para
     # Optimize gamma with cross-validation (optional)
     print('4/4 ... optimization of gamma')
     if validation_method == 'cv':
-        model = GridSearchCV(svm.SVR(kernel='rbf', epsilon=optimal_epsilon, C=optimal_c), {'gamma': gammas}, cv=parameter)
-        model.fit(x, y)
-        optimal_gamma = model.best_params_['gamma']
+        r2cvs = []
+        for gamma in gammas:
+            model = SVR(kernel='rbf', C=optimal_c, epsilon=optimal_epsilon, gamma=gamma)
+            estimated_y_in_cv = cross_val_predict(model, x, y, cv=cross_validation)
+            r2cvs.append(r2_score(y, estimated_y_in_cv))
+        optimal_gamma = gammas[np.where(r2cvs==np.max(r2cvs))[0][0]] # クロスバリデーション後の r2 が最も大きい候補
+#        model = GridSearchCV(SVR(kernel='rbf', epsilon=optimal_epsilon, C=optimal_c), {'gamma': gammas}, cv=parameter)
+#        model.fit(x, y)
+#        optimal_gamma = model.best_params_['gamma']
     elif validation_method == 'midknn':
         r2_midknns = []
         for gamma in gammas:
-            model = svm.SVR(kernel='rbf', C=optimal_c, epsilon=optimal_epsilon, gamma=gamma)
+            model = SVR(kernel='rbf', C=optimal_c, epsilon=optimal_epsilon, gamma=gamma)
             model.fit(x, y)
             estimated_y_midknn = np.ndarray.flatten(model.predict(x_midknn))
             r2_midknns.append(float(1 - sum((y_midknn - estimated_y_midknn) ** 2) / sum((y_midknn - y_midknn.mean()) ** 2)))
