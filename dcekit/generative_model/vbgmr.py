@@ -387,9 +387,8 @@ class VBGMR(BayesianGaussianMixture):
                                     dataset_train_in_cv = autoscaled_dataset[fold_index_in_cv != fold_number_in_cv, :]
                                     dataset_test_in_cv = autoscaled_dataset[fold_index_in_cv == fold_number_in_cv, :]
                                     
-                                    self.fit(dataset_train_in_cv)
-                
                                     try:
+                                        self.fit(dataset_train_in_cv)
                                         values = self.predict_rep(dataset_test_in_cv[:, numbers_of_input_variables],
                                                                   numbers_of_input_variables, numbers_of_output_variables)
                                     except:
