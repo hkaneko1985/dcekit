@@ -362,7 +362,7 @@ class VBGMR(BayesianGaussianMixture):
         """
 
         dataset = np.array(dataset)
-        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
+#        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
         reps = ['mean', 'mode']
         
         min_number = math.floor(dataset.shape[0] / fold_number)
@@ -390,8 +390,8 @@ class VBGMR(BayesianGaussianMixture):
                                 estimated_y_in_cv = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
                                 
                                 for fold_number_in_cv in np.arange(1, fold_number + 1, 1):
-                                    dataset_train_in_cv = autoscaled_dataset[fold_index_in_cv != fold_number_in_cv, :]
-                                    dataset_test_in_cv = autoscaled_dataset[fold_index_in_cv == fold_number_in_cv, :]
+                                    dataset_train_in_cv = dataset[fold_index_in_cv != fold_number_in_cv, :]
+                                    dataset_test_in_cv = dataset[fold_index_in_cv == fold_number_in_cv, :]
                                     
                                     try:
                                         self.fit(dataset_train_in_cv)
@@ -402,7 +402,7 @@ class VBGMR(BayesianGaussianMixture):
                 
                                     estimated_y_in_cv[fold_index_in_cv == fold_number_in_cv, :] = values  # 格納
                 
-                                y = np.ravel(autoscaled_dataset[:, numbers_of_output_variables])
+                                y = np.ravel(dataset[:, numbers_of_output_variables])
                                 y_pred = np.ravel(estimated_y_in_cv)
                                 r2 = float(1 - sum((y - y_pred) ** 2) / sum((y - y.mean()) ** 2))
                                 r2cvs.append(r2)
@@ -461,7 +461,7 @@ class VBGMR(BayesianGaussianMixture):
         """
 
         dataset = np.array(dataset)
-        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
+#        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
         
         # VBGMRのパラメータ設定
 #        numbers_of_components = np.arange(1, 51, 1)
@@ -566,11 +566,11 @@ class VBGMR(BayesianGaussianMixture):
                 self.weight_concentration_prior_type = weight_concentration_prior_type
                 self.weight_concentration_prior = weight_concentration_prior
                 self.rep = rep_type
-                estimated_y_in_cv = np.empty((autoscaled_dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
-                for i, (cv_train_idx, cv_test_idx) in enumerate(vbgmr_kfold.split(autoscaled_dataset)): # CVによる検証
+                estimated_y_in_cv = np.empty((dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
+                for i, (cv_train_idx, cv_test_idx) in enumerate(vbgmr_kfold.split(dataset)): # CVによる検証
                     # CVのinnerとouterを設定
-                    autoscaled_train_innercv = autoscaled_dataset[cv_train_idx, :]
-                    autoscaled_train_outercv = autoscaled_dataset[cv_test_idx, :]
+                    autoscaled_train_innercv = dataset[cv_train_idx, :]
+                    autoscaled_train_outercv = dataset[cv_test_idx, :]
                     try:
                         # modelにfitさせる
                         self.fit(autoscaled_train_innercv)
@@ -583,14 +583,18 @@ class VBGMR(BayesianGaussianMixture):
                     estimated_y_in_cv[cv_test_idx, :] = predict_y_train_outercv
                 
                 # r2を計算
-                y_train_one = np.ravel(autoscaled_dataset[:, numbers_of_output_variables])
+                y_train_one = np.ravel(dataset[:, numbers_of_output_variables])
                 y_pred = np.ravel(estimated_y_in_cv)
                 vbgmr_r2_score = r2_score(y_train_one, y_pred)
                 params_with_score_df.loc[selected_params_idx, 'r2cv score'] = vbgmr_r2_score # データの保存
             if self.display_flag:
                 print('Best r2cv :', params_with_score_df['r2cv score'].max())
                 print('='*10)
-        
+                
+            # 最後はBOの計算をしないためbreak
+            if bo_iter + 1 == bo_iteration_number:
+                break
+            
             # Bayesian optimization
             bo_x_data = bo_params_df.copy() # GP学習用データはVBGMRの結果があるサンプル
             bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（VBGMRの結果がない）サンプル

@@ -456,7 +456,7 @@ class GMR(GaussianMixture):
         """
 
         dataset = np.array(dataset)
-        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
+#        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
         reps = ['mean', 'mode']
         
         min_number = math.floor(dataset.shape[0] / fold_number)
@@ -481,8 +481,8 @@ class GMR(GaussianMixture):
                     estimated_y_in_cv = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
                     
                     for fold_number_in_cv in np.arange(1, fold_number + 1, 1):
-                        dataset_train_in_cv = autoscaled_dataset[fold_index_in_cv != fold_number_in_cv, :]
-                        dataset_test_in_cv = autoscaled_dataset[fold_index_in_cv == fold_number_in_cv, :]
+                        dataset_train_in_cv = dataset[fold_index_in_cv != fold_number_in_cv, :]
+                        dataset_test_in_cv = dataset[fold_index_in_cv == fold_number_in_cv, :]
                         try:
                             self.fit(dataset_train_in_cv)
                             values = self.predict_rep(dataset_test_in_cv[:, numbers_of_input_variables],
@@ -492,7 +492,7 @@ class GMR(GaussianMixture):
 
                         estimated_y_in_cv[fold_index_in_cv == fold_number_in_cv, :] = values  # 格納
     
-                    y = np.ravel(autoscaled_dataset[:, numbers_of_output_variables])
+                    y = np.ravel(dataset[:, numbers_of_output_variables])
                     y_pred = np.ravel(estimated_y_in_cv)
                     r2 = float(1 - sum((y - y_pred) ** 2) / sum((y - y.mean()) ** 2))
                     r2cvs.append(r2)
@@ -564,7 +564,7 @@ class GMR(GaussianMixture):
         delta = 10 ** -6  # MI
 
         dataset = np.array(dataset)
-        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
+#        autoscaled_dataset = (dataset - dataset.mean(axis=0)) / dataset.std(axis=0, ddof=1)
         reps = ['mean', 'mode']
         
         # GMRパラメータの全組み合わせ生成
@@ -639,11 +639,11 @@ class GMR(GaussianMixture):
                 self.covariance_type = covariance_type
                 self.n_components = number_of_components
                 self.rep = rep_type
-                estimated_y_in_cv = np.empty((autoscaled_dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
-                for i, (cv_train_idx, cv_test_idx) in enumerate(gmr_kfold.split(autoscaled_dataset)): # CVによる検証
+                estimated_y_in_cv = np.empty((dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
+                for i, (cv_train_idx, cv_test_idx) in enumerate(gmr_kfold.split(dataset)): # CVによる検証
                     # CVのinnerとouterを設定
-                    autoscaled_train_innercv = autoscaled_dataset[cv_train_idx, :]
-                    autoscaled_train_outercv = autoscaled_dataset[cv_test_idx, :]
+                    autoscaled_train_innercv = dataset[cv_train_idx, :]
+                    autoscaled_train_outercv = dataset[cv_test_idx, :]
                     try:
                         # modelにfitさせる
                         self.fit(autoscaled_train_innercv)
@@ -655,7 +655,7 @@ class GMR(GaussianMixture):
                     estimated_y_in_cv[cv_test_idx, :] = predict_y_train_outercv
                 
                 # r2を計算
-                y_train_one = np.ravel(autoscaled_dataset[:, numbers_of_output_variables])
+                y_train_one = np.ravel(dataset[:, numbers_of_output_variables])
                 y_pred = np.ravel(estimated_y_in_cv)
                 gmr_r2_score = r2_score(y_train_one, y_pred)
                 params_with_score_df.loc[selected_params_idx, 'r2cv score'] = gmr_r2_score # データの保存
@@ -663,6 +663,10 @@ class GMR(GaussianMixture):
                 print('Best r2cv :', params_with_score_df['r2cv score'].max())
                 print('='*10)
             
+            # 最後はBOの計算をしないためbreak
+            if bo_iter + 1 == bo_iteration_number:
+                break
+                    
             # Bayesian optimization
             bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
             bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
