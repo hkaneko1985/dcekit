@@ -12,7 +12,7 @@ from dcekit.validation import double_cross_validation
 from sklearn import datasets
 # import pandas as pd
 from sklearn.cross_decomposition import PLSRegression
-from sklearn.model_selection import GridSearchCV
+from dcekit.validation import DCEGridSearchCV
 
 # Settings
 max_pls_component_number = 30
@@ -27,7 +27,7 @@ x, y = datasets.make_regression(n_samples=number_of_training_samples + number_of
 
 # DCV
 pls_components = np.arange(1, max_pls_component_number + 1)
-inner_cv = GridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=inner_fold_number)
+inner_cv = DCEGridSearchCV(PLSRegression(), {'n_components': pls_components}, cv=inner_fold_number)
 estimated_y = double_cross_validation(gs_cv=inner_cv, x=x, y=y, outer_fold_number=outer_fold_number,
                                       do_autoscaling=True, random_state=0)
 

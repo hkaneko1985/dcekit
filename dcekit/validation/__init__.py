@@ -6,6 +6,7 @@
 
 from .metrics import k3nerror
 from .metrics import r2lm
+from .validation import DCEGridSearchCV
 from .validation import midknn
 from .validation import make_midknn_dataset
 from .validation import y_randomization

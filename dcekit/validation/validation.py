@@ -8,6 +8,85 @@ import math
 import numpy as np
 import numpy.matlib
 from scipy.spatial import distance
+from sklearn.base import is_classifier, clone
+from sklearn.model_selection._search import BaseSearchCV
+from sklearn.model_selection import ParameterGrid, StratifiedKFold, KFold, cross_val_predict
+from sklearn.metrics import r2_score, accuracy_score
+
+class DCEGridSearchCV(BaseSearchCV):
+    """
+    Hyperparameter optimization with grid search and cross-validation,
+    which is similar to GridSearchCV in scikit-learn https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+    
+    Parameters
+    ----------
+    Parameters are basically the same as the ones in GridSearchCV, KFold, and StratifiedKFold
+    GridSearchCV : https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+    KFold : https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
+    StratifiedKFold : https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold
+            
+    """
+    def __init__(
+        self,
+        estimator,
+        param_grid,
+        *,
+        scoring=None,
+        n_jobs=None,
+        refit=True,
+        cv=None,
+        verbose=0,
+        pre_dispatch="2*n_jobs",
+        error_score=np.nan,
+        return_train_score=False,
+        random_state = None,
+        shuffle = True,
+        display_flag = False,
+    ):
+        super().__init__(
+            estimator=estimator,
+            scoring=scoring,
+            n_jobs=n_jobs,
+            refit=refit,
+            cv=cv,
+            verbose=verbose,
+            pre_dispatch=pre_dispatch,
+            error_score=error_score,
+            return_train_score=return_train_score,
+        )
+        self.param_grid = param_grid
+        self.random_state = random_state
+        self.shuffle = shuffle
+        self.display_flag = display_flag
+    def fit(self, x, y):
+        if is_classifier(self.estimator):
+            cross_validation = StratifiedKFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
+        else:
+            cross_validation = KFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
+            
+        param_dicts = list(ParameterGrid(self.param_grid))
+        scores = []
+        for i, param_dict in enumerate(param_dicts):
+            self.estimator.set_params(**param_dict)
+            estimated_y_in_cv = cross_val_predict(self.estimator, x, y, cv=cross_validation,
+                                                  n_jobs=self.n_jobs, verbose=self.verbose, 
+                                                  pre_dispatch=self.pre_dispatch)
+            if is_classifier(self.estimator):
+                score = accuracy_score(y, estimated_y_in_cv)
+            else:
+                score = r2_score(y, estimated_y_in_cv)
+            if self.display_flag:
+                print(i + 1, '/', len(param_dicts), '... ' 'score :', score)
+            scores.append(score)
+        self.best_score_ = max(scores)
+        self.best_index_ = scores.index(self.best_score_)
+        self.best_params_ = param_dicts[self.best_index_]
+        self.best_estimator_ = clone(self.estimator)
+        self.best_estimator_.set_params(**self.best_params_)
+        self.cv_results_ = {'params': param_dicts, 'score': scores}
+    
+    def predict(self, x):
+        return self.best_estimator_.predict(x)
 
 
 def midknn(x, k):
@@ -100,7 +179,7 @@ def double_cross_validation(gs_cv, x, y, outer_fold_number, do_autoscaling=True,
         Fold number in outer CV (fold number in inner CV is included in gs_cv)
     do_autoscaling : bool
         flag of autoscaling, if True, do autoscaling
-    random_state : int
+    random_state : int, default None
         random seed, if None, random seed is not set
 
     Returns
