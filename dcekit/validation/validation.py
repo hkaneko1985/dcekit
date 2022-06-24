@@ -59,10 +59,13 @@ class DCEGridSearchCV(BaseSearchCV):
         self.shuffle = shuffle
         self.display_flag = display_flag
     def fit(self, x, y):
-        if is_classifier(self.estimator):
-            cross_validation = StratifiedKFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
+        if type(self.cv) == int:
+            if is_classifier(self.estimator):
+                cross_validation = StratifiedKFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
+            else:
+                cross_validation = KFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
         else:
-            cross_validation = KFold(n_splits=self.cv, random_state=self.random_state, shuffle=self.shuffle)
+            cross_validation = self.cv
             
         param_dicts = list(ParameterGrid(self.param_grid))
         scores = []
