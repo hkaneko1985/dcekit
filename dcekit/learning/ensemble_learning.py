@@ -21,7 +21,7 @@ class DCEBaggingRegressor(BaseEstimator, RegressorMixin):
         Parameters
         ----------
         base_estimator: object
-            The base estimator in scikit-learn. If cv_flag is True, this must be the object of GridSearchCV
+            The base estimator in scikit-learn. If cv_flag is True, this must be the object of DCEGridSearchCV or GridSearchCV
         n_estimators: int, default 100
             number of sub-models
         max_features: int or float, default 1.0
@@ -382,10 +382,6 @@ def ensemble_outlier_sample_detection(base_estimator, x, y, cv_flag, n_estimator
         max number of iteration
     autoscaling_flag : boolean, default False
         If True, autoscaling is done, and if False, autoscaling is not done 
-    cv_flag: boolean, default False
-        If True, base_estimator must be the object of 
-    robust_flag: boolean, default True
-        If True, median-based statistics are used, if False, mean-based statistics are used
     random_state : int
         random seed, if None, random seed is not set
 

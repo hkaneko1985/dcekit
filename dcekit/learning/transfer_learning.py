@@ -18,7 +18,7 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
         Parameters
         ----------
         base_estimator: object
-            The base estimator in scikit-learn. If cv_flag is True, this must be the object of GridSearchCV
+            The base estimator in scikit-learn. If cv_flag is True, this must be the object of DCEGridSearchCV or GridSearchCV
         x_source : numpy.array or pandas.DataFrame, shape (n_samples, n_features)
             Dataset of x to transfer samples
         y_source : numpy.array or pandas.DataFrame, shape (n_samples,)
@@ -26,7 +26,7 @@ class TransferLearningSample(BaseEstimator, RegressorMixin):
         autoscaling_flag : boolen, default True
             If True, autoscaling is done, and if False, autoscaling is not done 
         cv_flag: boolen, default False
-            If this is True, base_estimator must be the object of GridSearchCV
+            If this is True, base_estimator must be the object of DCEGridSearchCV or GridSearchCV
         """
         self.base_estimator = base_estimator
         self.x_source = x_source

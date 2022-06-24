@@ -19,8 +19,8 @@ class SemiSupervisedLearningLowDimension(BaseEstimator, RegressorMixin):
         
         Parameters
         ----------
-        base_estimator: object
-            The base estimator in scikit-learn. If cv_flag is True, this must be the object of GridSearchCV
+        base_estimator: object of model in scikit-learn or object of DCEGridSearchCV or GridSearchCV 
+            The base estimator in scikit-learn. If cv_flag is True, this must be the object of DCEGridSearchCV or GridSearchCV
         base_dimension_reductioner: object
             The base model of dimension reduction in scikit-learn with 'transform' function. 
             GTM in DCEKit can be used.
@@ -28,15 +28,15 @@ class SemiSupervisedLearningLowDimension(BaseEstimator, RegressorMixin):
             Unsupervised dataset of x
         autoscaling_flag : boolen, default True
             If True, autoscaling is done, and if False, autoscaling is not done 
-        cv_flag: boolen, default False
-            If True, base_estimator must be the object of GridSearchCV
-        ad_flag: boolen, default False
+        cv_flag: boolean, default False
+            If True, base_estimator must be the object of DCEGridSearchCV or GridSearchCV
+        ad_flag: boolean, default False
             If True, AD of k-NN is considered and unsupervised samples within AD are selected first.
             https://www.sciencedirect.com/science/article/abs/pii/S0169743919300875
         k: int, default 5
             k in k-NN. This is required when ad_flag is True
         within_ad_rate: float, default 0.997
-            Rate of trainng samples within AD, which is used to determine the threshold of k-NN distance as AD
+            Rate of supervised samples within AD, which is used to determine the threshold of k-NN distance as AD
         """
         self.base_estimator = base_estimator
         self.base_dimension_reductioner = base_dimension_reductioner
