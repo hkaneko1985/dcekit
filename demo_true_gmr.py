@@ -99,7 +99,7 @@ for y_number in range(len(numbers_of_y)):
     plt.show()
     # r2p, RMSEp, MAEp
     print('r2p: {0}'.format(float(1 - sum((variables_test[:, numbers_of_y[y_number]] - predicted_ytest) ** 2) / sum(
-        (variables_test[:, numbers_of_y[y_number]] - variables_train[:, numbers_of_y[y_number]].mean()) ** 2))))
+        (variables_test[:, numbers_of_y[y_number]] - variables_test[:, numbers_of_y[y_number]].mean()) ** 2))))
     print('RMSEp: {0}'.format(float((sum((variables_test[:, numbers_of_y[y_number]] - predicted_ytest) ** 2) / len(
         variables_test[:, numbers_of_y[y_number]])) ** 0.5)))
     print('MAEp: {0}'.format(float(sum(abs(variables_test[:, numbers_of_y[y_number]] - predicted_ytest)) / len(
