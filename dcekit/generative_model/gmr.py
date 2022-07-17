@@ -579,7 +579,7 @@ class GMR(GaussianMixture):
         # ベイズ最適化の繰り返し
         for bo_iter in bo_iterations:
             if self.display_flag:
-                print(f'Bayesian optimization iteration : {bo_iter} / {bo_iteration_number}')
+                print(f'Bayesian optimization iteration : {bo_iter + 1} / {bo_iteration_number}')
         #    print('='*10)
             if bo_iter == 0: # 最初の試行ではD最適基準を計算
                 # D最適基準の計算
