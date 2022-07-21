@@ -474,7 +474,7 @@ class VBGMR(BayesianGaussianMixture):
         doe_number_of_selecting_samples = 15  # 選択するサンプル数
         doe_number_of_random_searches = 100  # ランダムにサンプルを選択して D 最適基準を計算する繰り返し回数
         # BOの設定
-        bo_iteration_number = 20 # BOの繰り返し回数
+#        bo_iteration_number = 20 # BOの繰り返し回数
         bo_iterations = np.arange(0, bo_iteration_number + 1)
         bo_gp_fold_number = 5 # BOのGPを構築するためのcvfold数
         bo_number_of_selecting_samples = 5  # 選択するサンプル数
