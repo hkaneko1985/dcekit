@@ -309,10 +309,14 @@ class VBGMR(BayesianGaussianMixture):
                     input_output_covariances[component_number, :, :])
                 estimated_covariances[component_number, :, :] = output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
                         np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :])
-                weights[component_number, :] = self.weights_[component_number] * \
-                                               multivariate_normal.pdf(dataset,
-                                                                       input_means[component_number, :],
-                                                                       input_covariances[component_number, :, :])
+                try:
+                    weights[component_number, :] = self.weights_[component_number] * \
+                                                   multivariate_normal.pdf(dataset,
+                                                                           input_means[component_number, :],
+                                                                           input_covariances[component_number, :, :])
+                except:
+                    print('assignment of weights is failed, and zero is assigned')
+                    
             if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
                 weights = np.ones(weights.shape)
             if np.isnan(weights.sum(axis=0)).any():
