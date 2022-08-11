@@ -101,8 +101,6 @@ def clustering_based_on_correlation_coefficients(x, threshold_of_r):
     r_in_x = x.corr()
     r_in_x = abs(r_in_x)
     distance_in_x = 1 / r_in_x
-    for i in range(r_in_x.shape[0]):
-        r_in_x.iloc[i, i] = 10 ^ 10
 
     # clustering
     clustering = AgglomerativeClustering(n_clusters=None, affinity='precomputed', compute_full_tree='True',
