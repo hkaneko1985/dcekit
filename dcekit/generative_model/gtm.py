@@ -613,229 +613,235 @@ class GTM:
         params_df = pd.DataFrame(params_temp_list, columns=['shape of map', 'shape of rbf centers', 'variance of rbfs', 'lambda', 'rep']) # 全組み合わせのDataframe
         params_df = pd.get_dummies(params_df, columns=['rep']) # ダミー変数化
         
-        # ベイズ最適化の繰り返し
-        for bo_iter in bo_iterations:
-            if bo_display_flag:
-                print(f'Bayesian optimization iteration : {bo_iter + 1} / {bo_iteration_number}')
-        #    print('='*10)
-            if bo_iter == 0: # 最初の試行ではD最適基準を計算
-                # D最適基準の計算
-                param_std = params_df.std(axis=0, ddof=1)
-                param_std[np.where(param_std == 0)[0]] = 1
-                autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
-        
-                all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
-        
-                np.random.seed(110) # 乱数を生成するためのシードを固定
-                for random_search_number in range(doe_number_of_random_searches):
-                    # 1. ランダムに候補を選択
-                    new_selected_indexes = np.random.choice(all_indexes, doe_number_of_selecting_samples, replace=False)
-                    new_selected_samples = autoscaled_params_df.iloc[new_selected_indexes, :]
-                    # 2. D 最適基準を計算
-                    xt_x = np.dot(new_selected_samples.T, new_selected_samples)
-                    d_optimal_value = np.linalg.det(xt_x) 
-                    # 3. D 最適基準が前回までの最大値を上回ったら、選択された候補を更新
-                    if random_search_number == 0:
-                        best_d_optimal_value = d_optimal_value.copy()
-                        selected_sample_indexes = new_selected_indexes.copy()
-                    else:
-                        if best_d_optimal_value < d_optimal_value:
+        if params_df.shape[0] <= doe_number_of_selecting_samples + bo_iteration_number:
+            self.cv_opt(dataset, numbers_of_input_variables, numbers_of_output_variables, candidates_of_shape_of_map,
+               candidates_of_shape_of_rbf_centers,
+               candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, fold_number,
+               number_of_iterations)
+        else:
+            # ベイズ最適化の繰り返し
+            for bo_iter in bo_iterations:
+                if bo_display_flag:
+                    print(f'Bayesian optimization iteration : {bo_iter + 1} / {bo_iteration_number}')
+            #    print('='*10)
+                if bo_iter == 0: # 最初の試行ではD最適基準を計算
+                    # D最適基準の計算
+                    param_std = params_df.std(axis=0, ddof=1)
+                    param_std[np.where(param_std == 0)[0]] = 1
+                    autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
+            
+                    all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
+            
+                    np.random.seed(110) # 乱数を生成するためのシードを固定
+                    for random_search_number in range(doe_number_of_random_searches):
+                        # 1. ランダムに候補を選択
+                        new_selected_indexes = np.random.choice(all_indexes, doe_number_of_selecting_samples, replace=False)
+                        new_selected_samples = autoscaled_params_df.iloc[new_selected_indexes, :]
+                        # 2. D 最適基準を計算
+                        xt_x = np.dot(new_selected_samples.T, new_selected_samples)
+                        d_optimal_value = np.linalg.det(xt_x) 
+                        # 3. D 最適基準が前回までの最大値を上回ったら、選択された候補を更新
+                        if random_search_number == 0:
                             best_d_optimal_value = d_optimal_value.copy()
                             selected_sample_indexes = new_selected_indexes.copy()
-                selected_sample_indexes = list(selected_sample_indexes) # リスト型に変換
-        
-                # 選択されたサンプル、選択されなかったサンプル
-                selected_params_df = params_df.iloc[selected_sample_indexes, :]  # 選択されたサンプル
-                bo_params_df = selected_params_df.copy() # BOのGPモデル構築用データを作成
-                remaining_indexes = np.delete(all_indexes, selected_sample_indexes)  # 選択されなかったサンプルのインデックス
-                remaining_params_df = params_df.iloc[remaining_indexes, :]  # 選択されなかったサンプル
-        
-                # 選択された全候補でGTMRの計算
-                params_with_score_df = params_df.copy() # cvのscoreが含まれるdataframe
-                params_with_score_df['r2cv score'] = np.nan # 初期値はnanを設定
-        
-            else: # 2回目以降では前回の結果をもとにする
-                selected_sample_indexes = next_samples_df.index # 提案サンプルのindex
-                selected_params_df = params_df.loc[selected_sample_indexes, :] # 次に計算するサンプル
-                bo_params_df = pd.concat([bo_params_df, selected_params_df], axis=0) # BOのGPモデル構築用データは前回のデータと提案サンプルをマージする
-                remaining_params_df = params_df.loc[params_with_score_df['r2cv score'].isna(), :] # 選択されなかったサンプル
-                remaining_params_df = remaining_params_df.drop(index=selected_sample_indexes)
-        
-            # 選ばれたサンプル（パラメータの組み合わせ）を一つずつ計算する
-            for i_n, selected_params_idx in enumerate(selected_sample_indexes):
-                selected_params = selected_params_df.loc[selected_params_idx, :] # サンプルの選択
-                # shape of mapの決定
-                shape_of_map = selected_params['shape of map']
-                # shape of rbf centerの決定
-                shape_of_rbf_centers = selected_params['shape of rbf centers']
-                # variance of rbfの決定
-                variance_of_rbfs = selected_params['variance of rbfs']
-                # lambdaの決定
-                lambda_in_em = selected_params['lambda']
-                # repの決定
-                rep_series = selected_params[[x for x in selected_params.index if 'rep' in x]]
-                rep_type = rep_series.loc[rep_series == 1]
-                rep_type = (rep_type.index[0]).replace('rep_', '')
-                # GTMRモデルの構築
-                self.shape_of_map = [shape_of_map, shape_of_map]
-                self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
-                self.variance_of_rbfs = variance_of_rbfs
-                self.lambda_in_em_algorithm = lambda_in_em
-                self.rep = rep_type
-                estimated_y_in_cv = np.zeros((dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
-                success_flag_cv = True
-                for i, (cv_train_idx, cv_test_idx) in enumerate(gtmr_kfold.split(dataset)): # CVによる検証
-                    # CVのinnerとouterを設定
-                    autoscaled_train_innercv = dataset[cv_train_idx, :]
-                    autoscaled_train_outercv = dataset[cv_test_idx, :]
-                    try:
-                        # modelにfitさせる
-                        self.fit(autoscaled_train_innercv)
-                        if self.success_flag:
-                            predict_y_train_outercv = self.predict_rep(
-                                autoscaled_train_outercv[:, numbers_of_input_variables], numbers_of_input_variables, numbers_of_output_variables)
                         else:
-                            success_flag_cv = False
-                            break
-                    except:
-                        predict_y_train_outercv = np.ones([autoscaled_train_outercv.shape[0], 1]) * (-10**10)
-                    estimated_y_in_cv[cv_test_idx, :] = predict_y_train_outercv
-                
-                if success_flag_cv:
-                    # r2を計算
-                    y_train_one = np.ravel(dataset[:, numbers_of_output_variables])
-                    y_pred = np.ravel(estimated_y_in_cv)
-                    gtmr_r2_score = r2_score(y_train_one, y_pred)
-                else:
-                    gtmr_r2_score = (np.random.rand() / 10 + 1) * (-100)
-                params_with_score_df.loc[selected_params_idx, 'r2cv score'] = gtmr_r2_score # データの保存
-                
-            if bo_display_flag:
-                print('Best r2cv :', params_with_score_df['r2cv score'].max())
-                print('='*10)
+                            if best_d_optimal_value < d_optimal_value:
+                                best_d_optimal_value = d_optimal_value.copy()
+                                selected_sample_indexes = new_selected_indexes.copy()
+                    selected_sample_indexes = list(selected_sample_indexes) # リスト型に変換
             
-            # 最後はBOの計算をしないためbreak
-            if bo_iter + 1 == bo_iteration_number:
-                break
+                    # 選択されたサンプル、選択されなかったサンプル
+                    selected_params_df = params_df.iloc[selected_sample_indexes, :]  # 選択されたサンプル
+                    bo_params_df = selected_params_df.copy() # BOのGPモデル構築用データを作成
+                    remaining_indexes = np.delete(all_indexes, selected_sample_indexes)  # 選択されなかったサンプルのインデックス
+                    remaining_params_df = params_df.iloc[remaining_indexes, :]  # 選択されなかったサンプル
+            
+                    # 選択された全候補でGTMRの計算
+                    params_with_score_df = params_df.copy() # cvのscoreが含まれるdataframe
+                    params_with_score_df['r2cv score'] = np.nan # 初期値はnanを設定
+            
+                else: # 2回目以降では前回の結果をもとにする
+                    selected_sample_indexes = next_samples_df.index # 提案サンプルのindex
+                    selected_params_df = params_df.loc[selected_sample_indexes, :] # 次に計算するサンプル
+                    bo_params_df = pd.concat([bo_params_df, selected_params_df], axis=0) # BOのGPモデル構築用データは前回のデータと提案サンプルをマージする
+                    remaining_params_df = params_df.loc[params_with_score_df['r2cv score'].isna(), :] # 選択されなかったサンプル
+                    remaining_params_df = remaining_params_df.drop(index=selected_sample_indexes)
+            
+                # 選ばれたサンプル（パラメータの組み合わせ）を一つずつ計算する
+                for i_n, selected_params_idx in enumerate(selected_sample_indexes):
+                    selected_params = selected_params_df.loc[selected_params_idx, :] # サンプルの選択
+                    # shape of mapの決定
+                    shape_of_map = selected_params['shape of map']
+                    # shape of rbf centerの決定
+                    shape_of_rbf_centers = selected_params['shape of rbf centers']
+                    # variance of rbfの決定
+                    variance_of_rbfs = selected_params['variance of rbfs']
+                    # lambdaの決定
+                    lambda_in_em = selected_params['lambda']
+                    # repの決定
+                    rep_series = selected_params[[x for x in selected_params.index if 'rep' in x]]
+                    rep_type = rep_series.loc[rep_series == 1]
+                    rep_type = (rep_type.index[0]).replace('rep_', '')
+                    # GTMRモデルの構築
+                    self.shape_of_map = [shape_of_map, shape_of_map]
+                    self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
+                    self.variance_of_rbfs = variance_of_rbfs
+                    self.lambda_in_em_algorithm = lambda_in_em
+                    self.rep = rep_type
+                    estimated_y_in_cv = np.zeros((dataset.shape[0],  len(numbers_of_output_variables))) # yの保存先
+                    success_flag_cv = True
+                    for i, (cv_train_idx, cv_test_idx) in enumerate(gtmr_kfold.split(dataset)): # CVによる検証
+                        # CVのinnerとouterを設定
+                        autoscaled_train_innercv = dataset[cv_train_idx, :]
+                        autoscaled_train_outercv = dataset[cv_test_idx, :]
+                        try:
+                            # modelにfitさせる
+                            self.fit(autoscaled_train_innercv)
+                            if self.success_flag:
+                                predict_y_train_outercv = self.predict_rep(
+                                    autoscaled_train_outercv[:, numbers_of_input_variables], numbers_of_input_variables, numbers_of_output_variables)
+                            else:
+                                success_flag_cv = False
+                                break
+                        except:
+                            predict_y_train_outercv = np.ones([autoscaled_train_outercv.shape[0], 1]) * (-10**10)
+                        estimated_y_in_cv[cv_test_idx, :] = predict_y_train_outercv
                     
-            # Bayesian optimization
-            bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
-            bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
-            bo_y_data = params_with_score_df.loc[bo_params_df.index, 'r2cv score'] # yはGMRのr2cv
-            
-            # カーネル 11 種類
-            bo_kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
-                        ConstantKernel() * RBF() + WhiteKernel(),
-                        ConstantKernel() * RBF() + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel(),
-                        ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=1.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=0.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=2.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + ConstantKernel() * DotProduct()]
-        
-            next_samples = pd.DataFrame([], columns=selected_params_df.columns)  # 次のサンプルを入れる変数を準備
-        
-            # 次の候補を複数提案する繰り返し工程
-            for bo_sample_number in range(bo_number_of_selecting_samples):
-                # オートスケーリング
-                x_std = bo_x_data.std(axis=0, ddof=1)
-                x_std[np.where(x_std == 0)[0]] = 1
-                autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
-                autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
-                autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
+                    if success_flag_cv:
+                        # r2を計算
+                        y_train_one = np.ravel(dataset[:, numbers_of_output_variables])
+                        y_pred = np.ravel(estimated_y_in_cv)
+                        gtmr_r2_score = r2_score(y_train_one, y_pred)
+                    else:
+                        gtmr_r2_score = (np.random.rand() / 10 + 1) * (-100)
+                    params_with_score_df.loc[selected_params_idx, 'r2cv score'] = gtmr_r2_score # データの保存
+                    
+                if bo_display_flag:
+                    print('Best r2cv :', params_with_score_df['r2cv score'].max())
+                    print('='*10)
                 
-                # モデル構築
-                if bo_regression_method == 'gpr_one_kernel':
-                    bo_selected_kernel = bo_kernels[bo_kernel_number]
-                    bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_selected_kernel)
-        
-                elif bo_regression_method == 'gpr_kernels':
-                    # クロスバリデーションによるカーネル関数の最適化
-                    bo_cross_validation = KFold(n_splits=bo_gp_fold_number, random_state=9, shuffle=True) # クロスバリデーションの分割の設定
-                    bo_r2cvs = [] # 空の list。カーネル関数ごとに、クロスバリデーション後の r2 を入れていきます
-                    for index, bo_kernel in enumerate(bo_kernels):
-                        bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_kernel)
-                        estimated_bo_y_in_cv = np.ndarray.flatten(cross_val_predict(bo_model, autoscaled_bo_x_data, autoscaled_bo_y_data, cv=bo_cross_validation))
-                        estimated_bo_y_in_cv = estimated_bo_y_in_cv * bo_y_data.std(ddof=1) + bo_y_data.mean()
-                        bo_r2cvs.append(r2_score(bo_y_data, estimated_bo_y_in_cv))
-                    optimal_bo_kernel_number = np.where(bo_r2cvs == np.max(bo_r2cvs))[0][0]  # クロスバリデーション後の r2 が最も大きいカーネル関数の番号
-                    optimal_bo_kernel = bo_kernels[optimal_bo_kernel_number]  # クロスバリデーション後の r2 が最も大きいカーネル関数
+                # 最後はBOの計算をしないためbreak
+                if bo_iter + 1 == bo_iteration_number:
+                    break
+                        
+                # Bayesian optimization
+                bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
+                bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
+                bo_y_data = params_with_score_df.loc[bo_params_df.index, 'r2cv score'] # yはGMRのr2cv
+                
+                # カーネル 11 種類
+                bo_kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
+                            ConstantKernel() * RBF() + WhiteKernel(),
+                            ConstantKernel() * RBF() + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel(),
+                            ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=1.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=0.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=2.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + ConstantKernel() * DotProduct()]
+            
+                next_samples = pd.DataFrame([], columns=selected_params_df.columns)  # 次のサンプルを入れる変数を準備
+            
+                # 次の候補を複数提案する繰り返し工程
+                for bo_sample_number in range(bo_number_of_selecting_samples):
+                    # オートスケーリング
+                    x_std = bo_x_data.std(axis=0, ddof=1)
+                    x_std[np.where(x_std == 0)[0]] = 1
+                    autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
+                    autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
+                    autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
                     
                     # モデル構築
-                    bo_model = GaussianProcessRegressor(alpha=0, kernel=optimal_bo_kernel) # GPR モデルの宣言
-                
-                bo_model.fit(autoscaled_bo_x_data, autoscaled_bo_y_data)  # モデルの学習
-                
-                # 予測
-                estimated_bo_y_prediction, estimated_bo_y_prediction_std = bo_model.predict(autoscaled_bo_x_prediction, return_std=True)
-                estimated_bo_y_prediction = estimated_bo_y_prediction * bo_y_data.std() + bo_y_data.mean()
-                estimated_bo_y_prediction_std = estimated_bo_y_prediction_std * bo_y_data.std()
-                
-                cumulative_variance = np.zeros(bo_x_prediction.shape[0])
-                # 獲得関数の計算
-                if acquisition_function == 'MI':
-                    acquisition_function_prediction = estimated_bo_y_prediction + np.log(2 / delta) ** 0.5 * (
-                            (estimated_bo_y_prediction_std ** 2 + cumulative_variance) ** 0.5 - cumulative_variance ** 0.5)
-                    cumulative_variance = cumulative_variance + estimated_bo_y_prediction_std ** 2
-                elif acquisition_function == 'EI':
-                    acquisition_function_prediction = (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) * \
-                                                    norm.cdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
-                                                                estimated_bo_y_prediction_std) + \
-                                                    estimated_bo_y_prediction_std * \
-                                                    norm.pdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
-                                                                estimated_bo_y_prediction_std)
-                elif acquisition_function == 'PI':
-                    acquisition_function_prediction = norm.cdf(
-                            (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) / estimated_bo_y_prediction_std)
-                elif acquisition_function == 'PTR':
-                    acquisition_function_prediction = norm.cdf(target_range[1],
-                                                            loc=estimated_bo_y_prediction,
-                                                            scale=estimated_bo_y_prediction_std
-                                                            ) - norm.cdf(target_range[0],
-                                                                            loc=estimated_bo_y_prediction,
-                                                                            scale=estimated_bo_y_prediction_std)
-                acquisition_function_prediction[estimated_bo_y_prediction_std <= 0] = 0
-                
-                # 保存
-                estimated_bo_y_prediction = pd.DataFrame(estimated_bo_y_prediction, bo_x_prediction.index, columns=['estimated_y'])
-                estimated_bo_y_prediction_std = pd.DataFrame(estimated_bo_y_prediction_std, bo_x_prediction.index, columns=['std_of_estimated_y'])
-                acquisition_function_prediction = pd.DataFrame(acquisition_function_prediction, index=bo_x_prediction.index, columns=['acquisition_function'])
-        #        
-                # 次のサンプル
-                next_samples = pd.concat([next_samples, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
-                
-                # x, y, x_prediction, cumulative_variance の更新
-                bo_x_data = pd.concat([bo_x_data, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
-                bo_y_data = pd.concat([bo_y_data, estimated_bo_y_prediction.loc[acquisition_function_prediction.idxmax()].iloc[0]], axis=0)
-                bo_x_prediction = bo_x_prediction.drop(acquisition_function_prediction.idxmax(), axis=0)
-                cumulative_variance = np.delete(cumulative_variance, np.where(acquisition_function_prediction.index == acquisition_function_prediction.iloc[:, 0].idxmax())[0][0])
-            next_samples_df = next_samples.copy()
-        
-        # 結果の保存
-        #params_with_score_df.sort_values('r2cv score', ascending=False).to_csv('params_with_score.csv')
-        params_with_score_df_best = params_with_score_df.sort_values('r2cv score', ascending=False).iloc[0, :] # r2が高い順にソート
-        shape_of_map = params_with_score_df_best['shape of map']
-        # shape of rbf centerの決定
-        shape_of_rbf_centers = params_with_score_df_best['shape of rbf centers']
-        # variance of rbfの決定
-        variance_of_rbfs = params_with_score_df_best['variance of rbfs']
-        # lambdaの決定
-        lambda_in_em = params_with_score_df_best['lambda']
-        # repの決定
-        rep_series = params_with_score_df_best[[x for x in params_with_score_df_best.index if 'rep' in x]]
-        rep_type = rep_series.loc[rep_series == 1]
-        self.shape_of_map =[int(shape_of_map), int(shape_of_map)]
-        self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
-        self.variance_of_rbfs = variance_of_rbfs
-        self.lambda_in_em_algorithm = lambda_in_em
-        self.rep = (rep_type.index[0]).replace('rep_', '')
-        self.r2cv = params_with_score_df_best['r2cv score']
+                    if bo_regression_method == 'gpr_one_kernel':
+                        bo_selected_kernel = bo_kernels[bo_kernel_number]
+                        bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_selected_kernel)
+            
+                    elif bo_regression_method == 'gpr_kernels':
+                        # クロスバリデーションによるカーネル関数の最適化
+                        bo_cross_validation = KFold(n_splits=bo_gp_fold_number, random_state=9, shuffle=True) # クロスバリデーションの分割の設定
+                        bo_r2cvs = [] # 空の list。カーネル関数ごとに、クロスバリデーション後の r2 を入れていきます
+                        for index, bo_kernel in enumerate(bo_kernels):
+                            bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_kernel)
+                            estimated_bo_y_in_cv = np.ndarray.flatten(cross_val_predict(bo_model, autoscaled_bo_x_data, autoscaled_bo_y_data, cv=bo_cross_validation))
+                            estimated_bo_y_in_cv = estimated_bo_y_in_cv * bo_y_data.std(ddof=1) + bo_y_data.mean()
+                            bo_r2cvs.append(r2_score(bo_y_data, estimated_bo_y_in_cv))
+                        optimal_bo_kernel_number = np.where(bo_r2cvs == np.max(bo_r2cvs))[0][0]  # クロスバリデーション後の r2 が最も大きいカーネル関数の番号
+                        optimal_bo_kernel = bo_kernels[optimal_bo_kernel_number]  # クロスバリデーション後の r2 が最も大きいカーネル関数
+                        
+                        # モデル構築
+                        bo_model = GaussianProcessRegressor(alpha=0, kernel=optimal_bo_kernel) # GPR モデルの宣言
+                    
+                    bo_model.fit(autoscaled_bo_x_data, autoscaled_bo_y_data)  # モデルの学習
+                    
+                    # 予測
+                    estimated_bo_y_prediction, estimated_bo_y_prediction_std = bo_model.predict(autoscaled_bo_x_prediction, return_std=True)
+                    estimated_bo_y_prediction = estimated_bo_y_prediction * bo_y_data.std() + bo_y_data.mean()
+                    estimated_bo_y_prediction_std = estimated_bo_y_prediction_std * bo_y_data.std()
+                    
+                    cumulative_variance = np.zeros(bo_x_prediction.shape[0])
+                    # 獲得関数の計算
+                    if acquisition_function == 'MI':
+                        acquisition_function_prediction = estimated_bo_y_prediction + np.log(2 / delta) ** 0.5 * (
+                                (estimated_bo_y_prediction_std ** 2 + cumulative_variance) ** 0.5 - cumulative_variance ** 0.5)
+                        cumulative_variance = cumulative_variance + estimated_bo_y_prediction_std ** 2
+                    elif acquisition_function == 'EI':
+                        acquisition_function_prediction = (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) * \
+                                                        norm.cdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
+                                                                    estimated_bo_y_prediction_std) + \
+                                                        estimated_bo_y_prediction_std * \
+                                                        norm.pdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
+                                                                    estimated_bo_y_prediction_std)
+                    elif acquisition_function == 'PI':
+                        acquisition_function_prediction = norm.cdf(
+                                (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) / estimated_bo_y_prediction_std)
+                    elif acquisition_function == 'PTR':
+                        acquisition_function_prediction = norm.cdf(target_range[1],
+                                                                loc=estimated_bo_y_prediction,
+                                                                scale=estimated_bo_y_prediction_std
+                                                                ) - norm.cdf(target_range[0],
+                                                                                loc=estimated_bo_y_prediction,
+                                                                                scale=estimated_bo_y_prediction_std)
+                    acquisition_function_prediction[estimated_bo_y_prediction_std <= 0] = 0
+                    
+                    # 保存
+                    estimated_bo_y_prediction = pd.DataFrame(estimated_bo_y_prediction, bo_x_prediction.index, columns=['estimated_y'])
+                    estimated_bo_y_prediction_std = pd.DataFrame(estimated_bo_y_prediction_std, bo_x_prediction.index, columns=['std_of_estimated_y'])
+                    acquisition_function_prediction = pd.DataFrame(acquisition_function_prediction, index=bo_x_prediction.index, columns=['acquisition_function'])
+            #        
+                    # 次のサンプル
+                    next_samples = pd.concat([next_samples, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
+                    
+                    # x, y, x_prediction, cumulative_variance の更新
+                    bo_x_data = pd.concat([bo_x_data, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
+                    bo_y_data = pd.concat([bo_y_data, estimated_bo_y_prediction.loc[acquisition_function_prediction.idxmax()].iloc[0]], axis=0)
+                    bo_x_prediction = bo_x_prediction.drop(acquisition_function_prediction.idxmax(), axis=0)
+                    cumulative_variance = np.delete(cumulative_variance, np.where(acquisition_function_prediction.index == acquisition_function_prediction.iloc[:, 0].idxmax())[0][0])
+                next_samples_df = next_samples.copy()
+            
+            # 結果の保存
+            #params_with_score_df.sort_values('r2cv score', ascending=False).to_csv('params_with_score.csv')
+            params_with_score_df_best = params_with_score_df.sort_values('r2cv score', ascending=False).iloc[0, :] # r2が高い順にソート
+            shape_of_map = params_with_score_df_best['shape of map']
+            # shape of rbf centerの決定
+            shape_of_rbf_centers = params_with_score_df_best['shape of rbf centers']
+            # variance of rbfの決定
+            variance_of_rbfs = params_with_score_df_best['variance of rbfs']
+            # lambdaの決定
+            lambda_in_em = params_with_score_df_best['lambda']
+            # repの決定
+            rep_series = params_with_score_df_best[[x for x in params_with_score_df_best.index if 'rep' in x]]
+            rep_type = rep_series.loc[rep_series == 1]
+            self.shape_of_map =[int(shape_of_map), int(shape_of_map)]
+            self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
+            self.variance_of_rbfs = variance_of_rbfs
+            self.lambda_in_em_algorithm = lambda_in_em
+            self.rep = (rep_type.index[0]).replace('rep_', '')
+            self.r2cv = params_with_score_df_best['r2cv score']
         if bo_display_flag:
             self.display_flag = True
-    
+
     def k3nerror_bo(self, dataset, candidates_of_shape_of_map, candidates_of_shape_of_rbf_centers,
                candidates_of_variance_of_rbfs, candidates_of_lambda_in_em_algorithm, number_of_iterations,
                k_in_k3nerror=10, bo_iteration_number=15):
@@ -885,203 +891,241 @@ class GTM:
                         params_temp_list.append([gtmr_map, gtmr_rbf_c, gtmr_var, gtmr_lambda])
         params_df = pd.DataFrame(params_temp_list, columns=['shape of map', 'shape of rbf centers', 'variance of rbfs', 'lambda']) # 全組み合わせのDataframe
         
-        # ベイズ最適化の繰り返し
-        for bo_iter in bo_iterations:
-            if bo_display_flag:
-                print(f'Bayesian optimization iteration : {bo_iter + 1} / {bo_iteration_number}')
-        #    print('='*10)
-            if bo_iter == 0: # 最初の試行ではD最適基準を計算
-                # D最適基準の計算
-                param_std = params_df.std(axis=0, ddof=1)
-                param_std[np.where(param_std == 0)[0]] = 1
-                autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
-        
-                all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
-        
-                np.random.seed(110) # 乱数を生成するためのシードを固定
-                for random_search_number in range(doe_number_of_random_searches):
-                    # 1. ランダムに候補を選択
-                    new_selected_indexes = np.random.choice(all_indexes, doe_number_of_selecting_samples, replace=False)
-                    new_selected_samples = autoscaled_params_df.iloc[new_selected_indexes, :]
-                    # 2. D 最適基準を計算
-                    xt_x = np.dot(new_selected_samples.T, new_selected_samples)
-                    d_optimal_value = np.linalg.det(xt_x) 
-                    # 3. D 最適基準が前回までの最大値を上回ったら、選択された候補を更新
-                    if random_search_number == 0:
-                        best_d_optimal_value = d_optimal_value.copy()
-                        selected_sample_indexes = new_selected_indexes.copy()
-                    else:
-                        if best_d_optimal_value < d_optimal_value:
+        if params_df.shape[0] <= doe_number_of_selecting_samples + bo_iteration_number:
+            # grid search
+            parameters_and_k3nerror = []
+            calculation_number = 0
+            for shape_of_map_grid in candidates_of_shape_of_map:
+                for shape_of_rbf_centers_grid in candidates_of_shape_of_rbf_centers:
+                    for variance_of_rbfs_grid in candidates_of_variance_of_rbfs:
+                        for lambda_in_em_algorithm_grid in candidates_of_lambda_in_em_algorithm:
+                            calculation_number += 1
+                            self.shape_of_map = [shape_of_map_grid, shape_of_map_grid]
+                            self.shape_of_rbf_centers = [shape_of_rbf_centers_grid, shape_of_rbf_centers_grid]
+                            self.variance_of_rbfs = variance_of_rbfs_grid
+                            self.lambda_in_em_algorithm = lambda_in_em_algorithm_grid
+                            self.fit(dataset)
+                            if self.success_flag:
+                                # calculate of responsibilities
+                                responsibilities = self.responsibility(dataset)
+                                # calculate the mean of responsibilities
+                                means = responsibilities.dot(self.map_grids)
+                                # calculate k3n-error
+                                k3nerror_of_gtm = k3nerror(dataset, means, k_in_k3nerror) + k3nerror(means, dataset, k_in_k3nerror)
+                            else:
+                                k3nerror_of_gtm = 10 ** 100
+                            parameters_and_k3nerror.append(
+                                [shape_of_map_grid, shape_of_rbf_centers_grid, variance_of_rbfs_grid, lambda_in_em_algorithm_grid,
+                                 k3nerror_of_gtm])
+            # optimized GTM
+            parameters_and_k3nerror = np.array(parameters_and_k3nerror)
+            optimized_hyperparameter_number = \
+                np.where(parameters_and_k3nerror[:, 4] == np.min(parameters_and_k3nerror[:, 4]))[0][0]
+            self.shape_of_map = [int(parameters_and_k3nerror[optimized_hyperparameter_number, 0]),
+                                 int(parameters_and_k3nerror[optimized_hyperparameter_number, 0])]
+            self.shape_of_rbf_centers = [int(parameters_and_k3nerror[optimized_hyperparameter_number, 1]),
+                                         int(parameters_and_k3nerror[optimized_hyperparameter_number, 1])]
+            self.variance_of_rbfs = parameters_and_k3nerror[optimized_hyperparameter_number, 2]
+            self.lambda_in_em_algorithm = parameters_and_k3nerror[optimized_hyperparameter_number, 3]
+            self.k3nerror = np.min(parameters_and_k3nerror[:, 4])
+        else:
+            # ベイズ最適化の繰り返し
+            for bo_iter in bo_iterations:
+                if bo_display_flag:
+                    print(f'Bayesian optimization iteration : {bo_iter + 1} / {bo_iteration_number}')
+            #    print('='*10)
+                if bo_iter == 0: # 最初の試行ではD最適基準を計算
+                    # D最適基準の計算
+                    param_std = params_df.std(axis=0, ddof=1)
+                    param_std[np.where(param_std == 0)[0]] = 1
+                    autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
+            
+                    all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
+            
+                    np.random.seed(110) # 乱数を生成するためのシードを固定
+                    for random_search_number in range(doe_number_of_random_searches):
+                        # 1. ランダムに候補を選択
+                        new_selected_indexes = np.random.choice(all_indexes, doe_number_of_selecting_samples, replace=False)
+                        new_selected_samples = autoscaled_params_df.iloc[new_selected_indexes, :]
+                        # 2. D 最適基準を計算
+                        xt_x = np.dot(new_selected_samples.T, new_selected_samples)
+                        d_optimal_value = np.linalg.det(xt_x) 
+                        # 3. D 最適基準が前回までの最大値を上回ったら、選択された候補を更新
+                        if random_search_number == 0:
                             best_d_optimal_value = d_optimal_value.copy()
                             selected_sample_indexes = new_selected_indexes.copy()
-                selected_sample_indexes = list(selected_sample_indexes) # リスト型に変換
-        
-                # 選択されたサンプル、選択されなかったサンプル
-                selected_params_df = params_df.iloc[selected_sample_indexes, :]  # 選択されたサンプル
-                bo_params_df = selected_params_df.copy() # BOのGPモデル構築用データを作成
-                remaining_indexes = np.delete(all_indexes, selected_sample_indexes)  # 選択されなかったサンプルのインデックス
-                remaining_params_df = params_df.iloc[remaining_indexes, :]  # 選択されなかったサンプル
-        
-                # 選択された全候補でGTMRの計算
-                params_with_score_df = params_df.copy() # cvのscoreが含まれるdataframe
-                params_with_score_df['k3nerror score'] = np.nan # 初期値はnanを設定
-        
-            else: # 2回目以降では前回の結果をもとにする
-                selected_sample_indexes = next_samples_df.index # 提案サンプルのindex
-                selected_params_df = params_df.loc[selected_sample_indexes, :] # 次に計算するサンプル
-                bo_params_df = pd.concat([bo_params_df, selected_params_df], axis=0) # BOのGPモデル構築用データは前回のデータと提案サンプルをマージする
-                remaining_params_df = params_df.loc[params_with_score_df['k3nerror score'].isna(), :] # 選択されなかったサンプル
-                remaining_params_df = remaining_params_df.drop(index=selected_sample_indexes)
-        
-            # 選ばれたサンプル（パラメータの組み合わせ）を一つずつ計算する
-            for i_n, selected_params_idx in enumerate(selected_sample_indexes):
-                selected_params = selected_params_df.loc[selected_params_idx, :] # サンプルの選択
-                # shape of mapの決定
-                shape_of_map = selected_params['shape of map']
-                # shape of rbf centerの決定
-                shape_of_rbf_centers = selected_params['shape of rbf centers']
-                # variance of rbfの決定
-                variance_of_rbfs = selected_params['variance of rbfs']
-                # lambdaの決定
-                lambda_in_em = selected_params['lambda']
-                # GTMモデルの構築
-                self.shape_of_map = [shape_of_map, shape_of_map]
-                self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
-                self.variance_of_rbfs = variance_of_rbfs
-                self.lambda_in_em_algorithm = lambda_in_em
-                self.fit(dataset)
-                if self.success_flag:
-                    means, modes = self.means_modes(dataset)
-                    # calculate k3n-error
-                    if rep == 'mean':
-                        k3nerror_of_gtm = k3nerror(dataset, means, k_in_k3nerror) + k3nerror(means, dataset, k_in_k3nerror)
-                    elif rep == 'mode':
-                        k3nerror_of_gtm = k3nerror(dataset, modes, k_in_k3nerror) + k3nerror(modes, dataset, k_in_k3nerror)
-                else:
-#                    k3nerror_of_gtm = 10 ** 100
-                    k3nerror_of_gtm = (np.random.rand()/10 + 1) * 50
-
-                params_with_score_df['k3nerror score'].loc[selected_params_idx] = k3nerror_of_gtm # データの保存
-                
-            if bo_display_flag:
-                print('Best k3n-error :', params_with_score_df['k3nerror score'].min())
-                print('='*10)
+                        else:
+                            if best_d_optimal_value < d_optimal_value:
+                                best_d_optimal_value = d_optimal_value.copy()
+                                selected_sample_indexes = new_selected_indexes.copy()
+                    selected_sample_indexes = list(selected_sample_indexes) # リスト型に変換
             
-            # 最後はBOの計算をしないためbreak
-            if bo_iter + 1 == bo_iteration_number:
-                break
+                    # 選択されたサンプル、選択されなかったサンプル
+                    selected_params_df = params_df.iloc[selected_sample_indexes, :]  # 選択されたサンプル
+                    bo_params_df = selected_params_df.copy() # BOのGPモデル構築用データを作成
+                    remaining_indexes = np.delete(all_indexes, selected_sample_indexes)  # 選択されなかったサンプルのインデックス
+                    remaining_params_df = params_df.iloc[remaining_indexes, :]  # 選択されなかったサンプル
+            
+                    # 選択された全候補でGTMRの計算
+                    params_with_score_df = params_df.copy() # cvのscoreが含まれるdataframe
+                    params_with_score_df['k3nerror score'] = np.nan # 初期値はnanを設定
+            
+                else: # 2回目以降では前回の結果をもとにする
+                    selected_sample_indexes = next_samples_df.index # 提案サンプルのindex
+                    selected_params_df = params_df.loc[selected_sample_indexes, :] # 次に計算するサンプル
+                    bo_params_df = pd.concat([bo_params_df, selected_params_df], axis=0) # BOのGPモデル構築用データは前回のデータと提案サンプルをマージする
+                    remaining_params_df = params_df.loc[params_with_score_df['k3nerror score'].isna(), :] # 選択されなかったサンプル
+                    remaining_params_df = remaining_params_df.drop(index=selected_sample_indexes)
+            
+                # 選ばれたサンプル（パラメータの組み合わせ）を一つずつ計算する
+                for i_n, selected_params_idx in enumerate(selected_sample_indexes):
+                    selected_params = selected_params_df.loc[selected_params_idx, :] # サンプルの選択
+                    # shape of mapの決定
+                    shape_of_map = selected_params['shape of map']
+                    # shape of rbf centerの決定
+                    shape_of_rbf_centers = selected_params['shape of rbf centers']
+                    # variance of rbfの決定
+                    variance_of_rbfs = selected_params['variance of rbfs']
+                    # lambdaの決定
+                    lambda_in_em = selected_params['lambda']
+                    # GTMモデルの構築
+                    self.shape_of_map = [shape_of_map, shape_of_map]
+                    self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
+                    self.variance_of_rbfs = variance_of_rbfs
+                    self.lambda_in_em_algorithm = lambda_in_em
+                    self.fit(dataset)
+                    if self.success_flag:
+                        means, modes = self.means_modes(dataset)
+                        # calculate k3n-error
+                        if rep == 'mean':
+                            k3nerror_of_gtm = k3nerror(dataset, means, k_in_k3nerror) + k3nerror(means, dataset, k_in_k3nerror)
+                        elif rep == 'mode':
+                            k3nerror_of_gtm = k3nerror(dataset, modes, k_in_k3nerror) + k3nerror(modes, dataset, k_in_k3nerror)
+                    else:
+    #                    k3nerror_of_gtm = 10 ** 100
+                        k3nerror_of_gtm = (np.random.rand()/10 + 1) * 50
+    
+                    params_with_score_df['k3nerror score'].loc[selected_params_idx] = k3nerror_of_gtm # データの保存
                     
-            # Bayesian optimization
-            bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
-            bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
-            bo_y_data = params_with_score_df.loc[bo_params_df.index, 'k3nerror score'] # yはGMRのr2cv
-            
-            # カーネル 11 種類
-            bo_kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
-                        ConstantKernel() * RBF() + WhiteKernel(),
-                        ConstantKernel() * RBF() + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel(),
-                        ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=1.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=0.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
-                        ConstantKernel() * Matern(nu=2.5) + WhiteKernel(),
-                        ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + ConstantKernel() * DotProduct()]
-        
-            next_samples = pd.DataFrame([], columns=selected_params_df.columns)  # 次のサンプルを入れる変数を準備
-        
-            # 次の候補を複数提案する繰り返し工程
-            for bo_sample_number in range(bo_number_of_selecting_samples):
-                # オートスケーリング
-                x_std = bo_x_data.std(axis=0, ddof=1)
-                x_std[np.where(x_std == 0)[0]] = 1
-                autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
-                autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
-                autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
+                if bo_display_flag:
+                    print('Best k3n-error :', params_with_score_df['k3nerror score'].min())
+                    print('='*10)
                 
-                # モデル構築
-                if bo_regression_method == 'gpr_one_kernel':
-                    bo_selected_kernel = bo_kernels[bo_kernel_number]
-                    bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_selected_kernel)
-        
-                elif bo_regression_method == 'gpr_kernels':
-                    # クロスバリデーションによるカーネル関数の最適化
-                    bo_cross_validation = KFold(n_splits=bo_gp_fold_number, random_state=9, shuffle=True) # クロスバリデーションの分割の設定
-                    bo_r2cvs = [] # 空の list。カーネル関数ごとに、クロスバリデーション後の r2 を入れていきます
-                    for index, bo_kernel in enumerate(bo_kernels):
-                        bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_kernel)
-                        estimated_bo_y_in_cv = np.ndarray.flatten(cross_val_predict(bo_model, autoscaled_bo_x_data, autoscaled_bo_y_data, cv=bo_cross_validation))
-                        estimated_bo_y_in_cv = estimated_bo_y_in_cv * bo_y_data.std(ddof=1) + bo_y_data.mean()
-                        bo_r2cvs.append(r2_score(bo_y_data, estimated_bo_y_in_cv))
-                    optimal_bo_kernel_number = np.where(bo_r2cvs == np.max(bo_r2cvs))[0][0]  # クロスバリデーション後の r2 が最も大きいカーネル関数の番号
-                    optimal_bo_kernel = bo_kernels[optimal_bo_kernel_number]  # クロスバリデーション後の r2 が最も大きいカーネル関数
+                # 最後はBOの計算をしないためbreak
+                if bo_iter + 1 == bo_iteration_number:
+                    break
+                        
+                # Bayesian optimization
+                bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
+                bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
+                bo_y_data = params_with_score_df.loc[bo_params_df.index, 'k3nerror score'] # yはGMRのr2cv
+                
+                # カーネル 11 種類
+                bo_kernels = [ConstantKernel() * DotProduct() + WhiteKernel(),
+                            ConstantKernel() * RBF() + WhiteKernel(),
+                            ConstantKernel() * RBF() + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel(),
+                            ConstantKernel() * RBF(np.ones(bo_x_data.shape[1])) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=1.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=1.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=0.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=0.5) + WhiteKernel() + ConstantKernel() * DotProduct(),
+                            ConstantKernel() * Matern(nu=2.5) + WhiteKernel(),
+                            ConstantKernel() * Matern(nu=2.5) + WhiteKernel() + ConstantKernel() * DotProduct()]
+            
+                next_samples = pd.DataFrame([], columns=selected_params_df.columns)  # 次のサンプルを入れる変数を準備
+            
+                # 次の候補を複数提案する繰り返し工程
+                for bo_sample_number in range(bo_number_of_selecting_samples):
+                    # オートスケーリング
+                    x_std = bo_x_data.std(axis=0, ddof=1)
+                    x_std[np.where(x_std == 0)[0]] = 1
+                    autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
+                    autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
+                    autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
                     
                     # モデル構築
-                    bo_model = GaussianProcessRegressor(alpha=0, kernel=optimal_bo_kernel) # GPR モデルの宣言
-                
-                bo_model.fit(autoscaled_bo_x_data, autoscaled_bo_y_data)  # モデルの学習
-                
-                # 予測
-                estimated_bo_y_prediction, estimated_bo_y_prediction_std = bo_model.predict(autoscaled_bo_x_prediction, return_std=True)
-                estimated_bo_y_prediction = estimated_bo_y_prediction * bo_y_data.std() + bo_y_data.mean()
-                estimated_bo_y_prediction_std = estimated_bo_y_prediction_std * bo_y_data.std()
-                
-#                cumulative_variance = np.zeros(bo_x_prediction.shape[0])
-                # 獲得関数の計算
-#                if acquisition_function == 'MI':
-#                    acquisition_function_prediction = estimated_bo_y_prediction + np.log(2 / delta) ** 0.5 * (
-#                            (estimated_bo_y_prediction_std ** 2 + cumulative_variance) ** 0.5 - cumulative_variance ** 0.5)
-#                    cumulative_variance = cumulative_variance + estimated_bo_y_prediction_std ** 2
-#                elif acquisition_function == 'EI':
-#                    acquisition_function_prediction = (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) * \
-#                                                    norm.cdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
-#                                                                estimated_bo_y_prediction_std) + \
-#                                                    estimated_bo_y_prediction_std * \
-#                                                    norm.pdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
-#                                                                estimated_bo_y_prediction_std)
-#                elif acquisition_function == 'PI':
-#                    acquisition_function_prediction = norm.cdf(
-#                            (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) / estimated_bo_y_prediction_std)
-                if acquisition_function == 'PTR':
-                    acquisition_function_prediction = norm.cdf(target_range[1],
-                                                            loc=estimated_bo_y_prediction,
-                                                            scale=estimated_bo_y_prediction_std
-                                                            ) - norm.cdf(target_range[0],
-                                                                            loc=estimated_bo_y_prediction,
-                                                                            scale=estimated_bo_y_prediction_std)
-                acquisition_function_prediction[estimated_bo_y_prediction_std <= 0] = 0
-                
-                # 保存
-                estimated_bo_y_prediction = pd.DataFrame(estimated_bo_y_prediction, bo_x_prediction.index, columns=['estimated_y'])
-                estimated_bo_y_prediction_std = pd.DataFrame(estimated_bo_y_prediction_std, bo_x_prediction.index, columns=['std_of_estimated_y'])
-                acquisition_function_prediction = pd.DataFrame(acquisition_function_prediction, index=bo_x_prediction.index, columns=['acquisition_function'])
-        #        
-                # 次のサンプル
-                next_samples = pd.concat([next_samples, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
-                
-                # x, y, x_prediction, cumulative_variance の更新
-                bo_x_data = pd.concat([bo_x_data, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
-                bo_y_data = pd.concat([bo_y_data, estimated_bo_y_prediction.loc[acquisition_function_prediction.idxmax()].iloc[0]], axis=0)
-                bo_x_prediction = bo_x_prediction.drop(acquisition_function_prediction.idxmax(), axis=0)
-#                cumulative_variance = np.delete(cumulative_variance, np.where(acquisition_function_prediction.index == acquisition_function_prediction.iloc[:, 0].idxmax())[0][0])
-            next_samples_df = next_samples.copy()
-        
-        # 結果の保存
-        #params_with_score_df.sort_values('r2cv score', ascending=True).to_csv('params_with_score.csv')
-        params_with_score_df_best = params_with_score_df.sort_values('k3nerror score', ascending=True).iloc[0, :] # k3n error が低い順にソート
-        shape_of_map = params_with_score_df_best['shape of map']
-        # shape of rbf centerの決定
-        shape_of_rbf_centers = params_with_score_df_best['shape of rbf centers']
-        # variance of rbfの決定
-        variance_of_rbfs = params_with_score_df_best['variance of rbfs']
-        # lambdaの決定
-        lambda_in_em = params_with_score_df_best['lambda']
-        self.shape_of_map =[int(shape_of_map), int(shape_of_map)]
-        self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
-        self.variance_of_rbfs = variance_of_rbfs
-        self.lambda_in_em_algorithm = lambda_in_em
-        self.k3nerror = params_with_score_df_best['k3nerror score']
+                    if bo_regression_method == 'gpr_one_kernel':
+                        bo_selected_kernel = bo_kernels[bo_kernel_number]
+                        bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_selected_kernel)
+            
+                    elif bo_regression_method == 'gpr_kernels':
+                        # クロスバリデーションによるカーネル関数の最適化
+                        bo_cross_validation = KFold(n_splits=bo_gp_fold_number, random_state=9, shuffle=True) # クロスバリデーションの分割の設定
+                        bo_r2cvs = [] # 空の list。カーネル関数ごとに、クロスバリデーション後の r2 を入れていきます
+                        for index, bo_kernel in enumerate(bo_kernels):
+                            bo_model = GaussianProcessRegressor(alpha=0, kernel=bo_kernel)
+                            estimated_bo_y_in_cv = np.ndarray.flatten(cross_val_predict(bo_model, autoscaled_bo_x_data, autoscaled_bo_y_data, cv=bo_cross_validation))
+                            estimated_bo_y_in_cv = estimated_bo_y_in_cv * bo_y_data.std(ddof=1) + bo_y_data.mean()
+                            bo_r2cvs.append(r2_score(bo_y_data, estimated_bo_y_in_cv))
+                        optimal_bo_kernel_number = np.where(bo_r2cvs == np.max(bo_r2cvs))[0][0]  # クロスバリデーション後の r2 が最も大きいカーネル関数の番号
+                        optimal_bo_kernel = bo_kernels[optimal_bo_kernel_number]  # クロスバリデーション後の r2 が最も大きいカーネル関数
+                        
+                        # モデル構築
+                        bo_model = GaussianProcessRegressor(alpha=0, kernel=optimal_bo_kernel) # GPR モデルの宣言
+                    
+                    bo_model.fit(autoscaled_bo_x_data, autoscaled_bo_y_data)  # モデルの学習
+                    
+                    # 予測
+                    estimated_bo_y_prediction, estimated_bo_y_prediction_std = bo_model.predict(autoscaled_bo_x_prediction, return_std=True)
+                    estimated_bo_y_prediction = estimated_bo_y_prediction * bo_y_data.std() + bo_y_data.mean()
+                    estimated_bo_y_prediction_std = estimated_bo_y_prediction_std * bo_y_data.std()
+                    
+    #                cumulative_variance = np.zeros(bo_x_prediction.shape[0])
+                    # 獲得関数の計算
+    #                if acquisition_function == 'MI':
+    #                    acquisition_function_prediction = estimated_bo_y_prediction + np.log(2 / delta) ** 0.5 * (
+    #                            (estimated_bo_y_prediction_std ** 2 + cumulative_variance) ** 0.5 - cumulative_variance ** 0.5)
+    #                    cumulative_variance = cumulative_variance + estimated_bo_y_prediction_std ** 2
+    #                elif acquisition_function == 'EI':
+    #                    acquisition_function_prediction = (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) * \
+    #                                                    norm.cdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
+    #                                                                estimated_bo_y_prediction_std) + \
+    #                                                    estimated_bo_y_prediction_std * \
+    #                                                    norm.pdf((estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) /
+    #                                                                estimated_bo_y_prediction_std)
+    #                elif acquisition_function == 'PI':
+    #                    acquisition_function_prediction = norm.cdf(
+    #                            (estimated_bo_y_prediction - max(bo_y_data) - relaxation * bo_y_data.std()) / estimated_bo_y_prediction_std)
+                    if acquisition_function == 'PTR':
+                        acquisition_function_prediction = norm.cdf(target_range[1],
+                                                                loc=estimated_bo_y_prediction,
+                                                                scale=estimated_bo_y_prediction_std
+                                                                ) - norm.cdf(target_range[0],
+                                                                                loc=estimated_bo_y_prediction,
+                                                                                scale=estimated_bo_y_prediction_std)
+                    acquisition_function_prediction[estimated_bo_y_prediction_std <= 0] = 0
+                    
+                    # 保存
+                    estimated_bo_y_prediction = pd.DataFrame(estimated_bo_y_prediction, bo_x_prediction.index, columns=['estimated_y'])
+                    estimated_bo_y_prediction_std = pd.DataFrame(estimated_bo_y_prediction_std, bo_x_prediction.index, columns=['std_of_estimated_y'])
+                    acquisition_function_prediction = pd.DataFrame(acquisition_function_prediction, index=bo_x_prediction.index, columns=['acquisition_function'])
+            #        
+                    # 次のサンプル
+                    next_samples = pd.concat([next_samples, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
+                    
+                    # x, y, x_prediction, cumulative_variance の更新
+                    bo_x_data = pd.concat([bo_x_data, bo_x_prediction.loc[acquisition_function_prediction.idxmax()]], axis=0)
+                    bo_y_data = pd.concat([bo_y_data, estimated_bo_y_prediction.loc[acquisition_function_prediction.idxmax()].iloc[0]], axis=0)
+                    bo_x_prediction = bo_x_prediction.drop(acquisition_function_prediction.idxmax(), axis=0)
+    #                cumulative_variance = np.delete(cumulative_variance, np.where(acquisition_function_prediction.index == acquisition_function_prediction.iloc[:, 0].idxmax())[0][0])
+                next_samples_df = next_samples.copy()
+            
+            # 結果の保存
+            #params_with_score_df.sort_values('r2cv score', ascending=True).to_csv('params_with_score.csv')
+            params_with_score_df_best = params_with_score_df.sort_values('k3nerror score', ascending=True).iloc[0, :] # k3n error が低い順にソート
+            shape_of_map = params_with_score_df_best['shape of map']
+            # shape of rbf centerの決定
+            shape_of_rbf_centers = params_with_score_df_best['shape of rbf centers']
+            # variance of rbfの決定
+            variance_of_rbfs = params_with_score_df_best['variance of rbfs']
+            # lambdaの決定
+            lambda_in_em = params_with_score_df_best['lambda']
+            self.shape_of_map = [int(shape_of_map), int(shape_of_map)]
+            self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
+            self.variance_of_rbfs = variance_of_rbfs
+            self.lambda_in_em_algorithm = lambda_in_em
+            self.k3nerror = params_with_score_df_best['k3nerror score']
         if bo_display_flag:
             self.display_flag = True
             
