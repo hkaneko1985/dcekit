@@ -481,7 +481,7 @@ class VBGMR(BayesianGaussianMixture):
 #        bo_iteration_number = 20 # BOの繰り返し回数
         bo_iterations = np.arange(0, bo_iteration_number + 1)
         bo_gp_fold_number = 5 # BOのGPを構築するためのcvfold数
-        bo_number_of_selecting_samples = 5  # 選択するサンプル数
+        bo_number_of_selecting_samples = 1  # 選択するサンプル数
         bo_regression_method = 'gpr_one_kernel'  # gpr_one_kernel', 'gpr_kernels'
         bo_kernel_number = 2  # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         acquisition_function = 'PI'  # 'PTR', 'PI', 'EI', 'MI'
