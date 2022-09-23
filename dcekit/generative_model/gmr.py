@@ -698,9 +698,11 @@ class GMR(GaussianMixture):
                 # 次の候補を複数提案する繰り返し工程
                 for bo_sample_number in range(bo_number_of_selecting_samples):
                     # オートスケーリング
+                    bo_x_data_std = bo_x_data.std()
+                    bo_x_data_std[bo_x_data_std == 0] = 1
                     autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
-                    autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / bo_x_data.std()
-                    autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / bo_x_data.std()
+                    autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / bo_x_data_std
+                    autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / bo_x_data_std
                     
                     # モデル構築
                     if bo_regression_method == 'gpr_one_kernel':
