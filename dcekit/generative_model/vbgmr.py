@@ -26,7 +26,7 @@ class VBGMR(BayesianGaussianMixture):
                  weight_concentration_prior_type='dirichlet_process',
                  weight_concentration_prior=0.01, rep='mean', max_iter=100,
                  random_state=None, display_flag=False):
-        super(VBGMR, self).__init__(n_components=n_components, covariance_type=covariance_type,
+        super(self.__class__, self).__init__(n_components=n_components, covariance_type=covariance_type,
                                     weight_concentration_prior_type=weight_concentration_prior_type,
                                     weight_concentration_prior=weight_concentration_prior,
                                     max_iter=max_iter, random_state=random_state)

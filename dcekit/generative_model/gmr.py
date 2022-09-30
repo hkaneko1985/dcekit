@@ -25,7 +25,7 @@ class GMR(GaussianMixture):
 
     def __init__(self, n_components=1, covariance_type='full', rep='mean',
                  max_iter=100, random_state=None, display_flag=False):
-        super(GMR, self).__init__(n_components=n_components, covariance_type=covariance_type,
+        super(self.__class__, self).__init__(n_components=n_components, covariance_type=covariance_type,
                                   max_iter=max_iter, random_state=random_state)
         
         self.rep = rep
