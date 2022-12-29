@@ -296,7 +296,7 @@ def bo_dnn_hyperparams(x, y,
     #params_with_score_df.sort_values('score', ascending=False).to_csv('params_with_score.csv')
     params_with_score_df_best = params_with_score_df.sort_values('score', ascending=False).iloc[0, :] # r2が高い順にソー
     best_r2cv = params_with_score_df_best['score'].copy()
-    print(best_r2cv)
+#    print(best_r2cv)
     best_candidate_combination = all_candidate_combinations_df.loc[params_with_score_df_best.name].copy()
     
     optimal_hidden_layer_sizes = hidden_layer_sizes_candidates[int(best_candidate_combination.iloc[0])]
