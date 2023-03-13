@@ -223,7 +223,7 @@ for target_y_number in range(len(y_targets)):
                 variable_numbers = np.where(group_numbers_other_than_0 == group_number)[0]
                 target_values = best_individual_array[variable_numbers]
                 indexes = np.argsort(target_values)
-                best_individual_array[variable_numbers[indexes[0:(len(variable_numbers) - other_than_0_numbers[variable_numbers[0]])]]] = 0
+                best_individual_array[variable_numbers[indexes[0:(len(variable_numbers) - int(other_than_0_numbers[variable_numbers[0]]))]]] = 0
         
         best_individual_array[zero_one_variable_numbers] = np.array((np.round(best_individual_array[zero_one_variable_numbers])), dtype='int64')
     
