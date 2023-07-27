@@ -13,7 +13,7 @@ with open('LICENSE.txt') as f:
 
 setup(
     name='dcekit',
-    version='2.12.2',
+    version='2.12.3',
     description='Data Chemical Engineering toolkit',
     long_description=readme,
     author='Hiromasa Kaneko',
