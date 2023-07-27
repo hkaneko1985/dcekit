@@ -31,7 +31,7 @@ def cvpfi(
             for i in range(x_corr.shape[1]):
                 for j in range(i + 1, x_corr.shape[1]):
                     z = 1 / 2 * np.log((1 + x_corr[i, j]) / (1 - x_corr[i, j])) # フィッシャーの z 変換
-                    interval_of_normal_distribution = norm.interval(alpha=alpha_r, loc=z, scale=(1 / (X.shape[0] - 3)) ** 0.5)
+                    interval_of_normal_distribution = norm.interval(alpha_r, loc=z, scale=(1 / (X.shape[0] - 3)) ** 0.5)
                     interval_of_normal_distribution = np.array(interval_of_normal_distribution)
                     interval_of_r = (np.exp(2 * interval_of_normal_distribution) - 1) / (np.exp(2 * interval_of_normal_distribution) + 1)
 #                    print(interval_of_r)
@@ -124,7 +124,7 @@ def cvpfi_gmr(
             for i in range(x_corr.shape[1]):
                 for j in range(i + 1, x_corr.shape[1]):
                     z = 1 / 2 * np.log((1 + x_corr[i, j]) / (1 - x_corr[i, j])) # フィッシャーの z 変換
-                    interval_of_normal_distribution = norm.interval(alpha=alpha_r, loc=z, scale=(1 / (X.shape[0] - 3)) ** 0.5)
+                    interval_of_normal_distribution = norm.interval(alpha_r, loc=z, scale=(1 / (X.shape[0] - 3)) ** 0.5)
                     interval_of_normal_distribution = np.array(interval_of_normal_distribution)
                     interval_of_r = (np.exp(2 * interval_of_normal_distribution) - 1) / (np.exp(2 * interval_of_normal_distribution) + 1)
                     if interval_of_r[0] * interval_of_r[1] < 0:
