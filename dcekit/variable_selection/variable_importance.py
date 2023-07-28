@@ -5,7 +5,7 @@
 
 import numpy as np
 from numpy import matlib
-from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.metrics import r2_score, mean_absolute_error, accuracy_score
 from scipy.stats import norm
 
 def cvpfi(
@@ -92,7 +92,15 @@ def cvpfi(
             for n_repeat in range(n_repeats):
 #                print(r2_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
                 importances[variable_number, n_repeat] = r2cv - r2_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
+    elif scoring == 'accuracy':
+        accuracy_cv = accuracy_score(y, estimated_y_in_cv)
+#        print(accuracy_score)
+        for variable_number in range(X.shape[1]):
+            for n_repeat in range(n_repeats):
+#                print(accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
+                importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
         
+    
     importances_mean = importances.mean(axis=1)
     importances_std = importances.std(axis=1, ddof=1)
     np.random.seed()
