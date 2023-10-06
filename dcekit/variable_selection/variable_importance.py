@@ -7,6 +7,7 @@ import numpy as np
 from numpy import matlib
 from sklearn.metrics import r2_score, mean_absolute_error, accuracy_score
 from scipy.stats import norm
+import copy
 
 def cvpfi(
     estimator,
@@ -22,7 +23,8 @@ def cvpfi(
     
     X = np.array(X)
     y = np.array(y)
-        
+    estimator_copy = copy.deepcopy(estimator)    
+    
     if alpha_r == 1:  # no correlation correction
         x_corr = np.eye(X.shape[1])
     else:
@@ -59,8 +61,8 @@ def cvpfi(
         x_train = X[fold_index != fold_number_in_outer_cv, :]
         y_train = y[fold_index != fold_number_in_outer_cv]
         x_test = X[fold_index == fold_number_in_outer_cv, :]
-        estimator.fit(x_train, y_train)
-        estimated_y_test = estimator.predict(x_test)
+        estimator_copy.fit(x_train, y_train)
+        estimated_y_test = estimator_copy.predict(x_test)
         estimated_y_in_cv[fold_index==fold_number_in_outer_cv] = np.ndarray.flatten(estimated_y_test)
         for variable_number in range(X.shape[1]):
             target_variable_all = X[:, variable_number].copy()
@@ -82,7 +84,7 @@ def cvpfi(
                                 if np.random.rand(1)[0] < target_x_corr[corr_variable_number]:
                                     x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
                                 
-                estimated_y_test_shuffled = np.ndarray.flatten(estimator.predict(x_test_shuffled))
+                estimated_y_test_shuffled = np.ndarray.flatten(estimator_copy.predict(x_test_shuffled))
                 estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, n_repeat, variable_number] = estimated_y_test_shuffled
     importances = np.zeros([X.shape[1], n_repeats])
     if scoring == 'r2':
@@ -123,6 +125,7 @@ def cvpfi_gmr(
     dataset = np.array(dataset)
     y = dataset[:, numbers_of_y]
     X = dataset[:, numbers_of_x]
+    estimator_copy = copy.deepcopy(estimator)   
     
     if alpha_r == 1:  # no correlation correction
         x_corr = np.eye(X.shape[1])
@@ -154,8 +157,8 @@ def cvpfi_gmr(
     for fold_number_in_outer_cv in range(fold_number):
         dataset_train = dataset[fold_index != fold_number_in_outer_cv, :]
         x_test = X[fold_index == fold_number_in_outer_cv, :]
-        estimator.fit(dataset_train)
-        estimated_y_test = estimator.predict_rep(x_test, numbers_of_x, numbers_of_y)
+        estimator_copy.fit(dataset_train)
+        estimated_y_test = estimator_copy.predict_rep(x_test, numbers_of_x, numbers_of_y)
         estimated_y_in_cv[fold_index==fold_number_in_outer_cv, :] = estimated_y_test
         for variable_number in range(X.shape[1]):
             target_variable_all = X[:, variable_number].copy()
@@ -178,7 +181,7 @@ def cvpfi_gmr(
                             for sample_number in range(x_test.shape[0]):
                                 if np.random.rand(1)[0] < target_x_corr[corr_variable_number]:
                                     x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
-                estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, :, n_repeat, variable_number] = estimator.predict_rep(x_test_shuffled, numbers_of_x, numbers_of_y)
+                estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, :, n_repeat, variable_number] = estimator_copy.predict_rep(x_test_shuffled, numbers_of_x, numbers_of_y)
     
     importances = np.zeros([X.shape[1], n_repeats])
     if scoring == 'r2':
