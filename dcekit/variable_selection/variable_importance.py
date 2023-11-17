@@ -54,7 +54,10 @@ def cvpfi(
     fold_index = np.random.permutation(index)
     
     estimated_y_in_cv = y.copy()
-    estimated_y_in_cv_shuffled = np.zeros([X.shape[0], n_repeats, X.shape[1]])
+    if y.ndim == 1:
+        estimated_y_in_cv_shuffled = np.zeros([X.shape[0], n_repeats, X.shape[1]])
+    else:
+        estimated_y_in_cv_shuffled = np.zeros([X.shape[0], y.shape[1], n_repeats, X.shape[1]])
     # cross-validatoin
     for fold_number_in_outer_cv in range(fold_number):
 #        print(fold_number_in_outer_cv + 1, '/', fold_number)
@@ -63,7 +66,10 @@ def cvpfi(
         x_test = X[fold_index == fold_number_in_outer_cv, :]
         estimator_copy.fit(x_train, y_train)
         estimated_y_test = estimator_copy.predict(x_test)
-        estimated_y_in_cv[fold_index==fold_number_in_outer_cv] = np.ndarray.flatten(estimated_y_test)
+        if y.ndim == 1:
+            estimated_y_in_cv[fold_index==fold_number_in_outer_cv] = np.ndarray.flatten(estimated_y_test)
+        else:
+            estimated_y_in_cv[fold_index==fold_number_in_outer_cv, :] = estimated_y_test
         for variable_number in range(X.shape[1]):
             target_variable_all = X[:, variable_number].copy()
             target_x_corr = x_corr[:, variable_number]
@@ -85,23 +91,39 @@ def cvpfi(
                                     x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
                                 
                 estimated_y_test_shuffled = np.ndarray.flatten(estimator_copy.predict(x_test_shuffled))
-                estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, n_repeat, variable_number] = estimated_y_test_shuffled
+                if y.ndim == 1:
+                    estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, n_repeat, variable_number] = estimated_y_test_shuffled
+                else:
+                    estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, :, n_repeat, variable_number] = estimated_y_test_shuffled
+                    
     importances = np.zeros([X.shape[1], n_repeats])
     if scoring == 'r2':
-        r2cv = r2_score(y, estimated_y_in_cv)
+        if y.ndim == 1:
+            r2cv = r2_score(y, estimated_y_in_cv)
+        else:
+            r2cv = r2_score(np.ravel(y), np.ravel(estimated_y_in_cv))
 #        print(r2cv)
         for variable_number in range(X.shape[1]):
             for n_repeat in range(n_repeats):
 #                print(r2_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
-                importances[variable_number, n_repeat] = r2cv - r2_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
+                if y.ndim == 1:
+                    importances[variable_number, n_repeat] = r2cv - r2_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
+                else:
+                    importances[variable_number, n_repeat] = r2cv - r2_score(np.ravel(y), np.ravel(estimated_y_in_cv_shuffled[:, :, n_repeat, variable_number]))
     elif scoring == 'accuracy':
-        accuracy_cv = accuracy_score(y, estimated_y_in_cv)
+        if y.ndim == 1:
+            accuracy_cv = accuracy_score(y, estimated_y_in_cv)
+        else:
+            accuracy_cv = accuracy_score(np.ravel(y), np.ravel(estimated_y_in_cv))
 #        print(accuracy_score)
         for variable_number in range(X.shape[1]):
             for n_repeat in range(n_repeats):
 #                print(accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
-                importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
-        
+                if y.ndim == 1:
+                    importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
+                else:
+                    importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(np.ravel(y), np.ravel(estimated_y_in_cv_shuffled[:, :, n_repeat, variable_number]))
+
     
     importances_mean = importances.mean(axis=1)
     importances_std = importances.std(axis=1, ddof=1)
