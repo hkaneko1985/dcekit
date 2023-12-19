@@ -90,9 +90,9 @@ def cvpfi(
                                 if np.random.rand(1)[0] < target_x_corr[corr_variable_number]:
                                     x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
                                 
-                estimated_y_test_shuffled = np.ndarray.flatten(estimator_copy.predict(x_test_shuffled))
+                estimated_y_test_shuffled = estimator_copy.predict(x_test_shuffled)
                 if y.ndim == 1:
-                    estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, n_repeat, variable_number] = estimated_y_test_shuffled
+                    estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, n_repeat, variable_number] = np.ndarray.flatten(estimated_y_test_shuffled)
                 else:
                     estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, :, n_repeat, variable_number] = estimated_y_test_shuffled
                     
