@@ -21,7 +21,7 @@ def lomp(
         
     lomp = np.zeros(x.shape)
     model_i = LinearRegression()
-    for sample_number in range(x.shape[1]):
+    for sample_number in range(x.shape[0]):
         if random_state:
             np.random.seed(random_state)
         x_upper = x[sample_number, :] + x_half_range
