@@ -10,3 +10,5 @@ from .iot import iot_obj_func
 from .iot import iot
 from .opt_dnn_hyperparams import bo_dnn_hyperparams
 from .opt_dnn_hyperparams import gs_dnn_hyperparams
+from .opt_dnn_hyperparams_class import bo_dnn_hyperparams_class
+from .opt_dnn_hyperparams_class import gs_dnn_hyperparams_class
