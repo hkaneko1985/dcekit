@@ -3,7 +3,7 @@
 @author: Hiromasa Kaneko
 """
 
-# Demonstration of hyperparameter optimization with grid search and cross-validation (DCEGridSearchCV) for EN
+# Demonstration of hyperparameter optimization based on Bayesian optimization for DNN regression
 
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
 
 number_of_test_samples = 200
-hidden_layer_sizes_candidates=[(50,), (100,), (50, 10), (100, 10), (50, 50, 10), (100, 100, 10), (50, 50, 50, 10), (100, 100, 100, 10)]
+hidden_layer_sizes_candidates = [(50,), (100,), (50, 10), (100, 10), (50, 50, 10), (100, 100, 10), (50, 50, 50, 10), (100, 100, 100, 10)]
 activation_candidates = ['identity', 'logistic', 'tanh', 'relu']
 alpha_candidates = 10 ** np.arange(-6, -1, dtype=float)
 learning_rate_init_candidates = 10 ** np.arange(-5, 0, dtype=float)
