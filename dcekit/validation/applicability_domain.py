@@ -87,7 +87,7 @@ class ApplicabilityDomain():
             knn_dist_all, knn_ind_all = self.ad.kneighbors(None)
             ad_values = 1 / (knn_dist_all.mean(axis=1) + 1)
         elif self.method_name == 'lof':
-            self.ad = LocalOutlierFactor(novelty=True, contamination=self.rate_of_outliers)
+            self.ad = LocalOutlierFactor(n_neighbors=self.n_neighbors, novelty=True, contamination=self.rate_of_outliers)
             self.ad.fit(x)
             ad_values = self.ad.negative_outlier_factor_ - self.ad.offset_
             
