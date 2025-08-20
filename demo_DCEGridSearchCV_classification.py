@@ -28,7 +28,7 @@ class_types = list(set(y_train))  # クラスの種類。これで混同行列�
 class_types.sort(reverse=True)  # 並び替え
 
 # autoscaling
-autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(ddof=1)
+autoscaled_x_train = (x_train - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
 autoscaled_x_test = (x_test - x_train.mean(axis=0)) / x_train.std(axis=0, ddof=1)
 
 # SVM hyperparameter optimization with grid search and cross-validation (DCEGridSearchCV)
