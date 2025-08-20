@@ -23,7 +23,7 @@ breast_cancer = load_breast_cancer()
 y = breast_cancer.target
 x = breast_cancer.data
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, stratify=y, random_state=0)
 class_types = list(set(y_train))  # クラスの種類。これで混同行列における縦と横のクラスの順番を定めます
 class_types.sort(reverse=True)  # 並び替え
 
