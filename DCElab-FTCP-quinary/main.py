@@ -19,7 +19,7 @@ from itertools import product
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import ReduceLROnPlateau, LearningRateScheduler
-from module.data import data_query, FTCP_represent
+from module.data import FTCP_represent
 from module.utils import pad, minmax, inv_minmax
 from module.FTCP import LossHistoryCallback, FTCP_VAE
 
@@ -46,7 +46,7 @@ coeff_prop    = 10
 
 # Execution flags
 restart_flag     = True    # Whether to restart training from an intermediate state
-code_test        = True   # For testing code
+code_test        = True   # For testing code. Set to False for production runs.
 
 # Target properties
 prop = ['formation_energy_per_atom', 'band_gap']
