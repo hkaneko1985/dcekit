@@ -76,9 +76,13 @@ The following files are newly written or substantially modified in this work:
 | `tensorflow==1.15.5` | Not available on PyPI for Python 3.8+ |
 | `numpy==1.18.5` | Build fails on Python 3.9+ |
 <<<<<<< HEAD
+<<<<<<< HEAD
 | `pymatgen==2021.3.9` | Compilation errors on Python 3.9+ |
 =======
 | `pymatgen==2019.12.22` | Compilation errors on Python 3.9+ |
+>>>>>>> 2.15.X
+=======
+| `pymatgen==2021.3.9` | Compilation errors on Python 3.9+ |
 >>>>>>> 2.15.X
 
 ```bash
@@ -88,9 +92,13 @@ conda activate ftcp_env
 pip install numpy==1.18.5 pandas matplotlib scikit-learn joblib tqdm
 pip install tensorflow==1.15.5 keras==2.3.1 protobuf==3.20.3  # or tensorflow-gpu==1.15.5 for GPU
 <<<<<<< HEAD
+<<<<<<< HEAD
 pip install matminer==0.6.2 pymatgen==2021.3.9 monty==3.0.2 ase
 =======
 pip install matminer==0.6.2 pymatgen==2019.12.22 monty==3.0.2 ase
+>>>>>>> 2.15.X
+=======
+pip install matminer==0.6.2 pymatgen==2021.3.9 monty==3.0.2 ase
 >>>>>>> 2.15.X
 pip install ruamel.yaml==0.17.21 ruamel.yaml.clib==0.2.7
 

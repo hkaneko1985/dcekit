@@ -6,11 +6,10 @@ from tqdm import tqdm
 tqdm = partial(tqdm, position=0, leave=True)
 from sklearn.preprocessing import OneHotEncoder
 from pymatgen.core import Structure
-from mp_api.client import MPRester
+#from mp_api.client import MPRester
 
-
+'''
 def data_query(mp_api_key, max_elms=3, min_elms=3, max_sites=20, include_te=False):
-    """
     The function queries data from Materials Project.
 
     Parameters
@@ -33,8 +32,7 @@ def data_query(mp_api_key, max_elms=3, min_elms=3, max_sites=20, include_te=Fals
     -------
     dataframe : pandas dataframe
         Dataframe returned by MPDataRetrieval.
-
-    """
+    
     with MPRester(mp_api_key) as mpr:
         # Query materials with specified criteria
         docs = mpr.materials.summary.search(
@@ -86,7 +84,7 @@ def data_query(mp_api_key, max_elms=3, min_elms=3, max_sites=20, include_te=Fals
         dataframe['Seebeck'] = dataframe['Seebeck'].apply(np.abs)
     
     return dataframe
-
+'''
 
 def FTCP_represent(dataframe, max_elms=3, max_sites=20, return_Nsites=False):
     '''
