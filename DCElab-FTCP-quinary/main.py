@@ -319,7 +319,7 @@ max_elms, min_elms, max_sites = 5, 3, 112
 
 # Specify the CNN model to be trained and the network architecture
 network_pattern_numbers = ["0", "1", "2", "3", "4", "5", "6"]
-cnn_patterns            = ['0', '1', '2', '3']
+cnn_patterns            = ['0', '1', '2']
 supervised_modes        = [True, False]
 
 # SVAE/USVAE taining hyperparameters
@@ -331,7 +331,7 @@ coeff_prop    = 10
 
 # Execution flags
 restart_flag     = True    # Whether to restart training from an intermediate state
-code_test        = True   # For testing code. Set to False for production runs.
+code_test        = False   # For testing code. Set to False for production runs.
 
 # Target properties
 prop = ['formation_energy_per_atom', 'band_gap']
