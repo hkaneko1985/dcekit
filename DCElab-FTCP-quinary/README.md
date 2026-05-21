@@ -134,7 +134,7 @@ Key settings:
 ```python
 data_name               = 'data_query_3_5_elements_property_nsites_below_112'
 network_pattern_numbers = ["0", "1", "2", "3", "4", "5", "6"]
-cnn_patterns            = ['0', '1', '2', '3']
+cnn_patterns            = ['0', '1', '2']
 supervised_modes        = [True, False]   # SVAE and USVAE
 epochs                  = 200
 batch_size              = 256
@@ -178,7 +178,6 @@ Define the convolutional structure of the encoder (Conv1D) and decoder (Conv2DTr
 | 0 | kernel=5, stride=2 | 3 | Baseline (same as PV-Lab/FTCP) |
 | 1 | kernel=3, stride=1 | 3 | Resolution-preserving in first stage |
 | 2 | kernel=3, stride=1 | 4 | Additional Conv layer |
-| 3 | kernel=5, stride=2 | 3 | Fine-grained receptive field variant |
 
 ### Network Patterns
 

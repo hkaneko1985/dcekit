@@ -109,10 +109,10 @@ SUBSET_COLOR = {"3-4": "black", "5": "red"}
 
 # Global font size settings
 FS = {
-    "base":   20,
-    "tick":   18,
-    "legend": 15,
-    "title":  20,
+    "base":   22,
+    "tick":   20,
+    "legend": 20,
+    "title":  22,
 }
 
 plt.rcParams.update({
@@ -127,12 +127,9 @@ plt.rcParams.update({
 sns.set_style("ticks")
 
 # Model/network pattern configurations for full sweep
-cnn_patterns_all        = ["0", "1", "2", "3"]
+cnn_patterns_all        = ["0", "1", "2"]
 superviseds_all         = ["SVAE", "USVAE"]
-network_pattern_numbers = ["0", "1", "2", "5", "6", "8", "15", "16"]
-
-# Paper-side pattern index mapping
-paper_pattern_map = {"0": 0, "15": 1, "16": 2, "1": 3, "8": 4, "2": 5, "6": 6}
+network_pattern_numbers = ["0", "1", "2", "3", "4", "5", "6"]
 
 
 # ===========================================================================
@@ -272,7 +269,6 @@ for cnn, sup, net in itertools.product(cnn_patterns_all, superviseds_all, networ
         tf.keras.backend.clear_session()
 
 df_all_breakdown = pd.DataFrame(all_breakdown_rows)
-df_all_breakdown["paper_pattern"] = df_all_breakdown["network_pattern_code"].map(paper_pattern_map)
 
 all_breakdown_path = os.path.join(OUT_ROOT, "all_models_breakdown_3-4_vs_5.csv")
 df_all_breakdown.to_csv(all_breakdown_path, index=False)
