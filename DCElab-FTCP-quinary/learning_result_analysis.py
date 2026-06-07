@@ -1274,7 +1274,7 @@ best_tag, ranking_df = find_best_cfg(result_all)
 ranking_df.to_csv(os.path.join(OUT_ROOT, "model_ranking.csv"))
 print(f"\n  Best model detected: {best_tag}")
 
-# Build BEST_CFG from auto-detected tag
+# Build BEST_CFG from auto-detected tags
 BEST_CFG      = tag_to_cfg(best_tag)
 BEST_CFG["label"] = f"Proposed\n({best_tag})"
 
