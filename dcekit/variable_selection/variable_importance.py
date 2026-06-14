@@ -88,7 +88,11 @@ def cvpfi(
                             corr_variable_all = X[:, corr_variable_number].copy()                            
                             for sample_number in range(x_test.shape[0]):
                                 if np.random.rand(1)[0] < target_x_corr[corr_variable_number]:
-                                    x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
+                                    tmp = np.random.choice(corr_variable_all, 1, replace=replace)
+                                    if len(tmp)== 1:
+                                        x_test_shuffled[sample_number, corr_variable_number] = tmp[0]
+                                    else:
+                                        x_test_shuffled[sample_number, corr_variable_number] = tmp
                                 
                 estimated_y_test_shuffled = estimator_copy.predict(x_test_shuffled)
                 if y.ndim == 1:
@@ -115,11 +119,12 @@ def cvpfi(
             accuracy_cv = accuracy_score(y, estimated_y_in_cv)
         else:
             accuracy_cv = accuracy_score(np.ravel(y), np.ravel(estimated_y_in_cv))
-#        print(accuracy_score)
+        print(accuracy_cv)
         for variable_number in range(X.shape[1]):
             for n_repeat in range(n_repeats):
 #                print(accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
                 if y.ndim == 1:
+                    print(accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number]))
                     importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(y, estimated_y_in_cv_shuffled[:, n_repeat, variable_number])
                 else:
                     importances[variable_number, n_repeat] = accuracy_cv - accuracy_score(np.ravel(y), np.ravel(estimated_y_in_cv_shuffled[:, :, n_repeat, variable_number]))
@@ -202,7 +207,11 @@ def cvpfi_gmr(
                             corr_variable_all = X[:, corr_variable_number].copy()                            
                             for sample_number in range(x_test.shape[0]):
                                 if np.random.rand(1)[0] < target_x_corr[corr_variable_number]:
-                                    x_test_shuffled[sample_number, corr_variable_number] = np.random.choice(corr_variable_all, 1, replace=replace)
+                                    tmp = np.random.choice(corr_variable_all, 1, replace=replace)
+                                    if len(tmp)== 1:
+                                        x_test_shuffled[sample_number, corr_variable_number] = tmp[0]
+                                    else:
+                                        x_test_shuffled[sample_number, corr_variable_number] = tmp
                 estimated_y_in_cv_shuffled[fold_index==fold_number_in_outer_cv, :, n_repeat, variable_number] = estimator_copy.predict_rep(x_test_shuffled, numbers_of_x, numbers_of_y)
     
     importances = np.zeros([X.shape[1], n_repeats])

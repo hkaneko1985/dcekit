@@ -103,7 +103,7 @@ def clustering_based_on_correlation_coefficients(x, threshold_of_r):
     distance_in_x = 1 / r_in_x
 
     # clustering
-    clustering = AgglomerativeClustering(n_clusters=None, affinity='precomputed', compute_full_tree='True',
+    clustering = AgglomerativeClustering(n_clusters=None, metric='precomputed', compute_full_tree='auto',
                                          distance_threshold=1 / threshold_of_r, linkage='complete')
     clustering.fit(distance_in_x)
     cluster_numbers = clustering.labels_

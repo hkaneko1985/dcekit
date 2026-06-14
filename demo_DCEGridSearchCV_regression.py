@@ -9,9 +9,8 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from dcekit.validation import DCEGridSearchCV
+from dcekit.validation import DCEGridSearchCV, train_test_split_group
 from sklearn.linear_model import ElasticNet
-from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 
 number_of_test_samples = 200
@@ -20,9 +19,9 @@ alphas = np.arange(0, 1.01, 0.01, dtype=float) # α for EN
 fold_number = 5
 
 # load dataset
-boston = load_boston()
-y = boston.target
-x = boston.data
+dataset = pd.read_csv('boston.csv', index_col=0)
+y = dataset.iloc[:, 0]
+x = dataset.iloc[:, 1:]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
 

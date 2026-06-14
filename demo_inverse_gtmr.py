@@ -11,7 +11,7 @@ import mpl_toolkits.mplot3d
 import numpy as np
 from dcekit.generative_model import GTM
 # import pandas as pd
-from sklearn.datasets.samples_generator import make_swiss_roll
+from sklearn.datasets import make_swiss_roll
 
 target_y_value = 4  # y-target for inverse analysis
 
@@ -31,7 +31,7 @@ numbers_of_x = [0, 1, 2]
 numbers_of_y = [3]
 
 # load a swiss roll dataset and make a y-variable
-x, color = make_swiss_roll(number_of_samples, 0, random_state=10)
+x, color = make_swiss_roll(n_samples=number_of_samples, noise=0, random_state=10)
 raw_y = 0.3 * x[:, 0] - 0.1 * x[:, 1] + 0.2 * x[:, 2]
 y = raw_y + noise_ratio_of_y * raw_y.std(ddof=1) * np.random.randn(len(raw_y))
 # plot

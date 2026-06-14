@@ -9,7 +9,7 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 from dcekit.generative_model import GTM
-from sklearn.datasets.samples_generator import make_s_curve
+from sklearn.datasets import make_s_curve
 from sklearn.model_selection import train_test_split
 
 # settings
@@ -30,7 +30,7 @@ numbers_of_y = [3, 4]
 
 # Generate samples for demonstration
 np.random.seed(seed=100)
-x, color = make_s_curve(number_of_samples, random_state=10)
+x, color = make_s_curve(n_samples=number_of_samples, random_state=10)
 raw_y1 = 0.3 * x[:, 0] - 0.1 * x[:, 1] + 0.2 * x[:, 2]
 y1 = raw_y1 + noise_ratio_of_y * raw_y1.std(ddof=1) * np.random.randn(len(raw_y1))
 raw_y2 = np.arcsin(x[:, 0]) + np.log(x[:, 1]) - 0.5 * x[:, 2] ** 4 + 5

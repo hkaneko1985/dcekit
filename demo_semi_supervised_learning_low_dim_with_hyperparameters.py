@@ -19,7 +19,7 @@ max_pls_component_number = 30
 fold_number = 10
 
 # load dataset
-dataset = pd.read_csv('descriptors8_with_boiling_point.csv', encoding='SHIFT-JIS', index_col=0)
+dataset = pd.read_csv('descriptors8_with_boiling_point.csv', index_col=0)
 y = dataset.iloc[:, 0]
 x = dataset.iloc[:, 1:]
 

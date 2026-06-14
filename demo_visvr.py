@@ -10,7 +10,6 @@ import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.datasets import load_boston
 from sklearn import svm
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV, train_test_split, cross_val_predict
@@ -30,9 +29,9 @@ random_forest_number_of_trees = 500  # Number of decision trees for random fores
 random_forest_x_variables_rates = np.arange(1, 10, dtype=float) / 10  # Ratio of the number of X-variables for random forest
 weights_of_feature_importances = list(np.arange(0, 3.1, 0.1)) # p in VI-SVR
 
-x, y = load_boston(return_X_y=True)
-x = pd.DataFrame(x)
-y = pd.Series(y)
+dataset = pd.read_csv('boston.csv', index_col=0)
+y = dataset.iloc[:, 0]
+x = dataset.iloc[:, 1:]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=rate_of_test_samples, shuffle=True)
     
 # autoscaling

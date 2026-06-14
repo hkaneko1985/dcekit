@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from dcekit.learning import DCEBaggingRegressor
-from sklearn.datasets import load_boston
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import WhiteKernel, RBF, ConstantKernel
 from sklearn.model_selection import cross_val_predict, train_test_split
@@ -20,9 +19,9 @@ rate_of_selected_variables = 0.7
 fold_number = 5
 
 # load dataset
-boston = load_boston()
-y = boston.target
-x = boston.data
+dataset = pd.read_csv('boston.csv', index_col=0)
+y = dataset.iloc[:, 0]
+x = dataset.iloc[:, 1:]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
 

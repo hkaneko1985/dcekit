@@ -21,8 +21,6 @@ alpha_r = 0.999  # alpha (the significance level) in the r (correlation) conside
 fold_number = 5
 svm_cs = 2 ** np.arange(-10, 11, dtype=float)
 svm_gammas = 2 ** np.arange(-20, 10, dtype=float)
-svm_cs = 2 ** np.arange(-5, -3, dtype=float)
-svm_gammas = 2 ** np.arange(-15, -13, dtype=float)
 
 # load dataset
 breast_cancer = load_breast_cancer()

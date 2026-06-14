@@ -132,9 +132,9 @@ class VBGMR(BayesianGaussianMixture):
         """
         
         mode_of_estimated_mean, weighted_estimated_mean, _, _ = self.predict(dataset, numbers_of_input_variables, numbers_of_output_variables)
-        if self.rep == 'mean':
+        if self.rep == 'mode':
             values = mode_of_estimated_mean.copy()
-        elif self.rep == 'mode':
+        elif self.rep == 'mean':
             values = weighted_estimated_mean.copy()
         return values
     

@@ -12,7 +12,7 @@ threshold_of_r = 0.95  # variable whose absolute correlation coefficnent with ot
 threshold_of_rate_of_same_value = 1
 
 # load data set
-dataset = pd.read_csv('descriptors_with_logS.csv', encoding='SHIFT-JIS', index_col=0)
+dataset = pd.read_csv('descriptors_with_logS.csv', index_col=0)
 
 dataset = dataset.loc[:, dataset.mean().index]  # 平均を計算できる変数だけ選択
 dataset = dataset.replace(np.inf, np.nan).fillna(np.nan)  # infをnanに置き換えておく

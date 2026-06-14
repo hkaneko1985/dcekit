@@ -24,8 +24,10 @@ warnings.simplefilter('ignore')
 class GMR(GaussianMixture):
 
     def __init__(self, n_components=1, covariance_type='full', rep='mean',
+                 weights_init=None, means_init=None, precisions_init=None,
                  max_iter=100, random_state=None, display_flag=False):
         super(self.__class__, self).__init__(n_components=n_components, covariance_type=covariance_type,
+                                  weights_init=weights_init, means_init=means_init, precisions_init=precisions_init,
                                   max_iter=max_iter, random_state=random_state)
         
         self.rep = rep
@@ -123,9 +125,9 @@ class GMR(GaussianMixture):
         """
 
         mode_of_estimated_mean, weighted_estimated_mean, _, _ = self.predict(dataset, numbers_of_input_variables, numbers_of_output_variables)
-        if self.rep == 'mean':
+        if self.rep == 'mode':
             values = mode_of_estimated_mean.copy()
-        elif self.rep == 'mode':
+        elif self.rep == 'mean':
             values = weighted_estimated_mean.copy()
         return values
     
@@ -301,7 +303,6 @@ class GMR(GaussianMixture):
         Parameters
         ----------
         gmm_model: mixture.gaussian_mixture.GaussianMixture
-            GMM model constructed using scikit-learn
         dataset: numpy.array or pandas.DataFrame
             (autoscaled) m x n matrix of dataset of training data or test data,
             m is the number of sammples and
@@ -371,7 +372,7 @@ class GMR(GaussianMixture):
 
         input_means = self.means_[:, numbers_of_input_variables]
         output_means = self.means_[:, numbers_of_output_variables]
-
+        
         if self.covariance_type == 'full':
             all_covariances = self.covariances_
         elif self.covariance_type == 'diag':
@@ -422,8 +423,112 @@ class GMR(GaussianMixture):
             if np.isinf(weights.sum(axis=0)).any():
                 weights = np.ones(weights.shape)
             weights = weights / weights.sum(axis=0)
-
+            
         return estimated_means, estimated_covariances, weights
+    
+    def predict_mog_pdf(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
+        """
+        Gaussian Mixture Regression (GMR) based on Gaussian Mixture Model (GMM)
+        
+        Predict values of variables for forward analysis (regression) and inverse analysis. Predition results are given as mixture of Gaussians
+    
+        Parameters
+        ----------
+        gmm_model: mixture.gaussian_mixture.GaussianMixture
+            GMM model constructed using scikit-learn
+        dataset: numpy.array or pandas.DataFrame
+            (autoscaled) m x n matrix of dataset of training data or test data,
+            m is the number of sammples and
+            n is the number of input variables
+            When this is X-variables, it is forward analysis (regression) and
+            when this is Y-variables, it is inverse analysis
+        numbers_of_input_variables: list
+            vector of numbers of input variables
+            When this is numbers of X-variables, it is forward analysis (regression) and
+            when this is numbers of Y-variables, it is inverse analysis
+        numbers_of_output_variables: list
+            vector of numbers of output variables
+            When this is numbers of Y-variables, it is forward analysis (regression) and
+            when this is numbers of X-variables, it is inverse analysis
+    
+        Returns
+        -------
+        estimated_means : numpy.array
+            (autoscaled) l x m x k matrix of output variables estimated for all components,
+            k is the number of output variables
+        estimated_covariances : numpy.array
+            (autoscaled) l x k x k variance-covariance matrix of output variables estimated for all components,
+        weights : numpy.array
+            l x m matrix of weights,
+        """
+
+        dataset = np.array(dataset)
+        if dataset.ndim == 0:
+            dataset = np.reshape(dataset, (1, 1))
+        elif dataset.ndim == 1:
+            dataset = np.reshape(dataset, (1, dataset.shape[0]))
+
+        input_means = self.means_[:, numbers_of_input_variables]
+        output_means = self.means_[:, numbers_of_output_variables]
+
+        if self.covariance_type == 'full':
+            all_covariances = self.covariances_
+        elif self.covariance_type == 'diag':
+            all_covariances = np.empty(
+                [self.n_components, self.covariances_.shape[1], self.covariances_.shape[1]])
+            for component_number in range(self.n_components):
+                all_covariances[component_number, :, :] = np.diag(self.covariances_[component_number, :])
+        elif self.covariance_type == 'tied':
+            all_covariances = np.tile(self.covariances_, (self.n_components, 1, 1))
+        elif self.covariance_type == 'spherical':
+            all_covariances = np.empty([self.n_components, self.means_.shape[1], self.means_.shape[1]])
+            for component_number in range(self.n_components):
+                all_covariances[component_number, :, :] = np.diag(
+                    self.covariances_[component_number] * np.ones(self.means_.shape[1]))
+
+        estimated_means = np.zeros([self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
+        estimated_covariances = np.zeros([self.n_components, len(numbers_of_output_variables), len(numbers_of_output_variables)])
+        weights = np.zeros([self.n_components, dataset.shape[0]])
+        pdfs = np.zeros([self.n_components, dataset.shape[0]])
+        logpdfs = np.zeros([self.n_components, dataset.shape[0]])
+
+#        print(all_covariances.shape[2], len(numbers_of_input_variables), len(numbers_of_output_variables))
+        if all_covariances.shape[2] == len(numbers_of_input_variables) + len(numbers_of_output_variables):
+            input_output_covariances = all_covariances[:, numbers_of_input_variables, :]
+            input_covariances = input_output_covariances[:, :, numbers_of_input_variables]
+            input_output_covariances = input_output_covariances[:, :, numbers_of_output_variables]
+            output_input_covariances = all_covariances[:, numbers_of_output_variables, :]
+            output_covariances = output_input_covariances[:, :, numbers_of_output_variables]
+            output_input_covariances = output_input_covariances[:, :, numbers_of_input_variables]
+            
+            # estimated means and weights for all components
+            for component_number in range(self.n_components):
+                estimated_means[component_number, :, :] = output_means[component_number, :] + (
+                        dataset - input_means[component_number, :]).dot(
+                    np.linalg.inv(input_covariances[component_number, :, :])).dot(
+                    input_output_covariances[component_number, :, :])
+                estimated_covariances[component_number, :, :] = output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
+                        np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :])
+                try:
+                    weights[component_number, :] = self.weights_[component_number] * \
+                                                   multivariate_normal.pdf(dataset,
+                                                                           input_means[component_number, :],
+                                                                           input_covariances[component_number, :, :])
+                    pdfs[component_number, :] = multivariate_normal.pdf(dataset, input_means[component_number, :], input_covariances[component_number, :, :])
+                    logpdfs[component_number, :] = multivariate_normal.logpdf(dataset, input_means[component_number, :], input_covariances[component_number, :, :])
+                except:
+                    print('assignment of weights is failed, and zero is assigned')
+                   
+            if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
+                weights = np.ones(weights.shape)
+            if np.isnan(weights.sum(axis=0)).any():
+                weights = np.ones(weights.shape)
+            if np.isinf(weights.sum(axis=0)).any():
+                weights = np.ones(weights.shape)
+            weights = weights / weights.sum(axis=0)
+            ioe = -logsumexp(logpdfs, axis=0, b=weights)
+
+        return estimated_means, estimated_covariances, weights, pdfs, logpdfs, ioe
     
     def cv_opt(self, dataset, numbers_of_input_variables, numbers_of_output_variables, covariance_types,
                numbers_of_components, fold_number):

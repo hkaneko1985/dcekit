@@ -134,4 +134,5 @@ best_individual_array = np.array(best_individual)
 selected_x_variable_numbers = np.where(best_individual_array > threshold_of_variable_selection)[0]
 print('Selected variables : %s, %s' % (selected_x_variable_numbers, best_individual.fitness.values[0]))
 selected_x_variable_numbers_df = pd.DataFrame(selected_x_variable_numbers)
-selected_x_variable_numbers.to_csv('ga_plsfc_selected_x_numbers.csv')  # save results
+selected_x_variable_numbers_df.to_csv('ga_plsfc_selected_x_numbers.csv')  # save results
+

@@ -12,7 +12,7 @@ from dcekit.generative_model import GTM
 from sklearn.datasets import load_iris
 
 # settings
-candidates_of_shape_of_map = np.arange(30, 31, dtype=int)
+candidates_of_shape_of_map = np.arange(5, 31, dtype=int)
 candidates_of_shape_of_rbf_centers = np.arange(2, 22, 2, dtype=int)
 candidates_of_variance_of_rbfs = 2 ** np.arange(-5, 4, 2, dtype=float)
 candidates_of_lambda_in_em_algorithm = 2 ** np.arange(-4, 0, dtype=float)

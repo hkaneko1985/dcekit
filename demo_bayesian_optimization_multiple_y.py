@@ -23,9 +23,9 @@ fold_number = 10
 relaxation_value = 0.01
 
 # load datasets and settings
-training_data = pd.read_csv('training_data.csv', encoding='SHIFT-JIS', index_col=0)
-x_for_prediction = pd.read_csv('x_for_prediction.csv', encoding='SHIFT-JIS', index_col=0)
-settings = pd.read_csv('settings.csv', encoding='SHIFT-JIS', index_col=0)
+training_data = pd.read_csv('training_data.csv', index_col=0)
+x_for_prediction = pd.read_csv('x_for_prediction.csv', index_col=0)
+settings = pd.read_csv('settings.csv', index_col=0)
 
 # check datasets and settings
 number_of_y_variables = settings.shape[1]

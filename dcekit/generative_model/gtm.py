@@ -627,7 +627,7 @@ class GTM:
                 if bo_iter == 0: # 最初の試行ではD最適基準を計算
                     # D最適基準の計算
                     param_std = params_df.std(axis=0, ddof=1)
-                    param_std[np.where(param_std == 0)[0]] = 1
+                    param_std.iloc[np.where(param_std == 0)[0]] = 1
                     autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
             
                     all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
@@ -748,7 +748,7 @@ class GTM:
                 for bo_sample_number in range(bo_number_of_selecting_samples):
                     # オートスケーリング
                     x_std = bo_x_data.std(axis=0, ddof=1)
-                    x_std[np.where(x_std == 0)[0]] = 1
+                    x_std.iloc[np.where(x_std == 0)[0]] = 1
                     autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
                     autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
                     autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
@@ -937,7 +937,7 @@ class GTM:
                 if bo_iter == 0: # 最初の試行ではD最適基準を計算
                     # D最適基準の計算
                     param_std = params_df.std(axis=0, ddof=1)
-                    param_std[np.where(param_std == 0)[0]] = 1
+                    param_std.iloc[np.where(param_std == 0)[0]] = 1
                     autoscaled_params_df = (params_df - params_df.mean(axis=0)) / param_std # 計算のために標準化
             
                     all_indexes = list(range(autoscaled_params_df.shape[0])) # indexを取得
@@ -1004,8 +1004,8 @@ class GTM:
                     else:
     #                    k3nerror_of_gtm = 10 ** 100
                         k3nerror_of_gtm = (np.random.rand()/10 + 1) * 50
-    
-                    params_with_score_df['k3nerror score'].loc[selected_params_idx] = k3nerror_of_gtm # データの保存
+                    
+                    params_with_score_df.loc[selected_params_idx, 'k3nerror score'] = k3nerror_of_gtm # データの保存
                     
                 if bo_display_flag:
                     print('Best k3n-error :', params_with_score_df['k3nerror score'].min())
@@ -1016,7 +1016,7 @@ class GTM:
                     break
                         
                 # Bayesian optimization
-                bo_x_data = bo_params_df.copy() # GP学習用データはGMRの結果があるサンプル
+                bo_x_data = bo_params_df.copy() # GP学習用データはGTMの結果があるサンプル
                 bo_x_prediction = remaining_params_df.copy() # predictionは選択されていない（GMRの結果がない）サンプル
                 bo_y_data = params_with_score_df.loc[bo_params_df.index, 'k3nerror score'] # yはGMRのr2cv
                 
@@ -1039,7 +1039,7 @@ class GTM:
                 for bo_sample_number in range(bo_number_of_selecting_samples):
                     # オートスケーリング
                     x_std = bo_x_data.std(axis=0, ddof=1)
-                    x_std[np.where(x_std == 0)[0]] = 1
+                    x_std.iloc[np.where(x_std == 0)[0]] = 1
                     autoscaled_bo_y_data = (bo_y_data - bo_y_data.mean()) / bo_y_data.std()
                     autoscaled_bo_x_data = (bo_x_data - bo_x_data.mean()) / x_std
                     autoscaled_bo_x_prediction = (bo_x_prediction - bo_x_data.mean()) / x_std
@@ -1125,6 +1125,7 @@ class GTM:
             self.shape_of_rbf_centers = [shape_of_rbf_centers, shape_of_rbf_centers]
             self.variance_of_rbfs = variance_of_rbfs
             self.lambda_in_em_algorithm = lambda_in_em
+            self.rep = 'mean'
             self.k3nerror = params_with_score_df_best['k3nerror score']
         if bo_display_flag:
             self.display_flag = True

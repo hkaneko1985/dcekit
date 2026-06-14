@@ -51,7 +51,7 @@ group_numbers_only_one = settings.iloc[8, :].values
 only_one_numbers = settings.iloc[9, :].values
 group_numbers_other_than_0 = settings.iloc[10, :].values
 other_than_0_numbers = settings.iloc[11, :].values
-rounding_numbers = settings.iloc[12, :].values
+rounding_numbers = settings.iloc[12, :].to_numpy(copy=True)
 rounding_numbers[zero_one_variable_numbers] = 999
 
 variables_train = np.array(dataset)

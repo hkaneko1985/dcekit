@@ -8,8 +8,8 @@
 import matplotlib.figure as figure
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from dcekit.optimization import bo_dnn_hyperparams
-from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
 
@@ -21,9 +21,9 @@ learning_rate_init_candidates = 10 ** np.arange(-5, 0, dtype=float)
 fold_number = 5
 
 # load dataset
-boston = load_boston()
-y = boston.target
-x = boston.data
+dataset = pd.read_csv('boston.csv', index_col=0)
+y = dataset.iloc[:, 0]
+x = dataset.iloc[:, 1:]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=number_of_test_samples, random_state=0)
 
