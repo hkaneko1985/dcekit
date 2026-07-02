@@ -317,13 +317,12 @@ class VBGMR(BayesianGaussianMixture):
                 except:
                     print('assignment of weights is failed, and zero is assigned')
                     
-            if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
-                weights = np.ones(weights.shape)
-            if np.isnan(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            if np.isinf(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            weights = weights / weights.sum(axis=0)
+            weights_sum = weights.sum(axis=0)
+            invalid_samples = (weights_sum <= 0) | (~np.isfinite(weights_sum))
+            if invalid_samples.any():
+                weights[:, invalid_samples] = 1.0
+                weights_sum = weights.sum(axis=0)
+            weights = weights / weights_sum
 
         return estimated_means, estimated_covariances, weights
     
@@ -419,13 +418,12 @@ class VBGMR(BayesianGaussianMixture):
                 except:
                     print('assignment of weights is failed, and zero is assigned')
                     
-            if len(np.where(weights.sum(axis=0)==0)[0]) > 0:
-                weights = np.ones(weights.shape)
-            if np.isnan(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            if np.isinf(weights.sum(axis=0)).any():
-                weights = np.ones(weights.shape)
-            weights = weights / weights.sum(axis=0)
+            weights_sum = weights.sum(axis=0)
+            invalid_samples = (weights_sum <= 0) | (~np.isfinite(weights_sum))
+            if invalid_samples.any():
+                weights[:, invalid_samples] = 1.0
+                weights_sum = weights.sum(axis=0)
+            weights = weights / weights_sum
             ioe = -logsumexp(logpdfs, axis=0, b=weights)
 
         return estimated_means, estimated_covariances, weights, pdfs, logpdfs, ioe
