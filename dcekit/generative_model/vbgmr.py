@@ -34,6 +34,79 @@ class VBGMR(BayesianGaussianMixture):
         self.rep = rep
         self.display_flag = display_flag
 
+    def _calculate_logpdfs_and_weights(self, dataset, input_means, input_covariances):
+        """
+        Calculate posterior component weights in log-space.
+    
+        Parameters
+        ----------
+        dataset : numpy.ndarray
+            Input samples, shape = (n_samples, n_input_variables)
+        input_means : numpy.ndarray
+            Means of input variables, shape = (n_components, n_input_variables)
+        input_covariances : numpy.ndarray
+            Covariance matrices of input variables,
+            shape = (n_components, n_input_variables, n_input_variables)
+    
+        Returns
+        -------
+        weights : numpy.ndarray
+            Posterior weights, shape = (n_components, n_samples)
+        logpdfs : numpy.ndarray
+            Component-wise log density of input variables,
+            shape = (n_components, n_samples)
+        log_normalizer : numpy.ndarray
+            log p(x) for each sample, shape = (n_samples,)
+        """
+    
+        n_samples = dataset.shape[0]
+    
+        # log N(x | mu_x,k, Sigma_xx,k)
+        logpdfs = np.full([self.n_components, n_samples], -np.inf)
+    
+        for component_number in range(self.n_components):
+            try:
+                logpdfs[component_number, :] = multivariate_normal.logpdf(
+                    dataset,
+                    mean=input_means[component_number, :],
+                    cov=input_covariances[component_number, :, :]
+                )
+            except Exception:
+                print('assignment of logpdfs is failed, and -inf is assigned')
+    
+        # log pi_k
+        log_priors = np.full(self.n_components, -np.inf)
+        positive_prior_flags = self.weights_ > 0
+        log_priors[positive_prior_flags] = np.log(self.weights_[positive_prior_flags])
+        log_priors = log_priors[:, np.newaxis]
+    
+        # log pi_k + log N(x | mu_x,k, Sigma_xx,k)
+        log_unnormalized_weights = log_priors + logpdfs
+    
+        # NaN は無効成分として扱う
+        log_unnormalized_weights[np.isnan(log_unnormalized_weights)] = -np.inf
+    
+        # log Σ_k pi_k N(x | mu_x,k, Sigma_xx,k)
+        log_normalizer = logsumexp(log_unnormalized_weights, axis=0)
+    
+        # posterior weights:
+        # h_k(x) = pi_k N(x | mu_x,k, Sigma_xx,k) / Σ_j pi_j N(x | mu_x,j, Sigma_xx,j)
+        weights = np.zeros_like(log_unnormalized_weights)
+    
+        valid_sample_flags = np.isfinite(log_normalizer)
+    
+        weights[:, valid_sample_flags] = np.exp(
+            log_unnormalized_weights[:, valid_sample_flags]
+            - log_normalizer[valid_sample_flags]
+        )
+    
+        # 全成分が underflow / -inf / NaN 等になったサンプルだけ一様重みにする
+        invalid_sample_flags = ~valid_sample_flags
+        if invalid_sample_flags.any():
+            weights[:, invalid_sample_flags] = 1.0 / self.n_components
+    
+        return weights, logpdfs, log_normalizer
+    
     def predict(self, dataset, numbers_of_input_variables, numbers_of_output_variables):
         """
         Variational Bayesian Gaussian Mixture Regression (VBGMR) based on Variational Bayesian Gaussian Mixture Model (VBGMM)
@@ -89,7 +162,7 @@ class VBGMR(BayesianGaussianMixture):
             mode_of_estimated_mean = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
             weighted_estimated_mean = np.zeros([dataset.shape[0], len(numbers_of_output_variables)])
             estimated_mean_for_all_components = np.zeros([self.n_components, dataset.shape[0], len(numbers_of_output_variables)])
-            weights = np.zeros([dataset.shape[0], self.n_components])
+            weights = np.zeros([self.n_components, dataset.shape[0]])
 
         return mode_of_estimated_mean, weighted_estimated_mean, estimated_mean_for_all_components, weights
 
@@ -301,28 +374,25 @@ class VBGMR(BayesianGaussianMixture):
             output_covariances = output_input_covariances[:, :, numbers_of_output_variables]
             output_input_covariances = output_input_covariances[:, :, numbers_of_input_variables]
             
-            # estimated means and weights for all components
+            # estimated means and covariances for all components
             for component_number in range(self.n_components):
                 estimated_means[component_number, :, :] = output_means[component_number, :] + (
                         dataset - input_means[component_number, :]).dot(
                     np.linalg.inv(input_covariances[component_number, :, :])).dot(
                     input_output_covariances[component_number, :, :])
-                estimated_covariances[component_number, :, :] = output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
-                        np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :])
-                try:
-                    weights[component_number, :] = self.weights_[component_number] * \
-                                                   multivariate_normal.pdf(dataset,
-                                                                           input_means[component_number, :],
-                                                                           input_covariances[component_number, :, :])
-                except:
-                    print('assignment of weights is failed, and zero is assigned')
-                    
-            weights_sum = weights.sum(axis=0)
-            invalid_samples = (weights_sum <= 0) | (~np.isfinite(weights_sum))
-            if invalid_samples.any():
-                weights[:, invalid_samples] = 1.0
-                weights_sum = weights.sum(axis=0)
-            weights = weights / weights_sum
+            
+                estimated_covariances[component_number, :, :] = (
+                    output_covariances[component_number, :, :]
+                    - output_input_covariances[component_number, :, :].dot(
+                        np.linalg.inv(input_covariances[component_number, :, :])
+                    ).dot(input_output_covariances[component_number, :, :])
+                )
+            
+            weights, _, _ = self._calculate_logpdfs_and_weights(
+                dataset,
+                input_means,
+                input_covariances
+            )
 
         return estimated_means, estimated_covariances, weights
     
@@ -408,22 +478,15 @@ class VBGMR(BayesianGaussianMixture):
                     input_output_covariances[component_number, :, :])
                 estimated_covariances[component_number, :, :] = output_covariances[component_number, :, :] - output_input_covariances[component_number, :, :].dot(
                         np.linalg.inv(input_covariances[component_number, :, :])).dot(input_output_covariances[component_number, :, :])
-                try:
-                    weights[component_number, :] = self.weights_[component_number] * \
-                                                   multivariate_normal.pdf(dataset,
-                                                                           input_means[component_number, :],
-                                                                           input_covariances[component_number, :, :])
-                    pdfs[component_number, :] = multivariate_normal.pdf(dataset, input_means[component_number, :], input_covariances[component_number, :, :])
-                    logpdfs[component_number, :] = multivariate_normal.logpdf(dataset, input_means[component_number, :], input_covariances[component_number, :, :])
-                except:
-                    print('assignment of weights is failed, and zero is assigned')
-                    
-            weights_sum = weights.sum(axis=0)
-            invalid_samples = (weights_sum <= 0) | (~np.isfinite(weights_sum))
-            if invalid_samples.any():
-                weights[:, invalid_samples] = 1.0
-                weights_sum = weights.sum(axis=0)
-            weights = weights / weights_sum
+                
+            weights, logpdfs, log_normalizer = self._calculate_logpdfs_and_weights(
+                dataset,
+                input_means,
+                input_covariances
+            )
+            with np.errstate(under='ignore'):
+                pdfs = np.exp(logpdfs)
+                
             ioe = -logsumexp(logpdfs, axis=0, b=weights)
 
         return estimated_means, estimated_covariances, weights, pdfs, logpdfs, ioe
