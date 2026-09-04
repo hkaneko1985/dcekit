@@ -1,0 +1,8 @@
+dataset,dataset_label,objective_label,formula,normalization
+D1,Non-isothermal CSTR,High conversion with low temperature and heat-removal burdens,+1.00 conversion -0.10 reactor_temperature -0.05 heat_removal,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D2,CALPHAD Pb-Sn phase equilibrium,Liquid-phase stability and tin chemical potential,+1.00 liquid_fraction +0.20 mu_sn,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D3,PyBaMM lithium-ion battery,High discharge energy with low temperature rise,+1.00 discharge_energy -0.25 peak_temperature_rise,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D4,IDAES carbon-dioxide adsorption/desorption,High regeneration recovery and carbon-dioxide purity with low breakthrough,+1.00 regeneration_recovery +0.75 desorption_co2_purity -0.25 breakthrough_ratio,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D5,IDAES methanol-synthesis process,High methanol production and recovery with low utility demand,+1.00 methanol_product +0.25 methanol_recovery -0.20 total_utility,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D6,Multiphase-field grain growth,Large uniform grains with low boundary density,+1.00 mean_grain_diameter -0.10 grain_count -0.20 boundary_density -0.10 grain_size_cv,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"
+D7,Concrete Slump experimental data,Strength-led composite workability objective,+1.00 compressive_strength_28d +0.10 slump +0.05 flow,"initial-training mean; max(SD, 0.05*abs(mean), 1e-8)"

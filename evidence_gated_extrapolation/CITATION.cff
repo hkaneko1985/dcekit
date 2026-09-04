@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this implementation, please cite the associated article and DCEKit."
+title: "Evidence-gated extrapolation: reference implementation"
+type: software
+authors:
+  - family-names: Kaneko
+    given-names: Hiromasa
+license: MIT
+version: 1.1.0
+date-released: 2026-09-02
+keywords:
+  - extrapolation
+  - applicability domain
+  - Gaussian process regression
+  - support vector regression
+  - Gaussian mixture regression
+  - Bayesian optimization

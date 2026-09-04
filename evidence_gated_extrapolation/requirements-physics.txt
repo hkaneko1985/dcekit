@@ -1,0 +1,7 @@
+-r requirements-core.txt
+pycalphad==0.11.2
+pybamm==26.8.0.0
+idaes-pse==2.12.0
+idaes-examples==2.10.0
+pyomo==6.10.1
+

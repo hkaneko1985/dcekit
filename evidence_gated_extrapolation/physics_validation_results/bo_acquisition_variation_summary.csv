@@ -1,0 +1,64 @@
+dataset,dataset_label,method,rho,support_rate,acquisition_directional_sd_median,mean_directional_sd_median
+D1,Non-isothermal CSTR,AD-ADE mean + base std UCB,1.5,1.0,0.9762741259401944,0.9760176786927762
+D1,Non-isothermal CSTR,AD-ADE mean + base std UCB,4.0,1.0,3.2329105227022956,3.232910522702296
+D1,Non-isothermal CSTR,AD-ADE mean + base std UCB,32.0,1.0,24.926848490588448,24.926848490588448
+D1,Non-isothermal CSTR,EG-AD-ADE risk-adjusted UCB,1.5,1.0,1.0051092930769276,0.9760176786927762
+D1,Non-isothermal CSTR,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D1,Non-isothermal CSTR,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D1,Non-isothermal CSTR,RBF-GPR-UCB,1.5,1.0,0.07230081610718903,0.07267036825255535
+D1,Non-isothermal CSTR,RBF-GPR-UCB,4.0,1.0,5.178680426854767e-12,5.178693396181305e-12
+D1,Non-isothermal CSTR,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,AD-ADE mean + base std UCB,1.5,1.0,1.1866566289569147,1.189968254124329
+D2,CALPHAD Pb-Sn phase equilibrium,AD-ADE mean + base std UCB,4.0,1.0,2.0994198491155585,2.0990817236423682
+D2,CALPHAD Pb-Sn phase equilibrium,AD-ADE mean + base std UCB,32.0,1.0,12.525871171188646,12.525871171188646
+D2,CALPHAD Pb-Sn phase equilibrium,EG-AD-ADE risk-adjusted UCB,1.5,1.0,1.2197991738244314,1.189968254124329
+D2,CALPHAD Pb-Sn phase equilibrium,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D2,CALPHAD Pb-Sn phase equilibrium,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D2,CALPHAD Pb-Sn phase equilibrium,RBF-GPR-UCB,1.5,1.0,1.0272198017732512,1.023226425213709
+D2,CALPHAD Pb-Sn phase equilibrium,RBF-GPR-UCB,4.0,1.0,0.2500948708284592,0.2501918512645962
+D2,CALPHAD Pb-Sn phase equilibrium,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D3,PyBaMM lithium-ion battery,AD-ADE mean + base std UCB,1.5,1.0,1.0999832472588424,1.1016744704280934
+D3,PyBaMM lithium-ion battery,AD-ADE mean + base std UCB,4.0,1.0,3.09955563175011,3.0995556317500816
+D3,PyBaMM lithium-ion battery,AD-ADE mean + base std UCB,32.0,1.0,23.215936510452757,23.215936510452757
+D3,PyBaMM lithium-ion battery,EG-AD-ADE risk-adjusted UCB,1.5,1.0,1.1021617256320912,1.1016744704280934
+D3,PyBaMM lithium-ion battery,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D3,PyBaMM lithium-ion battery,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D3,PyBaMM lithium-ion battery,RBF-GPR-UCB,1.5,1.0,0.17711246580843365,0.1761868286365918
+D3,PyBaMM lithium-ion battery,RBF-GPR-UCB,4.0,1.0,3.048840526566117e-08,3.0488404486234894e-08
+D3,PyBaMM lithium-ion battery,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,AD-ADE mean + base std UCB,1.5,1.0,0.9033168882588214,0.9033168937114963
+D4,IDAES carbon-dioxide adsorption/desorption,AD-ADE mean + base std UCB,4.0,1.0,4.047303310674887,4.047303310674887
+D4,IDAES carbon-dioxide adsorption/desorption,AD-ADE mean + base std UCB,32.0,1.0,35.52353098641038,35.52353098641038
+D4,IDAES carbon-dioxide adsorption/desorption,EG-AD-ADE risk-adjusted UCB,1.5,1.0,1.263692776051949,0.9033168937114963
+D4,IDAES carbon-dioxide adsorption/desorption,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D4,IDAES carbon-dioxide adsorption/desorption,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D4,IDAES carbon-dioxide adsorption/desorption,RBF-GPR-UCB,1.5,1.0,0.0016170397591188548,0.0016197369620251818
+D4,IDAES carbon-dioxide adsorption/desorption,RBF-GPR-UCB,4.0,1.0,0.0,1.058521690697294e-28
+D4,IDAES carbon-dioxide adsorption/desorption,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D5,IDAES methanol-synthesis process,AD-ADE mean + base std UCB,1.5,1.0,0.882075826670172,0.882070753148122
+D5,IDAES methanol-synthesis process,AD-ADE mean + base std UCB,4.0,1.0,3.8885085965995154,3.8885085965995154
+D5,IDAES methanol-synthesis process,AD-ADE mean + base std UCB,32.0,1.0,33.337725887189116,33.33772588718912
+D5,IDAES methanol-synthesis process,EG-AD-ADE risk-adjusted UCB,1.5,1.0,0.9445927684220815,0.882070753148122
+D5,IDAES methanol-synthesis process,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D5,IDAES methanol-synthesis process,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D5,IDAES methanol-synthesis process,RBF-GPR-UCB,1.5,1.0,0.007355909990416356,0.007342845200724748
+D5,IDAES methanol-synthesis process,RBF-GPR-UCB,4.0,1.0,0.0,5.933044660038317e-21
+D5,IDAES methanol-synthesis process,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D6,Multiphase-field grain growth,AD-ADE mean + base std UCB,1.5,1.0,0.8864732364427015,0.8871274016841737
+D6,Multiphase-field grain growth,AD-ADE mean + base std UCB,4.0,1.0,2.760455596227031,2.760455596227031
+D6,Multiphase-field grain growth,AD-ADE mean + base std UCB,32.0,1.0,23.241607780943063,23.241607780943063
+D6,Multiphase-field grain growth,EG-AD-ADE risk-adjusted UCB,1.5,1.0,0.8795859347377338,0.8871274016841737
+D6,Multiphase-field grain growth,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D6,Multiphase-field grain growth,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D6,Multiphase-field grain growth,RBF-GPR-UCB,1.5,1.0,0.06072673040099315,0.06152777084884849
+D6,Multiphase-field grain growth,RBF-GPR-UCB,4.0,1.0,1.4090272737685897e-12,1.4090183498229834e-12
+D6,Multiphase-field grain growth,RBF-GPR-UCB,32.0,1.0,0.0,0.0
+D7,Concrete Slump experimental data,AD-ADE mean + base std UCB,1.5,1.0,2.1106840529287245,2.1107114882442977
+D7,Concrete Slump experimental data,AD-ADE mean + base std UCB,4.0,1.0,9.356942834058756,9.356942834058756
+D7,Concrete Slump experimental data,AD-ADE mean + base std UCB,32.0,1.0,79.54482614762188,79.54482614762188
+D7,Concrete Slump experimental data,EG-AD-ADE risk-adjusted UCB,1.5,1.0,2.124163390535711,2.1107114882442977
+D7,Concrete Slump experimental data,EG-AD-ADE risk-adjusted UCB,4.0,0.0,,
+D7,Concrete Slump experimental data,EG-AD-ADE risk-adjusted UCB,32.0,0.0,,
+D7,Concrete Slump experimental data,RBF-GPR-UCB,1.5,1.0,0.0029778416918442305,0.00297374648194485
+D7,Concrete Slump experimental data,RBF-GPR-UCB,4.0,1.0,0.0,4.6389849817224975e-21
+D7,Concrete Slump experimental data,RBF-GPR-UCB,32.0,1.0,0.0,0.0

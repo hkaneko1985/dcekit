@@ -1,0 +1,5 @@
+regime,proposed,baseline,independent_unit,dataset_count,repetition_pair_count,dataset_win_count,dataset_tie_count,dataset_loss_count,median_dataset_difference,cluster_bootstrap_ci_low,cluster_bootstrap_ci_high,wilcoxon_statistic,wilcoxon_p
+sequential,EG-AD-ADE-GPR-UCB,RBF-GPR-UCB,dataset,7,35,4,2,1,0.06147496121760876,0.0,0.15261663789631086,3.0,0.3125
+sequential,EG-AD-ADE-GPR-UCB,AD-ADE-mean/base-std-UCB,dataset,7,35,1,1,5,-0.06934934064873843,-0.1425938432160465,0.0,4.0,0.21875
+batch,EG-AD-ADE diverse-3,RBF-GPR top-3,dataset,7,35,4,1,2,0.10165753001407818,-0.0006128951217572176,0.16458757540361224,4.0,0.21875
+batch,EG-AD-ADE diverse-3,EG-AD-ADE top-3,dataset,7,35,2,3,2,0.0,-0.0006128951217572176,0.039676518729864885,5.0,1.0

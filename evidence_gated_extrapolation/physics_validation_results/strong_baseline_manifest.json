@@ -1,0 +1,46 @@
+{
+  "independent_test_use": false,
+  "selection_set": "outer 30% kNN-distance shell of each training split",
+  "primary_metric": "mean response-wise RMSE normalized by external-test response SD",
+  "D5_status": "exploratory because failed simulations were removed non-uniformly",
+  "grids": {
+    "ridge_alpha": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "gpr_length_scale": [
+      0.35,
+      0.55,
+      0.85,
+      1.3,
+      2.0
+    ],
+    "gpr_noise_level": [
+      0.005,
+      0.015,
+      0.05,
+      0.15
+    ],
+    "svr_C": [
+      1.0,
+      4.0,
+      12.0,
+      36.0
+    ],
+    "svr_gamma_multiplier_divided_by_p": [
+      0.2,
+      0.55,
+      1.2
+    ],
+    "svr_epsilon": [
+      0.02,
+      0.05,
+      0.1
+    ]
+  }
+}

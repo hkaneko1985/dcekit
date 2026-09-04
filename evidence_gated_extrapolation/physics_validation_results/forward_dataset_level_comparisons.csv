@@ -1,0 +1,7 @@
+proposed,baseline,baseline_role,independent_unit,dataset_count,win_count,tie_count,loss_count,median_test_sd_nrmse_reduction,wilcoxon_statistic,wilcoxon_p,holm_p
+AD-ADE-GPR,GPR,fixed RBF control,dataset,6,5,0,1,0.2796346450429949,1.0,0.0625,0.3125
+AD-ADE-SVR,SVR,fixed RBF control,dataset,6,6,0,0,0.20087580726342738,0.0,0.03125,0.1875
+AD-ADE-GPR,Tuned-RBF-GPR,training-shell-tuned RBF,dataset,6,5,0,1,0.15316006792960432,3.0,0.15625,0.625
+AD-ADE-SVR,Tuned-RBF-SVR,training-shell-tuned RBF,dataset,6,4,0,2,0.1094131568148071,4.0,0.21875,0.65625
+AD-ADE-GPR,Tuned-Ridge,global linear extrapolation,dataset,6,2,0,4,-0.06984881447526076,8.0,0.6875,1.0
+AD-ADE-SVR,Tuned-Ridge,global linear extrapolation,dataset,6,3,0,3,0.07659415224075387,8.0,0.6875,1.0

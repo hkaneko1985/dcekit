@@ -1,0 +1,235 @@
+{
+  "primary_forward_datasets": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D6",
+    "D7"
+  ],
+  "exploratory_forward_dataset": "D5",
+  "primary_inverse_datasets": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D6"
+  ],
+  "D5_training_success_rate": 0.832,
+  "D5_external_success_rate": 0.6461538461538462,
+  "D4_purity_train_sd": 0.00020524932330553768,
+  "D4_purity_test_sd": 0.19146358539306524,
+  "forward_dataset_level_comparisons": [
+    {
+      "proposed": "AD-ADE-GPR",
+      "baseline": "GPR",
+      "baseline_role": "fixed RBF control",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 5,
+      "tie_count": 0,
+      "loss_count": 1,
+      "median_test_sd_nrmse_reduction": 0.2796346450429949,
+      "wilcoxon_statistic": 1.0,
+      "wilcoxon_p": 0.0625,
+      "holm_p": 0.3125
+    },
+    {
+      "proposed": "AD-ADE-SVR",
+      "baseline": "SVR",
+      "baseline_role": "fixed RBF control",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 6,
+      "tie_count": 0,
+      "loss_count": 0,
+      "median_test_sd_nrmse_reduction": 0.20087580726342738,
+      "wilcoxon_statistic": 0.0,
+      "wilcoxon_p": 0.03125,
+      "holm_p": 0.1875
+    },
+    {
+      "proposed": "AD-ADE-GPR",
+      "baseline": "Tuned-RBF-GPR",
+      "baseline_role": "training-shell-tuned RBF",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 5,
+      "tie_count": 0,
+      "loss_count": 1,
+      "median_test_sd_nrmse_reduction": 0.15316006792960432,
+      "wilcoxon_statistic": 3.0,
+      "wilcoxon_p": 0.15625,
+      "holm_p": 0.625
+    },
+    {
+      "proposed": "AD-ADE-SVR",
+      "baseline": "Tuned-RBF-SVR",
+      "baseline_role": "training-shell-tuned RBF",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 4,
+      "tie_count": 0,
+      "loss_count": 2,
+      "median_test_sd_nrmse_reduction": 0.1094131568148071,
+      "wilcoxon_statistic": 4.0,
+      "wilcoxon_p": 0.21875,
+      "holm_p": 0.65625
+    },
+    {
+      "proposed": "AD-ADE-GPR",
+      "baseline": "Tuned-Ridge",
+      "baseline_role": "global linear extrapolation",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 2,
+      "tie_count": 0,
+      "loss_count": 4,
+      "median_test_sd_nrmse_reduction": -0.06984881447526076,
+      "wilcoxon_statistic": 8.0,
+      "wilcoxon_p": 0.6875,
+      "holm_p": 1.0
+    },
+    {
+      "proposed": "AD-ADE-SVR",
+      "baseline": "Tuned-Ridge",
+      "baseline_role": "global linear extrapolation",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "win_count": 3,
+      "tie_count": 0,
+      "loss_count": 3,
+      "median_test_sd_nrmse_reduction": 0.07659415224075387,
+      "wilcoxon_statistic": 8.0,
+      "wilcoxon_p": 0.6875,
+      "holm_p": 1.0
+    }
+  ],
+  "inverse_all_target_overall": [
+    {
+      "method": "Absolute-GMR",
+      "target_count": 120,
+      "verified_answer_rate": 0.8166666666666667,
+      "success_rate_nrmse_le_0_5": 0.625,
+      "success_rate_nrmse_le_1_0": 0.7166666666666667,
+      "conditional_top5_nrmse_median": 0.1985622325254775,
+      "penalized_top5_nrmse_mean": 0.7155637394384464,
+      "datasets": "D1-D4,D6",
+      "rejection_penalty": 2.0
+    },
+    {
+      "method": "EGC-GMR",
+      "target_count": 120,
+      "verified_answer_rate": 0.875,
+      "success_rate_nrmse_le_0_5": 0.7166666666666667,
+      "success_rate_nrmse_le_1_0": 0.8166666666666667,
+      "conditional_top5_nrmse_median": 0.1468780612565611,
+      "penalized_top5_nrmse_mean": 0.5159190234464387,
+      "datasets": "D1-D4,D6",
+      "rejection_penalty": 2.0
+    },
+    {
+      "method": "Transition-GMR",
+      "target_count": 120,
+      "verified_answer_rate": 0.8833333333333333,
+      "success_rate_nrmse_le_0_5": 0.7333333333333333,
+      "success_rate_nrmse_le_1_0": 0.8083333333333333,
+      "conditional_top5_nrmse_median": 0.15696298984629095,
+      "penalized_top5_nrmse_mean": 0.5115165907931031,
+      "datasets": "D1-D4,D6",
+      "rejection_penalty": 2.0
+    }
+  ],
+  "bo_dataset_clustered_comparisons": [
+    {
+      "regime": "sequential",
+      "proposed": "EG-AD-ADE-GPR-UCB",
+      "baseline": "RBF-GPR-UCB",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "repetition_pair_count": 30,
+      "dataset_win_count": 3,
+      "dataset_tie_count": 2,
+      "dataset_loss_count": 1,
+      "median_dataset_difference": 0.05082876500703909,
+      "cluster_bootstrap_ci_low": -0.07129692160802326,
+      "cluster_bootstrap_ci_high": 0.15844530134792628,
+      "wilcoxon_statistic": 2.0,
+      "wilcoxon_p": 0.375
+    },
+    {
+      "regime": "sequential",
+      "proposed": "EG-AD-ADE-GPR-UCB",
+      "baseline": "AD-ADE-mean/base-std-UCB",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "repetition_pair_count": 30,
+      "dataset_win_count": 1,
+      "dataset_tie_count": 1,
+      "dataset_loss_count": 4,
+      "median_dataset_difference": -0.03660188039385004,
+      "cluster_bootstrap_ci_low": -0.10996800071077151,
+      "cluster_bootstrap_ci_high": 0.0409209344456446,
+      "wilcoxon_statistic": 4.0,
+      "wilcoxon_p": 0.4375
+    },
+    {
+      "regime": "batch",
+      "proposed": "EG-AD-ADE diverse-3",
+      "baseline": "RBF-GPR top-3",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "repetition_pair_count": 30,
+      "dataset_win_count": 3,
+      "dataset_tie_count": 1,
+      "dataset_loss_count": 2,
+      "median_dataset_difference": 0.05082876500703909,
+      "cluster_bootstrap_ci_low": -0.05176510980396942,
+      "cluster_bootstrap_ci_high": 0.1433244398311146,
+      "wilcoxon_statistic": 4.0,
+      "wilcoxon_p": 0.4375
+    },
+    {
+      "regime": "batch",
+      "proposed": "EG-AD-ADE diverse-3",
+      "baseline": "EG-AD-ADE top-3",
+      "independent_unit": "dataset",
+      "dataset_count": 6,
+      "repetition_pair_count": 30,
+      "dataset_win_count": 1,
+      "dataset_tie_count": 3,
+      "dataset_loss_count": 2,
+      "median_dataset_difference": 0.0,
+      "cluster_bootstrap_ci_low": -0.03897752666362686,
+      "cluster_bootstrap_ci_high": 0.019838259364932442,
+      "wilcoxon_statistic": 2.0,
+      "wilcoxon_p": 0.75
+    }
+  ],
+  "bo_uncertainty_cross_dataset_medians": [
+    {
+      "method": "AD-ADE mean + base std",
+      "coverage_90_supported_median": 0.8293189368770764,
+      "interval_width_90_supported_median": 3.2298019294512024,
+      "interval_score_90_supported_median": 6.760938143250829,
+      "rmse_supported_median": 1.3514634166503576,
+      "support_rate": 1.0
+    },
+    {
+      "method": "EG-AD-ADE uncertainty",
+      "coverage_90_supported_median": 0.9534722222222223,
+      "interval_width_90_supported_median": 5.14086323376994,
+      "interval_score_90_supported_median": 5.330842940042309,
+      "rmse_supported_median": 1.1609314193176692,
+      "support_rate": 0.6659663865546219
+    },
+    {
+      "method": "RBF-GPR",
+      "coverage_90_supported_median": 0.6743697478991597,
+      "interval_width_90_supported_median": 3.2298019294512024,
+      "interval_score_90_supported_median": 13.954891485606312,
+      "rmse_supported_median": 2.187552436933312,
+      "support_rate": 1.0
+    }
+  ]
+}

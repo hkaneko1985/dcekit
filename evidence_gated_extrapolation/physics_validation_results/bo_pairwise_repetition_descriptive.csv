@@ -1,0 +1,5 @@
+regime,proposed,baseline,pair_count,win_count,tie_count,loss_count,median_quality_difference,interpretation
+sequential,EG-AD-ADE-GPR-UCB,RBF-GPR-UCB,30,15,9,6,0.015000352068060663,descriptive only; repetitions within a dataset are clustered
+sequential,EG-AD-ADE-GPR-UCB,AD-ADE-mean/base-std-UCB,30,5,7,18,-0.036062060699748044,descriptive only; repetitions within a dataset are clustered
+batch,EG-AD-ADE diverse-3,RBF-GPR top-3,30,17,4,9,0.02374073705439289,descriptive only; repetitions within a dataset are clustered
+batch,EG-AD-ADE diverse-3,EG-AD-ADE top-3,30,6,12,12,0.0,descriptive only; repetitions within a dataset are clustered

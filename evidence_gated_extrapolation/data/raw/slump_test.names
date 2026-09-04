@@ -1,0 +1,80 @@
+Title: Concrete Slump Test
+
+Abstract: Concrete is a highly complex material. The slump flow of concrete is not 
+only determined by the water content, but that is also influenced by other concrete 
+ingredients.
+
+----------------------------------------------------------------------------------------
+
+Data Set Characteristics: Multivariate
+Attribute Characteristics: Real
+Associated Tasks: Regression
+Number of Instances: 103
+Number of Attributes: 10
+Missing Values? N/A
+Area: Computer
+Date Donated: 2009-04-30
+
+----------------------------------------------------------------------------------------
+
+Source:
+
+Donor: I-Cheng Yeh
+Email: icyeh 'at' chu.edu.tw
+Institution: Department of Information Management, Chung-Hua University (Republic of China)
+Other contact information: Department of Information Management, Chung-Hua University, 
+Hsin Chu, Taiwan 30067, R.O.C.
+ 
+----------------------------------------------------------------------------------------
+
+Data Set Information:
+
+The data set includes 103 data points. There are 7 input variables, and 3 output 
+variables in the data set.  The initial data set included 78 data. After several 
+years, we got 25 new data points.
+
+----------------------------------------------------------------------------------------
+
+Attribute Information:
+
+Input variables (7)(component kg in one M^3 concrete):
+Cement
+Slag
+Fly ash
+Water
+SP
+Coarse Aggr.
+Fine Aggr.
+
+Output variables (3):
+SLUMP (cm)
+FLOW (cm)
+28-day Compressive Strength (Mpa) 
+
+----------------------------------------------------------------------------------------
+
+Relevant Papers:
+
+1. Yeh, I-Cheng, "Modeling slump of concrete with fly ash and superplasticizer," 
+Computers and Concrete, Vol.5, No.6, 559-572, 2008.
+
+2. Yeh, I-Cheng, "Simulation of concrete slump using neural networks," Construction 
+Materials,Vol.162, No.1, 11-18, 2009.
+
+3. Yeh, I-Cheng, "Prediction of workability of concrete using design of experiments 
+for mixtures," COMPUTERS AND CONCRETE, Vol.5, No.1, 1-20, 2008.
+
+4. Yeh, I-Cheng, "Modeling slump flow of concrete using second-order regressions and 
+artificial neural networks," Cement and Concrete Composites, Vol.29, No. 6, 474-480, 
+2007.
+
+5. Yeh, I-Cheng, "Exploring concrete slump model using artificial neural networks," J. 
+of Computing in Civil Engineering, ASCE, Vol.20, No.3, 217-221, 2006.
+
+----------------------------------------------------------------------------------------
+
+Citation Request:
+
+Yeh, I-Cheng, "Modeling slump flow of concrete using second-order regressions and 
+artificial neural networks," Cement and Concrete Composites, Vol.29, No. 6, 474-480, 
+2007.

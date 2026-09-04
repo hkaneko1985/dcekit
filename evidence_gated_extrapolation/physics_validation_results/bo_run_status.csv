@@ -1,0 +1,281 @@
+dataset,dataset_label,rep,regime,method,selected_count,cycle_count,stop_reason,final_quality,top10_hit
+D1,Non-isothermal CSTR,0,sequential,Random,9,9,budget_reached,0.31399862753551566,0.0
+D1,Non-isothermal CSTR,0,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7342182664131776,1.0
+D1,Non-isothermal CSTR,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9744846392769538,1.0
+D1,Non-isothermal CSTR,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8966408112177652,1.0
+D1,Non-isothermal CSTR,0,batch,Random batch-3,9,3,budget_reached,0.23782726513654612,0.0
+D1,Non-isothermal CSTR,0,batch,RBF-GPR top-3,9,3,budget_reached,0.7342182664131776,1.0
+D1,Non-isothermal CSTR,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9744846392769538,1.0
+D1,Non-isothermal CSTR,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8966408112177652,1.0
+D1,Non-isothermal CSTR,1,sequential,Random,9,9,budget_reached,0.3862144696922847,0.0
+D1,Non-isothermal CSTR,1,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7330588944580579,1.0
+D1,Non-isothermal CSTR,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9760554688144611,1.0
+D1,Non-isothermal CSTR,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9760554688144611,1.0
+D1,Non-isothermal CSTR,1,batch,Random batch-3,9,3,budget_reached,0.7330588944580579,1.0
+D1,Non-isothermal CSTR,1,batch,RBF-GPR top-3,9,3,budget_reached,0.7330588944580579,1.0
+D1,Non-isothermal CSTR,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9760554688144611,1.0
+D1,Non-isothermal CSTR,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8996168830363099,1.0
+D1,Non-isothermal CSTR,2,sequential,Random,9,9,budget_reached,0.9531976360960736,1.0
+D1,Non-isothermal CSTR,2,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7337403095096027,1.0
+D1,Non-isothermal CSTR,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9756700431187114,1.0
+D1,Non-isothermal CSTR,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8983278849132149,1.0
+D1,Non-isothermal CSTR,2,batch,Random batch-3,9,3,budget_reached,0.5112530781513634,0.0
+D1,Non-isothermal CSTR,2,batch,RBF-GPR top-3,9,3,budget_reached,0.7337403095096027,1.0
+D1,Non-isothermal CSTR,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9756700431187114,1.0
+D1,Non-isothermal CSTR,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8983278849132149,1.0
+D1,Non-isothermal CSTR,3,sequential,Random,9,9,budget_reached,1.0,1.0
+D1,Non-isothermal CSTR,3,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7344777124500399,1.0
+D1,Non-isothermal CSTR,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9755236661590151,1.0
+D1,Non-isothermal CSTR,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8971646093360675,1.0
+D1,Non-isothermal CSTR,3,batch,Random batch-3,9,3,budget_reached,0.6420616427024469,1.0
+D1,Non-isothermal CSTR,3,batch,RBF-GPR top-3,9,3,budget_reached,0.7344777124500399,1.0
+D1,Non-isothermal CSTR,3,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9755236661590151,1.0
+D1,Non-isothermal CSTR,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8971646093360675,1.0
+D1,Non-isothermal CSTR,4,sequential,Random,9,9,budget_reached,0.8378803065964423,1.0
+D1,Non-isothermal CSTR,4,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7337637971782549,1.0
+D1,Non-isothermal CSTR,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9753696079227336,1.0
+D1,Non-isothermal CSTR,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8980377619777966,1.0
+D1,Non-isothermal CSTR,4,batch,Random batch-3,9,3,budget_reached,0.38786008165196456,0.0
+D1,Non-isothermal CSTR,4,batch,RBF-GPR top-3,9,3,budget_reached,0.7337637971782549,1.0
+D1,Non-isothermal CSTR,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9753696079227336,1.0
+D1,Non-isothermal CSTR,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9753696079227336,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,sequential,Random,9,9,budget_reached,0.6981109353429681,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,sequential,RBF-GPR-UCB,9,9,budget_reached,0.982385182671541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9519310902833169,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.982385182671541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,batch,Random batch-3,9,3,budget_reached,0.7931903704562363,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,batch,RBF-GPR top-3,9,3,budget_reached,0.9746663834601265,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.982385182671541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.982385182671541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,sequential,Random,9,9,budget_reached,0.8694279454888832,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,sequential,RBF-GPR-UCB,9,9,budget_reached,0.9820423263075653,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.8973465636591464,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9820423263075653,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,batch,Random batch-3,9,3,budget_reached,0.8244555315746058,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,batch,RBF-GPR top-3,9,3,budget_reached,0.9741732877049307,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9820423263075653,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9820423263075653,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,sequential,Random,9,9,budget_reached,0.9534716325238477,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,sequential,RBF-GPR-UCB,9,9,budget_reached,0.9829497132655083,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9534716325238477,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9829497132655083,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,batch,Random batch-3,9,3,budget_reached,1.0,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,batch,RBF-GPR top-3,9,3,budget_reached,0.9829497132655083,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9829497132655083,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.975478290919961,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,sequential,Random,9,9,budget_reached,0.952646720835661,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,sequential,RBF-GPR-UCB,9,9,budget_reached,0.952646720835661,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9008055560804933,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9826474249717824,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,batch,Random batch-3,9,3,budget_reached,0.8303706475954337,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,batch,RBF-GPR top-3,9,3,budget_reached,0.952646720835661,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9826474249717824,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.952646720835661,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,sequential,Random,9,9,budget_reached,0.9821314688237541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,sequential,RBF-GPR-UCB,9,9,budget_reached,0.9821314688237541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.8370298184079298,0.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9821314688237541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,batch,Random batch-3,9,3,budget_reached,0.9512387329448486,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,batch,RBF-GPR top-3,9,3,budget_reached,0.9821314688237541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9821314688237541,1.0
+D2,CALPHAD Pb-Sn phase equilibrium,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9821314688237541,1.0
+D3,PyBaMM lithium-ion battery,0,sequential,Random,9,9,budget_reached,0.8245228065821394,1.0
+D3,PyBaMM lithium-ion battery,0,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7780405551028281,1.0
+D3,PyBaMM lithium-ion battery,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D3,PyBaMM lithium-ion battery,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8989680486170203,1.0
+D3,PyBaMM lithium-ion battery,0,batch,Random batch-3,9,3,budget_reached,0.7712447614808661,0.0
+D3,PyBaMM lithium-ion battery,0,batch,RBF-GPR top-3,9,3,budget_reached,0.7780405551028281,1.0
+D3,PyBaMM lithium-ion battery,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8989680486170203,1.0
+D3,PyBaMM lithium-ion battery,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8176529906089796,1.0
+D3,PyBaMM lithium-ion battery,1,sequential,Random,9,9,budget_reached,0.6577637489734609,0.0
+D3,PyBaMM lithium-ion battery,1,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7780340214549507,1.0
+D3,PyBaMM lithium-ion battery,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D3,PyBaMM lithium-ion battery,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9306506593512616,1.0
+D3,PyBaMM lithium-ion battery,1,batch,Random batch-3,9,3,budget_reached,0.9306506593512616,1.0
+D3,PyBaMM lithium-ion battery,1,batch,RBF-GPR top-3,9,3,budget_reached,0.7780340214549507,1.0
+D3,PyBaMM lithium-ion battery,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8989838895356359,1.0
+D3,PyBaMM lithium-ion battery,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8989838895356359,1.0
+D3,PyBaMM lithium-ion battery,2,sequential,Random,9,9,budget_reached,0.7598262197548156,0.0
+D3,PyBaMM lithium-ion battery,2,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7782171389800693,1.0
+D3,PyBaMM lithium-ion battery,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D3,PyBaMM lithium-ion battery,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9303054363551796,1.0
+D3,PyBaMM lithium-ion battery,2,batch,Random batch-3,9,3,budget_reached,0.9252357046313308,1.0
+D3,PyBaMM lithium-ion battery,2,batch,RBF-GPR top-3,9,3,budget_reached,0.7782171389800693,1.0
+D3,PyBaMM lithium-ion battery,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9303054363551796,1.0
+D3,PyBaMM lithium-ion battery,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9303054363551796,1.0
+D3,PyBaMM lithium-ion battery,3,sequential,Random,9,9,budget_reached,0.7696619322171845,0.0
+D3,PyBaMM lithium-ion battery,3,sequential,RBF-GPR-UCB,9,9,budget_reached,0.777383277120055,1.0
+D3,PyBaMM lithium-ion battery,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D3,PyBaMM lithium-ion battery,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9318774775317185,1.0
+D3,PyBaMM lithium-ion battery,3,batch,Random batch-3,9,3,budget_reached,0.6771160050653681,0.0
+D3,PyBaMM lithium-ion battery,3,batch,RBF-GPR top-3,9,3,budget_reached,0.777383277120055,1.0
+D3,PyBaMM lithium-ion battery,3,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9005616280734545,1.0
+D3,PyBaMM lithium-ion battery,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9005616280734545,1.0
+D3,PyBaMM lithium-ion battery,4,sequential,Random,9,9,budget_reached,0.8578537065485939,1.0
+D3,PyBaMM lithium-ion battery,4,sequential,RBF-GPR-UCB,9,9,budget_reached,0.7777094684573742,1.0
+D3,PyBaMM lithium-ion battery,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D3,PyBaMM lithium-ion battery,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9312625240984396,1.0
+D3,PyBaMM lithium-ion battery,4,batch,Random batch-3,9,3,budget_reached,0.8814501069380046,1.0
+D3,PyBaMM lithium-ion battery,4,batch,RBF-GPR top-3,9,3,budget_reached,0.7777094684573742,1.0
+D3,PyBaMM lithium-ion battery,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9312625240984396,1.0
+D3,PyBaMM lithium-ion battery,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8997707727159912,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,sequential,Random,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,batch,Random batch-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8970826755138184,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,sequential,Random,9,9,budget_reached,0.9796804847183678,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,batch,Random batch-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8970826755138184,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,sequential,Random,9,9,budget_reached,0.9471021597696103,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,batch,Random batch-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8970826755138184,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,sequential,Random,9,9,budget_reached,0.9336573575535274,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,batch,Random batch-3,9,3,budget_reached,0.9179820705631778,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8970826755138184,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,sequential,Random,9,9,budget_reached,0.9471021597696103,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,batch,Random batch-3,9,3,budget_reached,0.9796804847183678,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.8574061567839535,0.0
+D4,IDAES carbon-dioxide adsorption/desorption,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8970826755138184,0.0
+D5,IDAES methanol-synthesis process,0,sequential,Random,9,9,budget_reached,0.5893701904548891,0.0
+D5,IDAES methanol-synthesis process,0,sequential,RBF-GPR-UCB,9,9,budget_reached,0.614248098232031,1.0
+D5,IDAES methanol-synthesis process,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.739287549089684,1.0
+D5,IDAES methanol-synthesis process,0,batch,Random batch-3,9,3,budget_reached,0.5696770830653419,0.0
+D5,IDAES methanol-synthesis process,0,batch,RBF-GPR top-3,9,3,budget_reached,0.614248098232031,1.0
+D5,IDAES methanol-synthesis process,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.739287549089684,1.0
+D5,IDAES methanol-synthesis process,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,1,sequential,Random,9,9,budget_reached,0.7386679746019899,1.0
+D5,IDAES methanol-synthesis process,1,sequential,RBF-GPR-UCB,9,9,budget_reached,0.6231640189280576,1.0
+D5,IDAES methanol-synthesis process,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.6846389801456664,1.0
+D5,IDAES methanol-synthesis process,1,batch,Random batch-3,9,3,budget_reached,0.5442979682549578,0.0
+D5,IDAES methanol-synthesis process,1,batch,RBF-GPR top-3,9,3,budget_reached,0.6231640189280576,1.0
+D5,IDAES methanol-synthesis process,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.6130618666354515,1.0
+D5,IDAES methanol-synthesis process,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,2,sequential,Random,9,9,budget_reached,0.6052559453626141,1.0
+D5,IDAES methanol-synthesis process,2,sequential,RBF-GPR-UCB,9,9,budget_reached,0.6152750094333787,1.0
+D5,IDAES methanol-synthesis process,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.6152750094333787,1.0
+D5,IDAES methanol-synthesis process,2,batch,Random batch-3,9,3,budget_reached,0.6847877033501215,1.0
+D5,IDAES methanol-synthesis process,2,batch,RBF-GPR top-3,9,3,budget_reached,0.6152750094333787,1.0
+D5,IDAES methanol-synthesis process,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.6152750094333787,1.0
+D5,IDAES methanol-synthesis process,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.6259111972659763,1.0
+D5,IDAES methanol-synthesis process,3,sequential,Random,9,9,budget_reached,0.565813239973147,0.0
+D5,IDAES methanol-synthesis process,3,sequential,RBF-GPR-UCB,9,9,budget_reached,0.6118361955851694,1.0
+D5,IDAES methanol-synthesis process,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,3,batch,Random batch-3,9,3,budget_reached,0.5985792924326014,0.0
+D5,IDAES methanol-synthesis process,3,batch,RBF-GPR top-3,9,3,budget_reached,0.6215431399393999,1.0
+D5,IDAES methanol-synthesis process,3,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,4,sequential,Random,9,9,budget_reached,0.6851341088386603,1.0
+D5,IDAES methanol-synthesis process,4,sequential,RBF-GPR-UCB,9,9,budget_reached,0.6137920785269955,1.0
+D5,IDAES methanol-synthesis process,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D5,IDAES methanol-synthesis process,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.6137920785269955,1.0
+D5,IDAES methanol-synthesis process,4,batch,Random batch-3,9,3,budget_reached,0.5582350149800556,0.0
+D5,IDAES methanol-synthesis process,4,batch,RBF-GPR top-3,9,3,budget_reached,0.6239414502040647,1.0
+D5,IDAES methanol-synthesis process,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.6137920785269955,1.0
+D5,IDAES methanol-synthesis process,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.6851341088386603,1.0
+D6,Multiphase-field grain growth,0,sequential,Random,9,9,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,0,sequential,RBF-GPR-UCB,9,9,budget_reached,0.6086134449539319,0.0
+D6,Multiphase-field grain growth,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,0.9962070751594855,1.0
+D6,Multiphase-field grain growth,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9962070751594855,1.0
+D6,Multiphase-field grain growth,0,batch,Random batch-3,9,3,budget_reached,0.8763181857274794,1.0
+D6,Multiphase-field grain growth,0,batch,RBF-GPR top-3,9,3,budget_reached,0.6086134449539319,0.0
+D6,Multiphase-field grain growth,0,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9962070751594855,1.0
+D6,Multiphase-field grain growth,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9492877618821501,1.0
+D6,Multiphase-field grain growth,1,sequential,Random,9,9,budget_reached,0.9959984010687857,1.0
+D6,Multiphase-field grain growth,1,sequential,RBF-GPR-UCB,9,9,budget_reached,0.8941862232252271,1.0
+D6,Multiphase-field grain growth,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9959984010687857,1.0
+D6,Multiphase-field grain growth,1,batch,Random batch-3,9,3,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,1,batch,RBF-GPR top-3,9,3,budget_reached,0.6065948036045097,0.0
+D6,Multiphase-field grain growth,1,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9959984010687857,1.0
+D6,Multiphase-field grain growth,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9959984010687857,1.0
+D6,Multiphase-field grain growth,2,sequential,Random,9,9,budget_reached,0.9732733749337502,1.0
+D6,Multiphase-field grain growth,2,sequential,RBF-GPR-UCB,9,9,budget_reached,0.8947383822970689,1.0
+D6,Multiphase-field grain growth,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9963182721603137,1.0
+D6,Multiphase-field grain growth,2,batch,Random batch-3,9,3,budget_reached,0.748509813207992,0.0
+D6,Multiphase-field grain growth,2,batch,RBF-GPR top-3,9,3,budget_reached,0.8947383822970689,1.0
+D6,Multiphase-field grain growth,2,batch,EG-AD-ADE top-3,9,3,budget_reached,0.609797396136385,0.0
+D6,Multiphase-field grain growth,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9963182721603137,1.0
+D6,Multiphase-field grain growth,3,sequential,Random,9,9,budget_reached,0.9735511595101396,1.0
+D6,Multiphase-field grain growth,3,sequential,RBF-GPR-UCB,9,9,budget_reached,0.8948361173595345,1.0
+D6,Multiphase-field grain growth,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.6104306918638318,0.0
+D6,Multiphase-field grain growth,3,batch,Random batch-3,9,3,budget_reached,0.7857683257623195,0.0
+D6,Multiphase-field grain growth,3,batch,RBF-GPR top-3,9,3,budget_reached,0.8948361173595345,1.0
+D6,Multiphase-field grain growth,3,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9963762609941926,1.0
+D6,Multiphase-field grain growth,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9963762609941926,1.0
+D6,Multiphase-field grain growth,4,sequential,Random,9,9,budget_reached,0.8944880498469602,1.0
+D6,Multiphase-field grain growth,4,sequential,RBF-GPR-UCB,9,9,budget_reached,0.8944880498469602,1.0
+D6,Multiphase-field grain growth,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D6,Multiphase-field grain growth,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,0.9961455798610384,1.0
+D6,Multiphase-field grain growth,4,batch,Random batch-3,9,3,budget_reached,0.7897558856308725,0.0
+D6,Multiphase-field grain growth,4,batch,RBF-GPR top-3,9,3,budget_reached,0.8944880498469602,1.0
+D6,Multiphase-field grain growth,4,batch,EG-AD-ADE top-3,9,3,budget_reached,0.9961455798610384,1.0
+D6,Multiphase-field grain growth,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9961455798610384,1.0
+D7,Concrete Slump experimental data,0,sequential,Random,9,9,budget_reached,0.6110459561347901,0.0
+D7,Concrete Slump experimental data,0,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,0,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,0,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,0,batch,Random batch-3,9,3,budget_reached,0.8488775925811611,1.0
+D7,Concrete Slump experimental data,0,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,0,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,0,batch,EG-AD-ADE diverse-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,sequential,Random,9,9,budget_reached,0.8687295373579873,1.0
+D7,Concrete Slump experimental data,1,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,batch,Random batch-3,9,3,budget_reached,0.8510425583806392,1.0
+D7,Concrete Slump experimental data,1,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,1,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9993871048782427,1.0
+D7,Concrete Slump experimental data,2,sequential,Random,9,9,budget_reached,0.8297326810395879,0.0
+D7,Concrete Slump experimental data,2,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,2,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,2,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,2,batch,Random batch-3,9,3,budget_reached,0.7891409192354903,0.0
+D7,Concrete Slump experimental data,2,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,2,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,2,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.9701243097447726,1.0
+D7,Concrete Slump experimental data,3,sequential,Random,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,batch,Random batch-3,9,3,budget_reached,0.8506844502048403,1.0
+D7,Concrete Slump experimental data,3,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,3,batch,EG-AD-ADE diverse-3,9,3,budget_reached,0.8506844502048403,1.0
+D7,Concrete Slump experimental data,4,sequential,Random,9,9,budget_reached,0.9743790542216537,1.0
+D7,Concrete Slump experimental data,4,sequential,RBF-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,4,sequential,AD-ADE-mean/base-std-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,4,sequential,EG-AD-ADE-GPR-UCB,9,9,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,4,batch,Random batch-3,9,3,budget_reached,0.9991933453286067,1.0
+D7,Concrete Slump experimental data,4,batch,RBF-GPR top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,4,batch,EG-AD-ADE top-3,9,3,budget_reached,1.0,1.0
+D7,Concrete Slump experimental data,4,batch,EG-AD-ADE diverse-3,9,3,budget_reached,1.0,1.0

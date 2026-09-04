@@ -1,0 +1,148 @@
+{
+  "created_at": "2026-08-27T11:25:54.457031+09:00",
+  "representation": "training-split componentwise StandardScaler only; no PCA, no PLS, no nonlinear feature transform",
+  "forward_methods": [
+    "RBF-GPR",
+    "AD-ADE-GPR",
+    "RBF-SVR",
+    "AD-ADE-SVR"
+  ],
+  "inverse_methods": [
+    "absolute-coordinate GMR (log-stable baseline)",
+    "Transition-GMR direct conditioning",
+    "EGC-GMR: evidence-gated competitive direct inverse analysis"
+  ],
+  "egc_gmr": {
+    "reliability_metric": "GMR-specific Index of Extrapolation / log evidence from the fitted Gaussian mixture density; distinct from the kNN input-distance AD used for GPR, SVR, and Bayesian optimization",
+    "support_shell_ratio": 2.0,
+    "support_quantile": 0.05,
+    "candidate_budget": 5,
+    "candidate_sources": [
+      "Absolute-GMR",
+      "Transition-GMR"
+    ],
+    "feasibility_rule": "discard candidates outside declared physical bounds; do not clip",
+    "selection_rule": "interleave model-specific candidates by calibrated support after covariance and diversity filtering",
+    "rejection_rule": "return unsupported_evidence if neither model exceeds its training-only shell threshold"
+  },
+  "inverse_matched_comparison": {
+    "rule": "compare all three methods only on targets accepted and simulator-verified for EGC-GMR; D7 retains accepted targets for input-space comparison only",
+    "output": "inverse_matched_summary.csv"
+  },
+  "forward_repetitions": 5,
+  "inverse_repetitions": 3,
+  "inverse_targets_per_repetition": 8,
+  "variation_diagnostic": {
+    "shell_ratios": [
+      1.2,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0
+    ],
+    "forward_repetitions": 5,
+    "inverse_repetitions": 3,
+    "maximum_directions": 24,
+    "purpose": "verify that conventional local-kernel predictions collapse to a constant, whereas the proposed forward model remains direction-dependent and EGC-GMR either returns direction-dependent direct inverse candidates or explicitly rejects targets outside its training-calibrated evidence support"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "pycalphad": "unavailable: No module named 'pycalphad'",
+    "pybamm": "unavailable: No module named 'pybamm'",
+    "idaes": "unavailable: No module named 'idaes'",
+    "pyomo": "unavailable: No module named 'pyomo'"
+  },
+  "random_seed": 20260823,
+  "limitations": [
+    "Outer-domain truth is limited to the declared physical bounds.",
+    "EGC-GMR errors are conditional on targets accepted by the support gate; acceptance is reported separately.",
+    "IDAES CO2 uses five spatial elements and short adsorption/desorption horizons for tractability.",
+    "Concrete Slump candidates cannot be confirmed without new experiments; inverse response error is not reported.",
+    "Phase-field is an in-house finite-difference implementation, not MOOSE."
+  ],
+  "bayesian_optimization": {
+    "script": "run_bayesian_optimization_validation.py",
+    "repetitions": 5,
+    "external_evaluation_budget": 9,
+    "batch_size": 3,
+    "acquisition": "risk-adjusted UCB; exploration and discrepancy weights selected on the training-only outer shell",
+    "ad_definition": "mean k=5 nearest-neighbor distance in the training-standardized x space; boundary=Q90 of leave-one-out training scores",
+    "support_gate": "kNN-AD ratio rho <= clip(max(2.00, 1.50*Q95(training-shell rho)), 2.00, 2.50)",
+    "risk_penalty": "lambda*discrepancy_std + 0.05*max(rho-1,0)^2; kappa and lambda selected on training-only outer shell",
+    "batch_rule": "first acquisition maximum; subsequent maximin among top-40% acquisition candidates and above robust distance threshold; no fantasy observations",
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "outputs": [
+      "bo_selection_raw.csv",
+      "bo_run_status.csv",
+      "bo_curve_raw.csv",
+      "bo_curve_summary.csv",
+      "bo_run_summary.csv",
+      "bo_dataset_summary.csv",
+      "bo_uncertainty_raw.csv",
+      "bo_uncertainty_summary.csv",
+      "bo_acquisition_variation_raw.csv",
+      "bo_acquisition_variation_summary.csv",
+      "bo_pairwise_summary.csv",
+      "bo_model_choices.csv",
+      "bo_objective_definitions.csv",
+      "fig_bo_convergence.png",
+      "fig_bo_final_quality.png",
+      "fig_bo_uncertainty_batch.png"
+    ]
+  },
+  "forward_applicability_domain": {
+    "metric": "mean k=5 nearest-neighbor distance in training-standardized x space",
+    "boundary": "Q90 of leave-one-out training kNN distances"
+  },
+  "reviewer_driven_reanalysis": {
+    "date": "2026-09-02",
+    "primary_forward_and_bo_datasets": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D6",
+      "D7"
+    ],
+    "primary_inverse_datasets": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D6"
+    ],
+    "D5_status": "exploratory because simulator-success filtering was non-uniform",
+    "forward_primary_metric": "mean response-wise external-test-SD NRMSE",
+    "strong_baselines": [
+      "training-shell-tuned RBF-GPR",
+      "training-shell-tuned RBF-SVR",
+      "training-shell-tuned ridge"
+    ],
+    "bo_inference": "Wilcoxon test on one median paired difference per dataset; repetitions are descriptive",
+    "inverse_feasibility": "common discard-without-clipping rule",
+    "inverse_all_target_penalty": 2.0,
+    "uncertainty": "coverage, interval width, RMSE, and proper interval score",
+    "outputs": [
+      "forward_all_model_summary.csv",
+      "forward_dataset_level_comparisons.csv",
+      "inverse_metrics_fair_raw.csv",
+      "inverse_decision_utility_by_dataset.csv",
+      "inverse_decision_utility_overall.csv",
+      "bo_pairwise_summary.csv",
+      "bo_pairwise_all_datasets_exploratory.csv",
+      "bo_pairwise_repetition_descriptive.csv",
+      "bo_uncertainty_scored_raw.csv",
+      "dataset_generation_audit.csv",
+      "revision_key_results.json"
+    ]
+  }
+}

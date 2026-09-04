@@ -1,0 +1,19 @@
+{
+  "package_name": "evidence_gated_extrapolation",
+  "prepared_date": "2026-09-02",
+  "revision": "reviewer-driven statistical and evaluation correction",
+  "reference_dcekit_commit": "5f84d5b4bc87ed00a58875a2de3fdfdf98dbc1a2",
+  "base_random_seed": 20260823,
+  "python": "3.12.13",
+  "representation": "component-wise StandardScaler fitted to each training split; no PCA, PLS, latent representation, or nonlinear feature transform",
+  "forward_support": "mean five-nearest-neighbor distance in training-standardized input space; boundary is the 90th percentile of leave-one-out training scores",
+  "gmr_support": "GMR-specific index of extrapolation and calibrated log evidence from the fitted mixture density",
+  "numerical_base_kernel": "radial basis function",
+  "primary_forward_metric": "mean response-wise RMSE normalized by external-test response SD",
+  "strong_baselines": "training-shell-tuned RBF-GPR, RBF-SVR, and ridge regression",
+  "bo_independent_statistical_unit": "dataset; repetitions within dataset are descriptive",
+  "inverse_feasibility": "common discard-without-clipping rule for all methods",
+  "D7_inverse_bounds": "training-input min/max plus fixed 3% margin; test inputs unused",
+  "D5_analysis_status": "exploratory; 21/125 training and 23/65 external simulations failed",
+  "external_test_used_for_tuning": false
+}

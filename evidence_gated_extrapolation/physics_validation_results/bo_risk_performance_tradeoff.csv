@@ -1,0 +1,9 @@
+regime,method,final_quality_median,final_quality_q25,final_quality_q75,unsupported_stop_rate,analysis_set
+batch,EG-AD-ADE diverse-3,0.9397965991186648,0.8971031589693806,0.9823217542095942,0.0,primary six datasets; D5 excluded
+batch,EG-AD-ADE top-3,0.9758627559665862,0.8993783241700906,0.9961087851629752,0.0,primary six datasets; D5 excluded
+batch,RBF-GPR top-3,0.9237414190975978,0.7774648249543847,1.0,0.0,primary six datasets; D5 excluded
+batch,Random batch-3,0.8497810213930007,0.7748756525512295,0.9460917145464518,0.0,primary six datasets; D5 excluded
+sequential,AD-ADE-mean/base-std-UCB,1.0,0.9755602603989393,1.0,0.0,primary six datasets; D5 excluded
+sequential,EG-AD-ADE-GPR-UCB,0.9539664731730897,0.8973828974964997,0.9961087851629752,0.0,primary six datasets; D5 excluded
+sequential,RBF-GPR-UCB,0.9237414190975978,0.7777906067067684,1.0,0.0,primary six datasets; D5 excluded
+sequential,Random,0.940379758661569,0.8258252751965015,0.9741720805437751,0.0,primary six datasets; D5 excluded
