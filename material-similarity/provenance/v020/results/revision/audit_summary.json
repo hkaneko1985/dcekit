@@ -1,0 +1,55 @@
+{
+  "source_records": 832,
+  "source_article_groups": 119,
+  "subsets": {
+    "full": {
+      "n": 832,
+      "article_groups": 119,
+      "duplicate_setting_records": 18,
+      "placeholder_records": 53,
+      "placeholder_article_groups": 20
+    },
+    "api": {
+      "n": 183,
+      "article_groups": 32,
+      "duplicate_setting_records": 2,
+      "placeholder_records": 12,
+      "placeholder_article_groups": 5
+    },
+    "systems": {
+      "n": 72,
+      "article_groups": 22,
+      "duplicate_setting_records": 0,
+      "placeholder_records": 5,
+      "placeholder_article_groups": 2
+    },
+    "methods": {
+      "n": 120,
+      "article_groups": 93,
+      "duplicate_setting_records": 5,
+      "placeholder_records": 13,
+      "placeholder_article_groups": 13
+    }
+  },
+  "quarantined_entries": 288,
+  "quarantined_process_entries": 279,
+  "quarantine_by_reason": {
+    "unit_not_reported": 283,
+    "unrecognized_or_incompatible_unit": 5
+  },
+  "quarantine_by_key": {
+    "amperage": 1,
+    "power": 1,
+    "throughput": 1,
+    "torque": 3,
+    "voltage": 1,
+    "rotation speed": 3,
+    "amount": 155,
+    "rotational frequency": 66,
+    "SpecificSurfaceArea": 5,
+    "solvent amount": 48,
+    "Density": 4
+  },
+  "numeric_scale_scope": "quantity_kind x canonical_unit, fitted to all 832 normalized primary records",
+  "primary_component_features": "constituent names, mass fraction, volume fraction; excludes density, width, aspect ratio and specific surface area"
+}

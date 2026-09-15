@@ -1,0 +1,19 @@
+sample_id,step_uri,key,number_of_values,handling
+l210-s2-zhang-2014,http://materialsmine.org/sample/L210_S2_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l210-s3-zhang-2014,http://materialsmine.org/sample/L210_S3_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l210-s4-zhang-2014,http://materialsmine.org/sample/L210_S4_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l210-s5-zhang-2014,http://materialsmine.org/sample/L210_S5_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l210-s6-zhang-2014,http://materialsmine.org/sample/L210_S6_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l210-s7-zhang-2014,http://materialsmine.org/sample/L210_S7_Zhang_2014_melt_mixing_step_1,barrel temperature,4,unordered_multiset_no_zone_imputation
+l221-s1-dai-2008,http://materialsmine.org/sample/L221_S1_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s2-dai-2008,http://materialsmine.org/sample/L221_S2_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s3-dai-2008,http://materialsmine.org/sample/L221_S3_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s4-dai-2008,http://materialsmine.org/sample/L221_S4_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s5-dai-2008,http://materialsmine.org/sample/L221_S5_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s6-dai-2008,http://materialsmine.org/sample/L221_S6_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s7-dai-2008,http://materialsmine.org/sample/L221_S7_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s8-dai-2008,http://materialsmine.org/sample/L221_S8_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l221-s9-dai-2008,http://materialsmine.org/sample/L221_S9_Dai_2008_in-situ_polymerization_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l260-s1-haggenmueller-2006,http://materialsmine.org/sample/L260_S1_Haggenmueller_2006_solution_processing_step_0,chemical used,5,unordered_multiset_no_zone_imputation
+l375-s1-rishi-2018,http://materialsmine.org/sample/L375_S1_Rishi_2018_melt_mixing_step_0,chemical used,2,unordered_multiset_no_zone_imputation
+l375-s4-rishi-2018,http://materialsmine.org/sample/L375_S4_Rishi_2018_melt_mixing_step_0,chemical used,3,unordered_multiset_no_zone_imputation

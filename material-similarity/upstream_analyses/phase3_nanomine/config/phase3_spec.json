@@ -1,0 +1,53 @@
+{
+  "phase": 3,
+  "title": "NanoMineによる目的変数非依存・欠損非補完の材料類似度検証",
+  "frozen_on": "2026-09-10",
+  "primary_population": "MaterialsMineの公開検索キャッシュで、材料構成・工程・論文メタデータの3情報がすべて得られるPolymerNanocompositeレコード",
+  "exclusions": [
+    "目的変数・物性値",
+    "特性測定結果",
+    "顕微鏡像・派生構造結果",
+    "自由記述Description（主解析）",
+    "論文ID・DOI・著者・所属（距離特徴から除外し、弱い外部情報としてのみ利用）"
+  ],
+  "facets": {
+    "material": [
+      "matrix identity: strict and lexical-soft",
+      "filler identity: strict and lexical-soft",
+      "surface-treatment identity: strict and lexical-soft",
+      "filler loading: mass/volume fraction",
+      "reported component descriptors: density, width, aspect ratio, specific surface area"
+    ],
+    "process": [
+      "top-level processing family",
+      "reported step-type set",
+      "ordered/repeated step sequence",
+      "structured settings within aligned repeated steps"
+    ]
+  },
+  "missingness": {
+    "imputation": false,
+    "reported_distance": "2試料で共通して記載された変数だけで計算し、重みを再正規化",
+    "optimistic_bound": "片側のみ記載された変数の未知距離を0とする",
+    "pessimistic_bound": "片側のみ記載された変数の未知距離を1とする",
+    "both_unreported": "その比較から除外。ファセット全体が比較不能なら区間[0,1]",
+    "absent_process_step": "工程系列が記載されたレコード内で『記載系列にない』と扱う。実験で未実施だったとの強い断定はしない",
+    "missing_process_setting": "未設定か未記載かを識別できないため、未記載設定として不確実性へ入れる"
+  },
+  "validation": {
+    "primary_weak_positive": "同一NanoMine文献ID（L/E接頭辞）に属する別試料。DOIは対照試料で仮値になることがあるため主キーにしない",
+    "secondary_support": [
+      "異なる論文間で著者が1名以上一致",
+      "異なる論文間で所属Location文字列が完全一致"
+    ],
+    "not_negative": "異なる論文のペアは負例とみなさない",
+    "controls": [
+      "論文ラベル置換",
+      "欠損マスクのみのクラスタリング",
+      "工程順序シャッフル（工程種類と反復数を保存）",
+      "工程設定値シャッフル（欠損マスクを保存）",
+      "optimistic/reported/pessimistic間のクラスタ安定性"
+    ]
+  },
+  "decision_rule": "単一の最良類似度を選ばない。固定した複数ビューについて、クラスタ傾向、弱い外部情報との整合、欠損依存性、区間安定性、および興味深い横断論文ペアを記述する。"
+}

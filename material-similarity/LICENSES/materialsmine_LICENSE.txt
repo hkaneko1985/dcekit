@@ -1,0 +1,51 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC-BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+This project is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International license. By using this
+codebase, you agree to abide by the terms of this license. Below is a summary of
+the key terms; for the full legal text, please visit -
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode CC-BY-NC-SA 4.0
+License.
+
+Summary of Key Terms:
+
+1. Attribution (BY):
+
+   • You must provide appropriate credit, a link to the license, and indicate if
+   changes were made. • Attribution must not imply endorsement by the original
+   authors.
+
+2. Non-Commercial (NC):
+
+   • You may not use the material for commercial purposes. • For commercial use
+   cases, explicit permission must be sought from the copyright holders.
+
+3. Share-Alike (SA):
+
+   • If you remix, transform, or build upon the material, you must distribute
+   your contributions under the same license as the original.
+
+4. Scope of Usage:
+
+   • The license applies to the entire codebase, which includes: • Backend
+   Service: Node.js/Express API • Frontend Application: Vue.js codebase •
+   Managed Services: Python Flask components • Whyis: Knowledge graph system •
+   It does not extend to data or services accessed through the API unless
+   otherwise stated.
+
+Permissions and Limitations:
+
+    •	You are allowed to:
+    •	Use the code for personal or educational purposes.
+    •	Modify and share the code, provided it remains non-commercial and properly attributed.
+    •	You are not allowed to:
+    •	Use the code for commercial purposes without explicit permission.
+    •	Sub-license or relicense the code under a different license.
+
+Additional Notes:
+
+    •	By using this code, you agree to the terms of this license.
+    •	For questions or commercial licensing inquiries, please contact the repository maintainers.
+
+Copyright © 2024, Materialsmine.org. All rights reserved.

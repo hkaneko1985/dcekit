@@ -1,0 +1,11 @@
+# Verification of version 0.2.1
+
+The pinned Python 3.12 environment completed all 39 tests, including four new canonical-mask regressions and the existing source checks covering all 18 repeated-setting records. A complete `python run_all.py` run regenerated and compared all 13 common-interface outputs and 15 additional evaluation outputs with the reference files. All matched within relative tolerance 1e-7 and absolute tolerance 1e-8. The full run log and both machine-readable comparison reports are included here.
+
+The unchanged common-analysis distances and clustering support the same scientific purpose. Corrected bilateral masks, nonempty-mask counts, and the interval/coverage interpretation experiment are current results. Earlier 0.2.0 results are historical only in `provenance/v020/`; its invalid positional bilateral condition is labelled explicitly. No physical ground truth, response target, expert label, imputation or optimized weight was added.
+
+Primary NanoMine input is available in the author-local reproduction archive. The public-code archive omits nine NanoMine source/raw-audit paths and supports saved-table checks and plots only. Independent permission-backed reviewer/public access remains unverified. Local restoration verifies an already-held file, not a fresh acquisition. Source registry lookups use the frozen DOI audit; live source acquisition, full raw Starrydata/HTEM acquisition, and all original article transcriptions were not rerun.
+
+Package checks and exact results are in RELEASE_AUDIT.json. Figures 2–7 and S1–S3 are generated from the current or explicitly historical tables. ZIP integrity and every manifest entry are verified at packaging. These checks establish computational consistency within the stated inputs and scope, not a universally superior similarity.
+
+The isolated public stage completed its saved-table mode with 35 executed tests and the source-regression class skipped. It correctly refused a fresh analysis without the NanoMine input. In a separate test copy, six supplied source files were restored from the original author-held archive with matching hashes. These checks validate packaging/restoration behavior without claiming an independent acquisition route. The original full unit suite and numerical rerun used the author-held source.

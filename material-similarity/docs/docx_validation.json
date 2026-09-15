@@ -1,0 +1,32 @@
+[
+  {
+    "file": "JCIM_Material_Similarity_Manuscript_R2.docx",
+    "zip_crc": "passed",
+    "all_xml_parts_parse": "passed",
+    "internal_relationships": "passed",
+    "native_math_objects": 20,
+    "native_math_preserved": true,
+    "python_docx_load": "passed",
+    "embedded_images": 8
+  },
+  {
+    "file": "JCIM_Material_Similarity_Response_R2_JA.docx",
+    "zip_crc": "passed",
+    "all_xml_parts_parse": "passed",
+    "internal_relationships": "passed",
+    "native_math_objects": 0,
+    "native_math_preserved": null,
+    "python_docx_load": "passed",
+    "embedded_images": 0
+  },
+  {
+    "file": "JCIM_Material_Similarity_Supporting_Information_R2.docx",
+    "zip_crc": "passed",
+    "all_xml_parts_parse": "passed",
+    "internal_relationships": "passed",
+    "native_math_objects": 2,
+    "native_math_preserved": true,
+    "python_docx_load": "passed",
+    "embedded_images": 3
+  }
+]

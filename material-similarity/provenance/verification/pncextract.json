@@ -1,0 +1,9 @@
+{
+  "files_checked": 3,
+  "reference_files": 3,
+  "rtol": 1e-07,
+  "atol": 1e-08,
+  "passed": true,
+  "differences": [],
+  "scope": "PNCExtract normalized cohort: three outputs from 126 clusterings"
+}

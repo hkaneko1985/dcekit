@@ -1,0 +1,7 @@
+view,method_id,process_method,cross_paper_knn5_agreement
+method_blind_process,M1,Solution Processing,0.405
+method_blind_process,M2,Melt Mixing,0.555
+method_blind_process,M3,In-Situ Polymerization,0.31
+method_aware_process,M1,Solution Processing,0.915
+method_aware_process,M2,Melt Mixing,0.935
+method_aware_process,M3,In-Situ Polymerization,0.945

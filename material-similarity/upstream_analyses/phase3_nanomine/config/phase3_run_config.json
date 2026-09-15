@@ -1,0 +1,82 @@
+{
+  "random_seed": 20260910,
+  "cluster_counts": [8, 12, 20, 30, 50, 80],
+  "family_cluster_counts": [4, 8, 12, 20],
+  "process_lambdas": [0.0, 0.25, 0.5, 0.75, 1.0],
+  "bounds": ["optimistic", "reported", "pessimistic"],
+  "permutation_repeats": 200,
+  "shuffle_repeats": 10,
+  "consensus_k_neighbors": 10,
+  "material_profiles": {
+    "identity_strict": {
+      "matrix_strict": 0.45,
+      "filler_strict": 0.45,
+      "surface_strict": 0.10
+    },
+    "identity_soft": {
+      "matrix_soft": 0.45,
+      "filler_soft": 0.45,
+      "surface_soft": 0.10
+    },
+    "full_strict": {
+      "matrix_strict": 0.30,
+      "filler_strict": 0.30,
+      "surface_strict": 0.08,
+      "loading": 0.20,
+      "descriptor": 0.12
+    },
+    "loading_focus_soft": {
+      "matrix_soft": 0.20,
+      "filler_soft": 0.20,
+      "surface_soft": 0.05,
+      "loading": 0.45,
+      "descriptor": 0.10
+    }
+  },
+  "process_profiles": {
+    "equal": {
+      "process_family": 0.20,
+      "step_type": 0.25,
+      "sequence": 0.30,
+      "settings_all": 0.25
+    },
+    "method_type": {
+      "process_family": 0.45,
+      "step_type": 0.40,
+      "sequence": 0.10,
+      "settings_all": 0.05
+    },
+    "sequence": {
+      "process_family": 0.10,
+      "step_type": 0.15,
+      "sequence": 0.60,
+      "settings_all": 0.15
+    },
+    "settings_all": {
+      "process_family": 0.10,
+      "step_type": 0.15,
+      "sequence": 0.20,
+      "settings_all": 0.55
+    },
+    "settings_numeric": {
+      "process_family": 0.10,
+      "step_type": 0.15,
+      "sequence": 0.20,
+      "settings_numeric": 0.55
+    },
+    "no_settings": {
+      "process_family": 0.25,
+      "step_type": 0.35,
+      "sequence": 0.40
+    }
+  },
+  "sentinel_views": [
+    {"name": "material_only", "material": "identity_strict", "process": "equal", "lambda": 0.0},
+    {"name": "balanced", "material": "full_strict", "process": "equal", "lambda": 0.5},
+    {"name": "sequence_focus", "material": "identity_soft", "process": "sequence", "lambda": 0.5},
+    {"name": "settings_focus", "material": "identity_soft", "process": "settings_all", "lambda": 0.5},
+    {"name": "numeric_settings_focus", "material": "identity_soft", "process": "settings_numeric", "lambda": 0.5},
+    {"name": "process_only", "material": "identity_soft", "process": "equal", "lambda": 1.0}
+  ]
+}
+

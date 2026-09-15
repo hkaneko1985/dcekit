@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+outputs/
+*.log
+
+# NanoMine API data: restore locally; public redistribution unconfirmed
+/data/upstream/nanomine_phase3_records.jsonl.gz
+/upstream_analyses/phase3_nanomine/data/nanomine_phase3_records.jsonl.gz
+/data/processed/nanomine_audited_records.jsonl
+/results/revision/normalization_audit.csv
+/upstream_analyses/phase3_nanomine/data/raw_cache/components_knowledge.json
+/upstream_analyses/phase3_nanomine/data/raw_cache/headers_knowledge.json
+/upstream_analyses/phase3_nanomine/data/raw_cache/processing_knowledge.json
+/upstream_analyses/phase3_nanomine/data/raw_cache/sample_index.json

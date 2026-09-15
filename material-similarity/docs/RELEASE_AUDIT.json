@@ -1,0 +1,92 @@
+{
+  "version": "0.2.2",
+  "completed_utc": "2026-09-15T01:11:37.866630+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "system": "Linux"
+  },
+  "unit_tests": {
+    "executed": 39,
+    "passed": 39,
+    "full_input_present": true
+  },
+  "common_outputs": {
+    "checked": 13,
+    "passed": true
+  },
+  "additional_outputs": {
+    "checked": 18,
+    "passed": true,
+    "unchanged_R2_references": 15,
+    "new_baseline_files": 3
+  },
+  "baseline": {
+    "query_records": 120,
+    "article_groups": 93,
+    "scale_source_records": 832,
+    "mask_fraction": 0.0,
+    "query_repetitions": 1,
+    "query_rows": 7200,
+    "summary_conditions": 60,
+    "eligible_directed_pairs_per_condition": [
+      14222
+    ],
+    "records_without_reported_settings": [
+      "l242-s4-narayanan-2006"
+    ],
+    "empty_masks_in_existing_25_50_75_percent_experiment": 9,
+    "observed_baseline_ranges": {
+      "material_identity": {
+        "minimum_upper_distance": 0.6572316887841861,
+        "maximum_common_coverage": 0.5142857142857142
+      },
+      "experimental_protocol": {
+        "minimum_upper_distance": 0.2019767441860465,
+        "maximum_common_coverage": 0.925
+      },
+      "balanced_instance": {
+        "minimum_upper_distance": 0.4203044074666856,
+        "maximum_common_coverage": 0.6071428571428572
+      }
+    },
+    "rules_and_views": "unchanged config/interval_utility.json; R3 descriptive baseline",
+    "reference": "documented unmasked pair distance; no physical target",
+    "scope": "pairwise decisions only; no cluster-membership or stability guarantee"
+  },
+  "existing_180_conditions_and_random_streams": "unchanged; all 15 references byte-identical to R2",
+  "full_execution_log": "docs/full_verification.txt",
+  "public_tables_check": {
+    "executed": 35,
+    "source_test_class_skipped": true,
+    "saved_plots_passed": true,
+    "fresh_analysis_refused_without_input": true,
+    "log": "docs/public_tables_check.txt"
+  },
+  "data_access": "unresolved; author-held input only; both public API checks returned 503 on 2026-09-15",
+  "source_checks_scope": "current author-held input; no fresh acquisition or new source transcription",
+  "reproduction_tolerance": {
+    "relative": 1e-07,
+    "absolute": 1e-08
+  },
+  "word_documents": {
+    "JCIM_Material_Similarity_Manuscript_R3.docx": {
+      "pages": 32,
+      "crc_xml_relationships": "passed",
+      "layout_verified": true,
+      "native_math_objects": 20
+    },
+    "JCIM_Material_Similarity_Supporting_Information_R3.docx": {
+      "pages": 21,
+      "crc_xml_relationships": "passed",
+      "layout_verified": true,
+      "native_math_objects": 2
+    },
+    "JCIM_Material_Similarity_Response_R3_JA.docx": {
+      "pages": 3,
+      "crc_xml_relationships": "passed",
+      "layout_verified": true,
+      "native_math_objects": 0
+    }
+  },
+  "SI_Table_S15_counts_checked": 60
+}

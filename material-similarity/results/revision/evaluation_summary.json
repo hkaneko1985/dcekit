@@ -1,0 +1,20 @@
+{
+  "heldout_exact_duplicate_cross_group_pairs_excluded": 0,
+  "masked_query_records": 102,
+  "masked_query_article_groups": 78,
+  "heldout_query_records": 120,
+  "heldout_article_groups": 93,
+  "crossref_resolved_query_records": 107,
+  "weights_optimized": false,
+  "interpretation": "metadata retrieval and held-out metadata support; no property/transfer evidence",
+  "sequence_alignment_spearman": 0.771456951026955,
+  "subset_scale_spearman": 0.9982679715177538,
+  "augmented_descriptor_spearman": 0.9172279523051837,
+  "bilateral_mask_universe": "intersection of jointly reported canonical operation-occurrence-setting keys",
+  "bilateral_key_mismatch_pairs": 0,
+  "random_streams": {
+    "retrieval_and_pair_selection": 20260914,
+    "missingness": 20260915,
+    "scale_bootstrap": 20260916
+  }
+}

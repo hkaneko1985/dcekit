@@ -1,0 +1,127 @@
+{
+  "hybrid_parameterized": {
+    "common": [],
+    "label_status": "reporting/control-profile only; not a synthesis-method label",
+    "method_defining_evidence": [],
+    "minimum_group_size": 20,
+    "optional": [],
+    "rare": [],
+    "sample_libraries": 1,
+    "structural_not_applicable": [],
+    "template_status": "insufficient_sample_size",
+    "unresolved": [
+      "deposition_energy",
+      "deposition_base_pressure_mtorr",
+      "deposition_growth_pressure_mtorr",
+      "deposition_gases",
+      "deposition_gas_flow_sccm",
+      "deposition_initial_temp_c",
+      "deposition_substrate_material",
+      "deposition_ts_distance"
+    ],
+    "unresolved_due_to_small_group": [
+      "deposition_compounds",
+      "deposition_power",
+      "deposition_target_pulses",
+      "deposition_rep_rate",
+      "deposition_sample_time_min",
+      "deposition_cycles"
+    ],
+    "warning": "The template defines comparability and reporting expectations only; it never fills an individual missing value or infers an unreported step."
+  },
+  "power_parameterized": {
+    "common": [
+      "deposition_compounds",
+      "deposition_initial_temp_c",
+      "deposition_sample_time_min"
+    ],
+    "label_status": "reporting/control-profile only; not a synthesis-method label",
+    "method_defining_evidence": [
+      "deposition_power"
+    ],
+    "minimum_group_size": 20,
+    "optional": [
+      "deposition_base_pressure_mtorr",
+      "deposition_growth_pressure_mtorr",
+      "deposition_gases",
+      "deposition_gas_flow_sccm",
+      "deposition_substrate_material"
+    ],
+    "rare": [],
+    "sample_libraries": 1467,
+    "structural_not_applicable": [],
+    "template_status": "frozen",
+    "unresolved": [
+      "deposition_target_pulses",
+      "deposition_rep_rate",
+      "deposition_energy",
+      "deposition_cycles",
+      "deposition_ts_distance"
+    ],
+    "unresolved_due_to_small_group": [],
+    "warning": "The template defines comparability and reporting expectations only; it never fills an individual missing value or infers an unreported step."
+  },
+  "pulse_parameterized": {
+    "common": [
+      "deposition_sample_time_min",
+      "deposition_cycles"
+    ],
+    "label_status": "reporting/control-profile only; not a synthesis-method label",
+    "method_defining_evidence": [
+      "deposition_target_pulses",
+      "deposition_rep_rate",
+      "deposition_energy"
+    ],
+    "minimum_group_size": 20,
+    "optional": [
+      "deposition_compounds",
+      "deposition_base_pressure_mtorr",
+      "deposition_growth_pressure_mtorr",
+      "deposition_initial_temp_c",
+      "deposition_ts_distance"
+    ],
+    "rare": [
+      "deposition_gases",
+      "deposition_substrate_material"
+    ],
+    "sample_libraries": 231,
+    "structural_not_applicable": [],
+    "template_status": "frozen",
+    "unresolved": [
+      "deposition_power",
+      "deposition_gas_flow_sccm"
+    ],
+    "unresolved_due_to_small_group": [],
+    "warning": "The template defines comparability and reporting expectations only; it never fills an individual missing value or infers an unreported step."
+  },
+  "unresolved": {
+    "common": [],
+    "label_status": "reporting/control-profile only; not a synthesis-method label",
+    "method_defining_evidence": [],
+    "minimum_group_size": 20,
+    "optional": [],
+    "rare": [
+      "deposition_compounds",
+      "deposition_power",
+      "deposition_base_pressure_mtorr",
+      "deposition_growth_pressure_mtorr",
+      "deposition_gases",
+      "deposition_gas_flow_sccm",
+      "deposition_initial_temp_c",
+      "deposition_sample_time_min",
+      "deposition_cycles",
+      "deposition_substrate_material"
+    ],
+    "sample_libraries": 192,
+    "structural_not_applicable": [],
+    "template_status": "frozen",
+    "unresolved": [
+      "deposition_target_pulses",
+      "deposition_rep_rate",
+      "deposition_energy",
+      "deposition_ts_distance"
+    ],
+    "unresolved_due_to_small_group": [],
+    "warning": "The template defines comparability and reporting expectations only; it never fills an individual missing value or infers an unreported step."
+  }
+}

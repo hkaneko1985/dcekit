@@ -1,0 +1,117 @@
+{
+  "version": "1.1.0",
+  "study_claim": "Metadata-only construct validation of a materials similarity metric; no claim about property prediction or improvement transfer.",
+  "expert_judgment_policy": "No expert labels, expert-created cluster names, or post-hoc expert scoring are used in model selection or evaluation.",
+  "primary_dataset": "Starrydata samples table",
+  "primary_cohort": "ThermoelectricMaterials project if a project-specific samples file is available; otherwise a descriptor-defined inorganic cohort frozen before evaluation.",
+  "external_replication": "HTEM sample-level data, using sample-library/study identity and owner identity as weak supporting labels.",
+  "unit_of_analysis": "material sample",
+
+  "feature_sets": [
+    "F0 composition only",
+    "F1 composition plus physical form",
+    "F2 F1 plus fabrication process",
+    "F3 F2 plus state/morphology; observation masks control availability only and are not scientific similarity features"
+  ],
+  "clustering": {
+    "algorithms": [
+      "agglomerative clustering with precomputed mixed distance",
+      "HDBSCAN or density-based alternative when installed"
+    ],
+    "hyperparameter_selection": "Use only internal stability, coverage, silhouette/medoid separation, and noise fraction on the development partition. Do not inspect proxy labels until frozen.",
+    "cluster_count_policy": "Report a stability plateau across resolutions; do not select one resolution by maximizing same-paper or institution agreement."
+  },
+  "distance_model": {
+    "mixed_distance": "D(i,j) = sum_b[m_ijb * w_b * d_b(i,j)] / sum_b[m_ijb * w_b] + lambda_missing * M(i,j)",
+    "initial_block_weights": "Equal block weights; sensitivity grid selected only by resampling stability, never by proxy agreement.",
+    "composition_candidates": [
+      "stoichiometric element-vector distance",
+      "ElMD-style element mover distance",
+      "element-set Jaccard as a deliberately simple baseline"
+    ],
+    "process_distance": "Controlled-vocabulary Jaccard for unordered metadata; edit/sequence distance only where ordered operations are present.",
+    "missing_block_rule": "Pairwise available-block renormalization; lambda_missing = 0 in the primary analysis and a small penalty is sensitivity-only."
+  },
+  "proxy_labels": {
+    "primary": {
+      "label": "same SID; normalized DOI grouping is sensitivity-only",
+      "role": "known-positive, unlabeled-otherwise",
+      "restriction": "not used in features or hyperparameter tuning"
+    },
+    "secondary": {
+      "label": "same institution on different papers",
+      "role": "weak contextual support",
+      "restriction": "requires DOI enrichment; exclude same-paper pairs; normalize institutions to stable IDs; exclude or down-weight very large institutions"
+    },
+    "tertiary": {
+      "label": "same held-out MaterialFamily",
+      "role": "exploratory database-taxonomy sensitivity only; excluded from confirmatory conclusions",
+      "restriction": "MaterialFamily must be removed from features and cannot determine GO/NO-GO because its curation may embed human judgment"
+    }
+  },
+  "evaluation": {
+    "split_policy": "Freeze a development/test partition by SID before feature engineering. Proxy labels are hidden during distance and clustering selection; final metrics are computed once on test papers.",
+    "primary_metrics": [
+      "same-paper cluster co-assignment lift versus composition-matched unlabeled pairs",
+      "within-cluster same-paper odds ratio versus stratified permutation null",
+      "incremental co-assignment lift of F2/F3 over F0 under paper-block bootstrap"
+    ],
+    "secondary_metrics": [
+      "same-paper nearest-neighbor lift@1, @5, @10",
+      "known-positive retrieval average precision against a composition-matched unlabeled pool, reported as a descriptive PU metric",
+      "cross-paper same-institution lift@k",
+      "bootstrap cluster co-assignment Jaccard",
+      "adjusted Rand index across resamples",
+      "exploratory held-out MaterialFamily adjusted mutual information, not used for decisions"
+    ],
+    "uncertainty": "paper-block bootstrap with 95% percentile intervals and at least 1000 stratified label permutations",
+    "candidate_pair_matching": [
+      "same project/domain",
+      "same element-count bin",
+      "overlapping element set or equal coarse composition family",
+      "publication-year bin for institution analysis"
+    ],
+    "positive_unlabeled_rule": "Same-paper and same-institution pairs are known positives only. Pairs without a shared context are unlabeled and must never be called negatives.",
+    "random_pair_sampling": "For each known-positive pair, sample unlabeled comparators within the prespecified composition/domain strata; repeat at least 20 times.",
+    "multiple_testing": "Report all frozen feature-set and distance variants; control false discovery rate for secondary comparisons and emphasize effect sizes with intervals."
+  },
+  "negative_controls": [
+    "shuffle process fields across samples within composition strata",
+    "missingness-mask-only similarity",
+    "provenance-only clustering using SID/institution (diagnostic only)",
+    "random labels preserving group sizes"
+  ],
+  "source_leakage_checks": [
+    "Predict SID/institution from missingness masks and descriptor-key presence alone",
+    "Repeat evaluation with missingness penalty fixed to zero",
+    "Repeat same-paper evaluation using only cross-figure or non-identical-composition pairs when available",
+    "Run institution analysis only across different papers and report institution-size sensitivity"
+  ],
+  "proxy_falsification_checks": [
+    "Estimate same-paper lift after exact-composition pairs are removed",
+    "Estimate same-paper lift after restricting to pairs from different figures when figure identity is available",
+    "Estimate institution lift only for different papers, different first authors, and multiple institution-size cutoffs",
+    "Compare observed lift with source-metadata-only and missingness-only baselines",
+    "Treat a proxy disagreement as ambiguity, never as evidence that the materials are dissimilar"
+  ],
+  "go_no_go": {
+    "data_integrity": [
+      "download checksum matches published manifest",
+      "samples row count matches manifest",
+      "duplicate (SID, sample_id) rows are zero after quarantine",
+      "all property/curve fields are absent from the modeling table"
+    ],
+    "minimum_scale": [
+      "at least 5000 usable samples",
+      "at least 1000 SID groups with two or more usable samples",
+      "at least 30 percent of usable samples have a nonempty fabrication/form/state descriptor"
+    ],
+    "phase1_success": [
+      "F2 or F3 improves same-paper cluster co-assignment lift over F0 with a paper-block 95% interval excluding zero",
+      "improvement remains after composition-matched permutation and missingness-zero sensitivity",
+      "bootstrap co-assignment stability median at least 0.70",
+      "no single paper or institution accounts for more than 10 percent of the observed lift"
+    ],
+    "interpretation_if_failed": "Reject or revise the metadata similarity representation, not the existence of scientifically meaningful material similarity."
+  }
+}

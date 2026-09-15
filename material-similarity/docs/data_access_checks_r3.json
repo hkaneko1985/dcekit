@@ -1,0 +1,32 @@
+[
+  {
+    "name": "api_search",
+    "url": "https://materialsmine.org/api/search/filter?search=http&field=identifier&type=samples&page=1&pageSize=1",
+    "checked_at_utc": "2026-09-15T00:55:23.559038+00:00",
+    "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+    "name": "software_license",
+    "url": "https://raw.githubusercontent.com/Duke-MatSci/materialsmine/5a48d01d21b112aa36c62be22e470cc00620ef74/LICENSE",
+    "checked_at_utc": "2026-09-15T00:55:23.560471+00:00",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 2072,
+    "sha256": "7401c93f548ead852c4aeb90f4d453ca94d09e6962c052f7bf9c34924246134c"
+  },
+  {
+    "name": "dataset_source",
+    "url": "https://raw.githubusercontent.com/Duke-MatSci/materialsmine/5a48d01d21b112aa36c62be22e470cc00620ef74/app/src/modules/whyis-dataset.ts",
+    "checked_at_utc": "2026-09-15T00:55:23.562198+00:00",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 13134,
+    "sha256": "580e82989be6d9d118eaf412ca7385533e7fe6b8e7355c15cbd59e9130c5d1cf"
+  },
+  {
+    "name": "public_sparql",
+    "url": "https://materialsmine.org/wi/sparql?query=SELECT%20%3Fs%20WHERE%20%7B%3Fs%20%3Fp%20%3Fo%7D%20LIMIT%201&format=json",
+    "checked_at_utc": "2026-09-15T00:55:23.562831+00:00",
+    "error": "HTTP Error 503: Service Unavailable"
+  }
+]

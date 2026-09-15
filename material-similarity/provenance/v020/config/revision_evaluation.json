@@ -1,0 +1,11 @@
+{
+  "seed": 20260914,
+  "cohort": "pre-existing 120-record, three-method display subset; selection unchanged",
+  "masked_retrieval": {"replicates": 3, "mask_fraction": 0.4, "minimum_reported_setting_fields": 4, "gallery": "all cohort records except other records in the query article group; original target retained", "ties": "analytical expectation under uniform ordering"},
+  "heldout_method": {"remove_method_field_and_literal_aliases": true, "gallery": "different article group; exact distance-feature duplicates excluded", "k": 5},
+  "weights": {"balanced_strict": {"composition": 0.2,"material_identity": 0.25,"process_method": 0.1,"step_type": 0.1,"sequence": 0.15,"settings": 0.2}, "equal_facets": {"composition":1,"material_identity":1,"process_method":1,"step_type":1,"sequence":1,"settings":1}},
+  "scales": "fit using all source records excluding the query article group; no target or method labels used",
+  "bootstrap": {"unit":"article group", "replicates": 1000, "interval":"percentile 95%, conditional on fixed gallery"},
+  "missingness": {"pair_count": 300,"mask_fraction":0.5,"types":["unilateral","bilateral","article_block"],"coverage_gate":0.5},
+  "scale_sensitivity": {"bootstrap_replicates":20,"pair_count":300}
+}

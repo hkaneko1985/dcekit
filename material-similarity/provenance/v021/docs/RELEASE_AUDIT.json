@@ -1,0 +1,60 @@
+{
+  "version": "0.2.1",
+  "completed_utc": "2026-09-14T22:39:41.137978+00:00",
+  "unit_tests": {
+    "executed": 39,
+    "passed": 39,
+    "new_canonical_mask_tests": 4,
+    "source_records_with_multivalues_checked": 18
+  },
+  "common_analysis": {
+    "files_checked": 13,
+    "reference_files": 13,
+    "rtol": 1e-07,
+    "atol": 1e-08,
+    "passed": true,
+    "differences": [],
+    "scope": "Common-interface examples only; earlier resource-specific grids are not recomputed."
+  },
+  "additional_evaluations": {
+    "files_checked": 15,
+    "passed": true,
+    "differences": [],
+    "scope": "same-information retrieval and missingness/alignment/scale evaluations"
+  },
+  "public_saved_tables": {
+    "exit_code": 0,
+    "executed_tests": 35,
+    "source_regression_class_skipped": true,
+    "figures": "2–7 and S1–S3"
+  },
+  "public_fresh_analysis_without_source": {
+    "exit_code": 1,
+    "expected_refusal": true
+  },
+  "authorized_local_restoration_check": {
+    "source": "original user-supplied archive",
+    "source_files_restored": 6,
+    "all_source_hashes_match": true,
+    "is_independent_acquisition": false
+  },
+  "distribution": {
+    "unconfirmed_source_and_raw_audit_paths_excluded_from_public": 9,
+    "author_has_all_excluded_paths": true,
+    "reviewer_and_public_input_access": "not independently established"
+  },
+  "document_qa": {
+    "main_pages": 32,
+    "si_pages": 20,
+    "japanese_response_pages": 3,
+    "all_pages_rendered_and_visually_reviewed": true,
+    "native_math_preserved": true,
+    "scope": "OOXML parsing, internal package relationships, native-math comparison, and LibreOffice page rendering; not a Microsoft Word installation test"
+  },
+  "limits": [
+    "No property prediction or chemical ground truth evaluated",
+    "No optimized weights or imputation",
+    "Source acquisition and all original article transcriptions not re-audited",
+    "NanoMine permission-backed reviewer/public route remains unresolved"
+  ]
+}

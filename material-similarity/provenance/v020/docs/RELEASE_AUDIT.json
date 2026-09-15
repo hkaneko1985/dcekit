@@ -1,0 +1,97 @@
+{
+  "version": "0.2.0",
+  "date": "2026-09-14",
+  "common_analysis": {
+    "files_checked": 13,
+    "reference_files": 13,
+    "rtol": 1e-07,
+    "atol": 1e-08,
+    "passed": true,
+    "differences": [],
+    "scope": "Common-interface examples only; earlier resource-specific grids are not recomputed."
+  },
+  "additional_evaluation": {
+    "files_checked": 9,
+    "passed": true,
+    "differences": [],
+    "scope": "same-information retrieval and missingness/alignment/scale evaluations"
+  },
+  "public_tables_only": {
+    "passed": true,
+    "executed_tests": 30,
+    "source_regression_class_skipped": true,
+    "unittest_summary": "31 tests, skipped=1 (source-dependent class)",
+    "saved_figure_regeneration": "passed",
+    "fresh_data_analysis": false
+  },
+  "restored_source_tests": {
+    "passed": true,
+    "tests": 35,
+    "skipped": 0
+  },
+  "restoration_checks": {
+    "public_default_requires_data": true,
+    "incorrect_existing_source_rejected": true,
+    "authorized_original_snapshot_restore": true,
+    "restored_source_hashes": [
+      {
+        "path": "data/upstream/nanomine_phase3_records.jsonl.gz",
+        "hash_matches": true
+      },
+      {
+        "path": "upstream_analyses/phase3_nanomine/data/nanomine_phase3_records.jsonl.gz",
+        "hash_matches": true
+      },
+      {
+        "path": "upstream_analyses/phase3_nanomine/data/raw_cache/components_knowledge.json",
+        "hash_matches": true
+      },
+      {
+        "path": "upstream_analyses/phase3_nanomine/data/raw_cache/headers_knowledge.json",
+        "hash_matches": true
+      },
+      {
+        "path": "upstream_analyses/phase3_nanomine/data/raw_cache/processing_knowledge.json",
+        "hash_matches": true
+      },
+      {
+        "path": "upstream_analyses/phase3_nanomine/data/raw_cache/sample_index.json",
+        "hash_matches": true
+      }
+    ]
+  },
+  "public_exclusion": {
+    "passed": true,
+    "excluded_files": 8,
+    "separate_author_input_retained": true
+  },
+  "documents": [
+    {
+      "name": "JCIM_Material_Similarity_Manuscript_Revised.docx",
+      "pages": 29,
+      "sha256": "01507263cbc1e2e2f92b89b6dcd73b392e284273b818a410e1dc3d9b5c1078ea",
+      "visual_qa": "All pages reviewed; changed pages rendered and rechecked",
+      "math": "Native Word equations retained where applicable"
+    },
+    {
+      "name": "JCIM_Material_Similarity_Supporting_Information_Revised.docx",
+      "pages": 18,
+      "sha256": "6a59e4727a6312e72d8966406838658b2f07281486553bd4468dfbabed58ecb2",
+      "visual_qa": "All pages reviewed; changed pages rendered and rechecked",
+      "math": "Native Word equations retained where applicable"
+    },
+    {
+      "name": "JCIM_Material_Similarity_Response_JA.docx",
+      "pages": 3,
+      "sha256": "66bc5daf57ec429601f5f3276388497830fffa409c4f8f7dcb35ecf7a5c2319b",
+      "visual_qa": "All pages reviewed; changed pages rendered and rechecked",
+      "math": "Native Word equations retained where applicable"
+    }
+  ],
+  "limits": [
+    "NanoMine API-data redistribution permission remains unconfirmed.",
+    "The checked public API returned HTTP 503; live reconstruction of the frozen snapshot is not guaranteed.",
+    "No public repository URL, commit, or data DOI has been claimed.",
+    "Full historical Starrydata and HTEM acquisition inputs are unavailable."
+  ]
+}

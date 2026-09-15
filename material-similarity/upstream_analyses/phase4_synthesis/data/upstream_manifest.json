@@ -1,0 +1,91 @@
+{
+  "created_on": "2026-09-10",
+  "role": "Frozen upstream artifacts used by Phase 4",
+  "files": {
+    "starry_summary": {
+      "path": "data/upstream/starry_summary.json",
+      "bytes": 3597,
+      "sha256": "41ddd6eaed15db402a2451b0e3d0bf8e9f143759bcc86ce2d17576ff2fa74cdd"
+    },
+    "starry_assignments": {
+      "path": "data/upstream/starry_assignments.jsonl.gz",
+      "bytes": 127893,
+      "sha256": "c8604241eb845360baf19b945afde74ecd8c3beffdb7ec094d2e1ab846e62667"
+    },
+    "htem_summary": {
+      "path": "data/upstream/htem_summary.json",
+      "bytes": 140698,
+      "sha256": "eebda2613b70069ae4cca694afc87e9d1588a2bbbd691274443384901393e2b0"
+    },
+    "htem_grid": {
+      "path": "data/upstream/htem_grid.csv",
+      "bytes": 895154,
+      "sha256": "a39a51f41ba7250540e249f5265dba247514d40d7b267a6ba1d9593ab18a2806"
+    },
+    "htem_assignments": {
+      "path": "data/upstream/htem_assignments.jsonl.gz",
+      "bytes": 16665,
+      "sha256": "e13c353824ea94ebfdf696229a55e28a7cfeb40852cfbe796e7bb05a8f26ea5b"
+    },
+    "htem_candidates": {
+      "path": "data/upstream/htem_candidates.json",
+      "bytes": 115677,
+      "sha256": "24acffae18e1c7f15bc8539d9e4a84d73c4c90e12294774c285878fe6de38817"
+    },
+    "nano_summary": {
+      "path": "data/upstream/nano_summary.json",
+      "bytes": 596,
+      "sha256": "5ab63b4bea065c2c7d49a79e84c338beb971bb756ad4ae4f02c66d0688dad02a"
+    },
+    "nano_grid": {
+      "path": "data/upstream/nano_grid.csv",
+      "bytes": 766086,
+      "sha256": "4f68a7acdd7f7d73b3c706c4e974720e1e4b441a40fdb0b5d16adc4abb923f42"
+    },
+    "nano_config": {
+      "path": "data/upstream/nano_config.json",
+      "bytes": 2325,
+      "sha256": "761a53fc37379a8040c38d1bb8fdda64e3deafb0a6c46e6630c0639c739c315d"
+    },
+    "nano_assignments": {
+      "path": "data/upstream/nano_assignments.jsonl.gz",
+      "bytes": 114367,
+      "sha256": "31c65b6cbea58cc7faa8a80b9b9594c4566f50824a8effd10bd5d2373e74c39a"
+    },
+    "nano_retrieval": {
+      "path": "data/upstream/nano_retrieval.csv",
+      "bytes": 2083,
+      "sha256": "a08709c2dd0c0496b1510dcd067fe565a531bf6ac2712e08b92680ae559b74fb"
+    },
+    "nano_mask": {
+      "path": "data/upstream/nano_mask.csv",
+      "bytes": 1121,
+      "sha256": "b62dfc429024f0010edba6abf045080abf305abe983dae45be91213ea7ed9ef0"
+    },
+    "nano_shuffle": {
+      "path": "data/upstream/nano_shuffle.csv",
+      "bytes": 2030,
+      "sha256": "8164d9c5b3524c517dae48b1943532c7302bc2c95f0877f4c0d2ea3b3fdc7310"
+    },
+    "nano_candidates": {
+      "path": "data/upstream/nano_candidates.csv",
+      "bytes": 185039,
+      "sha256": "c682da452b542e9d1daa243443f9767179cb970b3b4d2173091a2f847f09d0fa"
+    },
+    "pnc_summary": {
+      "path": "data/upstream/pnc_summary.json",
+      "bytes": 289,
+      "sha256": "6a229723df8407675a85b4fe9395dab39e4c0a89ec250338f77ef52d55afc7e0"
+    },
+    "pnc_grid": {
+      "path": "data/upstream/pnc_grid.csv",
+      "bytes": 35485,
+      "sha256": "9814e62cbbb0a472993c2eb45f478ac7d517a958055ca1f3944491fc2039d29b"
+    },
+    "pnc_retrieval": {
+      "path": "data/upstream/pnc_retrieval.csv",
+      "bytes": 1123,
+      "sha256": "3120500319f364db9034e0d58ae98c20063123519038ae3fc3a3d18fd91f4905"
+    }
+  }
+}

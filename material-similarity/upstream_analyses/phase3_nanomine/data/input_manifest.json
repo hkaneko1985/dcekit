@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-09-10T00:59:08.885129+00:00",
+  "target_or_property_values_used": false,
+  "source": {
+    "site": "https://materialsmine.org/",
+    "public_search_route": "https://materialsmine.org/api/search/filter",
+    "note": "Public cached sample-view responses were used because the live SPARQL backend returned HTTP 503 during acquisition.",
+    "materialsmine_commit": "5a48d01d21b112aa36c62be22e470cc00620ef74",
+    "pncextract_commit": "46a8175f1371048ae3d381bbc6e01e5922321794"
+  },
+  "raw_files": {
+    "components_knowledge.json": {
+      "bytes": 5943638,
+      "sha256": "851f6e3d32f228a41066b2e4433823a50b15bf5f242805495eb521342468aead"
+    },
+    "headers_knowledge.json": {
+      "bytes": 1665086,
+      "sha256": "da61777cd56567e0633261d1f10722da34b6cb8f3cf7c6497147d6c5d01b28b4"
+    },
+    "processing_knowledge.json": {
+      "bytes": 4110575,
+      "sha256": "9e3a1ec001a14931a77bf892a86f346aed913a732b0c7015e2a93388efee6516"
+    },
+    "sample_index.json": {
+      "bytes": 387651,
+      "sha256": "83440a7d2e9bc9ada6924d35378dca3c9718da719c68719a2b1fa7155fb12cc8"
+    }
+  },
+  "cache_audit": {
+    "sample_index": 1610,
+    "components": {
+      "cache_hits": 1364,
+      "unique_samples": 907,
+      "duplicate_cache_hits": 457,
+      "conflicting_samples": 0
+    },
+    "processing": {
+      "cache_hits": 1266,
+      "unique_samples": 832,
+      "duplicate_cache_hits": 434,
+      "conflicting_samples": 0
+    },
+    "headers": {
+      "cache_hits": 1327,
+      "unique_samples": 836,
+      "duplicate_cache_hits": 491,
+      "conflicting_samples": 0
+    }
+  },
+  "analysis_population": {
+    "samples": 832,
+    "papers": 119,
+    "papers_with_at_least_two_samples": 105,
+    "samples_with_paper_neighbor": 818,
+    "same_paper_pairs": 4985,
+    "process_families": {
+      "Solution Processing": 459,
+      "Melt Mixing": 228,
+      "In-Situ Polymerization": 120,
+      "Other Processing": 27
+    },
+    "role_patterns": {
+      "Filler|Matrix|Surface Treatment": 118,
+      "Matrix": 108,
+      "Filler|Matrix": 606
+    },
+    "citation_metadata_samples": 794
+  }
+}

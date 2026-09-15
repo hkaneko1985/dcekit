@@ -1,0 +1,6 @@
+view,rank_left_to_right,rank_right_to_left,optimistic,reported,pessimistic,uncertainty_width,common_reported_fraction,one_sided_fraction,structural_difference_fraction,active_weight,excluded_weight
+material_identity,2,2,0.0,0.0,0.4,0.4,0.6,0.0,0.0,1.0,1.0
+material_identity_soft,2,2,0.0,0.0,0.4,0.4,0.6,0.0,0.0,1.0,1.0
+synthesis_pathway,5,8,0.12142857142857141,0.12142857142857141,0.12142857142857141,0.0,1.0,0.0,0.0,1.0,0.0
+experimental_protocol,5,8,0.1032142857142857,0.1032142857142857,0.1032142857142857,0.0,0.9624999999999999,0.0,0.0375,1.0,0.45
+balanced_instance,2,6,0.05809523809523809,0.07261904761904761,0.2580952380952381,0.2,0.7833333333333333,0.0,0.016666666666666666,1.0,0.65

@@ -1,0 +1,10 @@
+dataset,process_weight,configurations,global_gain_metric,global_gain_median,global_gain_positive_fraction,local_gain_metric,local_gain_median
+HTEM,0.1,130,source-adjusted excess gain vs composition,0.008862512548399901,0.7923076923076923,MRR gain vs composition,-0.0048913498448169
+HTEM,0.25,130,source-adjusted excess gain vs composition,0.019805962451884748,0.9,MRR gain vs composition,-0.0033055130260574
+HTEM,0.5,130,source-adjusted excess gain vs composition,0.049528446292305295,0.9076923076923077,MRR gain vs composition,-0.0025970342375014
+HTEM,0.75,130,source-adjusted excess gain vs composition,0.0618711814707572,0.9230769230769231,MRR gain vs composition,-0.002150696327827
+HTEM,1.0,130,source-adjusted excess gain vs composition,0.0694640357996065,0.9076923076923077,MRR gain vs composition,-0.0020038218825417
+NanoMine,0.25,144,paper ARI gain vs material-only,0.016999220416727155,0.9513888888888888,not available for full grid,
+NanoMine,0.5,144,paper ARI gain vs material-only,0.06082379903681891,0.9652777777777778,not available for full grid,
+NanoMine,0.75,144,paper ARI gain vs material-only,0.12712825287793675,1.0,not available for full grid,
+NanoMine,1.0,144,paper ARI gain vs material-only,0.15040955670464293,0.9861111111111112,not available for full grid,

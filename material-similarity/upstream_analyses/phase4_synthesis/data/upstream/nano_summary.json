@@ -1,0 +1,21 @@
+{
+  "samples": 832,
+  "papers": 119,
+  "same_paper_pairs": 4985,
+  "shared_author_cross_paper_pairs": 8437,
+  "same_location_cross_paper_pairs": 92,
+  "global_clusterings": 2160,
+  "family_clusterings": 288,
+  "distance_views": 360,
+  "unique_distance_clusterings": 244,
+  "reported_lift_distribution": {
+    "min": 1.0734514431442577,
+    "median": 6.546070270213789,
+    "max": 105.24742394955287
+  },
+  "bound_stability": {
+    "median_optimistic_pessimistic_ari": 0.5450065211838739,
+    "min_optimistic_pessimistic_ari": -0.052755165500621815,
+    "max_optimistic_pessimistic_ari": 1.0
+  }
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "path": "upstream_analyses/phase1r_process_audit/README.md",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/README.md",
+    "sha256": "e100d1ec476efe3a4f59a881d66a6ee35b1dee0f9553ffb0f90be9cc0b60a372"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/requirements-phase1r.txt",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/requirements-phase1r.txt",
+    "sha256": "f2474e79247a1ad965a2b8a20ef8ce4fa6a01b2dc86b7cc43095145ad9d28b94"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/MANIFEST.sha256",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/MANIFEST.sha256",
+    "sha256": "bbbd2fe033d130029681829cdfcfa21e48a7535c4baef338d15b034ca182ad8a"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/config/phase1r_spec.json",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/config/phase1r_spec.json",
+    "sha256": "1bf4bd2fb5aee46985a85ef9bcad1ed17b2e4adc78303af127a9ae7407c76685"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/figures/phase1r_process_audit.png",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/figures/phase1r_process_audit.png",
+    "sha256": "5c20bfc08e7fa196104f96fa4b2346839a467411afe884919cee224150e4be94"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/figures/phase1r_process_audit.svg",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/figures/phase1r_process_audit.svg",
+    "sha256": "f58bcf8916dca8da03b64fd26e37fdd6cbe1eba4fef0aef6deefbeb15e4d6ab1"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/data/htem_study_links.json",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/data/htem_study_links.json",
+    "sha256": "0116b58429bbf97a65a45e097d8b8336ac05396114b82e2d466c7a5acc6a39fe"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/data/htem_process_audit_records.jsonl.gz",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/data/htem_process_audit_records.jsonl.gz",
+    "sha256": "939594225c0e58db0aa2d12fe2d1d5c066c29a5a0f2b7d2902b7988e94c9ffd0"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/data/input_manifest.json",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/data/input_manifest.json",
+    "sha256": "8ea95d6348a484a295db65b4a892c5aff817a8d1b5c05f7fe0d3173be58166f1"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/tests/test_phase1r_audit.py",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/tests/test_phase1r_audit.py",
+    "sha256": "3ac4fc019c3646314cc5669cc5279574af8d92f23a761c6489a438d2f6e92ce7"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/results/process_templates.json",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/results/process_templates.json",
+    "sha256": "d888349d0c2f735a3c41da3e7e3490ca5fe1b0be032dc1d17d281321b64d514c"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/results/library_process_inventory.csv.gz",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/results/library_process_inventory.csv.gz",
+    "sha256": "582c6dba36dfa44214de0268c5cdd2f96eddb3231a430e0ec2ce306d1304ed31"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/results/component_occurrence_by_family.csv",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/results/component_occurrence_by_family.csv",
+    "sha256": "c99a31fcaaeb5c9a35a499e0705e782fc87e7680cf6c3fc004989a070c5e97d9"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/results/phase1r_audit.json",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/results/phase1r_audit.json",
+    "sha256": "ce66d728325b97372ddd9a5dc4954d221ab4b71f8c5f83744f7e98bd850d2ce7"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/results/field_reporting_by_family.csv",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/results/field_reporting_by_family.csv",
+    "sha256": "f4f907c64d2a5dbda335c9050cc460561625932ae6b913bf498e3bf08197b49f"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/src/prepare_phase1r_input.py",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/src/prepare_phase1r_input.py",
+    "sha256": "b984025770680698f4382c18e74b92fce9b5753a799ba74278f12cdaeb526cef"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/src/run_phase1r_audit.py",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/src/run_phase1r_audit.py",
+    "sha256": "dff16673ba0d988790e3e41bc65c1f24a637f1983f2f03f9fa8906bd6435a2ef"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/src/make_release.py",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/src/make_release.py",
+    "sha256": "4c963252ed66072b2fe1c4953086bfbcf75d793e24f640cdbac1c37a4e5d6909"
+  },
+  {
+    "path": "upstream_analyses/phase1r_process_audit/reports/phase1r_report_ja.md",
+    "source": "extracted/phase1r_process_audit_bundle/phase1r_process_audit/reports/phase1r_report_ja.md",
+    "sha256": "8c31c34976b9eebc1bafb7b9d5c098792de84bdaadb99ca342ac3aa8c1aac6d5"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/README.md",
+    "source": "extracted/htem_material_similarity_phase2/README.md",
+    "sha256": "b58d1092d807fe2950c95585397b4a6663ed251036d1a3bf2d14e60c69c27bef"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/requirements-phase2.txt",
+    "source": "extracted/htem_material_similarity_phase2/requirements-phase2.txt",
+    "sha256": "12f0233fe1583d7b2e04b2349bf5131ff0bc8915d958164936186de373f169ea"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/config/phase2_run_config.json",
+    "source": "extracted/htem_material_similarity_phase2/config/phase2_run_config.json",
+    "sha256": "e6ef3bb44f3a56b7797effd327e961c5a06aa684273eb209df73a87bf7df3be8"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/config/phase2_spec.json",
+    "source": "extracted/htem_material_similarity_phase2/config/phase2_spec.json",
+    "sha256": "206852fec4e57a9b414bfed7730cce64c77bfd26d228cca813cb7763faf3295c"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/data/htem_study_links.json",
+    "source": "extracted/htem_material_similarity_phase2/data/htem_study_links.json",
+    "sha256": "0116b58429bbf97a65a45e097d8b8336ac05396114b82e2d466c7a5acc6a39fe"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/data/input_manifest.json",
+    "source": "extracted/htem_material_similarity_phase2/data/input_manifest.json",
+    "sha256": "0d3825e4f6ee35a309b2210ea326ddfaa2aa75951681d8b43b106a102a29a2ca"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/data/htem_phase2_records.jsonl.gz",
+    "source": "extracted/htem_material_similarity_phase2/data/htem_phase2_records.jsonl.gz",
+    "sha256": "94c71b1617a5c2bbaa1d8c782e83be74f42e545f341ff9db19c243dfda897666"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/tests/test_phase2_interval_core.py",
+    "source": "extracted/htem_material_similarity_phase2/tests/test_phase2_interval_core.py",
+    "sha256": "0d9a33ea1a06984d5e459f4ba9480b3a8838b63e5159ef427dce23f7b05194f3"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/selected_cluster_profiles.json",
+    "source": "extracted/htem_material_similarity_phase2/results/selected_cluster_profiles.json",
+    "sha256": "3d4eef2a27623386980b0c5388fbfa5f85bab3a0ae59f1e2284152663b686539"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/phase2_results.json",
+    "source": "extracted/htem_material_similarity_phase2/results/phase2_results.json",
+    "sha256": "eebda2613b70069ae4cca694afc87e9d1588a2bbbd691274443384901393e2b0"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/interesting_pairs.json",
+    "source": "extracted/htem_material_similarity_phase2/results/interesting_pairs.json",
+    "sha256": "24acffae18e1c7f15bc8539d9e4a84d73c4c90e12294774c285878fe6de38817"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/selected_assignments.jsonl.gz",
+    "source": "extracted/htem_material_similarity_phase2/results/selected_assignments.jsonl.gz",
+    "sha256": "e13c353824ea94ebfdf696229a55e28a7cfeb40852cfbe796e7bb05a8f26ea5b"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/phase2_grid.csv",
+    "source": "extracted/htem_material_similarity_phase2/results/phase2_grid.csv",
+    "sha256": "a39a51f41ba7250540e249f5265dba247514d40d7b267a6ba1d9593ab18a2806"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/results/phase2_posthoc_sensitivity.json",
+    "source": "extracted/htem_material_similarity_phase2/results/phase2_posthoc_sensitivity.json",
+    "sha256": "d83240e343369f0d9c1770a06666c3206280546266d0725472da06cef767d710"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/report/PHASE2_REPORT_JA.md",
+    "source": "extracted/htem_material_similarity_phase2/report/PHASE2_REPORT_JA.md",
+    "sha256": "b31f2bffbc5cfe64d90e0cc55bc3e033df49c37084d62f70c204a70eb9fc0713"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/phase2_interval_core.py",
+    "source": "extracted/htem_material_similarity_phase2/src/phase2_interval_core.py",
+    "sha256": "f1f21923296231d7e3ce1bc6b69420ce5b32054649c7969e3a34b33be67c4342"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/run_phase2.py",
+    "source": "extracted/htem_material_similarity_phase2/src/run_phase2.py",
+    "sha256": "0b5899d43623776a9d780e6858adb777037d3dd3f83c6ca6d7136d7ee9280f9e"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/run_posthoc_sensitivity.py",
+    "source": "extracted/htem_material_similarity_phase2/src/run_posthoc_sensitivity.py",
+    "sha256": "429ef96533276ffbb9ade1f29d85646887da3fa35096c2ea1c4ce83ca06ae951"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/make_phase2_figures.py",
+    "source": "extracted/htem_material_similarity_phase2/src/make_phase2_figures.py",
+    "sha256": "51355f4c71b130594ab7c545d98f60a0f902cd7b7475ba2eeb031ffce48fdf87"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/make_phase2_report.py",
+    "source": "extracted/htem_material_similarity_phase2/src/make_phase2_report.py",
+    "sha256": "e48442c935cddb06e0d5fdd50711818dc8ea309ec67946184e7f90d1a970dc52"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/src/prepare_phase2_input.py",
+    "source": "extracted/htem_material_similarity_phase2/src/prepare_phase2_input.py",
+    "sha256": "79c11a5c32c84ac1e05b2ca4fec4ddc9ce29edbb7190fb43ba6610265c243488"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/report/figures/phase2_summary.svg",
+    "source": "extracted/htem_material_similarity_phase2/report/figures/phase2_summary.svg",
+    "sha256": "114b061106a22bf88f4cffcda6ccc660894b80c392abe0d9df77a244ced99a58"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/report/figures/phase2_cross_instrument_pair.svg",
+    "source": "extracted/htem_material_similarity_phase2/report/figures/phase2_cross_instrument_pair.svg",
+    "sha256": "bd34e41a9177c359e8bdab7bc6bfa1437bdd3ffcdf797ed801f805cd53cb9a39"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/report/figures/phase2_cross_instrument_pair.png",
+    "source": "extracted/htem_material_similarity_phase2/report/figures/phase2_cross_instrument_pair.png",
+    "sha256": "c5ac9a58288d4a743a1899433425a3b464d75b9056e0d131469e5d9ab9070ab5"
+  },
+  {
+    "path": "upstream_analyses/phase2_htem/report/figures/phase2_summary.png",
+    "source": "extracted/htem_material_similarity_phase2/report/figures/phase2_summary.png",
+    "sha256": "6b09c365c0afeb9828d73862ca3858594d29465cb1430a56645943da94d4251b"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/README.md",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/README.md",
+    "sha256": "9c30f11677e1cdbdeb9494b4d7195cb9dc4d70b59efdb8970d29bcbe615e5c10"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/requirements-phase3.txt",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/requirements-phase3.txt",
+    "sha256": "8fb7633b31648f4e8b0861bcf3f5b17f9b7ecd393e4f8b2b1348eab2fa2dab8a"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/config/phase3_run_config.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/config/phase3_run_config.json",
+    "sha256": "761a53fc37379a8040c38d1bb8fdda64e3deafb0a6c46e6630c0639c739c315d"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/config/phase3_spec.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/config/phase3_spec.json",
+    "sha256": "f82d836d8c9db359453e32ef31b6b983d5e55610351a76305c0764f392830091"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/pncextract_breadth_records.jsonl.gz",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/pncextract_breadth_records.jsonl.gz",
+    "sha256": "13e63a7664bbaca59123c81026740884f8924b7070a31f07e647299af59a30a3"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/input_manifest.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/input_manifest.json",
+    "sha256": "c669c3a3a76648e87c43b0f8f8e6e724a3cefd7e995f759898dcdf770bbaa700"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/SOURCES_AND_LICENSES.md",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/SOURCES_AND_LICENSES.md",
+    "sha256": "333f6cc8712cf8a729e20912a1e84616225c63c0676c55bc3903a34cc5a26ba5"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/process_family_inventory.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/process_family_inventory.csv",
+    "sha256": "1452613d9cfcf03d4b8e9aa9c06156791c35e37d7fa72792975da6ccbe1308e4"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/nanomine_phase3_records.jsonl.gz",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/nanomine_phase3_records.jsonl.gz",
+    "sha256": "209168324fcbbcf9d308a2d6358d0caacf7a885b19b2c8e3de951bbff704833a"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/tests/test_phase3_core.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/tests/test_phase3_core.py",
+    "sha256": "b66f89596bf4e62142e2470877c1f16d6bdffeea76bc015bd24b8a1aeda57ba7"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/duplicate_signature_audit.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/duplicate_signature_audit.csv",
+    "sha256": "c59bac71998cadeca4b2413b4f4a3f233db75ef0ce7a5e156f1893240a38b097"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/sentinel_retrieval.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/sentinel_retrieval.csv",
+    "sha256": "a08709c2dd0c0496b1510dcd067fe565a531bf6ac2712e08b92680ae559b74fb"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/pncextract_breadth_retrieval.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/pncextract_breadth_retrieval.csv",
+    "sha256": "3120500319f364db9034e0d58ae98c20063123519038ae3fc3a3d18fd91f4905"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/sentinel_assignments.jsonl.gz",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/sentinel_assignments.jsonl.gz",
+    "sha256": "31c65b6cbea58cc7faa8a80b9b9594c4566f50824a8effd10bd5d2373e74c39a"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/bound_stability.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/bound_stability.csv",
+    "sha256": "49d68d26070f592f4d13d4581e8833674f9e11b219498532a52f364aecc44c5e"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/label_permutation_tests.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/label_permutation_tests.csv",
+    "sha256": "3f05c4d27bd1f93ba2ed52193317b5abb15ee9ac1b94f8b0b168027777b1276d"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/sentinel_cluster_profiles.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/sentinel_cluster_profiles.csv",
+    "sha256": "55eef117d48470223dd3e8f99c2340a09926b457e3bce3298ecd8fdca4d36bd4"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/phase3_grid.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/phase3_grid.csv",
+    "sha256": "4f68a7acdd7f7d73b3c706c4e974720e1e4b441a40fdb0b5d16adc4abb923f42"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/process_shuffle_controls.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/process_shuffle_controls.csv",
+    "sha256": "4568033d6625ec7c9fbf464fbe18a09259ec88a6344c548b067a145dec393550"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/pncextract_breadth_summary.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/pncextract_breadth_summary.json",
+    "sha256": "6a229723df8407675a85b4fe9395dab39e4c0a89ec250338f77ef52d55afc7e0"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/missingness_control.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/missingness_control.csv",
+    "sha256": "b62dfc429024f0010edba6abf045080abf305abe983dae45be91213ea7ed9ef0"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/deduplicated_sentinel_sensitivity.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/deduplicated_sentinel_sensitivity.csv",
+    "sha256": "6547b73102c3e925aca9db51e51e4089d7e7ae642900308b1d2ca6acfa27f540"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/pncextract_breadth_grid.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/pncextract_breadth_grid.csv",
+    "sha256": "9814e62cbbb0a472993c2eb45f478ac7d517a958055ca1f3944491fc2039d29b"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/facet_distances.npz",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/facet_distances.npz",
+    "sha256": "7b91e4bdb8de6d343f3206b27a096d0293dcbe78428b68c4adf3d84d4bdce0b3"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/process_shuffle_control_summary.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/process_shuffle_control_summary.csv",
+    "sha256": "8164d9c5b3524c517dae48b1943532c7302bc2c95f0877f4c0d2ea3b3fdc7310"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/phase3_family_grid.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/phase3_family_grid.csv",
+    "sha256": "99a8c067efab424ecf210f4b9269b09ae6c81b91c383bec95e97aaf9a3f2c1a1"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/phase3_summary.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/phase3_summary.json",
+    "sha256": "5ab63b4bea065c2c7d49a79e84c338beb971bb756ad4ae4f02c66d0688dad02a"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/facet_audit.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/facet_audit.csv",
+    "sha256": "0b08a26cd2b60a10ff77c40968f2db6156cd95bc431e876b3ea356ffd64d1317"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/results/consensus_cross_paper_pairs.csv",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/results/consensus_cross_paper_pairs.csv",
+    "sha256": "c682da452b542e9d1daa243443f9767179cb970b3b4d2173091a2f847f09d0fa"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/report/PHASE3_REPORT_JA.md",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/report/PHASE3_REPORT_JA.md",
+    "sha256": "11460d64d97eafbc007d3035bbb794b8502de74110250117fca46e64986df316"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/run_duplicate_sensitivity.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/run_duplicate_sensitivity.py",
+    "sha256": "d772ab0c628e161efd2871da65c41e24cd4270aef135aef53e500770acd10f85"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/acquire_phase3_cache.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/acquire_phase3_cache.py",
+    "sha256": "23bfc45f41c2fc0d00c881385424e207c1c4bf6a620cfab4d6d9708501db4648"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/make_phase3_figures.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/make_phase3_figures.py",
+    "sha256": "68a2cc3e97fb2ef9cbe73aea80d3350380f0eb4ddc989757d174f42f0293d202"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/run_controls.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/run_controls.py",
+    "sha256": "77e396b551eb3e17f4c554b9a21e8734faa8312eb518be5759b0306c589fda97"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/run_pncextract_breadth.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/run_pncextract_breadth.py",
+    "sha256": "30ac17b55672bd148a079984169ffba75f89b0abf17bf5df04f3765a05cd212e"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/make_phase3_report.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/make_phase3_report.py",
+    "sha256": "ff4f9b9ea6a000ef2f2908705cb393c77e50a9b0859d280e2f7e649d359a190e"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/phase3_core.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/phase3_core.py",
+    "sha256": "f39b006aedccc1329afb996804fd2b9e1e01cd12d8e1279bdcbf9f80e2402fb2"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/prepare_phase3_input.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/prepare_phase3_input.py",
+    "sha256": "f6995de4144e93940c26fde5238abbcda3a623a50f1f7f34ee7917213ab0df0c"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/src/run_phase3.py",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/src/run_phase3.py",
+    "sha256": "5c9503c56efc19fc9f80ff958da330cf755fe68d6d0c10f1d4b283d7c4c53429"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/raw_cache/components_knowledge.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/raw_cache/components_knowledge.json",
+    "sha256": "851f6e3d32f228a41066b2e4433823a50b15bf5f242805495eb521342468aead"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/raw_cache/headers_knowledge.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/raw_cache/headers_knowledge.json",
+    "sha256": "da61777cd56567e0633261d1f10722da34b6cb8f3cf7c6497147d6c5d01b28b4"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/raw_cache/sample_index.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/raw_cache/sample_index.json",
+    "sha256": "83440a7d2e9bc9ada6924d35378dca3c9718da719c68719a2b1fa7155fb12cc8"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/data/raw_cache/processing_knowledge.json",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/data/raw_cache/processing_knowledge.json",
+    "sha256": "9e3a1ec001a14931a77bf892a86f346aed913a732b0c7015e2a93388efee6516"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/report/figures/phase3_sensitivity.svg",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/report/figures/phase3_sensitivity.svg",
+    "sha256": "649679c988728473e420e78f210c126169b7b2253a5a984acc5a2db3208b3f4f"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/report/figures/phase3_sensitivity.png",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/report/figures/phase3_sensitivity.png",
+    "sha256": "5b24eb1dcb4ad510480cb3cb5cc3d15a09f8597560788cb2144bd277d50c14fc"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/report/figures/phase3_summary.svg",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/report/figures/phase3_summary.svg",
+    "sha256": "dcdf0f5c899e6519c72ac57765ebc985737772f98105139edf90097f43b1b9e7"
+  },
+  {
+    "path": "upstream_analyses/phase3_nanomine/report/figures/phase3_summary.png",
+    "source": "extracted/phase3_nanomine_similarity/phase3_nanomine_similarity/report/figures/phase3_summary.png",
+    "sha256": "54264eebe1641b194bd043a6883bd8fc0be18348e5b974fd31b9b26a272e9dc0"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/README.md",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/README.md",
+    "sha256": "115414b7eb31f5ee3ac5d1f5d16aae7d8d5958231c95d62b16401b01b4260a35"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/requirements-phase4.txt",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/requirements-phase4.txt",
+    "sha256": "aa90cf781dff1c8b2cc678fd28c60e35b128e137b94a51ab84d85173de64bdf1"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/MANIFEST.sha256",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/MANIFEST.sha256",
+    "sha256": "fda5a790f30d31b8ac66d0612653c01a3c1ee4f12cf5c2c2f0e5d7142d36931f"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/config/phase4_spec.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/config/phase4_spec.json",
+    "sha256": "64ce4a85e9ff3658066aab19ccb92ad1eeb1b4800ae2e8c52fb2ff28a7724573"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/README.md",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/README.md",
+    "sha256": "8ce1e3f57ea8d61b001294272ce5f65b135474e1f9ced14faa6a51e0cfb1a086"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/SOURCES_AND_LICENSES.md",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/SOURCES_AND_LICENSES.md",
+    "sha256": "2fa9e9e0446ad1514a8319bf5c3b498e15fa71a780649307957f721d79d1b29c"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream_manifest.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream_manifest.json",
+    "sha256": "2fd864b9d61c2129b6dc8da23497531416ac956ca65e608e13dd8720bde0f5b0"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/tests/test_phase4_outputs.py",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/tests/test_phase4_outputs.py",
+    "sha256": "990c485cc4a5642b081d1fa49d1ce4ad743b73fea8ffa6494fb4391ff57ba2aa"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/nanomine_sentinel_objectives.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/nanomine_sentinel_objectives.csv",
+    "sha256": "7f9008bda5ca88aaac256435470f572e55e9ffca8eebfda7893af48ea85bf634"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/view_disagreement_pairs.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/view_disagreement_pairs.csv",
+    "sha256": "16478981657b79847d80c9c13ec1ffee76cac78d1c208ca5687640f7a723b101"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/cross_dataset_diagnostics.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/cross_dataset_diagnostics.csv",
+    "sha256": "498de1397634f67d0d3eef4d805936841b20759678e1269e4b0a7c17922a0883"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/phase4_decision.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/phase4_decision.json",
+    "sha256": "1669b9e4d4f8d1fd590a5e00c94f1e2830b9b4a56bc81e4cc639f614ed5a0bbb"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/view_disagreement_summary.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/view_disagreement_summary.csv",
+    "sha256": "7ecbc600ae70d0e13ee13cce9fef21d5015cc135e348a44a9a8d1b0b7c79ecca"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/pncextract_k50_objectives.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/pncextract_k50_objectives.csv",
+    "sha256": "433a3e44b57e821acfa887e79643c460811658ecdcbea41b641238c115bf0502"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/phase4_summary.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/phase4_summary.json",
+    "sha256": "1a8c65955f1053380f19145b3420781d46e53f01a5c1357f30ced29a9e88fe31"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/hypothesis_evidence_matrix.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/hypothesis_evidence_matrix.csv",
+    "sha256": "b43cdc4419bdf5599579f9b862dc3c3b47f29e568d75f4138e928135ad9ff495"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/uncertainty_sensitivity.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/uncertainty_sensitivity.csv",
+    "sha256": "82d404115f09d85724f7b3e83e810ae9e4550a6da2ea9cc4a116d40b1a996cb3"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/objective_disagreement.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/objective_disagreement.csv",
+    "sha256": "817907ac6d293ebf856c39fad78b24b2c5d62a4255209129f0455a81ae82d014"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/results/weight_response.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/results/weight_response.csv",
+    "sha256": "546540b10e21eceee5e78550394a72cdc56b9accaf8543594d292123fef6b668"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/report/PHASE4_REPORT_JA.md",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/report/PHASE4_REPORT_JA.md",
+    "sha256": "df0f78df6ce5e9db71939d93aa68252827be69aa9cfaf1c66348dc56b583b9a5"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/src/run_phase4.py",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/src/run_phase4.py",
+    "sha256": "93082c9f39977fe394bf0e0cfb81c2ad2bf35c5e23d351572c4d280cf2dbf2a3"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/src/make_phase4_report.py",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/src/make_phase4_report.py",
+    "sha256": "c03c172f2a0129ab22db4cddaeb99e0883c08e3baa778575c2ab7124cce52a89"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/src/make_phase4_figures.py",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/src/make_phase4_figures.py",
+    "sha256": "3fd1995d4f9d6cbef5a4ebe5b9d5ba24d8da8f118b3222eff0a60cdb7f67094a"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_mask.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_mask.csv",
+    "sha256": "b62dfc429024f0010edba6abf045080abf305abe983dae45be91213ea7ed9ef0"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/htem_assignments.jsonl.gz",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/htem_assignments.jsonl.gz",
+    "sha256": "e13c353824ea94ebfdf696229a55e28a7cfeb40852cfbe796e7bb05a8f26ea5b"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/htem_candidates.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/htem_candidates.json",
+    "sha256": "24acffae18e1c7f15bc8539d9e4a84d73c4c90e12294774c285878fe6de38817"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/pnc_summary.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/pnc_summary.json",
+    "sha256": "6a229723df8407675a85b4fe9395dab39e4c0a89ec250338f77ef52d55afc7e0"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_assignments.jsonl.gz",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_assignments.jsonl.gz",
+    "sha256": "31c65b6cbea58cc7faa8a80b9b9594c4566f50824a8effd10bd5d2373e74c39a"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/pnc_retrieval.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/pnc_retrieval.csv",
+    "sha256": "3120500319f364db9034e0d58ae98c20063123519038ae3fc3a3d18fd91f4905"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/pnc_grid.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/pnc_grid.csv",
+    "sha256": "9814e62cbbb0a472993c2eb45f478ac7d517a958055ca1f3944491fc2039d29b"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/starry_summary.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/starry_summary.json",
+    "sha256": "41ddd6eaed15db402a2451b0e3d0bf8e9f143759bcc86ce2d17576ff2fa74cdd"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_config.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_config.json",
+    "sha256": "761a53fc37379a8040c38d1bb8fdda64e3deafb0a6c46e6630c0639c739c315d"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/starry_assignments.jsonl.gz",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/starry_assignments.jsonl.gz",
+    "sha256": "c8604241eb845360baf19b945afde74ecd8c3beffdb7ec094d2e1ab846e62667"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_retrieval.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_retrieval.csv",
+    "sha256": "a08709c2dd0c0496b1510dcd067fe565a531bf6ac2712e08b92680ae559b74fb"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_candidates.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_candidates.csv",
+    "sha256": "c682da452b542e9d1daa243443f9767179cb970b3b4d2173091a2f847f09d0fa"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/htem_grid.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/htem_grid.csv",
+    "sha256": "a39a51f41ba7250540e249f5265dba247514d40d7b267a6ba1d9593ab18a2806"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/htem_summary.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/htem_summary.json",
+    "sha256": "eebda2613b70069ae4cca694afc87e9d1588a2bbbd691274443384901393e2b0"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_summary.json",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_summary.json",
+    "sha256": "5ab63b4bea065c2c7d49a79e84c338beb971bb756ad4ae4f02c66d0688dad02a"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_grid.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_grid.csv",
+    "sha256": "4f68a7acdd7f7d73b3c706c4e974720e1e4b441a40fdb0b5d16adc4abb923f42"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/data/upstream/nano_shuffle.csv",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/data/upstream/nano_shuffle.csv",
+    "sha256": "8164d9c5b3524c517dae48b1943532c7302bc2c95f0877f4c0d2ea3b3fdc7310"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/report/figures/phase4_evidence_matrix.svg",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/report/figures/phase4_evidence_matrix.svg",
+    "sha256": "d03f0866c4c604ea0ec23368e5a21936ebd71637a6e50390387f0c13ae574269"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/report/figures/phase4_evidence_matrix.png",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/report/figures/phase4_evidence_matrix.png",
+    "sha256": "3e2d0a3e8c8332be52566d4091b418ca9d54d775189a89b258b0b117e164bb96"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/report/figures/phase4_cross_dataset_overview.png",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/report/figures/phase4_cross_dataset_overview.png",
+    "sha256": "371aa05767ec475b317cd93e92dae3a2081d9c913e6ac031def6d399c4b6dbed"
+  },
+  {
+    "path": "upstream_analyses/phase4_synthesis/report/figures/phase4_cross_dataset_overview.svg",
+    "source": "extracted/phase4_material_similarity_synthesis/phase4_material_similarity_synthesis/report/figures/phase4_cross_dataset_overview.svg",
+    "sha256": "f94233422043c92a7bf1b5bf47450be842eb959f70216eef29c506970ab15fce"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_feature_policy.json.openai-download-0c900f95cef94fcbacf2bc470c98f950",
+    "source": "recovered/phase1_feature_policy.json.openai-download-0c900f95cef94fcbacf2bc470c98f950",
+    "sha256": "ef71dbba7e0968ea9b2aeb1a4bb14172d1b5568af1193167ed612bae80e5c845"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/src/summarize_phase1_results.py",
+    "source": "recovered/summarize_phase1_results.py",
+    "sha256": "195306e3915ebdb4a66eeda39564a29f214c3df1a73370d907a297100cef3f30"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/requirements-phase1.txt",
+    "source": "recovered/requirements-phase1.txt",
+    "sha256": "9ec82eabd11d4edb2ad4fa3483de5f0330aa06ea7a57c6beb2800417f9a44262"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_decision.json",
+    "source": "recovered/phase1_decision.json",
+    "sha256": "866403ec82b93a89c7ecee83d881e2c9f0b281356208068bb7c8e732ed5aca33"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_resolution_sensitivity.json",
+    "source": "recovered/phase1_resolution_sensitivity.json",
+    "sha256": "2837a7a1ad486997feec44a63cbacf6ea8eb1cfc89711ae131262fad99c94fbc"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/src/make_phase1_decision.py",
+    "source": "recovered/make_phase1_decision.py",
+    "sha256": "cfcdef0a0bf029c66b0b118cec75fc8cdda6d10f025ef6e2644c9507e9f8a294"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_run.json",
+    "source": "recovered/phase1_run.json",
+    "sha256": "c3288a6b25e8336adaeac3cfb799fba0413012af93b617d9f149ab49435b02c2"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_preregistration.json.openai-download-c0dd2de4d9514124a9133b5df402648b",
+    "source": "recovered/phase1_preregistration.json.openai-download-c0dd2de4d9514124a9133b5df402648b",
+    "sha256": "c9eff9be8df59035231b811e1aeec4e3d5879886210609d15258971c250a578e"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_cluster_profiles.json",
+    "source": "recovered/phase1_cluster_profiles.json",
+    "sha256": "067cea7bf82dc7d729e80aa7a65fd3a4da1679ab0998f18b2f84fbe219f52c6a"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/requirements-phase1.txt.openai-download-d63879d165aa4233a3eab98956ece6fd",
+    "source": "recovered/requirements-phase1.txt.openai-download-d63879d165aa4233a3eab98956ece6fd",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_resolution_sensitivity_config.json",
+    "source": "recovered/phase1_resolution_sensitivity_config.json",
+    "sha256": "4f6e9eb08e66adf2b91e02e414bef2118e31515af075a8d6d57d5f79ea453eef"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_feature_policy.json",
+    "source": "recovered/phase1_feature_policy.json",
+    "sha256": "ef71dbba7e0968ea9b2aeb1a4bb14172d1b5568af1193167ed612bae80e5c845"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_preregistration.json",
+    "source": "recovered/phase1_preregistration.json",
+    "sha256": "c9eff9be8df59035231b811e1aeec4e3d5879886210609d15258971c250a578e"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_run.json.openai-download-975c815d0d404305b4d8c0d4f14b0d4a",
+    "source": "recovered/phase1_run.json.openai-download-975c815d0d404305b4d8c0d4f14b0d4a",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/tests/test_phase1_core.py",
+    "source": "recovered/test_phase1_core.py",
+    "sha256": "7e10daef2a72c1bc3defb15b45883f1b8c169658214681e2c6e36c81ef382249"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/report/phase1_report.md",
+    "source": "recovered/phase1_report.md",
+    "sha256": "4240b2ce7bf16297ae79f82efad5d16b8c8aef76c1a1651a46cba05cf1ba71b3"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_robustness_summary.json",
+    "source": "recovered/phase1_robustness_summary.json",
+    "sha256": "41ddd6eaed15db402a2451b0e3d0bf8e9f143759bcc86ce2d17576ff2fa74cdd"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_decision.json.openai-download-31f8a20847bc4b7e8439d354a7a4b01b",
+    "source": "recovered/phase1_decision.json.openai-download-31f8a20847bc4b7e8439d354a7a4b01b",
+    "sha256": "866403ec82b93a89c7ecee83d881e2c9f0b281356208068bb7c8e732ed5aca33"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_cluster_assignments.jsonl.gz",
+    "source": "recovered/phase1_cluster_assignments.jsonl.gz",
+    "sha256": "c8604241eb845360baf19b945afde74ecd8c3beffdb7ec094d2e1ab846e62667"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/src/make_phase1_figures.py",
+    "source": "recovered/make_phase1_figures.py",
+    "sha256": "cfee16e535e921ceb2ead9c9e072c5c40a2262e9546b4c9dc3e78c62721604d7"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/phase1_cluster_profiles.json.openai-download-96e88391de0d4beeb68f4145079d3fe0",
+    "source": "recovered/phase1_cluster_profiles.json.openai-download-96e88391de0d4beeb68f4145079d3fe0",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/results/make_phase1_decision.py.openai-download-321a5777cf09468981532da8990a509d",
+    "source": "recovered/make_phase1_decision.py.openai-download-321a5777cf09468981532da8990a509d",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/src/run_phase1.py",
+    "source": "recovered/run_phase1.py",
+    "sha256": "474730a44634b1f2e6bff070886fc14e762290fb0ce28ceeadafb65457e3ce45"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/src/phase1_core.py",
+    "source": "recovered/phase1_core.py",
+    "sha256": "d1141d09a20ef29018ec73145494ae930d93d6f89d5b3977ab6527b1b9c739ab"
+  },
+  {
+    "path": "upstream_analyses/phase1_starrydata/config/phase1_run_config.json",
+    "source": "recovered/phase1_run_config.json",
+    "sha256": "d42bfe23dc05514e3dde62fa8667999c875cd9da8b5baf0867ce282ed7c52778"
+  }
+]

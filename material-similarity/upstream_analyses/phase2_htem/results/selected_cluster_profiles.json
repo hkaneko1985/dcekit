@@ -1,0 +1,1462 @@
+{
+  "clusters": [
+    {
+      "cluster": 9,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          90
+        ]
+      ],
+      "same_study_unique_pairs": 211,
+      "sample_library_ids_first_30": [
+        6651,
+        6658,
+        6662,
+        6677,
+        6678,
+        6701,
+        6710,
+        6719,
+        6725,
+        6738,
+        6861,
+        6876,
+        6908,
+        6923,
+        6931,
+        6940,
+        6943,
+        6954,
+        6967,
+        7060,
+        7094,
+        7097,
+        7113,
+        7123,
+        7127,
+        7137,
+        7150,
+        7167,
+        7182,
+        7188
+      ],
+      "size": 90,
+      "top_element_systems": [
+        [
+          "Co-Ni-O-Zn",
+          75
+        ],
+        [
+          "Co-Ni-O",
+          13
+        ],
+        [
+          "",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 32,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          23
+        ],
+        [
+          "3",
+          11
+        ]
+      ],
+      "same_study_unique_pairs": 196,
+      "sample_library_ids_first_30": [
+        6638,
+        6665,
+        6839,
+        7027,
+        7254,
+        7373,
+        7418,
+        7655,
+        8315,
+        8316,
+        8317,
+        8321,
+        8322,
+        8323,
+        8324,
+        8325,
+        8326,
+        8327,
+        8328,
+        8329,
+        8330,
+        8331,
+        8332,
+        8333,
+        8334,
+        8335,
+        8336,
+        8337,
+        8338,
+        8339
+      ],
+      "size": 34,
+      "top_element_systems": [
+        [
+          "Ga-O-Zn",
+          28
+        ],
+        [
+          "Ga-H-O-Zn",
+          5
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 87,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          18
+        ]
+      ],
+      "same_study_unique_pairs": 91,
+      "sample_library_ids_first_30": [
+        6632,
+        6639,
+        6772,
+        6803,
+        6960,
+        6996,
+        7022,
+        7039,
+        7170,
+        7210,
+        7217,
+        7282,
+        7460,
+        7490,
+        7501,
+        7609,
+        7660,
+        8011
+      ],
+      "size": 18,
+      "top_element_systems": [
+        [
+          "Ag-O-V",
+          18
+        ]
+      ]
+    },
+    {
+      "cluster": 43,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          20
+        ]
+      ],
+      "same_study_unique_pairs": 45,
+      "sample_library_ids_first_30": [
+        6679,
+        6684,
+        6693,
+        6706,
+        6914,
+        6999,
+        7095,
+        7118,
+        7139,
+        7181,
+        7345,
+        7361,
+        7412,
+        7446,
+        7494,
+        8560,
+        8561,
+        8563,
+        8565,
+        8566
+      ],
+      "size": 20,
+      "top_element_systems": [
+        [
+          "Co-O-Sn-Ta",
+          20
+        ]
+      ]
+    },
+    {
+      "cluster": 27,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          59
+        ],
+        [
+          "5",
+          28
+        ]
+      ],
+      "same_study_unique_pairs": 10,
+      "sample_library_ids_first_30": [
+        6648,
+        6757,
+        6768,
+        6822,
+        6856,
+        6867,
+        6899,
+        6944,
+        6971,
+        6975,
+        7002,
+        7031,
+        7073,
+        7077,
+        7086,
+        7286,
+        7287,
+        7321,
+        7342,
+        7354,
+        7363,
+        7417,
+        7453,
+        7464,
+        7473,
+        7622,
+        7708,
+        7771,
+        7797,
+        7830
+      ],
+      "size": 87,
+      "top_element_systems": [
+        [
+          "N-Sn-Zn",
+          82
+        ],
+        [
+          "Sn-Zn",
+          4
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 93,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          5
+        ]
+      ],
+      "same_study_unique_pairs": 10,
+      "sample_library_ids_first_30": [
+        6767,
+        7336,
+        7896,
+        8021,
+        8024
+      ],
+      "size": 5,
+      "top_element_systems": [
+        [
+          "Ni-O",
+          3
+        ],
+        [
+          "Ni",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 14,
+      "instrument_distribution_validation_only": [
+        [
+          "3",
+          33
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 6,
+      "sample_library_ids_first_30": [
+        6897,
+        6916,
+        6984,
+        6993,
+        7171,
+        7515,
+        7745,
+        9164,
+        9165,
+        9167,
+        9216,
+        9217,
+        9218,
+        9219,
+        9220,
+        9221,
+        9222,
+        9224,
+        9225,
+        9231,
+        9241,
+        9242,
+        9244,
+        9245,
+        9246,
+        9247,
+        9248,
+        9249,
+        9250,
+        9251
+      ],
+      "size": 34,
+      "top_element_systems": [
+        [
+          "Ag-Ge-Y",
+          33
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 59,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          9
+        ]
+      ],
+      "same_study_unique_pairs": 6,
+      "sample_library_ids_first_30": [
+        6727,
+        6907,
+        6927,
+        7177,
+        7403,
+        7408,
+        8886,
+        8921,
+        8954
+      ],
+      "size": 9,
+      "top_element_systems": [
+        [
+          "S-Sn-Te",
+          9
+        ]
+      ]
+    },
+    {
+      "cluster": 130,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          5
+        ]
+      ],
+      "same_study_unique_pairs": 6,
+      "sample_library_ids_first_30": [
+        6833,
+        6979,
+        7104,
+        7245,
+        7487
+      ],
+      "size": 5,
+      "top_element_systems": [
+        [
+          "S-Se-Sn",
+          4
+        ],
+        [
+          "S-Se-Sn-Te",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 21,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          18
+        ],
+        [
+          "HTEMC",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 3,
+      "sample_library_ids_first_30": [
+        7707,
+        7722,
+        7887,
+        7909,
+        7988,
+        7997,
+        9764,
+        9777,
+        9851,
+        9864,
+        9867,
+        9887,
+        9895,
+        9918,
+        10104,
+        10105,
+        10136,
+        10137,
+        10793
+      ],
+      "size": 19,
+      "top_element_systems": [
+        [
+          "O-Sn-Ti-Zn",
+          17
+        ],
+        [
+          "",
+          1
+        ],
+        [
+          "Sn-Ti-Zn",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 89,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          11
+        ]
+      ],
+      "same_study_unique_pairs": 3,
+      "sample_library_ids_first_30": [
+        6653,
+        6958,
+        7036,
+        7260,
+        7267,
+        7301,
+        7627,
+        7662,
+        7955,
+        7956,
+        10194
+      ],
+      "size": 11,
+      "top_element_systems": [
+        [
+          "In-S",
+          11
+        ]
+      ]
+    },
+    {
+      "cluster": 79,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          3
+        ]
+      ],
+      "same_study_unique_pairs": 3,
+      "sample_library_ids_first_30": [
+        6813,
+        7307,
+        7431
+      ],
+      "size": 3,
+      "top_element_systems": [
+        [
+          "O-Sn",
+          3
+        ]
+      ]
+    },
+    {
+      "cluster": 6,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          36
+        ],
+        [
+          "1",
+          13
+        ],
+        [
+          "3",
+          10
+        ]
+      ],
+      "same_study_unique_pairs": 2,
+      "sample_library_ids_first_30": [
+        6626,
+        6637,
+        6657,
+        6661,
+        6671,
+        6672,
+        6745,
+        6749,
+        6750,
+        6845,
+        6885,
+        6894,
+        6898,
+        6939,
+        6955,
+        6986,
+        6987,
+        7024,
+        7067,
+        7122,
+        7198,
+        7274,
+        7290,
+        7349,
+        7353,
+        7399,
+        7444,
+        7497,
+        7582,
+        7600
+      ],
+      "size": 59,
+      "top_element_systems": [
+        [
+          "Cu-O-Se-Zn",
+          32
+        ],
+        [
+          "Cu-O-Zn",
+          24
+        ],
+        [
+          "",
+          3
+        ]
+      ]
+    },
+    {
+      "cluster": 40,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          22
+        ],
+        [
+          "NOT_REPORTED",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 1,
+      "sample_library_ids_first_30": [
+        6851,
+        6963,
+        7117,
+        7844,
+        8494,
+        8495,
+        8496,
+        8499,
+        8500,
+        8501,
+        8502,
+        8503,
+        8504,
+        8505,
+        8506,
+        8507,
+        8508,
+        8535,
+        8536,
+        8537,
+        8538,
+        8551,
+        8567
+      ],
+      "size": 23,
+      "top_element_systems": [
+        [
+          "Co-Sn-Ta",
+          23
+        ]
+      ]
+    },
+    {
+      "cluster": 10,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          19
+        ]
+      ],
+      "same_study_unique_pairs": 1,
+      "sample_library_ids_first_30": [
+        7048,
+        7281,
+        7402,
+        7437,
+        7730,
+        7843,
+        8413,
+        8414,
+        8415,
+        8422,
+        8423,
+        8424,
+        8476,
+        8477,
+        8478,
+        8479,
+        8480,
+        10206,
+        10208
+      ],
+      "size": 19,
+      "top_element_systems": [
+        [
+          "Cu-N-Ta",
+          17
+        ],
+        [
+          "",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 100,
+      "instrument_distribution_validation_only": [
+        [
+          "5",
+          6
+        ]
+      ],
+      "same_study_unique_pairs": 1,
+      "sample_library_ids_first_30": [
+        6814,
+        6828,
+        7262,
+        7717,
+        7861,
+        7870
+      ],
+      "size": 6,
+      "top_element_systems": [
+        [
+          "N-Sn-Ti",
+          6
+        ]
+      ]
+    },
+    {
+      "cluster": 166,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          3
+        ]
+      ],
+      "same_study_unique_pairs": 1,
+      "sample_library_ids_first_30": [
+        7026,
+        7334,
+        7492
+      ],
+      "size": 3,
+      "top_element_systems": [
+        [
+          "In-S-Zr",
+          3
+        ]
+      ]
+    },
+    {
+      "cluster": 187,
+      "instrument_distribution_validation_only": [
+        [
+          "3",
+          3
+        ]
+      ],
+      "same_study_unique_pairs": 1,
+      "sample_library_ids_first_30": [
+        9223,
+        9226,
+        9227
+      ],
+      "size": 3,
+      "top_element_systems": [
+        [
+          "Ag-Ge-Y",
+          3
+        ]
+      ]
+    },
+    {
+      "cluster": 24,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          64
+        ],
+        [
+          "4",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6628,
+        6635,
+        6830,
+        6863,
+        6913,
+        6922,
+        7040,
+        7079,
+        7081,
+        7141,
+        7192,
+        7219,
+        7242,
+        7302,
+        7348,
+        7355,
+        7376,
+        7461,
+        7489,
+        7588,
+        9823,
+        9831,
+        9832,
+        9833,
+        9839,
+        9854,
+        9855,
+        9862,
+        9872,
+        9873
+      ],
+      "size": 65,
+      "top_element_systems": [
+        [
+          "In-O-Sn-Zn",
+          63
+        ],
+        [
+          "",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 44,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          63
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6647,
+        6674,
+        6700,
+        6709,
+        6733,
+        6808,
+        6858,
+        6886,
+        6903,
+        6928,
+        6949,
+        6972,
+        6978,
+        7008,
+        7110,
+        7126,
+        7133,
+        7145,
+        7200,
+        7228,
+        7240,
+        7273,
+        7279,
+        7303,
+        7304,
+        7327,
+        7330,
+        7344,
+        7387,
+        7443
+      ],
+      "size": 63,
+      "top_element_systems": [
+        [
+          "Cu-S-Sn",
+          49
+        ],
+        [
+          "Cu-O-S-Sn",
+          14
+        ]
+      ]
+    },
+    {
+      "cluster": 28,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          52
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        7023,
+        7427,
+        10035,
+        10037,
+        10038,
+        10039,
+        10040,
+        10044,
+        10045,
+        10046,
+        10048,
+        10049,
+        10055,
+        10056,
+        10062,
+        10065,
+        10073,
+        10078,
+        10133,
+        10134,
+        10138,
+        10144,
+        10150,
+        10151,
+        10152,
+        10154,
+        10155,
+        10156,
+        10157,
+        10158
+      ],
+      "size": 52,
+      "top_element_systems": [
+        [
+          "Ba-Cu-S",
+          52
+        ]
+      ]
+    },
+    {
+      "cluster": 17,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          44
+        ],
+        [
+          "1",
+          1
+        ],
+        [
+          "NOT_REPORTED",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6656,
+        6682,
+        6718,
+        6720,
+        6722,
+        6740,
+        6804,
+        6812,
+        6829,
+        6900,
+        6905,
+        6926,
+        6991,
+        7001,
+        7393,
+        7405,
+        7454,
+        7539,
+        7634,
+        7637,
+        7644,
+        7648,
+        7656,
+        7670,
+        7690,
+        7715,
+        7725,
+        7757,
+        7792,
+        7794
+      ],
+      "size": 46,
+      "top_element_systems": [
+        [
+          "Cu-S-Sb",
+          33
+        ],
+        [
+          "Cu-O-S-Sb",
+          9
+        ],
+        [
+          "Cu-Mo-S-Sb",
+          2
+        ],
+        [
+          "",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 29,
+      "instrument_distribution_validation_only": [
+        [
+          "4",
+          39
+        ],
+        [
+          "1",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6688,
+        6785,
+        6809,
+        7038,
+        7159,
+        7166,
+        7230,
+        7244,
+        7297,
+        7406,
+        7466,
+        7598,
+        7683,
+        7687,
+        7716,
+        7749,
+        7763,
+        7968,
+        7977,
+        8000,
+        8822,
+        8823,
+        8832,
+        8833,
+        8834,
+        8859,
+        8860,
+        8861,
+        8862,
+        10572
+      ],
+      "size": 40,
+      "top_element_systems": [
+        [
+          "Cu-Ga-In-Se",
+          21
+        ],
+        [
+          "Cu-In-Se",
+          18
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 0,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          33
+        ],
+        [
+          "3",
+          2
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6633,
+        6680,
+        6685,
+        6782,
+        6793,
+        6854,
+        6904,
+        6961,
+        6974,
+        6985,
+        7064,
+        7065,
+        7151,
+        7172,
+        7183,
+        7241,
+        7250,
+        7259,
+        7320,
+        7338,
+        7379,
+        7804,
+        7957,
+        7985,
+        8027,
+        8029,
+        8531,
+        8591,
+        9345,
+        9906
+      ],
+      "size": 35,
+      "top_element_systems": [
+        [
+          "Cu-N",
+          34
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 18,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          26
+        ],
+        [
+          "5",
+          3
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6765,
+        6871,
+        6964,
+        7013,
+        7015,
+        7043,
+        7136,
+        7234,
+        7318,
+        7329,
+        7371,
+        7372,
+        7458,
+        7507,
+        7557,
+        7581,
+        7686,
+        7739,
+        7785,
+        7890,
+        8411,
+        8417,
+        8418,
+        8419,
+        8526,
+        8533,
+        8534,
+        9850,
+        10304
+      ],
+      "size": 29,
+      "top_element_systems": [
+        [
+          "Cu-N",
+          17
+        ],
+        [
+          "Cu-N-Zn",
+          7
+        ],
+        [
+          "Cu-N-Ta",
+          4
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 54,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          29
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6667,
+        6675,
+        6800,
+        6811,
+        6966,
+        6994,
+        7248,
+        7341,
+        7498,
+        7535,
+        7549,
+        7552,
+        7658,
+        8298,
+        8301,
+        8311,
+        8312,
+        8426,
+        8427,
+        8509,
+        8547,
+        8568,
+        10230,
+        10269,
+        10283,
+        10579,
+        10581,
+        10584,
+        10590
+      ],
+      "size": 29,
+      "top_element_systems": [
+        [
+          "Co-O-Zn",
+          22
+        ],
+        [
+          "Co-Ni-O-Zn",
+          6
+        ],
+        [
+          "Co-Cu-O-Sn-Zn",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 36,
+      "instrument_distribution_validation_only": [
+        [
+          "1",
+          27
+        ],
+        [
+          "3",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6669,
+        6732,
+        6783,
+        6790,
+        6801,
+        6807,
+        6837,
+        6915,
+        6934,
+        6936,
+        6959,
+        7016,
+        7030,
+        7049,
+        7153,
+        7213,
+        7225,
+        7261,
+        7296,
+        7325,
+        7439,
+        7449,
+        7486,
+        7712,
+        7840,
+        8470,
+        8471,
+        8475
+      ],
+      "size": 28,
+      "top_element_systems": [
+        [
+          "Cr-Mn-O",
+          14
+        ],
+        [
+          "Cr-Mg-Mn-O",
+          5
+        ],
+        [
+          "Cr-Mn-O-Zn",
+          3
+        ],
+        [
+          "Cr-Mn-N-O",
+          3
+        ],
+        [
+          "Cr-Mg-Mn-N-O",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 2,
+      "instrument_distribution_validation_only": [
+        [
+          "3",
+          19
+        ],
+        [
+          "1",
+          8
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6776,
+        6796,
+        6906,
+        6945,
+        7000,
+        7006,
+        7017,
+        7075,
+        7082,
+        7099,
+        7169,
+        7284,
+        7310,
+        7316,
+        7366,
+        7451,
+        7463,
+        7502,
+        7742,
+        8461,
+        8846,
+        9334,
+        9335,
+        9336,
+        9337,
+        9338,
+        9351
+      ],
+      "size": 27,
+      "top_element_systems": [
+        [
+          "Mn-O",
+          9
+        ],
+        [
+          "Mn-O-Sn",
+          5
+        ],
+        [
+          "Ga-Mn-O",
+          4
+        ],
+        [
+          "Cu-Mn-O-Zn",
+          4
+        ],
+        [
+          "Mn-O-Zn",
+          2
+        ]
+      ]
+    },
+    {
+      "cluster": 11,
+      "instrument_distribution_validation_only": [
+        [
+          "6",
+          18
+        ],
+        [
+          "1",
+          8
+        ],
+        [
+          "NOT_REPORTED",
+          1
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        11041,
+        11042,
+        11044,
+        11046,
+        11049,
+        11050,
+        11051,
+        11052,
+        11915,
+        11916,
+        11925,
+        12583,
+        12584,
+        12585,
+        12586,
+        12587,
+        12588,
+        12589,
+        12590,
+        12605,
+        12606,
+        12607,
+        12661,
+        12673,
+        12674,
+        12675,
+        12910
+      ],
+      "size": 27,
+      "top_element_systems": [
+        [
+          "Ge-N-Zn",
+          21
+        ],
+        [
+          "Ge-Zn",
+          5
+        ],
+        [
+          "",
+          1
+        ]
+      ]
+    },
+    {
+      "cluster": 13,
+      "instrument_distribution_validation_only": [
+        [
+          "3",
+          20
+        ],
+        [
+          "1",
+          5
+        ],
+        [
+          "4",
+          2
+        ]
+      ],
+      "same_study_unique_pairs": 0,
+      "sample_library_ids_first_30": [
+        6687,
+        6715,
+        6774,
+        6835,
+        6841,
+        6933,
+        6946,
+        6957,
+        7004,
+        7063,
+        7071,
+        7074,
+        7106,
+        7131,
+        7138,
+        7216,
+        7221,
+        7222,
+        7231,
+        7421,
+        7447,
+        7484,
+        7500,
+        7508,
+        8033,
+        9374,
+        9946
+      ],
+      "size": 27,
+      "top_element_systems": [
+        [
+          "Mn-O-Zn",
+          20
+        ],
+        [
+          "Co-Cr-O-Zn",
+          2
+        ],
+        [
+          "",
+          2
+        ],
+        [
+          "Co-Ni-O-Zn",
+          2
+        ],
+        [
+          "Ni-O-Zn",
+          1
+        ]
+      ]
+    }
+  ],
+  "configuration": {
+    "clusters": 200,
+    "config_id": "SOURCE_ONLY__reported__L075",
+    "process_lambda": 0.75,
+    "profile": "SOURCE_ONLY",
+    "variant": "reported"
+  }
+}

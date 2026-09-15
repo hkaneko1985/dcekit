@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this software and the underlying data resources when using this work."
+type: software
+title: "Material similarity from incomplete composition and synthesis metadata"
+version: 0.2.2
+authors:
+  - family-names: Kaneko
+    given-names: Hiromasa
+    affiliation: Meiji University
+abstract: >-
+  Python implementation and frozen research data for target-free material
+  comparison using composition, constituent identity, synthesis method,
+  operation types, ordered and repeated operations, and process settings.
+  Missing settings are not imputed. Multiple explicit weight profiles return
+  conditional distance bounds and support clustering and neighbor retrieval.
+keywords:
+  - materials informatics
+  - material similarity
+  - synthesis metadata
+  - unsupervised learning
+  - incomplete reporting

@@ -1,0 +1,478 @@
+{
+  "reporting_mask_retrieval_control": {
+    "composition_anchored": {
+      "0.1": {
+        "anchors": 138,
+        "hit_at_10": 0.057971014492753624,
+        "mrr": 0.04666386163577414,
+        "recall_at_10": 0.021739130434782608
+      },
+      "0.25": {
+        "anchors": 138,
+        "hit_at_10": 0.057971014492753624,
+        "mrr": 0.047759627407260426,
+        "recall_at_10": 0.021739130434782608
+      },
+      "0.5": {
+        "anchors": 138,
+        "hit_at_10": 0.057971014492753624,
+        "mrr": 0.04820133795157704,
+        "recall_at_10": 0.021739130434782608
+      },
+      "0.75": {
+        "anchors": 138,
+        "hit_at_10": 0.057971014492753624,
+        "mrr": 0.04825272436959201,
+        "recall_at_10": 0.021739130434782608
+      },
+      "1": {
+        "anchors": 138,
+        "hit_at_10": 0.057971014492753624,
+        "mrr": 0.048284894097880254,
+        "recall_at_10": 0.021739130434782608
+      }
+    },
+    "mask_only": {
+      "anchors": 138,
+      "hit_at_10": 0.13043478260869565,
+      "mrr": 0.0651855393300237,
+      "recall_at_10": 0.02898550724637681
+    }
+  },
+  "role": "post-hoc robustness audit; does not alter the frozen grid",
+  "selected_configuration_sensitivity": [
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.06553801676033844,
+          0.3515386820616736
+        ],
+        "component_deltas": [
+          0.06998443376396113,
+          -0.03505088179767002,
+          -0.00677082417763214,
+          -0.013998250218722696,
+          0.3860017497812774,
+          0.990449911290726,
+          0.017348203221809078,
+          0.017348203221809078,
+          0.8105522404227181,
+          -0.002788029983828058,
+          0.24819495260113886,
+          -0.021093000958772756,
+          -0.021093000958772756,
+          0.05581395348837215,
+          0.4649491182023301,
+          -0.013998250218722585,
+          0.3906678331875182
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.2777401427902309,
+        "mean": 0.19626578593338465,
+        "positive_component_fraction": 0.5882352941176471
+      },
+      "configuration": {
+        "clusters": 200,
+        "config_id": "SOURCE_ONLY__reported__L075",
+        "process_lambda": 0.75,
+        "profile": "SOURCE_ONLY",
+        "variant": "reported"
+      },
+      "descriptive_rank": 1,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.3287711691738047,
+        "current_source_matched_component_excess": 0.5854363387525874,
+        "delta_bootstrap": {
+          "ci95": [
+            0.09014434888732126,
+            0.4448822770354619
+          ],
+          "component_deltas": [
+            0.05393681242305104,
+            -0.030045871559632897,
+            0.469954128440367,
+            0.9798914280071952,
+            0.0032102728731941976,
+            0.0032102728731941976,
+            0.8022959844668558,
+            0.007566565554432081,
+            0.2580713021627299,
+            -0.010268734979243965,
+            0.4489014968614197,
+            -0.03004587155963301,
+            0.37996941896024466
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.281791108308753,
+          "mean": 0.25666516957878255,
+          "positive_component_fraction": 0.7692307692307693
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    },
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.0706077964939472,
+          0.2809671255039148
+        ],
+        "component_deltas": [
+          0.16229221347331607,
+          -0.10086568126352613,
+          0.44935057881241947,
+          0.1622922134733159,
+          0.16229221347331602,
+          0.9552136374340936,
+          0.12267657992565062,
+          0.12267657992565051,
+          0.14787250602815105,
+          0.02385766731404315,
+          0.022256639706304204,
+          0.026526046660274805,
+          0.026526046660274805,
+          0.0,
+          0.16229221347331602,
+          0.16229221347331624,
+          0.11089096121916847
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.327108466806276,
+        "mean": 0.15990838998759327,
+        "positive_component_fraction": 0.8823529411764706
+      },
+      "configuration": {
+        "clusters": 50,
+        "config_id": "ATMOS_ONLY__reported__L075",
+        "process_lambda": 0.75,
+        "profile": "ATMOS_ONLY",
+        "variant": "reported"
+      },
+      "descriptive_rank": 2,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.03294162675005124,
+        "current_source_matched_component_excess": 0.27138320257830534,
+        "delta_bootstrap": {
+          "ci95": [
+            0.13391901760957856,
+            0.391955472281884
+          ],
+          "component_deltas": [
+            0.24266055045871499,
+            0.24266055045871548,
+            0.2426605504587156,
+            1.0415116507035642,
+            0.1749598715890851,
+            0.174959871589085,
+            0.19413541062361206,
+            -0.017189079878665137,
+            -0.01512571002742713,
+            0.17150972252567187,
+            0.24266055045871537,
+            0.24266055045871526,
+            0.1616759963488001
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.3291371202226417,
+          "mean": 0.23844157582825407,
+          "positive_component_fraction": 0.8461538461538461
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    },
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.036963428176015285,
+          0.30170151996444144
+        ],
+        "component_deltas": [
+          0.0242053076698745,
+          -0.012636797593283289,
+          0.02248948230603931,
+          0.02420530766987472,
+          0.4242053076698747,
+          1.0138268996739193,
+          0.022304832713754497,
+          0.022304832713754608,
+          0.5471577520513853,
+          0.02527351389329796,
+          0.21193011184257177,
+          -0.06359859379993615,
+          -0.06359859379993615,
+          -0.027906976744186074,
+          0.02420530766987461,
+          0.02420530766987461,
+          0.41610911713101273
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.3413370053400125,
+        "mean": 0.15498130110222158,
+        "positive_component_fraction": 0.7647058823529411
+      },
+      "configuration": {
+        "clusters": 150,
+        "config_id": "ATMOS55__reported__L100",
+        "process_lambda": 1.0,
+        "profile": "ATMOS55",
+        "variant": "reported"
+      },
+      "descriptive_rank": 3,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.31535398681498883,
+        "current_source_matched_component_excess": 0.5615989107031932,
+        "delta_bootstrap": {
+          "ci95": [
+            0.10068755077035516,
+            0.41830483493400333
+          ],
+          "component_deltas": [
+            0.020642201834862206,
+            0.02064220183486265,
+            0.5206422018348624,
+            1.0119676759697709,
+            0.012841091492777013,
+            0.012841091492776902,
+            0.5439950656985764,
+            0.17736771149309066,
+            0.35473789667999367,
+            0.07046100065545113,
+            0.020642201834862317,
+            0.020642201834862317,
+            0.4137614678899083
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.31612293221374677,
+          "mean": 0.24624492388820438,
+          "positive_component_fraction": 1.0
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    },
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.04989761501565829,
+          0.26004888128575376
+        ],
+        "component_deltas": [
+          0.10659084281131531,
+          -0.18814599929394804,
+          0.4011295756976405,
+          0.10659084281131526,
+          0.10659084281131537,
+          0.8877010779132619,
+          0.22800495662949183,
+          0.22800495662949194,
+          0.21744611632376093,
+          -0.012428684372075172,
+          -0.016050803911907052,
+          -0.006391818472355482,
+          -0.006391818472355482,
+          0.09302325581395343,
+          0.10659084281131515,
+          0.10659084281131537,
+          0.07140120159496854
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.30726140302366567,
+        "mean": 0.14295624883155905,
+        "positive_component_fraction": 0.7058823529411765
+      },
+      "configuration": {
+        "clusters": 50,
+        "config_id": "ATMOS_THERM__reported__L100",
+        "process_lambda": 1.0,
+        "profile": "ATMOS_THERM",
+        "variant": "reported"
+      },
+      "descriptive_rank": 4,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.03294162675005124,
+        "current_source_matched_component_excess": 0.2396790209652089,
+        "delta_bootstrap": {
+          "ci95": [
+            0.114592213339273,
+            0.34331993464657334
+          ],
+          "component_deltas": [
+            0.08738532110091674,
+            0.08738532110091735,
+            0.08738532110091746,
+            0.8972835536398879,
+            0.2680577849117176,
+            0.2680577849117175,
+            0.26282568547785995,
+            0.10414560161779585,
+            0.10077034948140051,
+            0.29145728643216084,
+            0.08738532110091701,
+            0.08738532110091701,
+            0.058061472819924353
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.3338622510962863,
+          "mean": 0.2067373942151577,
+          "positive_component_fraction": 1.0
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    },
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.04338683511068716,
+          0.2594261994113002
+        ],
+        "component_deltas": [
+          0.10921551472732599,
+          -0.15394238000951643,
+          0.4030592031186333,
+          0.10921551472732571,
+          0.10921551472732582,
+          0.8865307057735867,
+          0.23048327137546465,
+          0.23048327137546465,
+          0.22126340880700163,
+          -0.05213914817795767,
+          -0.05983682692174075,
+          -0.03930968360498566,
+          -0.03930968360498566,
+          0.09302325581395343,
+          0.10921551472732571,
+          0.10921551472732594,
+          0.07505673305561389
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.29253465608170837,
+        "mean": 0.13773174709630362,
+        "positive_component_fraction": 0.7058823529411765
+      },
+      "configuration": {
+        "clusters": 50,
+        "config_id": "THERM55__reported__L100",
+        "process_lambda": 1.0,
+        "profile": "THERM55",
+        "variant": "reported"
+      },
+      "descriptive_rank": 5,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.03294162675005124,
+        "current_source_matched_component_excess": 0.23076443311480876,
+        "delta_bootstrap": {
+          "ci95": [
+            0.10149654467201487,
+            0.33462535575362234
+          ],
+          "component_deltas": [
+            0.08463302752293533,
+            0.08463302752293544,
+            0.08463302752293589,
+            0.8946687817240723,
+            0.2760834670947031,
+            0.276083467094703,
+            0.2710813699154396,
+            0.051567239635996076,
+            0.048537170857001155,
+            0.274087830456631,
+            0.08463302752293556,
+            0.08463302752293544,
+            0.056422018348623815
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.34789050252548054,
+          "mean": 0.19782280636475755,
+          "positive_component_fraction": 1.0
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    },
+    {
+      "all_libraries_source_matched_component_bootstrap": {
+        "ci95": [
+          0.052644820337452644,
+          0.25213244836698184
+        ],
+        "component_deltas": [
+          0.10965296004666097,
+          -0.19034703995333935,
+          0.4013629474792847,
+          0.10965296004666081,
+          0.10965296004666092,
+          0.8928805647172997,
+          0.057001239157372985,
+          0.057001239157372985,
+          0.08429796885565388,
+          0.06652960242105266,
+          0.06522013472699206,
+          0.06871204857782032,
+          0.06871204857782032,
+          0.13953488372093015,
+          0.1096529600466607,
+          0.10965296004666092,
+          0.07378325280595721
+        ],
+        "components": 17,
+        "maximum_absolute_component_share": 0.3290333308773101,
+        "mean": 0.13723257002808953,
+        "positive_component_fraction": 0.9411764705882353
+      },
+      "configuration": {
+        "clusters": 50,
+        "config_id": "THERM_SUBSTR__reported__L050",
+        "process_lambda": 0.5,
+        "profile": "THERM_SUBSTR",
+        "variant": "reported"
+      },
+      "descriptive_rank": 6,
+      "quantitative_composition_only": {
+        "baseline_source_matched_component_excess": 0.03294162675005124,
+        "current_source_matched_component_excess": 0.19579586013284936,
+        "delta_bootstrap": {
+          "ci95": [
+            0.09344304287265243,
+            0.2906943250852251
+          ],
+          "component_deltas": [
+            0.0947247706422018,
+            0.09472477064220186,
+            0.09472477064220186,
+            0.903736339061733,
+            0.08988764044943831,
+            0.0898876404494382,
+            0.11073391302890138,
+            0.1365015166835188,
+            0.12974596195252763,
+            0.11983832204500766,
+            0.09472477064220208,
+            0.09472477064220186,
+            0.0631498470948012
+          ],
+          "components": 13,
+          "maximum_absolute_component_share": 0.42687364328085464,
+          "mean": 0.1628542333827981,
+          "positive_component_fraction": 1.0
+        },
+        "libraries": 1252,
+        "positive_pair_instances": 847,
+        "study_components": 13,
+        "unlabeled_pairs": 109848
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

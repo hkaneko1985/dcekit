@@ -1,0 +1,9 @@
+{
+  "files_checked": 13,
+  "reference_files": 13,
+  "rtol": 1e-07,
+  "atol": 1e-08,
+  "passed": true,
+  "differences": [],
+  "scope": "Common API: thirteen CSV/JSON reference outputs"
+}

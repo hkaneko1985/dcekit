@@ -1,0 +1,89 @@
+{
+  "reason": "NanoMine API data redistribution unconfirmed; distinct from the software license",
+  "excluded_paths": [
+    "data/upstream/nanomine_phase3_records.jsonl.gz",
+    "upstream_analyses/phase3_nanomine/data/nanomine_phase3_records.jsonl.gz",
+    "data/processed/nanomine_audited_records.jsonl",
+    "results/revision/normalization_audit.csv",
+    "upstream_analyses/phase3_nanomine/data/raw_cache/components_knowledge.json",
+    "upstream_analyses/phase3_nanomine/data/raw_cache/headers_knowledge.json",
+    "upstream_analyses/phase3_nanomine/data/raw_cache/processing_knowledge.json",
+    "upstream_analyses/phase3_nanomine/data/raw_cache/sample_index.json",
+    "provenance/v020/results/revision/normalization_audit.csv"
+  ],
+  "files": [
+    {
+      "path": "data/upstream/nanomine_phase3_records.jsonl.gz",
+      "bytes": 138028,
+      "sha256": "209168324fcbbcf9d308a2d6358d0caacf7a885b19b2c8e3de951bbff704833a",
+      "kind": "supplied_source",
+      "required_for_current_analysis": true
+    },
+    {
+      "path": "upstream_analyses/phase3_nanomine/data/nanomine_phase3_records.jsonl.gz",
+      "bytes": 138028,
+      "sha256": "209168324fcbbcf9d308a2d6358d0caacf7a885b19b2c8e3de951bbff704833a",
+      "kind": "supplied_source",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "data/processed/nanomine_audited_records.jsonl",
+      "bytes": 5117247,
+      "sha256": "f47d8a8df77ef82ba55945b7915b99e828cd75cd41edf1bb3b5bb184148dad2c",
+      "kind": "generated_audit",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "results/revision/normalization_audit.csv",
+      "bytes": 2133853,
+      "sha256": "86c217ae5806711d4eb25e0298eec75adabd7eb735de6dfb10045972d9ba6eea",
+      "kind": "generated_audit",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "upstream_analyses/phase3_nanomine/data/raw_cache/components_knowledge.json",
+      "bytes": 5943638,
+      "sha256": "851f6e3d32f228a41066b2e4433823a50b15bf5f242805495eb521342468aead",
+      "kind": "supplied_source",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "upstream_analyses/phase3_nanomine/data/raw_cache/headers_knowledge.json",
+      "bytes": 1665086,
+      "sha256": "da61777cd56567e0633261d1f10722da34b6cb8f3cf7c6497147d6c5d01b28b4",
+      "kind": "supplied_source",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "upstream_analyses/phase3_nanomine/data/raw_cache/processing_knowledge.json",
+      "bytes": 4110575,
+      "sha256": "9e3a1ec001a14931a77bf892a86f346aed913a732b0c7015e2a93388efee6516",
+      "kind": "supplied_source",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "upstream_analyses/phase3_nanomine/data/raw_cache/sample_index.json",
+      "bytes": 387651,
+      "sha256": "83440a7d2e9bc9ada6924d35378dca3c9718da719c68719a2b1fa7155fb12cc8",
+      "kind": "supplied_source",
+      "required_for_current_analysis": false
+    },
+    {
+      "path": "provenance/v020/results/revision/normalization_audit.csv",
+      "bytes": 2133853,
+      "sha256": "86c217ae5806711d4eb25e0298eec75adabd7eb735de6dfb10045972d9ba6eea",
+      "kind": "generated_audit",
+      "required_for_current_analysis": false
+    }
+  ],
+  "public_acquisition_route": "https://materialsmine.org/api/search/filter",
+  "route_checked_on": "2026-09-14",
+  "observed_status": 503,
+  "restore_command": "python src/restore_external_data.py --archive /path/to/authorized/archive.zip",
+  "selection_manifest": "data/nanomine_selection_manifest.json",
+  "access_status": "No verified independent acquisition or permission-backed reviewer/public redistribution route to the frozen NanoMine input",
+  "restore_scope": "Imports an already-held authorized archive; not an acquisition route or permission grant",
+  "author_archive": "material-similarity_author_reproduction_v0.2.2.zip",
+  "public_archive": "material-similarity_github_v0.2.2.zip",
+  "access_check_evidence": "docs/data_access_checks.json"
+}

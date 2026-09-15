@@ -1,0 +1,23 @@
+{
+  "decision": "GO_FOR_METHODS_PAPER_HOLD_FOR_PERFORMANCE_TRANSFER_CLAIMS",
+  "total_material_instances_across_tracks": 8827,
+  "dataset_counts": {
+    "Starrydata": {
+      "samples": 5001,
+      "weak_groups": 947
+    },
+    "HTEM": {
+      "samples": 1891,
+      "weak_groups": 17
+    },
+    "NanoMine": {
+      "samples": 832,
+      "weak_groups": 119
+    },
+    "PNCExtract": {
+      "samples": 1103,
+      "weak_groups": 217
+    }
+  },
+  "all_decision_criteria_pass": true
+}

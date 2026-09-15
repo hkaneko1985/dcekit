@@ -1,0 +1,19 @@
+[
+  {
+    "path": "data/cohorts/starrydata_phase1_cohort.jsonl.gz",
+    "records": 5001,
+    "key_fields": [
+      "SID",
+      "sample_id"
+    ],
+    "unique": true
+  },
+  {
+    "path": "data/cohorts/pncextract_breadth_records.jsonl.gz",
+    "records": 1103,
+    "key_fields": [
+      "sample_id"
+    ],
+    "unique": true
+  }
+]

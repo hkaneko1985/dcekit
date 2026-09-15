@@ -1,0 +1,11 @@
+# Revision against the supplied review
+
+The current version repairs setting overwrites, quantity/unit parsing and feature-scope inconsistencies. It re-evaluates the common examples and adds same-information comparisons, masked-record retrieval, a held-out method task, fixed-schema masking, operation alignment, source-resolved subsets, and scale/bootstrap sensitivities.
+
+`results/revision/normalization_audit.csv` records every audited numeric interpretation; the public package omits its raw-value detail. `duplicate_settings.csv` and tests cover all 18 affected records. `affected_record_impact.csv` compares rankings/distances for the 18 queries in a 120-record display gallery augmented by missing affected records; it also isolates last-value collapse under corrected units/features/scales. `before_after_metrics.csv` compares the supplied version 0.1.0 main results with version 0.2.0.
+
+Starrydata F3 includes purity, relative density and grain size. Its removal changes the historical confirmation cross-view median from 0.590619 (six pairs) to 0.350816 (three F0–F2 pairs), using the same 1,441 assignments. It does not cause the F2/F0 log-lift difference of 0.809. Historical outputs and scripts remain labelled as historical; new work must use the audited adapter rather than the legacy upstream numeric parser.
+
+The manuscript gives priority to common-interface results. Former main Figures 2–4 are now SI Figures S1–S3; former Figures 5–7 are now main Figures 2–4. New main Figures 5/6 contain retrieval and missingness evaluations. Transfer-learning equations were removed from the main text and the application is a short outlook. AI text/code/artwork assistance is disclosed.
+
+Public redistribution of the NanoMine API snapshot is unresolved. The inspected MaterialsMine code license explicitly excludes API data; the public route returned 503 on 2026-09-14. An author reproduction archive retains supplied data, while a public-code archive excludes those snapshots and supplies selection, hashes and restoration/acquisition instructions. No external messages, public upload, repository URL or release claim are made. A durable authorized data route remains a submission/publication dependency.

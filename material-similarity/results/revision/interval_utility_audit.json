@@ -1,0 +1,51 @@
+{
+  "config": {
+    "protocol_version": "0.2.1",
+    "frozen_before_execution": true,
+    "seed": 20260917,
+    "cohort": "unchanged 120 NanoMine method-display records",
+    "query_mask_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "replicates": 3,
+    "mask_variables": "reported step settings only; canonical keys; no imputation",
+    "reference": "unmasked documented-record distance; not physical or chemical ground truth",
+    "gallery": "different article group; original and same-group records excluded",
+    "schema": "fixed reference schema from unchanged cohort metadata, no values fitted",
+    "scales": "all 832 source records excluding query article group",
+    "views": [
+      "material_identity",
+      "experimental_protocol",
+      "balanced_instance"
+    ],
+    "distance_thresholds": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "coverage_thresholds": [
+      0.5,
+      0.75
+    ],
+    "rules": [
+      "reported_point",
+      "point_and_common_coverage",
+      "interval_upper"
+    ],
+    "bootstrap": {
+      "unit": "article group",
+      "replicates": 1000,
+      "interval": "percentile 95%, conditional on fixed gallery"
+    },
+    "interpretation": "retention and contradiction trade-off for documented close relations; interval containment is structural, not a learned accuracy advantage; no weight selection"
+  },
+  "query_records": 120,
+  "article_groups": 93,
+  "reference_distance_outside_masked_interval": 0,
+  "interpretation": "pre-mask documented distances only; no property or expert target",
+  "guarantee_scope": "fixed feature universe and scales; masking only reported settings; interval decisions quantify an algebraic containment/retention trade-off"
+}

@@ -1,0 +1,110 @@
+process_family,record_type,name,sample_count,family_sample_count,prevalence,total_occurrences
+In-Situ Polymerization,operation,additive,49,120,0.4083333333333333,74
+In-Situ Polymerization,operation,cooling,2,120,0.016666666666666666,2
+In-Situ Polymerization,operation,drying evaporation,43,120,0.35833333333333334,74
+In-Situ Polymerization,operation,extrusion,6,120,0.05,6
+In-Situ Polymerization,operation,heating,60,120,0.5,89
+In-Situ Polymerization,operation,mixing,103,120,0.8583333333333333,220
+In-Situ Polymerization,operation,molding,44,120,0.36666666666666664,44
+In-Situ Polymerization,operation,solvent,36,120,0.3,36
+Melt Mixing,operation,additive,19,228,0.08333333333333333,25
+Melt Mixing,operation,cooling,17,228,0.07456140350877193,22
+Melt Mixing,operation,drying evaporation,113,228,0.4956140350877193,191
+Melt Mixing,operation,extrusion,30,228,0.13157894736842105,48
+Melt Mixing,operation,heating,84,228,0.3684210526315789,114
+Melt Mixing,operation,heating zone,6,228,0.02631578947368421,6
+Melt Mixing,operation,mixing,213,228,0.9342105263157895,353
+Melt Mixing,operation,molding,116,228,0.5087719298245614,149
+Melt Mixing,operation,output,3,228,0.013157894736842105,3
+Other Processing,operation,cooling,5,27,0.18518518518518517,8
+Other Processing,operation,drying evaporation,23,27,0.8518518518518519,28
+Other Processing,operation,extrusion,3,27,0.1111111111111111,3
+Other Processing,operation,heating,8,27,0.2962962962962963,8
+Other Processing,operation,mixing,26,27,0.9629629629629629,29
+Other Processing,operation,molding,16,27,0.5925925925925926,16
+Solution Processing,operation,additive,127,459,0.2766884531590414,216
+Solution Processing,operation,cooling,69,459,0.1503267973856209,99
+Solution Processing,operation,curing,5,459,0.010893246187363835,6
+Solution Processing,operation,drying evaporation,291,459,0.6339869281045751,379
+Solution Processing,operation,extrusion,34,459,0.07407407407407407,34
+Solution Processing,operation,heating,194,459,0.4226579520697168,393
+Solution Processing,operation,mixing,446,459,0.971677559912854,839
+Solution Processing,operation,molding,146,459,0.31808278867102396,187
+Solution Processing,operation,output,1,459,0.002178649237472767,1
+Solution Processing,operation,solvent,156,459,0.33986928104575165,195
+In-Situ Polymerization,setting_key,additive,49,120,0.4083333333333333,
+In-Situ Polymerization,setting_key,ambient condition,48,120,0.4,
+In-Situ Polymerization,setting_key,amount,29,120,0.24166666666666667,
+In-Situ Polymerization,setting_key,chemical used,9,120,0.075,
+In-Situ Polymerization,setting_key,equipment type,6,120,0.05,
+In-Situ Polymerization,setting_key,extruder,6,120,0.05,
+In-Situ Polymerization,setting_key,mixer,16,120,0.13333333333333333,
+In-Situ Polymerization,setting_key,mixing method,102,120,0.85,
+In-Situ Polymerization,setting_key,pressure,14,120,0.11666666666666667,
+In-Situ Polymerization,setting_key,rotational frequency,10,120,0.08333333333333333,
+In-Situ Polymerization,setting_key,solvent amount,20,120,0.16666666666666666,
+In-Situ Polymerization,setting_key,solvent name,36,120,0.3,
+In-Situ Polymerization,setting_key,temperature,107,120,0.8916666666666667,
+In-Situ Polymerization,setting_key,time,111,120,0.925,
+Melt Mixing,setting_key,additive,19,228,0.08333333333333333,
+Melt Mixing,setting_key,ambient condition,78,228,0.34210526315789475,
+Melt Mixing,setting_key,amount,7,228,0.03070175438596491,
+Melt Mixing,setting_key,barrel temperature,6,228,0.02631578947368421,
+Melt Mixing,setting_key,chemical used,2,228,0.008771929824561403,
+Melt Mixing,setting_key,equipment type,30,228,0.13157894736842105,
+Melt Mixing,setting_key,extruder,30,228,0.13157894736842105,
+Melt Mixing,setting_key,extrusion temperature,17,228,0.07456140350877193,
+Melt Mixing,setting_key,melt temperature,3,228,0.013157894736842105,
+Melt Mixing,setting_key,mixer,162,228,0.7105263157894737,
+Melt Mixing,setting_key,mixing method,135,228,0.5921052631578947,
+Melt Mixing,setting_key,pressure,46,228,0.20175438596491227,
+Melt Mixing,setting_key,pressure at die,2,228,0.008771929824561403,
+Melt Mixing,setting_key,residence time,2,228,0.008771929824561403,
+Melt Mixing,setting_key,rotation mode,18,228,0.07894736842105263,
+Melt Mixing,setting_key,rotation speed,23,228,0.10087719298245613,
+Melt Mixing,setting_key,rotational frequency,148,228,0.6491228070175439,
+Melt Mixing,setting_key,screw channel diameter,3,228,0.013157894736842105,
+Melt Mixing,setting_key,screw diameter,7,228,0.03070175438596491,
+Melt Mixing,setting_key,screw diameter length ratio,4,228,0.017543859649122806,
+Melt Mixing,setting_key,temperature,226,228,0.9912280701754386,
+Melt Mixing,setting_key,time,217,228,0.9517543859649122,
+Melt Mixing,setting_key,torque,2,228,0.008771929824561403,
+Other Processing,setting_key,ambient condition,24,27,0.8888888888888888,
+Other Processing,setting_key,equipment type,3,27,0.1111111111111111,
+Other Processing,setting_key,extrusion temperature,3,27,0.1111111111111111,
+Other Processing,setting_key,mixer,4,27,0.14814814814814814,
+Other Processing,setting_key,mixing method,15,27,0.5555555555555556,
+Other Processing,setting_key,pressure,2,27,0.07407407407407407,
+Other Processing,setting_key,rotation mode,3,27,0.1111111111111111,
+Other Processing,setting_key,rotational frequency,1,27,0.037037037037037035,
+Other Processing,setting_key,temperature,27,27,1.0,
+Other Processing,setting_key,time,24,27,0.8888888888888888,
+Solution Processing,setting_key,additive,126,459,0.27450980392156865,
+Solution Processing,setting_key,ambient condition,195,459,0.42483660130718953,
+Solution Processing,setting_key,amount,41,459,0.08932461873638345,
+Solution Processing,setting_key,amperage,1,459,0.002178649237472767,
+Solution Processing,setting_key,chemical used,1,459,0.002178649237472767,
+Solution Processing,setting_key,equipment type,34,459,0.07407407407407407,
+Solution Processing,setting_key,extruder,1,459,0.002178649237472767,
+Solution Processing,setting_key,extrusion temperature,34,459,0.07407407407407407,
+Solution Processing,setting_key,inner barrel diameter,1,459,0.002178649237472767,
+Solution Processing,setting_key,melt temperature,1,459,0.002178649237472767,
+Solution Processing,setting_key,mixer,187,459,0.4074074074074074,
+Solution Processing,setting_key,mixing method,375,459,0.8169934640522876,
+Solution Processing,setting_key,power,1,459,0.002178649237472767,
+Solution Processing,setting_key,pressure,77,459,0.16775599128540306,
+Solution Processing,setting_key,pressure at die,1,459,0.002178649237472767,
+Solution Processing,setting_key,residence time,32,459,0.06971677559912855,
+Solution Processing,setting_key,rotation mode,33,459,0.0718954248366013,
+Solution Processing,setting_key,rotation speed,34,459,0.07407407407407407,
+Solution Processing,setting_key,rotational frequency,141,459,0.30718954248366015,
+Solution Processing,setting_key,screw channel width,1,459,0.002178649237472767,
+Solution Processing,setting_key,screw diameter,1,459,0.002178649237472767,
+Solution Processing,setting_key,screw length,1,459,0.002178649237472767,
+Solution Processing,setting_key,solvent amount,23,459,0.05010893246187364,
+Solution Processing,setting_key,solvent name,156,459,0.33986928104575165,
+Solution Processing,setting_key,temperature,340,459,0.7407407407407407,
+Solution Processing,setting_key,throughput,1,459,0.002178649237472767,
+Solution Processing,setting_key,time,426,459,0.9281045751633987,
+Solution Processing,setting_key,torque,1,459,0.002178649237472767,
+Solution Processing,setting_key,voltage,1,459,0.002178649237472767,

@@ -1,0 +1,142 @@
+{
+  "summary_version": "1.0.0",
+  "primary_seed": 20260907,
+  "replicate_seeds": [
+    20260917,
+    20260927
+  ],
+  "runs": 3,
+  "feature_lifts": {
+    "F0": {
+      "values": [
+        1.5391494074892473,
+        2.3231554948138196,
+        1.331659540126251
+      ],
+      "median": 1.5391494074892473,
+      "minimum": 1.331659540126251,
+      "maximum": 2.3231554948138196
+    },
+    "F1": {
+      "values": [
+        3.0922330992544995,
+        3.4626482165127412,
+        2.9210072994887155
+      ],
+      "median": 3.0922330992544995,
+      "minimum": 2.9210072994887155,
+      "maximum": 3.4626482165127412
+    },
+    "F2": {
+      "values": [
+        3.454952999135752,
+        4.29822113119073,
+        3.5940279551548984
+      ],
+      "median": 3.5940279551548984,
+      "minimum": 3.454952999135752,
+      "maximum": 4.29822113119073
+    },
+    "F3": {
+      "values": [
+        4.162749603884435,
+        5.252718582016102,
+        4.311250398997299
+      ],
+      "median": 4.311250398997299,
+      "minimum": 4.162749603884435,
+      "maximum": 5.252718582016102
+    }
+  },
+  "F2_minus_F0_observed_delta_log_lift": {
+    "values": [
+      0.8085789223693334,
+      0.6152748580670906,
+      0.9928476276747261
+    ],
+    "median": 0.8085789223693334,
+    "minimum": 0.6152748580670906,
+    "maximum": 0.9928476276747261
+  },
+  "F2_minus_F1_observed_delta_log_lift": {
+    "values": [
+      0.11091533766286443,
+      0.21616756987490393,
+      0.20734504424415667
+    ],
+    "median": 0.20734504424415667,
+    "minimum": 0.11091533766286443,
+    "maximum": 0.21616756987490393
+  },
+  "complete_case_F2_minus_F0_delta_log_lift": {
+    "values": [
+      1.0458809643481453,
+      1.0023907133254482,
+      1.170094024491407
+    ],
+    "median": 1.0458809643481453,
+    "minimum": 1.0023907133254482,
+    "maximum": 1.170094024491407
+  },
+  "exact_composition_F2_minus_F0_delta_log_lift": {
+    "values": [
+      0.7273594027070044,
+      0.939447767106506,
+      0.7485881087160289
+    ],
+    "median": 0.7485881087160289,
+    "minimum": 0.7273594027070044,
+    "maximum": 0.939447767106506
+  },
+  "missingness_only_lift": {
+    "values": [
+      3.207688743670951,
+      2.567969475771692,
+      2.9074831559901617
+    ],
+    "median": 2.9074831559901617,
+    "minimum": 2.567969475771692,
+    "maximum": 3.207688743670951
+  },
+  "process_shuffle_F2_lift": {
+    "values": [
+      2.850336997525415,
+      3.166315188211871,
+      2.57609646154463
+    ],
+    "median": 2.850336997525415,
+    "minimum": 2.57609646154463,
+    "maximum": 3.166315188211871
+  },
+  "paper_dominance": {
+    "values": [
+      0.15544041450777202,
+      0.15086206896551724,
+      0.14285714285714285
+    ],
+    "median": 0.15086206896551724,
+    "minimum": 0.14285714285714285,
+    "maximum": 0.15544041450777202
+  },
+  "all_leave_one_paper_out_directions_positive": true,
+  "all_complete_case_ci_lower_bounds_positive": true,
+  "all_exact_composition_ci_lower_bounds_positive": true,
+  "resolution_sensitivity": {
+    "cluster_counts": [
+      25,
+      50,
+      75,
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "F2_minus_F0_positive_resolutions": 8,
+    "total_resolutions": 8,
+    "silhouette_reached_upper_boundary": true,
+    "interpretation": "The incremental result is multiresolution-robust, but the data do not identify a unique natural cluster count within the tested range."
+  },
+  "strict_preregistered_decision": "CONDITIONAL_GO",
+  "recommended_next_action": "Proceed to HTEM external replication while retaining the paper-dominance and source-missingness caveats."
+}

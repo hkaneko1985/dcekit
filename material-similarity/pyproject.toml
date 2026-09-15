@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "literature-material-similarity"
+version = "0.2.2"
+description = "Target-free material similarity with explicit synthesis facets and reporting-state bounds"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Hiromasa Kaneko"}]
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.24", "scipy>=1.10", "scikit-learn>=1.2"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7", "pandas>=2.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["material_similarity*"]

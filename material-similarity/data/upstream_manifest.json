@@ -1,0 +1,46 @@
+{
+  "manifest_version": 1,
+  "purpose": "Frozen upstream inputs used by the Phase 5 regression workflow.",
+  "files": [
+    {
+      "path": "data/upstream/cross_dataset_diagnostics.csv",
+      "bytes": 2496,
+      "sha256": "56f2a72fed8b127693ec08c2506fc5d28787658ee96d59598c3b885c8108bdc1"
+    },
+    {
+      "path": "data/upstream/htem_phase2_records.jsonl.gz",
+      "bytes": 452312,
+      "sha256": "94c71b1617a5c2bbaa1d8c782e83be74f42e545f341ff9db19c243dfda897666"
+    },
+    {
+      "path": "data/upstream/nanomine_phase3_records.jsonl.gz",
+      "bytes": 138028,
+      "sha256": "209168324fcbbcf9d308a2d6358d0caacf7a885b19b2c8e3de951bbff704833a"
+    },
+    {
+      "path": "data/upstream/objective_disagreement.csv",
+      "bytes": 126029,
+      "sha256": "817907ac6d293ebf856c39fad78b24b2c5d62a4255209129f0455a81ae82d014"
+    },
+    {
+      "path": "data/upstream/phase4_summary.json",
+      "bytes": 6979,
+      "sha256": "627c35a262b45c5d40c28040eb1e6333608ca60e6e16fd475119d16ef0408f24"
+    },
+    {
+      "path": "data/upstream/uncertainty_sensitivity.csv",
+      "bytes": 207615,
+      "sha256": "82d404115f09d85724f7b3e83e810ae9e4550a6da2ea9cc4a116d40b1a996cb3"
+    },
+    {
+      "path": "data/upstream/view_disagreement_summary.csv",
+      "bytes": 247,
+      "sha256": "4f2ba7489f9b6de74c1ecd923e9b8ddb4eb01fd4ef7cbea093aca1fea71c0481"
+    },
+    {
+      "path": "data/upstream/weight_response.csv",
+      "bytes": 1280,
+      "sha256": "546540b10e21eceee5e78550394a72cdc56b9accaf8543594d292123fef6b668"
+    }
+  ]
+}

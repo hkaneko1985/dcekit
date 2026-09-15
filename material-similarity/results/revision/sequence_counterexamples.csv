@@ -1,0 +1,7 @@
+example,settings_alignment,step_type_distance,sequence_distance,settings_distance
+insert_same_type,occurrence,0.0,0.25,0.5
+insert_same_type,sequence,0.0,0.25,0.25
+delete_repeat,occurrence,0.0,0.3333333333333333,0.3333333333333333
+delete_repeat,sequence,0.0,0.3333333333333333,0.3333333333333333
+reorder,occurrence,0.0,0.6666666666666666,0.0
+reorder,sequence,0.0,0.6666666666666666,0.8

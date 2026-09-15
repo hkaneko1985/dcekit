@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "study_title": "Property-free material similarity: revised Phase 1 process-data audit",
+  "analysis_unit": "HTEM sample library",
+  "property_policy": "No property or target column is retained or used.",
+  "expert_policy": "No expert labels or post-hoc expert scoring.",
+  "missingness_policy": {
+    "imputation": "forbidden",
+    "states": [
+      "REPORTED",
+      "NOT_REPORTED",
+      "NOT_PERFORMED",
+      "UNCONTROLLED",
+      "NOT_APPLICABLE",
+      "AMBIGUOUS",
+      "EXTRACTION_FAILED"
+    ],
+    "dataset_specific_rule": "Blank and null HTEM process cells are NOT_REPORTED unless an explicit source assertion supports another state.",
+    "joint_absence_rule": "Joint absence never increases similarity."
+  },
+  "template_policy": {
+    "common_reporting_rate": 0.8,
+    "optional_reporting_rate": 0.2,
+    "minimum_group_size": 20,
+    "method_family_status": "empirical control-profile family, not a synthesis-method label",
+    "provenance_exclusion": [
+      "deposition_instrument",
+      "owner",
+      "person_id",
+      "study_id",
+      "DOI"
+    ]
+  },
+  "phase2_fixed_design": {
+    "process_weight_grid": {
+      "components": ["operation_type", "order_and_repetition", "settings"],
+      "simplex_step": 0.25,
+      "include_equal_thirds": true,
+      "optimization": false
+    },
+    "composition_process_lambda": [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
+    "cluster_algorithm": "average-linkage agglomerative clustering on precomputed dissimilarities",
+    "cluster_resolutions": [25, 50, 75, 100, 125, 150, 200, 250, 300, 400],
+    "final_judgment": "Exploratory success requires at least one scientifically interpretable and reproducible cluster or material-pair pattern under one or more prespecified profiles; no universal best metric is required. The profile, uncertainty bound, resolution, controls, and proxy support must all be reported, and isolated post-hoc anecdotes do not qualify."
+  }
+}

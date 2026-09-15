@@ -1,0 +1,478 @@
+{
+  "context_proxy_audit": {
+    "institution_identifier_available": false,
+    "linked_libraries": 144,
+    "multilibrary_studies": 21,
+    "policy": "same-study is a weak positive; different-study is unlabeled",
+    "studies": 32
+  },
+  "cycles_by_family": {
+    "hybrid_parameterized": 1,
+    "pulse_parameterized": 212,
+    "unresolved": 23
+  },
+  "families": [
+    "power_parameterized",
+    "pulse_parameterized",
+    "unresolved",
+    "hybrid_parameterized"
+  ],
+  "family_counts": {
+    "hybrid_parameterized": 1,
+    "power_parameterized": 1467,
+    "pulse_parameterized": 231,
+    "unresolved": 192
+  },
+  "field_reporting": {
+    "deposition_base_pressure_mtorr": {
+      "partial_array_records": 0,
+      "rate": 0.4484399788471708,
+      "reported": 848
+    },
+    "deposition_compounds": {
+      "partial_array_records": 1095,
+      "rate": 0.8445267054468535,
+      "reported": 1597
+    },
+    "deposition_cycles": {
+      "partial_array_records": 0,
+      "rate": 0.12480169222633528,
+      "reported": 236
+    },
+    "deposition_energy": {
+      "partial_array_records": 0,
+      "rate": 0.0597567424643046,
+      "reported": 113
+    },
+    "deposition_gas_flow_sccm": {
+      "partial_array_records": 968,
+      "rate": 0.5727128503437334,
+      "reported": 1083
+    },
+    "deposition_gases": {
+      "partial_array_records": 979,
+      "rate": 0.5785298783712322,
+      "reported": 1094
+    },
+    "deposition_growth_pressure_mtorr": {
+      "partial_array_records": 0,
+      "rate": 0.6409307244843998,
+      "reported": 1212
+    },
+    "deposition_initial_temp_c": {
+      "partial_array_records": 0,
+      "rate": 0.8498149127445795,
+      "reported": 1607
+    },
+    "deposition_power": {
+      "partial_array_records": 962,
+      "rate": 0.7784241142252777,
+      "reported": 1472
+    },
+    "deposition_rep_rate": {
+      "partial_array_records": 0,
+      "rate": 0.07562136435748282,
+      "reported": 143
+    },
+    "deposition_sample_time_min": {
+      "partial_array_records": 0,
+      "rate": 0.8820729772607087,
+      "reported": 1668
+    },
+    "deposition_substrate_material": {
+      "partial_array_records": 0,
+      "rate": 0.5790586991010047,
+      "reported": 1095
+    },
+    "deposition_target_pulses": {
+      "partial_array_records": 0,
+      "rate": 0.07562136435748282,
+      "reported": 143
+    },
+    "deposition_ts_distance": {
+      "partial_array_records": 0,
+      "rate": 0.04706504494976203,
+      "reported": 89
+    }
+  },
+  "field_reporting_by_family": {
+    "hybrid_parameterized": {
+      "deposition_base_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_compounds": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_cycles": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_energy": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_gas_flow_sccm": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_gases": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_growth_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_initial_temp_c": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_power": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_rep_rate": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_sample_time_min": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_substrate_material": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_target_pulses": {
+        "partial_array_records": 0,
+        "rate": 1.0,
+        "reported": 1
+      },
+      "deposition_ts_distance": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      }
+    },
+    "power_parameterized": {
+      "deposition_base_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.5057941376959781,
+        "reported": 742
+      },
+      "deposition_compounds": {
+        "partial_array_records": 1083,
+        "rate": 1.0,
+        "reported": 1467
+      },
+      "deposition_cycles": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_energy": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_gas_flow_sccm": {
+        "partial_array_records": 963,
+        "rate": 0.7348329925017042,
+        "reported": 1078
+      },
+      "deposition_gases": {
+        "partial_array_records": 966,
+        "rate": 0.7368779822767553,
+        "reported": 1081
+      },
+      "deposition_growth_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.7498295841854125,
+        "reported": 1100
+      },
+      "deposition_initial_temp_c": {
+        "partial_array_records": 0,
+        "rate": 0.956373551465576,
+        "reported": 1403
+      },
+      "deposition_power": {
+        "partial_array_records": 962,
+        "rate": 1.0,
+        "reported": 1467
+      },
+      "deposition_rep_rate": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_sample_time_min": {
+        "partial_array_records": 0,
+        "rate": 0.9802317655078391,
+        "reported": 1438
+      },
+      "deposition_substrate_material": {
+        "partial_array_records": 0,
+        "rate": 0.7375596455351057,
+        "reported": 1082
+      },
+      "deposition_target_pulses": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_ts_distance": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      }
+    },
+    "pulse_parameterized": {
+      "deposition_base_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.4329004329004329,
+        "reported": 100
+      },
+      "deposition_compounds": {
+        "partial_array_records": 5,
+        "rate": 0.5194805194805194,
+        "reported": 120
+      },
+      "deposition_cycles": {
+        "partial_array_records": 0,
+        "rate": 0.9177489177489178,
+        "reported": 212
+      },
+      "deposition_energy": {
+        "partial_array_records": 0,
+        "rate": 0.48917748917748916,
+        "reported": 113
+      },
+      "deposition_gas_flow_sccm": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_gases": {
+        "partial_array_records": 8,
+        "rate": 0.03463203463203463,
+        "reported": 8
+      },
+      "deposition_growth_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.46320346320346323,
+        "reported": 107
+      },
+      "deposition_initial_temp_c": {
+        "partial_array_records": 0,
+        "rate": 0.7272727272727273,
+        "reported": 168
+      },
+      "deposition_power": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_rep_rate": {
+        "partial_array_records": 0,
+        "rate": 0.6147186147186147,
+        "reported": 142
+      },
+      "deposition_sample_time_min": {
+        "partial_array_records": 0,
+        "rate": 0.9307359307359307,
+        "reported": 215
+      },
+      "deposition_substrate_material": {
+        "partial_array_records": 0,
+        "rate": 0.03463203463203463,
+        "reported": 8
+      },
+      "deposition_target_pulses": {
+        "partial_array_records": 0,
+        "rate": 0.6147186147186147,
+        "reported": 142
+      },
+      "deposition_ts_distance": {
+        "partial_array_records": 0,
+        "rate": 0.3852813852813853,
+        "reported": 89
+      }
+    },
+    "unresolved": {
+      "deposition_base_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.03125,
+        "reported": 6
+      },
+      "deposition_compounds": {
+        "partial_array_records": 7,
+        "rate": 0.046875,
+        "reported": 9
+      },
+      "deposition_cycles": {
+        "partial_array_records": 0,
+        "rate": 0.11979166666666667,
+        "reported": 23
+      },
+      "deposition_energy": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_gas_flow_sccm": {
+        "partial_array_records": 5,
+        "rate": 0.026041666666666668,
+        "reported": 5
+      },
+      "deposition_gases": {
+        "partial_array_records": 5,
+        "rate": 0.026041666666666668,
+        "reported": 5
+      },
+      "deposition_growth_pressure_mtorr": {
+        "partial_array_records": 0,
+        "rate": 0.026041666666666668,
+        "reported": 5
+      },
+      "deposition_initial_temp_c": {
+        "partial_array_records": 0,
+        "rate": 0.1875,
+        "reported": 36
+      },
+      "deposition_power": {
+        "partial_array_records": 0,
+        "rate": 0.020833333333333332,
+        "reported": 4
+      },
+      "deposition_rep_rate": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_sample_time_min": {
+        "partial_array_records": 0,
+        "rate": 0.07291666666666667,
+        "reported": 14
+      },
+      "deposition_substrate_material": {
+        "partial_array_records": 0,
+        "rate": 0.026041666666666668,
+        "reported": 5
+      },
+      "deposition_target_pulses": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      },
+      "deposition_ts_distance": {
+        "partial_array_records": 0,
+        "rate": 0.0,
+        "reported": 0
+      }
+    }
+  },
+  "final_judgment": "Exploratory success requires at least one scientifically interpretable and reproducible cluster or material-pair pattern under one or more prespecified profiles; no universal best metric is required. The profile, uncertainty bound, resolution, controls, and proxy support must all be reported, and isolated post-hoc anecdotes do not qualify.",
+  "instrument_family_association": {
+    "cramers_v": 0.5569045086389753,
+    "cross_tabulation": {
+      "hybrid_parameterized": {
+        "3": 1
+      },
+      "power_parameterized": {
+        "1": 765,
+        "4": 563,
+        "5": 113,
+        "6": 19,
+        "NOT_REPORTED": 7
+      },
+      "pulse_parameterized": {
+        "3": 231
+      },
+      "unresolved": {
+        "1": 96,
+        "3": 31,
+        "4": 44,
+        "6": 14,
+        "HTEMC": 1,
+        "NOT_REPORTED": 6
+      }
+    },
+    "role": "source/reporting-pattern diagnostic only"
+  },
+  "libraries_with_any_reported_process": 1739,
+  "libraries_without_reported_process": 152,
+  "missing_state_counts": {
+    "AMBIGUOUS_explicit": 0,
+    "EXTRACTION_FAILED": 0,
+    "NOT_APPLICABLE": 0,
+    "NOT_PERFORMED": 0,
+    "NOT_REPORTED_field_cells": 14074,
+    "REPORTED_field_cells": 12400,
+    "UNCONTROLLED": 0,
+    "partial_array_records": 4004
+  },
+  "pairwise_common_field_histogram": {
+    "0": 280950,
+    "1": 125369,
+    "2": 124248,
+    "3": 116379,
+    "4": 379316,
+    "5": 166794,
+    "6": 3285,
+    "7": 99837,
+    "8": 238384,
+    "9": 252433
+  },
+  "pairwise_setting_coverage": {
+    "definition": "number of the 14 setting fields reported in both records; no imputation and no weight redistribution",
+    "maximum": 9,
+    "pair_count": 1786995,
+    "quantiles": {
+      "0.10": 0,
+      "0.25": 2,
+      "0.50": 4,
+      "0.75": 8,
+      "0.90": 9
+    },
+    "zero_common_fraction": 0.15721924235937984,
+    "zero_common_pairs": 280950
+  },
+  "phase1_decision": {
+    "next": "Phase 2 HTEM settings-focused clustering plus negative controls; defer full sequence validation to NanoMine or another sequence-bearing dataset",
+    "operation_type_similarity": "not discriminative in the current HTEM schema",
+    "order_and_repetition_similarity": "not testable as a sequence; do not impute",
+    "setting_similarity": "testable with pairwise reporting coverage and interval bounds",
+    "status": "PROCEED_WITH_SCOPE_RESTRICTION",
+    "synthesis_method_similarity": "not testable because no explicit method label is present"
+  },
+  "process_completeness_tiers": {
+    "A_full_method_sequence_repetition_settings": 0,
+    "B_method_sequence_partial_settings": 0,
+    "C_single_event_settings": 1739,
+    "D_method_name_only": 0,
+    "E_no_usable_process": 152
+  },
+  "sample_libraries": 1891,
+  "sequence_audit": {
+    "array_interpretation": "parallel target/gas slots, not temporal events",
+    "cycles_reported": 236,
+    "cycles_with_defined_repeat_unit_and_internal_order": 0,
+    "explicit_method_names": 0,
+    "explicit_ordered_event_sequences": 0
+  },
+  "version": "2.0.0"
+}

@@ -1,0 +1,21 @@
+{
+  "phase": 4,
+  "decision": "GO_FOR_METHODS_PAPER_HOLD_FOR_PERFORMANCE_TRANSFER_CLAIMS",
+  "criteria": {
+    "A_cross_domain_context_change": true,
+    "B_value_beyond_mask": true,
+    "C_task_dependence": true,
+    "D_multi_view_nonidentity": true,
+    "E_cross_source_candidates": true,
+    "F_reproducibility": true
+  },
+  "optional_criteria_passed": 4,
+  "required_optional_passes": 3,
+  "claim_supported": "不完全な文献メタデータに対する多視点・欠損区間付き材料類似度は、複数領域で文脈的構造と安定な異source候補を回収する。ただし用途ごとにビューを保持する必要がある。",
+  "claims_not_supported": [
+    "普遍的に最良な材料類似度",
+    "物理的な真の材料クラス",
+    "性能予測または文献改善効果の転移可能性"
+  ],
+  "next_phase": "日本語論文草稿と統一APIの作成。性能転移研究は別研究として開始する。"
+}

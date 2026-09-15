@@ -1,0 +1,7 @@
+proposition,Starrydata,HTEM,NanoMine,PNCExtract,basis
+P1_noncomposition_changes_context_clustering,support,support,support,mixed,"正方向率100%, 88.6%, 97.6%; PNC loadingは大域ARI低下・局所MRR上昇"
+P2_values_exceed_missingness_or_shuffle,partial_support,partial_support,partial_support,not_tested,値シャッフルとの差はあるが、欠損・source交絡は残る
+P3_missingness_is_material_confounder,support,support,support,support,mask対照、境界方向反転、区間幅またはloading境界感度
+P4_global_and_local_tasks_differ,not_tested,support,support,support,HTEMの両方改善4.6%、NanoMine順位rho≈0、PNCExtractで方向反転
+P5_multiple_views_are_nonidentical,support,support,support,support,主要ビュー間ARI中央値<0.90、目的・欠損境界・重みによる順位変化
+P6_consensus_recovers_cross_source_relations,not_tested,support,support,not_tested,HTEM跨study/装置 20対、NanoMine 16/18ビュー以上 198対

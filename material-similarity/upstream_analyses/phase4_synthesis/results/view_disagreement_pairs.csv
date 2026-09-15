@@ -1,0 +1,34 @@
+dataset,scope,view_a,view_b,ari
+Starrydata,confirmation; k=150,F0,F1,0.3508157357959135
+Starrydata,confirmation; k=150,F0,F2,0.32723555599461907
+Starrydata,confirmation; k=150,F1,F2,0.8854338753752286
+HTEM,six supported views; descriptive resolutions,ATMOS55__reported__L100__K150,ATMOS_ONLY__reported__L075__K50,0.45233058346642396
+HTEM,six supported views; descriptive resolutions,ATMOS55__reported__L100__K150,ATMOS_THERM__reported__L100__K50,0.518652195708096
+HTEM,six supported views; descriptive resolutions,ATMOS55__reported__L100__K150,SOURCE_ONLY__reported__L075__K200,0.7103461130581028
+HTEM,six supported views; descriptive resolutions,ATMOS55__reported__L100__K150,THERM55__reported__L100__K50,0.47295559422146366
+HTEM,six supported views; descriptive resolutions,ATMOS55__reported__L100__K150,THERM_SUBSTR__reported__L050__K50,0.4836397211794675
+HTEM,six supported views; descriptive resolutions,ATMOS_ONLY__reported__L075__K50,ATMOS_THERM__reported__L100__K50,0.6559185539292538
+HTEM,six supported views; descriptive resolutions,ATMOS_ONLY__reported__L075__K50,SOURCE_ONLY__reported__L075__K200,0.35182544320021464
+HTEM,six supported views; descriptive resolutions,ATMOS_ONLY__reported__L075__K50,THERM55__reported__L100__K50,0.6306190053085651
+HTEM,six supported views; descriptive resolutions,ATMOS_ONLY__reported__L075__K50,THERM_SUBSTR__reported__L050__K50,0.7385590649657674
+HTEM,six supported views; descriptive resolutions,ATMOS_THERM__reported__L100__K50,SOURCE_ONLY__reported__L075__K200,0.38495603784586774
+HTEM,six supported views; descriptive resolutions,ATMOS_THERM__reported__L100__K50,THERM55__reported__L100__K50,0.8948855052389468
+HTEM,six supported views; descriptive resolutions,ATMOS_THERM__reported__L100__K50,THERM_SUBSTR__reported__L050__K50,0.7856063640955967
+HTEM,six supported views; descriptive resolutions,SOURCE_ONLY__reported__L075__K200,THERM55__reported__L100__K50,0.35141977548784464
+HTEM,six supported views; descriptive resolutions,SOURCE_ONLY__reported__L075__K200,THERM_SUBSTR__reported__L050__K50,0.37600347096759673
+HTEM,six supported views; descriptive resolutions,THERM55__reported__L100__K50,THERM_SUBSTR__reported__L050__K50,0.7418410155677798
+NanoMine,six sentinel views; reported; k=50,material_only,balanced,0.7880555258374421
+NanoMine,six sentinel views; reported; k=50,material_only,sequence_focus,0.6046162900797101
+NanoMine,six sentinel views; reported; k=50,material_only,settings_focus,0.6221450714346349
+NanoMine,six sentinel views; reported; k=50,material_only,numeric_settings_focus,0.7010301288890183
+NanoMine,six sentinel views; reported; k=50,material_only,process_only,0.1579768991155027
+NanoMine,six sentinel views; reported; k=50,balanced,sequence_focus,0.7148452641617342
+NanoMine,six sentinel views; reported; k=50,balanced,settings_focus,0.7521576545040191
+NanoMine,six sentinel views; reported; k=50,balanced,numeric_settings_focus,0.7872660512141042
+NanoMine,six sentinel views; reported; k=50,balanced,process_only,0.24090975429928027
+NanoMine,six sentinel views; reported; k=50,sequence_focus,settings_focus,0.6471768995845957
+NanoMine,six sentinel views; reported; k=50,sequence_focus,numeric_settings_focus,0.8466650246403061
+NanoMine,six sentinel views; reported; k=50,sequence_focus,process_only,0.29517743456981205
+NanoMine,six sentinel views; reported; k=50,settings_focus,numeric_settings_focus,0.7145931799143519
+NanoMine,six sentinel views; reported; k=50,settings_focus,process_only,0.28938940447949546
+NanoMine,six sentinel views; reported; k=50,numeric_settings_focus,process_only,0.25544285486057555

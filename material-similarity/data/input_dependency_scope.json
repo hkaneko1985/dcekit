@@ -1,0 +1,52 @@
+{
+  "status": "author-held exact input; independent permission-backed acquisition not established",
+  "frozen_input": "data/upstream/nanomine_phase3_records.jsonl.gz",
+  "sha256": "209168324fcbbcf9d308a2d6358d0caacf7a885b19b2c8e3de951bbff704833a",
+  "bytes": 138028,
+  "normalized_snapshot_created_at": "2026-09-10T00:59:08.885129+00:00",
+  "creation_timestamp_is_not_live_database_version": true,
+  "source_records": 832,
+  "source_article_groups": 119,
+  "selection_manifest": "data/nanomine_selection_manifest.json",
+  "full_record_ids_key": "subsets.full",
+  "per_record_semantic_hashes_key": "source_record_semantic_hashes",
+  "subsets": {
+    "full": 832,
+    "api": 183,
+    "systems": 72,
+    "methods": 120
+  },
+  "dependencies": [
+    {
+      "results": "Figures 2-4",
+      "comparison_records": "183, 72, 120 overlapping selections",
+      "numeric_scale_reference": "all 832 source records",
+      "script": "src/run_validation.py"
+    },
+    {
+      "results": "Figure 5 held-out method and masked-record recovery",
+      "comparison_records": "120-record cohort with task-specific eligibility",
+      "numeric_scale_reference": "all 832 excluding query article group",
+      "script": "src/run_revision_evaluation.py"
+    },
+    {
+      "results": "Figure 6 and representation sensitivities",
+      "comparison_records": "300 fixed pairs from 120-record cohort",
+      "numeric_scale_reference": "all 832 by default; explicitly labelled subset and source-block resampling sensitivities",
+      "script": "src/run_revision_evaluation.py"
+    },
+    {
+      "results": "Figure 7 and SI Table S15",
+      "comparison_records": "120-record cohort; different-article-group galleries",
+      "numeric_scale_reference": "all 832 excluding query article group",
+      "scripts": [
+        "src/run_interval_utility.py",
+        "src/run_baseline_documentation.py"
+      ]
+    }
+  ],
+  "input_requirement": "The frozen 832-record file is sufficient for current numeric reruns; supplying only the displayed records does not reproduce scale fitting.",
+  "historical_acquisition": "Four retained API caches document prior normalization. Their original endpoints and requests are in upstream_analyses/phase3_nanomine/src/acquire_phase3_cache.py; this is not a verified independent route to the frozen snapshot.",
+  "access_checks": "docs/data_access_checks_r3.json",
+  "terms_and_pending_route": "docs/DATA_ACCESS_STATUS.md"
+}

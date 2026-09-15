@@ -1,0 +1,98 @@
+{
+  "version": "3.1.0",
+  "analysis_audit": "The weight grid was frozen before execution. An instrument-matched comparator and an element-system-plus-instrument shuffle were added after the initial implementation dry run revealed that 1,058 of 1,069 weak-positive pair instances share an instrument. Final judgments use the source-adjusted analysis and remain exploratory.",
+  "scope": "HTEM thin-film sample libraries; composition and deposition settings only",
+  "frozen_before_phase2_execution": true,
+  "property_policy": "No property, performance, structure outcome, morphology outcome, thickness, diffraction result, or measurement target is retained or used.",
+  "expert_policy": "No expert labels, expert scoring, or expert-based cluster naming.",
+  "method_and_sequence_policy": "Synthesis-method names and process order are outside the HTEM Phase 2 scope because the dataset represents a common thin-film deposition setting schema and contains no explicit event sequence.",
+  "missingness_policy": {
+    "imputation": "forbidden",
+    "reported_similarity": "computed only from settings reported for both libraries",
+    "joint_absence": "does not increase similarity",
+    "unreported_weight": "not redistributed; it widens the supported-to-possible similarity interval",
+    "partial_arrays": "reported slots are compared; unreported slots widen the interval",
+    "zero": "retained as an explicitly reported setting"
+  },
+  "process_facets": {
+    "source_energy": [
+      "deposition_compounds",
+      "deposition_power",
+      "deposition_target_pulses",
+      "deposition_rep_rate",
+      "deposition_energy"
+    ],
+    "atmosphere": [
+      "deposition_base_pressure_mtorr",
+      "deposition_growth_pressure_mtorr",
+      "deposition_gases",
+      "deposition_gas_flow_sccm"
+    ],
+    "thermal_temporal": [
+      "deposition_initial_temp_c",
+      "deposition_sample_time_min",
+      "deposition_cycles"
+    ],
+    "substrate_geometry": [
+      "deposition_substrate_material",
+      "deposition_ts_distance"
+    ]
+  },
+  "process_weight_profiles": {
+    "EQ": [0.25, 0.25, 0.25, 0.25],
+    "SOURCE55": [0.55, 0.15, 0.15, 0.15],
+    "ATMOS55": [0.15, 0.55, 0.15, 0.15],
+    "THERM55": [0.15, 0.15, 0.55, 0.15],
+    "SUBSTR55": [0.15, 0.15, 0.15, 0.55],
+    "SOURCE_ATMOS": [0.4, 0.4, 0.1, 0.1],
+    "SOURCE_THERM": [0.4, 0.1, 0.4, 0.1],
+    "ATMOS_THERM": [0.1, 0.4, 0.4, 0.1],
+    "THERM_SUBSTR": [0.1, 0.1, 0.4, 0.4],
+    "SOURCE_ONLY": [1.0, 0.0, 0.0, 0.0],
+    "ATMOS_ONLY": [0.0, 1.0, 0.0, 0.0],
+    "THERM_ONLY": [0.0, 0.0, 1.0, 0.0],
+    "SUBSTR_ONLY": [0.0, 0.0, 0.0, 1.0]
+  },
+  "material_distance": {
+    "formula": "D_material = C + (1-C)*lambda*D_process",
+    "composition_process_lambdas": [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
+    "process_variants": ["reported", "optimistic", "pessimistic"],
+    "optimistic": "unreported settings are maximally similar",
+    "pessimistic": "unreported settings are maximally dissimilar",
+    "reported": "conditional distance among jointly reported settings; falls back to composition when no setting is shared"
+  },
+  "clustering": {
+    "algorithm": "average-linkage agglomerative clustering on precomputed dissimilarity",
+    "reason": "pair-specific reporting subspaces need not satisfy Euclidean geometry; Ward and k-means are not used",
+    "cluster_resolutions": [25, 50, 75, 100, 125, 150, 200, 250, 300, 400],
+    "weight_optimization": false,
+    "resolution_optimization": false
+  },
+  "support_and_controls": {
+    "weak_positive": "different sample libraries linked to the same HTEM study",
+    "unlabeled": "all pairs without a shared study; never called negative",
+    "support_role": "descriptive support only; never used to tune weights or cluster resolution",
+    "controls": [
+      "composition only",
+      "reporting-mask similarity",
+      "deposition-instrument co-membership",
+      "process-row shuffle within element-system strata",
+      "process-row shuffle within element-system-plus-instrument strata",
+      "composition-distance-plus-instrument-matched unlabeled comparison",
+      "row-order stability",
+      "optimistic/reported/pessimistic bound stability"
+    ]
+  },
+  "exploratory_judgment": {
+    "rule": "The phase is informative if at least one prespecified profile and resolution yields an interpretable, reproducible cluster or material-pair pattern. A universal best similarity is not required.",
+    "minimum_evidence_for_context_supported_pattern": [
+      "positive excess co-assignment relative to composition-matched unlabeled pairs",
+      "positive excess after matching the unlabeled comparison on deposition instrument as well as composition distance",
+      "not reproduced equally by reporting-mask-only or instrument-only control",
+      "row-order median ARI at least 0.70",
+      "uncertainty-bound dependence reported",
+      "all prespecified profiles and resolutions disclosed"
+    ],
+    "novel_pattern_policy": "A cross-study pattern may be retained as a hypothesis when its composition and process basis is mechanically describable and stable; it is not declared scientifically correct without downstream validation."
+  }
+}

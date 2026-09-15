@@ -1,0 +1,941 @@
+{
+  "quantity_types": {
+    "temperature": "temperature",
+    "extrusion temperature": "temperature",
+    "melt temperature": "temperature",
+    "barrel temperature": "temperature",
+    "time": "duration",
+    "residence time": "duration",
+    "pressure": "pressure",
+    "pressure at die": "pressure",
+    "rotation speed": "rotation_rate",
+    "rotational frequency": "rotation_rate",
+    "screw diameter length ratio": "screw_diameter_length_ratio",
+    "aspect ratio": "aspect_ratio",
+    "width": "length",
+    "length": "length",
+    "diameter": "length",
+    "inner barrel diameter": "length",
+    "screw channel width": "length",
+    "screw diameter": "length",
+    "screw length": "length",
+    "screw channel diameter": "length",
+    "mass fraction": "mass_fraction",
+    "volume fraction": "volume_fraction",
+    "density": "density",
+    "specific surface area": "specific_surface_area",
+    "amperage": "electric_current",
+    "power": "power",
+    "voltage": "voltage",
+    "torque": "torque",
+    "throughput": "mass_flow",
+    "amount": "amount",
+    "solvent amount": "amount"
+  },
+  "units": [
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "g",
+      "canonical_unit": "g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "gram",
+      "canonical_unit": "g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "grams",
+      "canonical_unit": "g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "kg",
+      "canonical_unit": "g",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "kilogram",
+      "canonical_unit": "g",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "l",
+      "canonical_unit": "mL",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "liter",
+      "canonical_unit": "mL",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "litre",
+      "canonical_unit": "mL",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "m l",
+      "canonical_unit": "mL",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "milliliter",
+      "canonical_unit": "mL",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "amount",
+      "normalized_source_unit": "millilitre",
+      "canonical_unit": "mL",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "aspect_ratio",
+      "normalized_source_unit": "",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "aspect_ratio",
+      "normalized_source_unit": "1",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "aspect_ratio",
+      "normalized_source_unit": "dimensionless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "aspect_ratio",
+      "normalized_source_unit": "unitless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "g cm 3",
+      "canonical_unit": "g/cm3",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "g cm3",
+      "canonical_unit": "g/cm3",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "gram per cubic centimeter",
+      "canonical_unit": "g/cm3",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "kg m 3",
+      "canonical_unit": "g/cm3",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "kg m3",
+      "canonical_unit": "g/cm3",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "density",
+      "normalized_source_unit": "kilogram per cubic meter",
+      "canonical_unit": "g/cm3",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "d",
+      "canonical_unit": "min",
+      "factor": 1440,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "day",
+      "canonical_unit": "min",
+      "factor": 1440,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "days",
+      "canonical_unit": "min",
+      "factor": 1440,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "h",
+      "canonical_unit": "min",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "hour",
+      "canonical_unit": "min",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "hours",
+      "canonical_unit": "min",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "hr",
+      "canonical_unit": "min",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "hrs",
+      "canonical_unit": "min",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "min",
+      "canonical_unit": "min",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "mins",
+      "canonical_unit": "min",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "minute",
+      "canonical_unit": "min",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "minutes",
+      "canonical_unit": "min",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "s",
+      "canonical_unit": "min",
+      "factor": 0.016666666666666666,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "sec",
+      "canonical_unit": "min",
+      "factor": 0.016666666666666666,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "second",
+      "canonical_unit": "min",
+      "factor": 0.016666666666666666,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "seconds",
+      "canonical_unit": "min",
+      "factor": 0.016666666666666666,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "secs",
+      "canonical_unit": "min",
+      "factor": 0.016666666666666666,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "week",
+      "canonical_unit": "min",
+      "factor": 10080,
+      "offset": 0.0
+    },
+    {
+      "quantity": "duration",
+      "normalized_source_unit": "weeks",
+      "canonical_unit": "min",
+      "factor": 10080,
+      "offset": 0.0
+    },
+    {
+      "quantity": "electric_current",
+      "normalized_source_unit": "a",
+      "canonical_unit": "A",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "electric_current",
+      "normalized_source_unit": "ampere",
+      "canonical_unit": "A",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "electric_current",
+      "normalized_source_unit": "amperes",
+      "canonical_unit": "A",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "centimeter",
+      "canonical_unit": "nm",
+      "factor": 10000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "cm",
+      "canonical_unit": "nm",
+      "factor": 10000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "m",
+      "canonical_unit": "nm",
+      "factor": 1000000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "meter",
+      "canonical_unit": "nm",
+      "factor": 1000000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "metre",
+      "canonical_unit": "nm",
+      "factor": 1000000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "micrometer",
+      "canonical_unit": "nm",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "micrometers",
+      "canonical_unit": "nm",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "micrometre",
+      "canonical_unit": "nm",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "micron",
+      "canonical_unit": "nm",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "millimeter",
+      "canonical_unit": "nm",
+      "factor": 1000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "millimeters",
+      "canonical_unit": "nm",
+      "factor": 1000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "millimetre",
+      "canonical_unit": "nm",
+      "factor": 1000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "mm",
+      "canonical_unit": "nm",
+      "factor": 1000000.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "nanometer",
+      "canonical_unit": "nm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "nanometers",
+      "canonical_unit": "nm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "nanometre",
+      "canonical_unit": "nm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "nm",
+      "canonical_unit": "nm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "length",
+      "normalized_source_unit": "um",
+      "canonical_unit": "nm",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_flow",
+      "normalized_source_unit": "kg h",
+      "canonical_unit": "kg/h",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_flow",
+      "normalized_source_unit": "kilogram per hour",
+      "canonical_unit": "kg/h",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "1",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "dimensionless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "percent percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "unitless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "vol percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "volume percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "weight percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "mass_fraction",
+      "normalized_source_unit": "wt percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "power",
+      "normalized_source_unit": "w",
+      "canonical_unit": "W",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "power",
+      "normalized_source_unit": "watt",
+      "canonical_unit": "W",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "power",
+      "normalized_source_unit": "watts",
+      "canonical_unit": "W",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "bar",
+      "canonical_unit": "MPa",
+      "factor": 0.1,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "bars",
+      "canonical_unit": "MPa",
+      "factor": 0.1,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "gigapascal",
+      "canonical_unit": "MPa",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "gpa",
+      "canonical_unit": "MPa",
+      "factor": 1000,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "k pa",
+      "canonical_unit": "MPa",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "kilopascal",
+      "canonical_unit": "MPa",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "kilopascals",
+      "canonical_unit": "MPa",
+      "factor": 0.001,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "megapascal",
+      "canonical_unit": "MPa",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "megapascals",
+      "canonical_unit": "MPa",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "mpa",
+      "canonical_unit": "MPa",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "pa",
+      "canonical_unit": "MPa",
+      "factor": 1e-06,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "pascal",
+      "canonical_unit": "MPa",
+      "factor": 1e-06,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "pascals",
+      "canonical_unit": "MPa",
+      "factor": 1e-06,
+      "offset": 0.0
+    },
+    {
+      "quantity": "pressure",
+      "normalized_source_unit": "psi",
+      "canonical_unit": "MPa",
+      "factor": 0.006894757293168,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "hertz",
+      "canonical_unit": "rpm",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "hz",
+      "canonical_unit": "rpm",
+      "factor": 60,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "rad min",
+      "canonical_unit": "rpm",
+      "factor": 0.15915494309189535,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "radian per minute",
+      "canonical_unit": "rpm",
+      "factor": 0.15915494309189535,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "radians per minute",
+      "canonical_unit": "rpm",
+      "factor": 0.15915494309189535,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "revolutions per minute",
+      "canonical_unit": "rpm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "rotation per minute",
+      "canonical_unit": "rpm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "rotation_rate",
+      "normalized_source_unit": "rpm",
+      "canonical_unit": "rpm",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "screw_diameter_length_ratio",
+      "normalized_source_unit": "",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "screw_diameter_length_ratio",
+      "normalized_source_unit": "1",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "screw_diameter_length_ratio",
+      "normalized_source_unit": "dimensionless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "screw_diameter_length_ratio",
+      "normalized_source_unit": "unitless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "specific_surface_area",
+      "normalized_source_unit": "m 2 g",
+      "canonical_unit": "m2/g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "specific_surface_area",
+      "normalized_source_unit": "m2 g",
+      "canonical_unit": "m2/g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "specific_surface_area",
+      "normalized_source_unit": "square meter per gram",
+      "canonical_unit": "m2/g",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "c",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "celsius",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "deg c",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "degree celsius",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "degrees celsius",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "f",
+      "canonical_unit": "degC",
+      "factor": 0.5555555555555556,
+      "offset": -17.77777777777778
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "fahrenheit",
+      "canonical_unit": "degC",
+      "factor": 0.5555555555555556,
+      "offset": -17.77777777777778
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "k",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": -273.15
+    },
+    {
+      "quantity": "temperature",
+      "normalized_source_unit": "kelvin",
+      "canonical_unit": "degC",
+      "factor": 1.0,
+      "offset": -273.15
+    },
+    {
+      "quantity": "torque",
+      "normalized_source_unit": "n m",
+      "canonical_unit": "N m",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "torque",
+      "normalized_source_unit": "newton meter",
+      "canonical_unit": "N m",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "voltage",
+      "normalized_source_unit": "v",
+      "canonical_unit": "V",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "voltage",
+      "normalized_source_unit": "volt",
+      "canonical_unit": "V",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "voltage",
+      "normalized_source_unit": "volts",
+      "canonical_unit": "V",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "1",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "dimensionless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "percent percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "unitless",
+      "canonical_unit": "1",
+      "factor": 1.0,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "vol percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "volume percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "weight percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    },
+    {
+      "quantity": "volume_fraction",
+      "normalized_source_unit": "wt percent",
+      "canonical_unit": "1",
+      "factor": 0.01,
+      "offset": 0.0
+    }
+  ],
+  "unknown_unit_policy": "quarantine; retain raw value; no inference"
+}

@@ -1,0 +1,33 @@
+{
+  "source_archive": "phase5_material_similarity_framework (1).zip",
+  "source_archive_sha256": "2f757b4cfee0b6a4fe09dba5f7dc5b989b270ec657debfcdf1949276ed5ebacc",
+  "unchanged_files": [
+    "material_similarity/__init__.py",
+    "material_similarity/analysis.py",
+    "material_similarity/distance.py",
+    "material_similarity/schema.py",
+    "material_similarity/views.py",
+    "data/upstream/cross_dataset_diagnostics.csv",
+    "data/upstream/htem_phase2_records.jsonl.gz",
+    "data/upstream/nanomine_phase3_records.jsonl.gz",
+    "data/upstream/objective_disagreement.csv",
+    "data/upstream/phase4_summary.json",
+    "data/upstream/uncertainty_sensitivity.csv",
+    "data/upstream/view_disagreement_summary.csv",
+    "data/upstream/weight_response.csv",
+    "results/api_consensus_candidates.csv",
+    "results/api_htem_validation.csv",
+    "results/api_nanomine_validation.csv",
+    "results/api_validation_summary.json",
+    "results/nanomine_material_system_embedding.csv",
+    "results/nanomine_material_system_separation.csv",
+    "results/nanomine_material_systems.csv",
+    "results/nanomine_process_method_embedding.csv",
+    "results/nanomine_process_method_neighbors.csv",
+    "results/nanomine_process_method_separation.csv",
+    "results/nanomine_process_methods.csv",
+    "results/phase4_claims_lock.json",
+    "results/representative_pair_views.csv"
+  ],
+  "publication_status": "prepared for author upload; no repository URL or DOI assigned here"
+}

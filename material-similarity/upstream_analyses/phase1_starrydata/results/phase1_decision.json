@@ -1,0 +1,65 @@
+{
+  "decision_version": "1.0.0",
+  "strict_preregistered_decision": "CONDITIONAL_GO",
+  "operational_decision": "PROCEED_TO_PHASE2_WITH_CAVEATS",
+  "passed_gates": 5,
+  "total_gates": 6,
+  "failed_gates": [
+    "paper_dominance"
+  ],
+  "primary_evidence": {
+    "samples": 5001,
+    "confirmation_same_sid_pairs": 4334,
+    "F0_lift": 1.5391494074892473,
+    "F2_lift": 3.454952999135752,
+    "F2_minus_F0_delta_log_lift": {
+      "observed_delta_log_lift": 0.8085789223693334,
+      "bootstrap_95_interval": [
+        0.7796711614560929,
+        0.8370909245778528
+      ],
+      "bootstrap_probability_above_zero": 1.0,
+      "fixed_resolutions_with_positive_delta": 5,
+      "fixed_resolutions_total": 5
+    },
+    "F2_median_subsample_ari": 0.9178542730723747,
+    "empirical_permutation_pvalue": 0.000999000999000999
+  },
+  "caveats": {
+    "single_paper_increment_share": {
+      "maximum_absolute_increment_share": 0.15544041450777202,
+      "papers_with_nonzero_increment": 23
+    },
+    "preregistered_threshold": 0.1,
+    "observed_across_three_seeds": {
+      "values": [
+        0.15544041450777202,
+        0.15086206896551724,
+        0.14285714285714285
+      ],
+      "median": 0.15086206896551724,
+      "minimum": 0.14285714285714285,
+      "maximum": 0.15544041450777202
+    },
+    "missingness_only_lift": {
+      "values": [
+        3.207688743670951,
+        2.567969475771692,
+        2.9074831559901617
+      ],
+      "median": 2.9074831559901617,
+      "minimum": 2.567969475771692,
+      "maximum": 3.207688743670951
+    },
+    "cluster_resolution": "The incremental result is multiresolution-robust, but the data do not identify a unique natural cluster count within the tested range.",
+    "same_sid_role": "Weak positive support only; different-SID pairs are unlabeled, not negatives."
+  },
+  "phase2_requirements": [
+    "Use HTEM sample-library/study identity as an external weak-positive context.",
+    "Freeze F0/F1/F2 definitions before inspecting Phase 2 support labels.",
+    "Keep target variables, measured properties, source IDs, and free text out of similarity features.",
+    "Repeat complete-case, missingness-only, process-shuffle, order/tie, and multiresolution controls.",
+    "Treat failure to replicate as rejection or revision of this representation, not as evidence that meaningful material similarity does not exist."
+  ],
+  "claim_boundary": "Weak-context construct validation only; no property prediction, transferability, or expert-ground-truth claim."
+}

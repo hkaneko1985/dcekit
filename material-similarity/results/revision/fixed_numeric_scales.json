@@ -1,0 +1,34 @@
+{
+  "mass_fraction|1": {
+    "scale": 0.197,
+    "transform": "linear"
+  },
+  "volume_fraction|1": {
+    "scale": 0.10977640000000015,
+    "transform": "linear"
+  },
+  "rotation_rate|rpm": {
+    "scale": 2960.2112642270263,
+    "transform": "linear"
+  },
+  "duration|min": {
+    "scale": 1435.0,
+    "transform": "linear"
+  },
+  "temperature|degC": {
+    "scale": 160.0,
+    "transform": "linear"
+  },
+  "length|nm": {
+    "scale": 17440000.0,
+    "transform": "linear"
+  },
+  "pressure|MPa": {
+    "scale": 148.0,
+    "transform": "linear"
+  },
+  "screw_diameter_length_ratio|1": {
+    "scale": 1e-12,
+    "transform": "linear"
+  }
+}

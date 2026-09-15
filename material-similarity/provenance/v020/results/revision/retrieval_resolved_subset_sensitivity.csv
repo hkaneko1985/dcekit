@@ -1,0 +1,6 @@
+task,method,metric,article_macro_mean,ci_low,ci_high,n_article_groups,n_query_runs
+heldout_method,balanced_strict,agreement_at_5,0.4271604938271606,0.3740740740740741,0.4802469135802469,81,107
+heldout_method,equal_facets,agreement_at_5,0.4580246913580247,0.40450617283950624,0.5119444444444445,81,107
+heldout_method,gower_field_pool,agreement_at_5,0.4325102880658436,0.36665637860082306,0.5012345679012347,81,107
+heldout_method,sequence_as_bag,agreement_at_5,0.4444444444444444,0.38765432098765434,0.5,81,107
+heldout_method,sequence_as_set,agreement_at_5,0.44742798353909474,0.39093878600823045,0.5066898148148149,81,107

@@ -1,0 +1,780 @@
+[
+  {
+    "doi": "10.1002/(SICI)1097-4628(19991003)74:1%3C133::AID-APP16%3E3.0.CO;2-N",
+    "canonical_doi": "10.1002/(SICI)1097-4628(19991003)74:1<133::AID-APP16>3.0.CO;2-N",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Properties and structure of poly(vinyl alcohol)/silica composites",
+    "URL": "https://doi.org/10.1002/(sici)1097-4628(19991003)74:1<133::aid-app16>3.0.co;2-n"
+  },
+  {
+    "doi": "10.1002/app.44654",
+    "status": "crossref_resolved",
+    "title": "Dielectric, mechanical and transport properties of bisphenol A polycarbonate/graphene nanocomposites prepared by melt blending",
+    "URL": "https://doi.org/10.1002/app.44654",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/app.45332",
+    "status": "crossref_resolved",
+    "title": "Thermal and mechanical properties of polyamide 12/graphene nanoplatelets nanocomposites and parts fabricated by fused deposition modeling",
+    "URL": "https://doi.org/10.1002/app.45332",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/app.46157",
+    "status": "crossref_resolved",
+    "title": "Evaluation of thermomechanical properties of polyvinyl butyral nanocomposites reinforced with graphene nanoplatelets synthesized by <i>in situ</i> polymerization",
+    "URL": "https://doi.org/10.1002/app.46157",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/macp.201000138",
+    "status": "crossref_resolved",
+    "title": "In\u2010situ\u2010Synthetized Silver/Epoxy Nanocomposites: Electrical Characterization by Means of Dielectric Spectroscopy",
+    "URL": "https://doi.org/10.1002/macp.201000138",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pc.10497",
+    "status": "crossref_resolved",
+    "title": "Mechanical properties of Al\n                    <sub>2</sub>\n                    O\n                    <sub>3</sub>\n                    /polymethylmethacrylate nanocomposites",
+    "URL": "https://doi.org/10.1002/pc.10497",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pc.22141",
+    "status": "crossref_resolved",
+    "title": "Properties of PMMA/Carbon nanotubes nanocomposites prepared by \u201cgrafting through\u201d method",
+    "URL": "https://doi.org/10.1002/pc.22141",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pc.22306",
+    "status": "crossref_resolved",
+    "title": "Rheology and biodegradation of polylactide/silica nanocomposites",
+    "URL": "https://doi.org/10.1002/pc.22306",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pc.22633",
+    "status": "crossref_resolved",
+    "title": "Study on the properties of nano\u2010TiO<sub>2</sub>/polybutylene succinate composites prepared by vane extruder",
+    "URL": "https://doi.org/10.1002/pc.22633",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pen.21349",
+    "status": "crossref_resolved",
+    "title": "Morphology, thermal, and rheological behavior of nylon 11/multi\u2010walled carbon nanotube nanocomposites prepared by melt compounding",
+    "URL": "https://doi.org/10.1002/pen.21349",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pi.1121",
+    "status": "crossref_resolved",
+    "title": "Synthesis and properties of poly(methyl methacrylate)/montmorillonite (PMMA/MMT) nanocomposites",
+    "URL": "https://doi.org/10.1002/pi.1121",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pi.1520",
+    "status": "crossref_resolved",
+    "title": "<i>In situ</i> polymerization and characterization of polyamide\u20106/silica nanocomposites derived from water glass",
+    "URL": "https://doi.org/10.1002/pi.1520",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/pi.2343",
+    "status": "crossref_resolved",
+    "title": "Polyamide\u2013silica nanocomposites: mechanical, morphological and thermomechanical investigations",
+    "URL": "https://doi.org/10.1002/pi.2343",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/polb.20251",
+    "status": "crossref_resolved",
+    "title": "Glass transition and relaxation behavior of epoxy nanocomposites",
+    "URL": "https://doi.org/10.1002/polb.20251",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/polb.20297",
+    "status": "crossref_resolved",
+    "title": "Glass\u2010transition temperature behavior of alumina/PMMA nanocomposites",
+    "URL": "https://doi.org/10.1002/polb.20297",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/polb.20925",
+    "status": "crossref_resolved",
+    "title": "Polymer\u2013nanoparticle interfacial interactions in polymer nanocomposites: Confinement effects on glass transition temperature and suppression of physical aging",
+    "URL": "https://doi.org/10.1002/polb.20925",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1002/polb.21187",
+    "status": "crossref_resolved",
+    "title": "Graphitic nanofillers in PMMA nanocomposites\u2014An investigation of particle size and dispersion and their influence on nanocomposite properties",
+    "URL": "https://doi.org/10.1002/polb.21187",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s00289-013-0927-y",
+    "status": "crossref_resolved",
+    "title": "Synthesis and characterization of polyurethane/titanium dioxide nanocomposites obtained by in situ polymerization",
+    "URL": "https://doi.org/10.1007/s00289-013-0927-y",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s00289-015-1325-4",
+    "status": "crossref_resolved",
+    "title": "Thermal stability and thermal degradation kinetics (model-free kinetics) of nanocomposites based on poly (lactic acid)/graphene: the influence of functionalization",
+    "URL": "https://doi.org/10.1007/s00289-015-1325-4",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s10853-005-4417-y",
+    "status": "crossref_resolved",
+    "title": "Poly(vinyl alcohol)/silica hybrid nanocomposites by sol-gel technique: Synthesis and properties",
+    "URL": "https://doi.org/10.1007/s10853-005-4417-y",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s10853-014-8665-6",
+    "status": "crossref_resolved",
+    "title": "Mechanical properties and thermal conductivity of graphene nanoplatelet/epoxy composites",
+    "URL": "https://doi.org/10.1007/s10853-014-8665-6",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s10965-011-9793-1",
+    "status": "crossref_resolved",
+    "title": "A study on the properties of PMMA/silica nanocomposites prepared via RAFT polymerization",
+    "URL": "https://doi.org/10.1007/s10965-011-9793-1",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1007/s10973-014-3704-8",
+    "status": "crossref_resolved",
+    "title": "Graphite nanoplatelets/polymer nanocomposites: thermomechanical, dielectric, and functional behavior",
+    "URL": "https://doi.org/10.1007/s10973-014-3704-8",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/S0009-2614(03)00621-3",
+    "status": "crossref_resolved",
+    "title": "Dynamic mechanical behavior of in situ functionalized multi-walled carbon nanotube/phenoxy resin composite",
+    "URL": "https://doi.org/10.1016/s0009-2614(03)00621-3",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/S0167-577X(01)00626-7",
+    "status": "crossref_resolved",
+    "title": "Glass transition behavior of alumina/polymethylmethacrylate nanocomposites",
+    "URL": "https://doi.org/10.1016/s0167-577x(01)00626-7",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.carbon.2006.02.026",
+    "status": "crossref_resolved",
+    "title": "Effects of surface modification on rheological and mechanical properties of CNT/epoxy composites",
+    "URL": "https://doi.org/10.1016/j.carbon.2006.02.026",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.carbon.2007.03.029",
+    "status": "crossref_resolved",
+    "title": "Multifunctional polypropylene composites produced by incorporation of exfoliated graphite nanoplatelets",
+    "URL": "https://doi.org/10.1016/j.carbon.2007.03.029",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.carbon.2014.01.031",
+    "status": "crossref_resolved",
+    "title": "Polypropylene/carbon nanotube nano/microcellular structures with high dielectric permittivity, low dielectric loss, and low percolation threshold",
+    "URL": "https://doi.org/10.1016/j.carbon.2014.01.031",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compositesa.2005.02.006",
+    "status": "crossref_resolved",
+    "title": "Thermo-mechanical properties of randomly oriented carbon/epoxy nanocomposites",
+    "URL": "https://doi.org/10.1016/j.compositesa.2005.02.006",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compositesa.2008.02.006",
+    "status": "crossref_resolved",
+    "title": "Dynamic mechanical analysis of fumed silica/cyanate ester nanocomposites",
+    "URL": "https://doi.org/10.1016/j.compositesa.2008.02.006",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compositesa.2008.12.003",
+    "canonical_doi": "10.1016/j.compositesa.2008.12.003",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Poly (butylene terephthalate)/silica nanocomposites prepared from cyclic butylene terephthalate",
+    "URL": "https://doi.org/10.1016/j.compositesa.2008.12.003"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2004.01.024",
+    "status": "crossref_resolved",
+    "title": "Functionalisation effect on the thermo-mechanical behaviour of multi-wall carbon nanotube/epoxy-composites",
+    "URL": "https://doi.org/10.1016/j.compscitech.2004.01.024",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2004.11.016",
+    "status": "crossref_resolved",
+    "title": "Rubber\u2013pristine clay nanocomposites prepared by co-coagulating rubber latex and clay aqueous suspension",
+    "URL": "https://doi.org/10.1016/j.compscitech.2004.11.016",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2005.10.004",
+    "status": "crossref_resolved",
+    "title": "Reinforcement mechanisms in MWCNT-filled polycarbonate",
+    "URL": "https://doi.org/10.1016/j.compscitech.2005.10.004",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2006.12.012",
+    "status": "crossref_resolved",
+    "title": "Structure and thermal properties of poly(lactic acid)/cellulose whiskers nanocomposite materials",
+    "URL": "https://doi.org/10.1016/j.compscitech.2006.12.012",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2007.05.006",
+    "status": "crossref_resolved",
+    "title": "Effects of silane functionalization on the properties of carbon nanotube/epoxy nanocomposites",
+    "URL": "https://doi.org/10.1016/j.compscitech.2007.05.006",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2007.05.021",
+    "status": "crossref_resolved",
+    "title": "Study on microstructure and dielectric property of the BaTiO3/epoxy resin composites",
+    "URL": "https://doi.org/10.1016/j.compscitech.2007.05.021",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2008.01.009",
+    "status": "crossref_resolved",
+    "title": "Mechanisms leading to improved mechanical performance in nanoscale alumina filled epoxy",
+    "URL": "https://doi.org/10.1016/j.compscitech.2008.01.009",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2008.07.010",
+    "canonical_doi": "10.1016/j.compscitech.2008.07.010",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Improvements and mechanisms of fracture and fatigue properties of well-dispersed alumina/epoxy nanocomposites",
+    "URL": "https://doi.org/10.1016/j.compscitech.2008.07.010"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2008.09.039",
+    "status": "crossref_resolved",
+    "title": "Graphite oxide/poly(methyl methacrylate) nanocomposites prepared by a novel method utilizing macroazoinitiator",
+    "URL": "https://doi.org/10.1016/j.compscitech.2008.09.039",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.compscitech.2014.08.025",
+    "status": "crossref_resolved",
+    "title": "Dielectric properties of modified graphene oxide filled polyurethane nanocomposites and its correlation with rheology",
+    "URL": "https://doi.org/10.1016/j.compscitech.2014.08.025",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.eurpolymj.2008.06.015",
+    "status": "crossref_resolved",
+    "title": "Comparative studies for the effect of intercalating agent on the physical properties of epoxy resin-clay based nanocomposite materials",
+    "URL": "https://doi.org/10.1016/j.eurpolymj.2008.06.015",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.eurpolymj.2013.10.008",
+    "status": "crossref_resolved",
+    "title": "Preparation and characterization of graphite nano-platelet (GNP)/epoxy nano-composite: Mechanical, electrical and thermal properties",
+    "URL": "https://doi.org/10.1016/j.eurpolymj.2013.10.008",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.jeurceramsoc.2007.02.082",
+    "status": "crossref_resolved",
+    "title": "Dielectric properties of BST/polymer composite",
+    "URL": "https://doi.org/10.1016/j.jeurceramsoc.2007.02.082",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.matdes.2010.04.018",
+    "status": "crossref_resolved",
+    "title": "Mechanical properties of multi-walled carbon nanotube/epoxy composites",
+    "URL": "https://doi.org/10.1016/j.matdes.2010.04.018",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.matdes.2011.12.034",
+    "status": "crossref_resolved",
+    "title": "Effect of nanoclay content and compatibilizer on viscoelastic properties of montmorillonite/polypropylene nanocomposites",
+    "URL": "https://doi.org/10.1016/j.matdes.2011.12.034",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.matlet.2004.10.036",
+    "canonical_doi": "10.1016/j.matlet.2004.10.036",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Dielectric properties of zinc oxide/low density polyethylene nanocomposites",
+    "URL": "https://doi.org/10.1016/j.matlet.2004.10.036"
+  },
+  {
+    "doi": "10.1016/j.msea.2004.06.031",
+    "canonical_doi": "10.1016/j.msea.2004.06.031",
+    "checked_on": "2026-09-14",
+    "status": "metadata_mismatch",
+    "title": "Investigation of the dispersion process of SWNTs/SC-15 epoxy resin nanocomposites",
+    "URL": "https://doi.org/10.1016/s0921-5093(04)00857-3"
+  },
+  {
+    "doi": "10.1016/j.msea.2006.11.066",
+    "status": "crossref_resolved",
+    "title": "Experimental study on the thermal and mechanical properties of multi-walled carbon nanotube-reinforced epoxy",
+    "URL": "https://doi.org/10.1016/j.msea.2006.11.066",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.msea.2007.11.052",
+    "status": "crossref_resolved",
+    "title": "Fabrication and characterization of TiO2\u2013epoxy nanocomposite",
+    "URL": "https://doi.org/10.1016/j.msea.2007.11.052",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.msec.2012.04.005",
+    "status": "crossref_resolved",
+    "title": "PBAT based nanocomposites for medical and industrial applications",
+    "URL": "https://doi.org/10.1016/j.msec.2012.04.005",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymdegradstab.2012.05.022",
+    "canonical_doi": "10.1016/j.polymdegradstab.2012.05.022",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "PMMA\u2013titania nanocomposites: Properties and thermal degradation behaviour",
+    "URL": "https://doi.org/10.1016/j.polymdegradstab.2012.05.022"
+  },
+  {
+    "doi": "10.1016/j.polymer.2004.07.045",
+    "status": "crossref_resolved",
+    "title": "Rheological and mechanical properties of PVC/CaCO3 nanocomposites prepared by in situ polymerization",
+    "URL": "https://doi.org/10.1016/j.polymer.2004.07.045",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2005.02.104",
+    "status": "crossref_resolved",
+    "title": "Polyamide-6,6/in situ silica hybrid nanocomposites by sol\u2013gel technique: synthesis, characterization and properties",
+    "URL": "https://doi.org/10.1016/j.polymer.2005.02.104",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2006.01.087",
+    "status": "crossref_resolved",
+    "title": "Interfacial in situ polymerization of single wall carbon nanotube/nylon 6,6 nanocomposites",
+    "URL": "https://doi.org/10.1016/j.polymer.2006.01.087",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2009.08.038",
+    "status": "crossref_resolved",
+    "title": "Electrical/dielectric properties and conduction mechanism in melt processed polyamide/multi-walled carbon nanotubes composites",
+    "URL": "https://doi.org/10.1016/j.polymer.2009.08.038",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2011.06.018",
+    "status": "crossref_resolved",
+    "title": "Electrical, mechanical, and glass transition behavior of polycarbonate-based nanocomposites with different multi-walled carbon nanotubes",
+    "URL": "https://doi.org/10.1016/j.polymer.2011.06.018",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2012.12.066",
+    "status": "crossref_resolved",
+    "title": "A novel approach to control thermal degradation of PET/organoclay nanocomposites and improve clay exfoliation",
+    "URL": "https://doi.org/10.1016/j.polymer.2012.12.066",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.polymer.2013.05.033",
+    "status": "crossref_resolved",
+    "title": "Effect of graft density and molecular weight on mechanical properties of rubbery block copolymer grafted SiO2 nanoparticle toughened epoxy",
+    "URL": "https://doi.org/10.1016/j.polymer.2013.05.033",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.porgcoat.2015.09.021",
+    "status": "crossref_resolved",
+    "title": "Effect of silane surface modified titania nanoparticles on the thermal, mechanical, and corrosion protective properties of a bisphenol-A based phthalonitrile resin",
+    "URL": "https://doi.org/10.1016/j.porgcoat.2015.09.021",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.synthmet.2005.07.098",
+    "status": "crossref_resolved",
+    "title": "Dynamic mechanical analysis of polyvinylalcohol/silica nanocomposite",
+    "URL": "https://doi.org/10.1016/j.synthmet.2005.07.098",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1016/j.synthmet.2006.09.003",
+    "status": "crossref_resolved",
+    "title": "Antistatic coating and electromagnetic shielding properties of a hybrid material based on polyaniline/organoclay nanocomposite and EPDM rubber",
+    "URL": "https://doi.org/10.1016/j.synthmet.2006.09.003",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.iecr.7b03218",
+    "canonical_doi": "10.1021/acs.iecr.7b03218",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Mechanical Reinforcement in Thermoplastic Polyurethane Nanocomposite Incorporated with Polydopamine Functionalized Graphene Nanoplatelet",
+    "URL": "https://doi.org/10.1021/acs.iecr.7b03218"
+  },
+  {
+    "doi": "10.1021/acs.jpcc.5b08809",
+    "status": "crossref_resolved",
+    "title": "Composite Based on Fe<sub>3</sub>O<sub>4</sub>@BaTiO<sub>3</sub> Particles and Polyvinylidene Fluoride with Excellent Dielectric Properties and High Energy Density",
+    "URL": "https://doi.org/10.1021/acs.jpcc.5b08809",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.6b02158",
+    "status": "crossref_resolved",
+    "title": "How and Why Polymer Glasses Lose Their Ductility Due to Plasticizers",
+    "URL": "https://doi.org/10.1021/acs.macromol.6b02158",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.7b00698",
+    "status": "crossref_resolved",
+    "title": "Nonentropic Reinforcement in Elastomer Nanocomposites",
+    "URL": "https://doi.org/10.1021/acs.macromol.7b00698",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.7b00825",
+    "status": "crossref_resolved",
+    "title": "Analyzing the Interfacial Layer Properties in Polymer Nanocomposites by Broadband Dielectric Spectroscopy",
+    "URL": "https://doi.org/10.1021/acs.macromol.7b00825",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.8b01430",
+    "status": "crossref_resolved",
+    "title": "Polystyrene/rGO Composites with Orientation-3D Network Binary Structure and Its Surprising Conductivity",
+    "URL": "https://doi.org/10.1021/acs.macromol.8b01430",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.8b01510",
+    "status": "crossref_resolved",
+    "title": "Impact of an Emergent Hierarchical Filler Network on Nanocomposite Dynamics",
+    "URL": "https://doi.org/10.1021/acs.macromol.8b01510",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.8b02071",
+    "status": "crossref_resolved",
+    "title": "45% Periodicity Reduction in Nanocomposite Thin Films via Rapid Solvent Removal",
+    "URL": "https://doi.org/10.1021/acs.macromol.8b02071",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.8b02646",
+    "status": "crossref_resolved",
+    "title": "Multiscale Dynamics of Small, Attractive Nanoparticles and Entangled Polymers in Polymer Nanocomposites",
+    "URL": "https://doi.org/10.1021/acs.macromol.8b02646",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acs.macromol.9b01380",
+    "status": "crossref_resolved",
+    "title": "Effects of\nHairy Nanoparticles on Polymer Crystallization\nKinetics",
+    "URL": "https://doi.org/10.1021/acs.macromol.9b01380",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acsmacrolett.7b00609",
+    "status": "crossref_resolved",
+    "title": "Injectable Highly Loaded Cellulose Nanocrystal Fibers\nand Composites",
+    "URL": "https://doi.org/10.1021/acsmacrolett.7b00609",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acsmacrolett.7b00729",
+    "status": "crossref_resolved",
+    "title": "Unusual Fracture Behavior of Slide-Ring Gels with Movable Cross-Links",
+    "URL": "https://doi.org/10.1021/acsmacrolett.7b00729",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/acsmacrolett.9b00619",
+    "status": "crossref_resolved",
+    "title": "Nanoparticle Organization by Growing Polyethylene Crystal Fronts",
+    "URL": "https://doi.org/10.1021/acsmacrolett.9b00619",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/am300297j",
+    "status": "crossref_resolved",
+    "title": "Highly Conductive Poly(methyl methacrylate) (PMMA)-Reduced Graphene Oxide Composite Prepared by Self-Assembly of PMMA Latex and Graphene Oxide through Electrostatic Interaction",
+    "URL": "https://doi.org/10.1021/am300297j",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/am4001997",
+    "status": "crossref_resolved",
+    "title": "Mechanical and Viscoelastic Properties of Cellulose Nanocrystals Reinforced Poly(ethylene glycol) Nanocomposite Hydrogels",
+    "URL": "https://doi.org/10.1021/am4001997",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/am9000503",
+    "status": "crossref_resolved",
+    "title": "Enhanced Electrical Conductivity of Nanocomposites Containing Hybrid Fillers of Carbon Nanotubes and Carbon Black",
+    "URL": "https://doi.org/10.1021/am9000503",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/cm4010486",
+    "status": "crossref_resolved",
+    "title": "Fluoro-Polymer@BaTiO\n                    <sub>3</sub>\n                    Hybrid Nanoparticles Prepared via RAFT Polymerization: Toward Ferroelectric Polymer Nanocomposites with High Dielectric Constant and Low Dielectric Loss for Energy Storage Application",
+    "URL": "https://doi.org/10.1021/cm4010486",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/jp409474k",
+    "status": "crossref_resolved",
+    "title": "Large Enhancement in Polarization Response and Energy Storage Properties of Poly(vinylidene fluoride) by Improving the Interface Effect in Nanocomposites",
+    "URL": "https://doi.org/10.1021/jp409474k",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma0106494",
+    "status": "crossref_resolved",
+    "title": "Synthesis of Exfoliated PMMA/Na-MMT Nanocomposites via Soap-Free Emulsion Polymerization",
+    "URL": "https://doi.org/10.1021/ma0106494",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma049164g",
+    "status": "crossref_resolved",
+    "title": "Nanotube Networks in Polymer Nanocomposites:\u2009 Rheology and Electrical Conductivity",
+    "URL": "https://doi.org/10.1021/ma049164g",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma060125+",
+    "status": "crossref_resolved",
+    "title": "Compatibilizing Bulk Polymer Blends by Using Organoclays",
+    "URL": "https://doi.org/10.1021/ma060125+",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma1026077",
+    "status": "crossref_resolved",
+    "title": "Impact of Filler Surface Modification on Large Scale Mechanics of Styrene Butadiene/Silica Rubber Composites",
+    "URL": "https://doi.org/10.1021/ma1026077",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma302281b",
+    "status": "crossref_resolved",
+    "title": "Effect of Interfacial Energetics on Dispersion and Glass Transition Temperature in Polymer Nanocomposites",
+    "URL": "https://doi.org/10.1021/ma302281b",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma5000317",
+    "status": "crossref_resolved",
+    "title": "Dynamics at the Polymer/Nanoparticle Interface in Poly(2-vinylpyridine)/Silica Nanocomposites",
+    "URL": "https://doi.org/10.1021/ma5000317",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma7026098",
+    "status": "crossref_resolved",
+    "title": "Effects of Modified Clay on the Morphology and Properties of PMMA/Clay Nanocomposites Synthesized by <i>in Situ</i> Polymerization",
+    "URL": "https://doi.org/10.1021/ma7026098",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/ma800298x",
+    "status": "crossref_resolved",
+    "title": "Junction-Controlled Elasticity of Single-Walled Carbon Nanotube Dispersions in Acrylic Copolymer Gels and Solutions",
+    "URL": "https://doi.org/10.1021/ma800298x",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/nl301792g",
+    "status": "crossref_resolved",
+    "title": "Mechanical Properties of Thin Glassy Polymer Films Filled with Spherical Polymer-Grafted Nanoparticles",
+    "URL": "https://doi.org/10.1021/nl301792g",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1021/nn100661a",
+    "status": "crossref_resolved",
+    "title": "Sacrificial Bonds in Stacked-Cup Carbon Nanofibers: Biomimetic Toughening Mechanisms for Composite Systems",
+    "URL": "https://doi.org/10.1021/nn100661a",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1038/nmat1447",
+    "status": "crossref_resolved",
+    "title": "Quantitative equivalence between polymer nanocomposites and thin polymer films",
+    "URL": "https://doi.org/10.1038/nmat1447",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1038/nnano.2008.96",
+    "status": "crossref_resolved",
+    "title": "Functionalized graphene sheets for polymer nanocomposites",
+    "URL": "https://doi.org/10.1038/nnano.2008.96",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/C1JM13093E",
+    "status": "crossref_resolved",
+    "title": "TiO2 nanocomposites with high refractive index and transparency",
+    "URL": "https://doi.org/10.1039/c1jm13093e",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/C4RA14538K",
+    "status": "crossref_resolved",
+    "title": "Preparation, characterization and properties of PLA/TiO\n                    <sub>2</sub>\n                    nanocomposites based on a novel vane extruder",
+    "URL": "https://doi.org/10.1039/c4ra14538k",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/c1jm11434d",
+    "status": "crossref_resolved",
+    "title": "In situ preparation of functionalized graphene oxide/epoxy nanocomposites with effective reinforcements",
+    "URL": "https://doi.org/10.1039/c1jm11434d",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/c1jm12903a",
+    "status": "crossref_resolved",
+    "title": "Morphology-controllable graphene\u2013TiO2 nanorod hybrid nanostructures for polymer composites with high dielectric performance",
+    "URL": "https://doi.org/10.1039/c1jm12903a",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/c3ta10381a",
+    "status": "crossref_resolved",
+    "title": "Surface modification of nano-silica with amides and imides for use in polyester nanocomposites",
+    "URL": "https://doi.org/10.1039/c3ta10381a",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1039/c4tb01101e",
+    "status": "crossref_resolved",
+    "title": "Effect of TiO\n                    <sub>2</sub>\n                    nanoparticles on the performance of polyphenylsulfone biomaterial for orthopaedic implants",
+    "URL": "https://doi.org/10.1039/c4tb01101e",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1063/1.1996842",
+    "status": "crossref_resolved",
+    "title": "Carbon nanotube composites with high dielectric constant at low percolation threshold",
+    "URL": "https://doi.org/10.1063/1.1996842",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1063/1.2034654",
+    "status": "crossref_resolved",
+    "title": "Dielectric enhancement in polymer-nanoparticle composites through interphase polarizability",
+    "URL": "https://doi.org/10.1063/1.2034654",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1088/0022-3727/38/2/005",
+    "canonical_doi": "10.1088/0022-3727/38/2/005",
+    "checked_on": "2026-09-14",
+    "status": "crossref_resolved",
+    "title": "Nanocomposite dielectrics\u2014properties and implications",
+    "URL": "https://doi.org/10.1088/0022-3727/38/2/005"
+  },
+  {
+    "doi": "10.1103/PhysRevLett.97.075505",
+    "status": "crossref_resolved",
+    "title": "Dynamics and Internal Stress at the Nanoscale Related to Unique Thermomechanical Behavior in Polymer Nanocomposites",
+    "URL": "https://doi.org/10.1103/physrevlett.97.075505",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1109/ICACACT.2014.7223517",
+    "status": "crossref_resolved",
+    "title": "Bimodal brush functionalized TiO<sub>2</sub>/silicone nanocomposites with improved dielectric properties",
+    "URL": "https://doi.org/10.1109/icacact.2014.7223517",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1109/T-DEI.2008.4446732",
+    "status": "crossref_resolved",
+    "title": "Dielectric properties of epoxy nanocomposites",
+    "URL": "https://doi.org/10.1109/t-dei.2008.4446732",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1109/TDEI.2009.4815189",
+    "status": "crossref_resolved",
+    "title": "Influence of filler loading on dielectric properties of epoxy-ZnO nanocomposites",
+    "URL": "https://doi.org/10.1109/tdei.2009.4815189",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1142/S0217979210064447",
+    "status": "crossref_resolved",
+    "title": "DYNAMIC MECHANICAL PROPERTIES OF NANOCOMPOSITES WITH POLY (VINYL BUTYRAL) MATRIX",
+    "URL": "https://doi.org/10.1142/s0217979210064447",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.1177/0954008315588983",
+    "status": "crossref_resolved",
+    "title": "Effects of functionalized graphene nanoplatelets on the morphology and properties of epoxy resins",
+    "URL": "https://doi.org/10.1177/0954008315588983",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.3144/expresspolymlett.2012.93",
+    "status": "crossref_resolved",
+    "title": "Morphology, mechanical properties and thermal degradation kinetics of PMMA-zirconia nanocomposites prepared by melt compounding",
+    "URL": "https://doi.org/10.3144/expresspolymlett.2012.93",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.3390/polym10010018",
+    "status": "crossref_resolved",
+    "title": "Reprocessing of PLA/Graphene Nanoplatelets Nanocomposites",
+    "URL": "https://doi.org/10.3390/polym10010018",
+    "checked_on": "2026-09-14"
+  },
+  {
+    "doi": "10.3390/polym4010187",
+    "status": "crossref_resolved",
+    "title": "The Mechanical Properties of Epoxy Composites Filled with Rubbery Copolymer Grafted SiO2",
+    "URL": "https://doi.org/10.3390/polym4010187",
+    "checked_on": "2026-09-14"
+  }
+]

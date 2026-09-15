@@ -1,0 +1,27 @@
+[
+  {
+    "phase": "phase1_starrydata",
+    "returncode": 0,
+    "output": "test_composition_distance_is_symmetric (test_phase1_core.DistanceTest.test_composition_distance_is_symmetric) ... ok\ntest_missing_block_is_not_a_similarity_feature (test_phase1_core.DistanceTest.test_missing_block_is_not_a_similarity_feature) ... ok\ntest_hydrate (test_phase1_core.FormulaParserTest.test_hydrate) ... ok\ntest_numeric_and_parenthetical_formula (test_phase1_core.FormulaParserTest.test_numeric_and_parenthetical_formula) ... ok\ntest_variable_formula_rejected (test_phase1_core.FormulaParserTest.test_variable_formula_rejected) ... ok\ntest_selection_and_row_order_are_source_order_invariant (test_phase1_core.PilotOrderTest.test_selection_and_row_order_are_source_order_invariant) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.002s\n\nOK\n"
+  },
+  {
+    "phase": "phase1r_process_audit",
+    "returncode": 0,
+    "output": "test_joint_absence_has_zero_common_fields (test_phase1r_audit.Phase1RAuditTests.test_joint_absence_has_zero_common_fields) ... ok\ntest_missing_does_not_define_method (test_phase1r_audit.Phase1RAuditTests.test_missing_does_not_define_method) ... ok\ntest_null_array_is_not_reported (test_phase1r_audit.Phase1RAuditTests.test_null_array_is_not_reported) ... ok\ntest_partial_array_preserves_reported_zero (test_phase1r_audit.Phase1RAuditTests.test_partial_array_preserves_reported_zero) ... ok\ntest_power_and_pulse_profiles (test_phase1r_audit.Phase1RAuditTests.test_power_and_pulse_profiles) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "phase": "phase2_htem",
+    "returncode": 0,
+    "output": "test_interval_without_imputation (test_phase2_interval_core.Phase2IntervalCoreTests.test_interval_without_imputation) ... ok\ntest_joint_missing_is_not_similarity_evidence (test_phase2_interval_core.Phase2IntervalCoreTests.test_joint_missing_is_not_similarity_evidence) ... ok\ntest_material_distance_keeps_composition_floor (test_phase2_interval_core.Phase2IntervalCoreTests.test_material_distance_keeps_composition_floor) ... ok\ntest_null_slots_are_retained_as_unreported (test_phase2_interval_core.Phase2IntervalCoreTests.test_null_slots_are_retained_as_unreported) ... ok\ntest_partial_numeric_vector_coverage (test_phase2_interval_core.Phase2IntervalCoreTests.test_partial_numeric_vector_coverage) ... ok\ntest_source_matching_removes_source_only_signal (test_phase2_interval_core.Phase2IntervalCoreTests.test_source_matching_removes_source_only_signal) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.002s\n\nOK\n"
+  },
+  {
+    "phase": "phase3_nanomine",
+    "returncode": 0,
+    "output": "test_exact_and_soft_identity (test_phase3_core.DistanceTests.test_exact_and_soft_identity) ... ok\ntest_missing_is_interval_not_imputation (test_phase3_core.DistanceTests.test_missing_is_interval_not_imputation) ... ok\ntest_no_common_variable_is_undefined_reported (test_phase3_core.DistanceTests.test_no_common_variable_is_undefined_reported) ... ok\ntest_reported_composite_renormalizes_available_facets (test_phase3_core.DistanceTests.test_reported_composite_renormalizes_available_facets) ... ok\ntest_sequence_order_and_repetition (test_phase3_core.DistanceTests.test_sequence_order_and_repetition) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n"
+  },
+  {
+    "phase": "phase4_synthesis",
+    "returncode": 0,
+    "output": "test_core_cross_domain_directions (test_phase4_outputs.Phase4OutputTests.test_core_cross_domain_directions) ... ok\ntest_decision_and_manifest (test_phase4_outputs.Phase4OutputTests.test_decision_and_manifest) ... ok\ntest_expected_datasets_and_counts (test_phase4_outputs.Phase4OutputTests.test_expected_datasets_and_counts) ... ok\ntest_global_local_direction_reversal (test_phase4_outputs.Phase4OutputTests.test_global_local_direction_reversal) ... ok\ntest_report_has_no_control_characters (test_phase4_outputs.Phase4OutputTests.test_report_has_no_control_characters) ... ok\ntest_views_are_valid_and_nonidentical (test_phase4_outputs.Phase4OutputTests.test_views_are_valid_and_nonidentical) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.010s\n\nOK\n"
+  }
+]

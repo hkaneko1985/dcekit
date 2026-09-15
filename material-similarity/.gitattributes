@@ -1,0 +1,9 @@
+* text=auto eol=lf
+data/upstream/** -text
+results/** -text
+*.gz binary
+*.png binary
+*.svg text eol=lf
+
+data/cohorts/** -text
+upstream_analyses/** -text

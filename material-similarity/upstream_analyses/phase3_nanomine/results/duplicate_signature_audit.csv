@@ -1,0 +1,4 @@
+signature,samples,unique_signatures,duplicate_groups,largest_group,within_paper_duplicate_pairs,cross_paper_duplicate_pairs
+material,832,617,113,22,355,371
+process,832,222,127,35,3337,0
+full,832,741,68,9,141,0

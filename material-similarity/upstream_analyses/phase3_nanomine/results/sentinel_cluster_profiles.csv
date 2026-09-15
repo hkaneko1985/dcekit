@@ -1,0 +1,426 @@
+view,k,cluster,size,paper_count,largest_paper_fraction,top_matrix,top_matrix_fraction,top_filler,top_filler_fraction,top_process_family,top_process_family_fraction,top_sequence,top_sequence_fraction
+material_only,20,0,53,12,0.32075471698113206,Poly(vinyl butyral),0.33962264150943394,Titanium dioxide,0.5471698113207547,Melt Mixing,0.6037735849056604,mixing > molding,0.16981132075471697
+material_only,20,1,329,46,0.10030395136778116,Poly(methyl methacrylate),0.6200607902735562,Silicon dioxide,0.44376899696048633,Solution Processing,0.5957446808510638,mixing > mixing,0.12462006079027356
+material_only,20,2,213,25,0.10328638497652583,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.24413145539906103,Solution Processing,0.6291079812206573,solvent > mixing > heating > heating,0.09389671361502347
+material_only,20,3,4,1,1.0,Cyclic olefin copolymer,1.0,Barium strontium titanate,0.75,Melt Mixing,1.0,mixing > molding,0.75
+material_only,20,4,32,4,0.53125,Poly(2-vinyl pyridine),1.0,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.375,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.53125
+material_only,20,5,6,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Silver hexafluoroantimonate,0.8333333333333334,Solution Processing,1.0,mixing > drying evaporation,1.0
+material_only,20,6,7,4,0.2857142857142857,Poly(vinylidene fluoride),0.7142857142857143,Barium titanate,0.5714285714285714,Solution Processing,0.8571428571428571,mixing > mixing > mixing > mixing > drying evaporation,0.2857142857142857
+material_only,20,7,96,14,0.3645833333333333,Poly(bisphenol A carbonate),0.5104166666666666,Multi-wall carbon nanotubes,0.6354166666666666,Melt Mixing,0.8645833333333334,drying evaporation > mixing > heating,0.3645833333333333
+material_only,20,8,37,7,0.21621621621621623,Polyurethane,0.4864864864864865,Graphene,0.5405405405405406,In-Situ Polymerization,0.40540540540540543,solvent > mixing,0.21621621621621623
+material_only,20,9,15,3,0.4,Poly(ethylene glycol),0.8666666666666667,Cellulose,0.5333333333333333,Solution Processing,1.0,mixing,0.4
+material_only,20,10,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+material_only,20,11,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+material_only,20,12,1,1,1.0,Poly(methyl methacrylate)-block-poly(t-butyl acrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > mixing > mixing,1.0
+material_only,20,13,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+material_only,20,14,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+material_only,20,15,11,2,0.8181818181818182,DGEBF Epoxy Resin,0.8181818181818182,Carbon black,0.45454545454545453,Solution Processing,0.8181818181818182,mixing,1.0
+material_only,20,16,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+material_only,20,17,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+material_only,20,18,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+material_only,20,19,1,1,1.0,Poly(2-hydroxyethyl methacrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > additive > mixing > mixing > drying evaporation > curing,1.0
+material_only,50,0,1,1,1.0,Silicone rubber,1.0,Zirconium dioxide,1.0,Solution Processing,1.0,mixing > drying evaporation > mixing > molding > drying evaporation,1.0
+material_only,50,1,204,21,0.16176470588235295,Poly(methyl methacrylate),1.0,Silicon dioxide,0.29411764705882354,Solution Processing,0.5931372549019608,mixing > drying evaporation > extrusion,0.16176470588235295
+material_only,50,2,28,7,0.4642857142857143,Bisphenol E cyanate ester resin,0.4642857142857143,Silicon dioxide,0.9642857142857143,Solution Processing,0.5,mixing > mixing > mixing > mixing > additive > mixing > mixing > molding > drying evaporation > heating > heating > heating > cooling > drying evaporation,0.39285714285714285
+material_only,50,3,40,9,0.275,Polystyrene,1.0,Silicon dioxide,0.6,Solution Processing,0.775,mixing > drying evaporation > drying evaporation,0.275
+material_only,50,4,213,25,0.10328638497652583,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.24413145539906103,Solution Processing,0.6291079812206573,solvent > mixing > heating > heating,0.09389671361502347
+material_only,50,5,4,1,1.0,Cyclic olefin copolymer,1.0,Barium strontium titanate,0.75,Melt Mixing,1.0,mixing > molding,0.75
+material_only,50,6,1,1,1.0,Polyimide,1.0,Aluminium oxide,1.0,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+material_only,50,7,32,4,0.53125,Poly(2-vinyl pyridine),1.0,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.375,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.53125
+material_only,50,8,6,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Silver hexafluoroantimonate,0.8333333333333334,Solution Processing,1.0,mixing > drying evaporation,1.0
+material_only,50,9,2,1,1.0,"Poly(vinylidene fluoride-co-hexafluoropropylene)
+",1.0,Barium titanate,1.0,Solution Processing,1.0,mixing > mixing > mixing > mixing > drying evaporation,1.0
+material_only,50,10,5,3,0.4,Poly(vinylidene fluoride),1.0,Barium titanate,0.4,Solution Processing,0.8,mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > heating,0.4
+material_only,50,11,6,2,0.8333333333333334,Polybutylene succinate,0.8333333333333334,Titanium dioxide,1.0,Melt Mixing,0.8333333333333334,drying evaporation > mixing > drying evaporation > molding,0.8333333333333334
+material_only,50,12,44,5,0.7954545454545454,Poly(bisphenol A carbonate),0.9545454545454546,Multi-wall carbon nanotubes,0.9545454545454546,Melt Mixing,0.8863636363636364,drying evaporation > mixing > heating,0.7954545454545454
+material_only,50,13,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+material_only,50,14,8,2,0.5,Graphene,0.5,Graphene,1.0,Solution Processing,0.5,mixing > mixing,0.5
+material_only,50,15,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+material_only,50,16,18,2,0.9444444444444444,Poly(vinyl butyral),1.0,Silicon dioxide,0.4444444444444444,Melt Mixing,0.9444444444444444,mixing > molding,0.5
+material_only,50,17,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+material_only,50,18,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+material_only,50,19,16,4,0.375,Polylactic acid,1.0,Titanium dioxide,0.375,Melt Mixing,0.625,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.375
+material_only,50,20,2,1,1.0,"Poly(methyl methacrylate)-block-poly(n-butyl acrylate)-block-poly(methyl methacrylate)
+",1.0,Single-wall carbon nanotubes,1.0,Solution Processing,1.0,mixing > mixing > mixing,1.0
+material_only,50,21,6,2,0.6666666666666666,Poly(methyl methacrylate)-block-poly(n-butyl acrylate),1.0,Silicon dioxide,0.6666666666666666,Solution Processing,1.0,solvent > mixing > drying evaporation > drying evaporation > molding > heating,0.6666666666666666
+material_only,50,22,1,1,1.0,Poly(methyl methacrylate)-block-poly(t-butyl acrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > mixing > mixing,1.0
+material_only,50,23,18,3,0.4444444444444444,Polyurethane,1.0,Titanium dioxide,0.3888888888888889,In-Situ Polymerization,0.8333333333333334,solvent > mixing,0.4444444444444444
+material_only,50,24,4,1,1.0,Poly(ethylene terephthalate),1.0,Montmorillonite,1.0,Melt Mixing,1.0,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,1.0
+material_only,50,25,10,3,0.4,Poly(propylene),1.0,Multi-wall carbon nanotubes,0.4,Melt Mixing,0.7,extrusion > mixing,0.5
+material_only,50,26,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+material_only,50,27,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+material_only,50,28,3,2,0.6666666666666666,Poly(ethylene),1.0,Zinc oxide,0.6666666666666666,Melt Mixing,0.6666666666666666,mixing > heating,0.6666666666666666
+material_only,50,29,3,1,1.0,Silicon dioxide,1.0,Titanium dioxide,0.6666666666666666,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,1.0
+material_only,50,30,5,2,0.8,Nylon 6,1.0,Silicon dioxide,0.6,In-Situ Polymerization,0.8,mixing > heating > drying evaporation,0.8
+material_only,50,31,9,2,0.5555555555555556,Nylon 6-6,1.0,Silicon dioxide,0.4444444444444444,Other Processing,0.5555555555555556,mixing > drying evaporation > drying evaporation > molding,0.5555555555555556
+material_only,50,32,9,1,1.0,DGEBF Epoxy Resin,1.0,Carbon black,0.4444444444444444,Solution Processing,1.0,mixing,1.0
+material_only,50,33,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+material_only,50,34,25,2,0.6,Bisphenol-A-epoxy vinyl ester resin,1.0,Multi-wall carbon nanotubes,0.56,Melt Mixing,0.84,mixing > molding > heating > molding,0.6
+material_only,50,35,3,1,1.0,Polystyrene,1.0,Montmorillonite,0.6666666666666666,Melt Mixing,1.0,mixing > mixing,1.0
+material_only,50,36,7,1,1.0,Poly(bisphenol A carbonate),1.0,Montmorillonite,0.8571428571428571,Melt Mixing,1.0,mixing > mixing,1.0
+material_only,50,37,4,2,0.5,Poly(styrene-co-acrylonitrile),1.0,Montmorillonite,0.25,Melt Mixing,1.0,mixing > mixing,0.5
+material_only,50,38,18,3,0.3333333333333333,Poly(vinyl alcohol),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,0.6666666666666666,mixing > heating > molding > drying evaporation,0.3333333333333333
+material_only,50,39,4,2,0.5,Poly(styrene-b-butadiene),1.0,Silicon dioxide,0.75,Melt Mixing,0.5,mixing > heating,0.5
+material_only,50,40,5,1,1.0,Polyphenylsulfone,1.0,Titanium dioxide,0.8,Solution Processing,1.0,mixing > mixing > mixing > molding > drying evaporation,1.0
+material_only,50,41,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+material_only,50,42,3,1,1.0,Nylon 12,1.0,Graphene,0.6666666666666666,Melt Mixing,1.0,mixing > mixing > drying evaporation > molding,0.6666666666666666
+material_only,50,43,2,1,1.0,Polybutadiene,1.0,Carbon black,0.5,Melt Mixing,1.0,mixing,1.0
+material_only,50,44,6,1,1.0,Poly(vinyl acetate),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,1.0,solvent > additive > mixing > drying evaporation > solvent > mixing > drying evaporation > drying evaporation,0.8333333333333334
+material_only,50,45,2,1,1.0,Cellulose acetate butyrate,1.0,Cellulose,0.5,Solution Processing,1.0,mixing > drying evaporation,1.0
+material_only,50,46,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+material_only,50,47,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+material_only,50,48,1,1,1.0,Poly(2-hydroxyethyl methacrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > additive > mixing > mixing > drying evaporation > curing,1.0
+material_only,50,49,8,1,1.0,poly(lactic acid),1.0,Graphene,0.5,Melt Mixing,1.0,drying evaporation > drying evaporation > extrusion > molding,0.25
+balanced,20,0,4,2,0.75,Silicone rubber,1.0,Titanium dioxide,0.5,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,0.75
+balanced,20,1,283,36,0.1166077738515901,Poly(methyl methacrylate),0.6855123674911661,Silicon dioxide,0.5017667844522968,Solution Processing,0.6537102473498233,mixing > drying evaporation > extrusion,0.1166077738515901
+balanced,20,2,211,24,0.10426540284360189,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.24644549763033174,Solution Processing,0.6350710900473934,solvent > mixing > heating > heating,0.0947867298578199
+balanced,20,3,120,16,0.2916666666666667,Poly(bisphenol A carbonate),0.3416666666666667,Multi-wall carbon nanotubes,0.5083333333333333,Melt Mixing,0.925,drying evaporation > mixing > heating,0.2916666666666667
+balanced,20,4,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+balanced,20,5,37,4,0.6486486486486487,Polystyrene,0.5675675675675675,Montmorillonite,0.3783783783783784,Melt Mixing,0.8648648648648649,mixing > mixing,0.7837837837837838
+balanced,20,6,32,4,0.53125,Poly(2-vinyl pyridine),0.875,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.375,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.53125
+balanced,20,7,39,7,0.23076923076923078,Poly(ethylene glycol),0.3333333333333333,Cellulose,0.20512820512820512,Solution Processing,1.0,mixing,0.38461538461538464
+balanced,20,8,7,4,0.2857142857142857,Poly(vinylidene fluoride),0.7142857142857143,Barium titanate,0.5714285714285714,Solution Processing,0.8571428571428571,mixing > mixing > mixing > mixing > drying evaporation,0.2857142857142857
+balanced,20,9,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.9090909090909091,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+balanced,20,10,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+balanced,20,11,26,7,0.2692307692307692,Polyurethane,0.38461538461538464,Graphene,0.4230769230769231,Solution Processing,0.6923076923076923,mixing > mixing > mixing > molding > heating,0.2692307692307692
+balanced,20,12,9,2,0.5555555555555556,ethylene propylene diene monomer rubber,0.5555555555555556,Bentonite,0.4444444444444444,Solution Processing,0.5555555555555556,mixing > molding,0.5555555555555556
+balanced,20,13,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+balanced,20,14,15,3,0.5333333333333333,poly(lactic acid),0.5333333333333333,Montmorillonite,0.4666666666666667,Melt Mixing,0.8,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.26666666666666666
+balanced,20,15,6,3,0.3333333333333333,Poly(styrene-b-butadiene),0.6666666666666666,Silicon dioxide,0.5,Melt Mixing,0.6666666666666666,mixing > heating,0.6666666666666666
+balanced,20,16,9,2,0.5555555555555556,Nylon 6-6,1.0,Silicon dioxide,0.4444444444444444,Other Processing,0.5555555555555556,mixing > drying evaporation > drying evaporation > molding,0.5555555555555556
+balanced,20,17,4,2,0.75,Polyrotaxane,0.75,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,0.75
+balanced,20,18,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+balanced,20,19,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+balanced,50,0,4,2,0.75,Silicone rubber,1.0,Titanium dioxide,0.5,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,0.75
+balanced,50,1,133,14,0.24812030075187969,Poly(methyl methacrylate),1.0,Silicon dioxide,0.40601503759398494,Solution Processing,0.8646616541353384,mixing > drying evaporation > extrusion,0.24812030075187969
+balanced,50,2,4,3,0.5,Poly(propylene),0.5,Silicon dioxide,1.0,Melt Mixing,0.75,mixing > drying evaporation > extrusion|output,1.0
+balanced,50,3,204,22,0.10784313725490197,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.2549019607843137,Solution Processing,0.6568627450980392,solvent > mixing > heating > heating,0.09803921568627451
+balanced,50,4,28,4,0.6071428571428571,Poly(vinyl butyral),0.6071428571428571,Silicon dioxide,0.2857142857142857,Melt Mixing,1.0,mixing > molding,0.5714285714285714
+balanced,50,5,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+balanced,50,6,35,3,0.6857142857142857,Polystyrene,0.6,Montmorillonite,0.4,Melt Mixing,0.8571428571428571,mixing > mixing,0.8285714285714286
+balanced,50,7,31,3,0.5483870967741935,Poly(2-vinyl pyridine),0.9032258064516129,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.3870967741935484,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.5483870967741935
+balanced,50,8,8,2,0.75,Cycloaliphatic Epoxy Resin,0.75,Silver hexafluoroantimonate,0.625,Solution Processing,1.0,mixing > drying evaporation,1.0
+balanced,50,9,4,2,0.5,"Poly(vinylidene fluoride-co-hexafluoropropylene)
+",0.5,Barium titanate,1.0,Solution Processing,1.0,mixing > mixing > mixing > mixing > drying evaporation,0.5
+balanced,50,10,3,1,1.0,DGEBA Epoxy Resin,0.6666666666666666,Titanium dioxide,1.0,In-Situ Polymerization,1.0,solvent,1.0
+balanced,50,11,43,4,0.813953488372093,Poly(bisphenol A carbonate),0.9534883720930233,Multi-wall carbon nanotubes,0.9767441860465116,Melt Mixing,0.8837209302325582,drying evaporation > mixing > heating,0.813953488372093
+balanced,50,12,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+balanced,50,13,3,2,0.6666666666666666,Poly(vinylidene fluoride),1.0,Iron oxide - barium titanate core-shell nanoparticles,0.3333333333333333,Solution Processing,0.6666666666666666,solvent > additive > mixing > molding > drying evaporation > heating,0.3333333333333333
+balanced,50,14,13,2,0.6923076923076923,DGEBF Epoxy Resin,0.6923076923076923,Graphene,0.3076923076923077,Solution Processing,1.0,mixing,0.6923076923076923
+balanced,50,15,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+balanced,50,16,51,5,0.39215686274509803,Polystyrene,0.45098039215686275,Silicon dioxide,0.9607843137254902,Solution Processing,1.0,solvent > mixing > drying evaporation > drying evaporation > molding > heating,0.39215686274509803
+balanced,50,17,11,3,0.6363636363636364,Polyurethane,0.9090909090909091,Graphene,0.6363636363636364,In-Situ Polymerization,0.7272727272727273,mixing > mixing > mixing > molding > heating,0.6363636363636364
+balanced,50,18,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+balanced,50,19,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+balanced,50,20,6,2,0.6666666666666666,Polylactic acid,1.0,Graphene,0.6666666666666666,Solution Processing,1.0,mixing > mixing > mixing > mixing > heating > drying evaporation,0.6666666666666666
+balanced,50,21,5,1,1.0,"Poly(methyl methacrylate)-block-poly(n-butyl acrylate)-block-poly(methyl methacrylate)
+",0.4,Single-wall carbon nanotubes,0.6,Solution Processing,1.0,mixing > mixing > mixing,1.0
+balanced,50,22,15,3,0.4,Polylactic acid,0.6666666666666666,Titanium dioxide,0.7333333333333333,Melt Mixing,1.0,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.4
+balanced,50,23,50,5,0.38,Poly(methyl methacrylate),1.0,Aluminium oxide,0.52,In-Situ Polymerization,1.0,additive > additive > mixing > heating,0.38
+balanced,50,24,7,2,0.5714285714285714,Poly(ethylene terephthalate),0.5714285714285714,Montmorillonite,1.0,Melt Mixing,0.5714285714285714,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.5714285714285714
+balanced,50,25,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+balanced,50,26,2,1,1.0,DGEBA Epoxy Resin,1.0,Graphite oxide,1.0,In-Situ Polymerization,1.0,mixing > mixing > heating > heating > mixing > mixing > heating > heating,1.0
+balanced,50,27,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+balanced,50,28,2,1,1.0,Poly(ethylene),1.0,Zinc oxide,1.0,Melt Mixing,1.0,mixing > heating,1.0
+balanced,50,29,8,3,0.5,Poly(propylene),0.875,Multi-wall carbon nanotubes,0.625,Melt Mixing,1.0,extrusion > mixing,0.625
+balanced,50,30,4,1,1.0,Nylon 6-6,1.0,Single-wall carbon nanotubes,0.75,In-Situ Polymerization,0.75,solvent > mixing > mixing,0.75
+balanced,50,31,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+balanced,50,32,25,2,0.6,Bisphenol-A-epoxy vinyl ester resin,1.0,Multi-wall carbon nanotubes,0.56,Melt Mixing,0.84,mixing > molding > heating > molding,0.6
+balanced,50,33,5,1,1.0,Poly(methyl methacrylate),1.0,Graphene oxide,0.8,In-Situ Polymerization,1.0,molding,1.0
+balanced,50,34,10,2,0.6,Poly(ethylene terephthalate),0.6,Silicon dioxide,1.0,In-Situ Polymerization,1.0,mixing > additive > additive > heating > heating > extrusion,0.6
+balanced,50,35,5,1,1.0,Nylon 6-6,1.0,Silicon dioxide,0.8,Other Processing,1.0,mixing > drying evaporation > drying evaporation > molding,1.0
+balanced,50,36,6,2,0.6666666666666666,Nylon 6,0.6666666666666666,Silicon dioxide,0.8333333333333334,In-Situ Polymerization,1.0,mixing > heating > drying evaporation,0.6666666666666666
+balanced,50,37,18,3,0.3333333333333333,Poly(vinyl alcohol),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,0.6666666666666666,mixing > heating > molding > drying evaporation,0.3333333333333333
+balanced,50,38,4,2,0.5,Poly(styrene-b-butadiene),1.0,Silicon dioxide,0.75,Melt Mixing,0.5,mixing > heating,0.5
+balanced,50,39,8,1,1.0,Polyurethane,1.0,Titanium dioxide,0.875,In-Situ Polymerization,1.0,solvent > mixing,1.0
+balanced,50,40,5,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Titanium dioxide,0.8,Melt Mixing,1.0,mixing > mixing > molding > heating,1.0
+balanced,50,41,5,1,1.0,Polyphenylsulfone,1.0,Titanium dioxide,0.8,Solution Processing,1.0,mixing > mixing > mixing > molding > drying evaporation,1.0
+balanced,50,42,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+balanced,50,43,2,1,1.0,Polybutadiene,1.0,Carbon black,0.5,Melt Mixing,1.0,mixing,1.0
+balanced,50,44,6,1,1.0,Poly(vinyl acetate),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,1.0,solvent > additive > mixing > drying evaporation > solvent > mixing > drying evaporation > drying evaporation,0.8333333333333334
+balanced,50,45,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+balanced,50,46,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+balanced,50,47,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+balanced,50,48,1,1,1.0,Poly(2-hydroxyethyl methacrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > additive > mixing > mixing > drying evaporation > curing,1.0
+balanced,50,49,8,1,1.0,poly(lactic acid),1.0,Graphene,0.5,Melt Mixing,1.0,drying evaporation > drying evaporation > extrusion > molding,0.25
+sequence_focus,20,0,41,7,0.4146341463414634,Poly(vinyl butyral),0.4146341463414634,Titanium dioxide,0.4146341463414634,Melt Mixing,0.6341463414634146,mixing > molding,0.4146341463414634
+sequence_focus,20,1,293,37,0.11262798634812286,Poly(methyl methacrylate),0.6621160409556314,Silicon dioxide,0.47440273037542663,Solution Processing,0.6928327645051194,mixing > drying evaporation > extrusion,0.11262798634812286
+sequence_focus,20,2,236,28,0.09322033898305085,DGEBA Epoxy Resin,0.8940677966101694,Multi-wall carbon nanotubes,0.22033898305084745,Solution Processing,0.6313559322033898,solvent > mixing > heating > heating,0.0847457627118644
+sequence_focus,20,3,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+sequence_focus,20,4,35,3,0.6857142857142857,Polystyrene,0.6,Montmorillonite,0.4,Melt Mixing,0.8571428571428571,mixing > mixing,0.8285714285714286
+sequence_focus,20,5,9,3,0.6666666666666666,Cycloaliphatic Epoxy Resin,0.6666666666666666,Silver hexafluoroantimonate,0.5555555555555556,Solution Processing,1.0,mixing > drying evaporation,0.8888888888888888
+sequence_focus,20,6,9,6,0.2222222222222222,Poly(vinylidene fluoride),0.5555555555555556,Barium titanate,0.4444444444444444,Solution Processing,0.8888888888888888,mixing > mixing > mixing > mixing > drying evaporation,0.2222222222222222
+sequence_focus,20,7,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.9090909090909091,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+sequence_focus,20,8,65,7,0.5384615384615384,Poly(bisphenol A carbonate),0.6307692307692307,Multi-wall carbon nanotubes,0.9230769230769231,Melt Mixing,0.9230769230769231,drying evaporation > mixing > heating,0.5384615384615384
+sequence_focus,20,9,25,2,0.68,Poly(2-vinyl pyridine),0.88,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.48,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.68
+sequence_focus,20,10,16,5,0.375,Poly(ethylene glycol),0.8125,Cellulose,0.4375,Solution Processing,0.875,mixing,0.375
+sequence_focus,20,11,22,6,0.3181818181818182,Polyurethane,0.45454545454545453,Graphene,0.7727272727272727,In-Situ Polymerization,0.36363636363636365,mixing > mixing > mixing > molding > heating,0.3181818181818182
+sequence_focus,20,12,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+sequence_focus,20,13,20,4,0.4,Polylactic acid,0.6,Titanium dioxide,0.3,Melt Mixing,0.9,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.3
+sequence_focus,20,14,8,3,0.5,Poly(ethylene terephthalate),0.5,Montmorillonite,0.875,Melt Mixing,0.625,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.5
+sequence_focus,20,15,3,1,1.0,Silicon dioxide,1.0,Titanium dioxide,0.6666666666666666,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,1.0
+sequence_focus,20,16,18,5,0.2777777777777778,Nylon 6-6,0.5,Silicon dioxide,0.6111111111111112,In-Situ Polymerization,0.6111111111111112,mixing > drying evaporation > drying evaporation > molding,0.2777777777777778
+sequence_focus,20,17,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+sequence_focus,20,18,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+sequence_focus,20,19,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+sequence_focus,50,0,6,2,0.8333333333333334,Polyphenylsulfone,0.8333333333333334,Titanium dioxide,0.6666666666666666,Solution Processing,1.0,mixing > mixing > mixing > molding > drying evaporation,0.8333333333333334
+sequence_focus,50,1,115,11,0.28695652173913044,Poly(methyl methacrylate),0.6434782608695652,Silicon dioxide,0.8608695652173913,Solution Processing,0.8782608695652174,mixing > drying evaporation > extrusion,0.28695652173913044
+sequence_focus,50,2,186,19,0.11827956989247312,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.27956989247311825,Solution Processing,0.6236559139784946,solvent > mixing > heating > heating,0.10752688172043011
+sequence_focus,50,3,4,1,1.0,Cyclic olefin copolymer,1.0,Barium strontium titanate,0.75,Melt Mixing,1.0,mixing > molding,0.75
+sequence_focus,50,4,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+sequence_focus,50,5,35,3,0.6857142857142857,Polystyrene,0.6,Montmorillonite,0.4,Melt Mixing,0.8571428571428571,mixing > mixing,0.8285714285714286
+sequence_focus,50,6,6,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Silver hexafluoroantimonate,0.8333333333333334,Solution Processing,1.0,mixing > drying evaporation,1.0
+sequence_focus,50,7,4,2,0.5,"Poly(vinylidene fluoride-co-hexafluoropropylene)
+",0.5,Barium titanate,1.0,Solution Processing,1.0,mixing > mixing > mixing > mixing > drying evaporation,0.5
+sequence_focus,50,8,3,1,1.0,DGEBA Epoxy Resin,0.6666666666666666,Titanium dioxide,1.0,In-Situ Polymerization,1.0,solvent,1.0
+sequence_focus,50,9,41,3,0.8536585365853658,Poly(bisphenol A carbonate),1.0,Multi-wall carbon nanotubes,0.975609756097561,Melt Mixing,0.8780487804878049,drying evaporation > mixing > heating,0.8536585365853658
+sequence_focus,50,10,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+sequence_focus,50,11,8,1,1.0,Poly(2-vinyl pyridine),0.625,Aluminium oxide,0.875,Solution Processing,1.0,solvent > mixing > drying evaporation > cooling > cooling,0.875
+sequence_focus,50,12,3,2,0.6666666666666666,Poly(vinylidene fluoride),1.0,Iron oxide - barium titanate core-shell nanoparticles,0.3333333333333333,Solution Processing,0.6666666666666666,solvent > additive > mixing > molding > drying evaporation > heating,0.3333333333333333
+sequence_focus,50,13,42,5,0.5714285714285714,Poly(methyl methacrylate),0.7142857142857143,Single-wall carbon nanotubes,0.30952380952380953,Solution Processing,0.9523809523809523,mixing > mixing,0.6190476190476191
+sequence_focus,50,14,8,2,0.75,Poly(ethylene glycol),1.0,Cellulose,0.875,Solution Processing,1.0,mixing,0.75
+sequence_focus,50,15,48,9,0.25,Poly(methyl methacrylate),0.9791666666666666,Montmorillonite,0.2708333333333333,In-Situ Polymerization,0.6041666666666666,solvent > mixing > mixing > drying evaporation > mixing > heating > additive > heating > drying evaporation,0.25
+sequence_focus,50,16,15,4,0.4666666666666667,Polyurethane,0.6666666666666666,Graphene,0.7333333333333333,In-Situ Polymerization,0.5333333333333333,mixing > mixing > mixing > molding > heating,0.4666666666666667
+sequence_focus,50,17,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+sequence_focus,50,18,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+sequence_focus,50,19,12,3,0.5,Polylactic acid,1.0,Titanium dioxide,0.5,Melt Mixing,0.8333333333333334,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.5
+sequence_focus,50,20,43,5,0.4418604651162791,Poly(methyl methacrylate),1.0,Aluminium oxide,0.9534883720930233,In-Situ Polymerization,0.6046511627906976,additive > additive > mixing > heating,0.4418604651162791
+sequence_focus,50,21,7,2,0.5714285714285714,Poly(ethylene terephthalate),0.5714285714285714,Montmorillonite,1.0,Melt Mixing,0.5714285714285714,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.5714285714285714
+sequence_focus,50,22,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+sequence_focus,50,23,13,1,1.0,Bisphenol E cyanate ester resin,1.0,Silicon dioxide,0.9230769230769231,Solution Processing,1.0,mixing > mixing > mixing > mixing > additive > mixing > mixing > molding > drying evaporation > heating > heating > heating > cooling > drying evaporation,0.8461538461538461
+sequence_focus,50,24,24,4,0.4166666666666667,DGEBA Epoxy Resin,0.5833333333333334,Graphene,0.7916666666666666,Solution Processing,0.6666666666666666,solvent > mixing > mixing > heating > mixing > heating > mixing > mixing > heating > molding > heating,0.2916666666666667
+sequence_focus,50,25,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+sequence_focus,50,26,2,1,1.0,Poly(ethylene),1.0,Zinc oxide,1.0,Melt Mixing,1.0,mixing > heating,1.0
+sequence_focus,50,27,3,1,1.0,Silicon dioxide,1.0,Titanium dioxide,0.6666666666666666,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,1.0
+sequence_focus,50,28,7,2,0.5714285714285714,Poly(propylene),1.0,Multi-wall carbon nanotubes,0.5714285714285714,Melt Mixing,1.0,extrusion > mixing,0.7142857142857143
+sequence_focus,50,29,4,2,0.75,Nylon 6-6,0.75,Single-wall carbon nanotubes,0.75,In-Situ Polymerization,0.75,solvent > mixing > mixing,0.75
+sequence_focus,50,30,14,4,0.35714285714285715,Nylon 6-6,0.42857142857142855,Silicon dioxide,0.7857142857142857,In-Situ Polymerization,0.5714285714285714,mixing > drying evaporation > drying evaporation > molding,0.35714285714285715
+sequence_focus,50,31,7,2,0.5714285714285714,Graphene,0.5714285714285714,Graphene,0.8571428571428571,Melt Mixing,1.0,mixing > molding,0.5714285714285714
+sequence_focus,50,32,15,1,1.0,DGEBF Epoxy Resin,0.6,Silicon dioxide,0.4,Solution Processing,1.0,mixing,1.0
+sequence_focus,50,33,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+sequence_focus,50,34,15,1,1.0,Bisphenol-A-epoxy vinyl ester resin,1.0,Multi-wall carbon nanotubes,0.9333333333333333,Melt Mixing,1.0,mixing > molding > heating > molding,1.0
+sequence_focus,50,35,2,1,1.0,Nylon 11,1.0,Multi-wall carbon nanotubes,1.0,Melt Mixing,1.0,drying evaporation > extrusion,1.0
+sequence_focus,50,36,18,3,0.3333333333333333,Poly(vinyl alcohol),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,0.6666666666666666,mixing > heating > molding > drying evaporation,0.3333333333333333
+sequence_focus,50,37,6,3,0.3333333333333333,Poly(styrene-b-butadiene),0.6666666666666666,Silicon dioxide,0.5,Melt Mixing,0.6666666666666666,mixing,0.6666666666666666
+sequence_focus,50,38,8,2,0.75,Poly(ethylene terephthalate),0.75,Silicon dioxide,1.0,In-Situ Polymerization,1.0,mixing > additive > additive > heating > heating > extrusion,0.75
+sequence_focus,50,39,8,1,1.0,Polyurethane,1.0,Titanium dioxide,0.875,In-Situ Polymerization,1.0,solvent > mixing,1.0
+sequence_focus,50,40,22,2,0.7727272727272727,Poly(vinyl butyral),0.7727272727272727,Titanium dioxide,0.5909090909090909,Melt Mixing,1.0,mixing > molding,0.4090909090909091
+sequence_focus,50,41,5,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Titanium dioxide,0.8,Melt Mixing,1.0,mixing > mixing > molding > heating,1.0
+sequence_focus,50,42,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+sequence_focus,50,43,6,1,1.0,Poly(vinyl acetate),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,1.0,solvent > additive > mixing > drying evaporation > solvent > mixing > drying evaporation > drying evaporation,0.8333333333333334
+sequence_focus,50,44,2,1,1.0,Cellulose acetate butyrate,1.0,Cellulose,0.5,Solution Processing,1.0,mixing > drying evaporation,1.0
+sequence_focus,50,45,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+sequence_focus,50,46,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+sequence_focus,50,47,17,1,1.0,Poly(2-vinyl pyridine),1.0,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.7058823529411765,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,1.0
+sequence_focus,50,48,6,2,0.8333333333333334,Poly(ethylene glycol),0.8333333333333334,Silicon dioxide,0.5,Solution Processing,1.0,additive > solvent > additive > molding > drying evaporation > heating > molding,0.5
+sequence_focus,50,49,8,1,1.0,poly(lactic acid),1.0,Graphene,0.5,Melt Mixing,1.0,drying evaporation > drying evaporation > extrusion > molding,0.25
+settings_focus,20,0,4,2,0.75,Silicone rubber,1.0,Titanium dioxide,0.5,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,0.75
+settings_focus,20,1,294,38,0.11224489795918367,Poly(methyl methacrylate),0.6598639455782312,Silicon dioxide,0.47619047619047616,Solution Processing,0.6938775510204082,mixing > drying evaporation > extrusion,0.11224489795918367
+settings_focus,20,2,220,24,0.1,DGEBA Epoxy Resin,0.9590909090909091,Multi-wall carbon nanotubes,0.23636363636363636,Solution Processing,0.65,solvent > mixing > heating > heating,0.09090909090909091
+settings_focus,20,3,37,6,0.4594594594594595,Poly(vinyl butyral),0.4594594594594595,Titanium dioxide,0.35135135135135137,Melt Mixing,0.8918918918918919,mixing > molding,0.43243243243243246
+settings_focus,20,4,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+settings_focus,20,5,43,7,0.5581395348837209,Polystyrene,0.5348837209302325,Montmorillonite,0.32558139534883723,Melt Mixing,0.7906976744186046,mixing > mixing,0.6744186046511628
+settings_focus,20,6,9,2,0.6666666666666666,Cycloaliphatic Epoxy Resin,0.6666666666666666,Silver hexafluoroantimonate,0.5555555555555556,Solution Processing,1.0,mixing > drying evaporation,0.6666666666666666
+settings_focus,20,7,9,6,0.2222222222222222,Poly(vinylidene fluoride),0.5555555555555556,Barium titanate,0.4444444444444444,Solution Processing,0.8888888888888888,mixing > mixing > mixing > mixing > drying evaporation,0.2222222222222222
+settings_focus,20,8,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.9090909090909091,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+settings_focus,20,9,65,7,0.5384615384615384,Poly(bisphenol A carbonate),0.6307692307692307,Multi-wall carbon nanotubes,0.9230769230769231,Melt Mixing,0.9230769230769231,drying evaporation > mixing > heating,0.5384615384615384
+settings_focus,20,10,30,3,0.5666666666666667,Poly(2-vinyl pyridine),0.7333333333333333,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.4,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.5666666666666667
+settings_focus,20,11,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+settings_focus,20,12,21,4,0.47619047619047616,Polyurethane,0.47619047619047616,Graphene,0.7619047619047619,In-Situ Polymerization,0.38095238095238093,mixing > mixing > mixing > molding > heating,0.3333333333333333
+settings_focus,20,13,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+settings_focus,20,14,24,5,0.3333333333333333,Polylactic acid,0.6666666666666666,Graphene,0.3333333333333333,Melt Mixing,0.75,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.25
+settings_focus,20,15,8,3,0.5,Poly(ethylene terephthalate),0.5,Montmorillonite,0.875,Melt Mixing,0.625,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.5
+settings_focus,20,16,7,2,0.7142857142857143,ethylene propylene diene monomer rubber,0.7142857142857143,Bentonite,0.5714285714285714,Solution Processing,1.0,mixing > molding,0.7142857142857143
+settings_focus,20,17,2,1,1.0,Poly(ethylene),1.0,Zinc oxide,1.0,Melt Mixing,1.0,mixing > heating,1.0
+settings_focus,20,18,18,5,0.2777777777777778,Nylon 6-6,0.5,Silicon dioxide,0.6111111111111112,In-Situ Polymerization,0.6111111111111112,mixing > drying evaporation > drying evaporation > molding,0.2777777777777778
+settings_focus,20,19,5,2,0.8,bisphenol-A phthalonitrile resin,0.8,Titanium dioxide,0.6,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,0.8
+settings_focus,50,0,4,2,0.75,Silicone rubber,1.0,Titanium dioxide,0.5,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,0.75
+settings_focus,50,1,119,11,0.2773109243697479,Poly(methyl methacrylate),0.9327731092436975,Silicon dioxide,0.48739495798319327,Solution Processing,0.8823529411764706,mixing > drying evaporation > extrusion,0.2773109243697479
+settings_focus,50,2,164,18,0.13414634146341464,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.3170731707317073,Solution Processing,0.8109756097560976,solvent > mixing > heating > heating,0.12195121951219512
+settings_focus,50,3,4,1,1.0,Cyclic olefin copolymer,1.0,Barium strontium titanate,0.75,Melt Mixing,1.0,mixing > molding,0.75
+settings_focus,50,4,42,5,0.3333333333333333,DGEBA Epoxy Resin,1.0,Zinc oxide,0.23809523809523808,Melt Mixing,0.7619047619047619,mixing > mixing > mixing > mixing > molding > drying evaporation,0.3333333333333333
+settings_focus,50,5,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+settings_focus,50,6,5,1,1.0,Polystyrene,1.0,Graphene oxide,1.0,Solution Processing,1.0,mixing > mixing,1.0
+settings_focus,50,7,30,5,0.2,Poly(vinyl alcohol),0.6,Silicon dioxide,0.8333333333333334,Solution Processing,0.8,solvent > mixing > drying evaporation > drying evaporation,0.2
+settings_focus,50,8,6,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Silver hexafluoroantimonate,0.8333333333333334,Solution Processing,1.0,mixing > drying evaporation,1.0
+settings_focus,50,9,7,4,0.2857142857142857,Poly(vinylidene fluoride),0.7142857142857143,Barium titanate,0.5714285714285714,Solution Processing,0.8571428571428571,mixing > mixing > mixing > mixing > drying evaporation,0.2857142857142857
+settings_focus,50,10,3,1,1.0,DGEBA Epoxy Resin,0.6666666666666666,Titanium dioxide,1.0,In-Situ Polymerization,1.0,solvent,1.0
+settings_focus,50,11,43,4,0.813953488372093,Poly(bisphenol A carbonate),0.9534883720930233,Multi-wall carbon nanotubes,0.9767441860465116,Melt Mixing,0.8837209302325582,drying evaporation > mixing > heating,0.813953488372093
+settings_focus,50,12,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+settings_focus,50,13,8,1,1.0,Poly(2-vinyl pyridine),0.625,Aluminium oxide,0.875,Solution Processing,1.0,solvent > mixing > drying evaporation > cooling > cooling,0.875
+settings_focus,50,14,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+settings_focus,50,15,37,3,0.5405405405405406,Polystyrene,0.6216216216216216,Silicon dioxide,0.972972972972973,Solution Processing,1.0,solvent > mixing > drying evaporation > drying evaporation > molding > heating,0.5405405405405406
+settings_focus,50,16,1,1,1.0,Poly(vinyl butyral),1.0,Graphene,1.0,In-Situ Polymerization,1.0,mixing > mixing > mixing > drying evaporation > heating,1.0
+settings_focus,50,17,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+settings_focus,50,18,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+settings_focus,50,19,24,5,0.3333333333333333,Polylactic acid,0.6666666666666666,Graphene,0.3333333333333333,Melt Mixing,0.75,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.25
+settings_focus,50,20,9,3,0.5555555555555556,Poly(methyl acrylate),0.3333333333333333,Single-wall carbon nanotubes,0.3333333333333333,Solution Processing,1.0,mixing > mixing > mixing,0.5555555555555556
+settings_focus,50,21,10,2,0.7,Polyurethane,1.0,Graphene,0.6,In-Situ Polymerization,0.7,mixing > mixing > mixing > molding > heating,0.7
+settings_focus,50,22,41,4,0.4634146341463415,Poly(methyl methacrylate),1.0,Aluminium oxide,1.0,In-Situ Polymerization,0.6341463414634146,additive > additive > mixing > heating,0.4634146341463415
+settings_focus,50,23,7,2,0.5714285714285714,Poly(ethylene terephthalate),0.5714285714285714,Montmorillonite,1.0,Melt Mixing,0.5714285714285714,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.5714285714285714
+settings_focus,50,24,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+settings_focus,50,25,13,1,1.0,Bisphenol E cyanate ester resin,1.0,Silicon dioxide,0.9230769230769231,Solution Processing,1.0,mixing > mixing > mixing > mixing > additive > mixing > mixing > molding > drying evaporation > heating > heating > heating > cooling > drying evaporation,0.8461538461538461
+settings_focus,50,26,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+settings_focus,50,27,2,1,1.0,Poly(ethylene),1.0,Zinc oxide,1.0,Melt Mixing,1.0,mixing > heating,1.0
+settings_focus,50,28,7,2,0.5714285714285714,Poly(propylene),1.0,Multi-wall carbon nanotubes,0.5714285714285714,Melt Mixing,1.0,extrusion > mixing,0.7142857142857143
+settings_focus,50,29,5,2,0.8,Nylon 6-6,0.8,Single-wall carbon nanotubes,0.6,In-Situ Polymerization,0.6,solvent > mixing > mixing,0.6
+settings_focus,50,30,7,2,0.5714285714285714,Graphene,0.5714285714285714,Graphene,0.8571428571428571,Melt Mixing,1.0,mixing > molding,0.5714285714285714
+settings_focus,50,31,9,1,1.0,DGEBF Epoxy Resin,1.0,Carbon black,0.4444444444444444,Solution Processing,1.0,mixing,1.0
+settings_focus,50,32,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+settings_focus,50,33,15,1,1.0,Bisphenol-A-epoxy vinyl ester resin,1.0,Multi-wall carbon nanotubes,0.9333333333333333,Melt Mixing,1.0,mixing > molding > heating > molding,1.0
+settings_focus,50,34,36,8,0.3333333333333333,Poly(methyl methacrylate),1.0,Graphite oxide,0.3055555555555556,In-Situ Polymerization,0.8055555555555556,solvent > mixing > mixing > drying evaporation > mixing > heating > additive > heating > drying evaporation,0.3333333333333333
+settings_focus,50,35,30,2,0.8,Polystyrene,0.5333333333333333,Montmorillonite,0.4666666666666667,Melt Mixing,1.0,mixing > mixing,0.8
+settings_focus,50,36,13,3,0.38461538461538464,Nylon 6-6,0.38461538461538464,Silicon dioxide,0.8461538461538461,In-Situ Polymerization,0.6153846153846154,mixing > drying evaporation > drying evaporation > molding,0.38461538461538464
+settings_focus,50,37,4,2,0.5,Poly(styrene-b-butadiene),1.0,Silicon dioxide,0.75,Melt Mixing,0.5,mixing > heating,0.5
+settings_focus,50,38,9,3,0.6666666666666666,Poly(ethylene terephthalate),0.6666666666666666,Silicon dioxide,1.0,In-Situ Polymerization,0.8888888888888888,mixing > additive > additive > heating > heating > extrusion,0.6666666666666666
+settings_focus,50,39,8,1,1.0,Polyurethane,1.0,Titanium dioxide,0.875,In-Situ Polymerization,1.0,solvent > mixing,1.0
+settings_focus,50,40,22,2,0.7727272727272727,Poly(vinyl butyral),0.7727272727272727,Titanium dioxide,0.5909090909090909,Melt Mixing,1.0,mixing > molding,0.4090909090909091
+settings_focus,50,41,5,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Titanium dioxide,0.8,Melt Mixing,1.0,mixing > mixing > molding > heating,1.0
+settings_focus,50,42,5,1,1.0,Polyphenylsulfone,1.0,Titanium dioxide,0.8,Solution Processing,1.0,mixing > mixing > mixing > molding > drying evaporation,1.0
+settings_focus,50,43,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+settings_focus,50,44,10,1,1.0,Bisphenol-A-epoxy vinyl ester resin,1.0,Graphene,0.9,Melt Mixing,0.6,mixing > mixing > heating > heating > heating,0.6
+settings_focus,50,45,2,1,1.0,Polybutadiene,1.0,Carbon black,0.5,Melt Mixing,1.0,mixing,1.0
+settings_focus,50,46,2,1,1.0,Cellulose acetate butyrate,1.0,Cellulose,0.5,Solution Processing,1.0,mixing > drying evaporation,1.0
+settings_focus,50,47,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+settings_focus,50,48,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+settings_focus,50,49,17,1,1.0,Poly(2-vinyl pyridine),1.0,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.7058823529411765,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,1.0
+numeric_settings_focus,20,0,4,2,0.75,Silicone rubber,1.0,Titanium dioxide,0.5,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,0.75
+numeric_settings_focus,20,1,282,36,0.11702127659574468,Poly(methyl methacrylate),0.6879432624113475,Silicon dioxide,0.46099290780141844,Solution Processing,0.6808510638297872,mixing > drying evaporation > extrusion,0.11702127659574468
+numeric_settings_focus,20,2,220,24,0.1,DGEBA Epoxy Resin,0.9590909090909091,Multi-wall carbon nanotubes,0.23636363636363636,Solution Processing,0.65,solvent > mixing > heating > heating,0.09090909090909091
+numeric_settings_focus,20,3,37,6,0.4594594594594595,Poly(vinyl butyral),0.4594594594594595,Titanium dioxide,0.35135135135135137,Melt Mixing,0.8918918918918919,mixing > molding,0.43243243243243246
+numeric_settings_focus,20,4,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+numeric_settings_focus,20,5,13,3,0.46153846153846156,Polystyrene,1.0,Graphene oxide,0.38461538461538464,Solution Processing,0.8461538461538461,mixing > molding > heating,0.46153846153846156
+numeric_settings_focus,20,6,39,5,0.4358974358974359,Poly(2-vinyl pyridine),0.717948717948718,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.3076923076923077,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.4358974358974359
+numeric_settings_focus,20,7,8,2,0.75,Cycloaliphatic Epoxy Resin,0.75,Silver hexafluoroantimonate,0.625,Solution Processing,1.0,mixing > drying evaporation,1.0
+numeric_settings_focus,20,8,9,6,0.2222222222222222,Poly(vinylidene fluoride),0.5555555555555556,Barium titanate,0.4444444444444444,Solution Processing,0.8888888888888888,mixing > mixing > mixing > mixing > drying evaporation,0.2222222222222222
+numeric_settings_focus,20,9,15,3,0.5333333333333333,Polyurethane,0.5333333333333333,Titanium dioxide,0.8666666666666667,In-Situ Polymerization,0.7333333333333333,solvent > mixing,0.5333333333333333
+numeric_settings_focus,20,10,58,5,0.603448275862069,Poly(bisphenol A carbonate),0.7068965517241379,Multi-wall carbon nanotubes,0.9655172413793104,Melt Mixing,0.9137931034482759,drying evaporation > mixing > heating,0.603448275862069
+numeric_settings_focus,20,11,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+numeric_settings_focus,20,12,21,4,0.47619047619047616,Polyurethane,0.47619047619047616,Graphene,0.7619047619047619,In-Situ Polymerization,0.38095238095238093,mixing > mixing > mixing > molding > heating,0.3333333333333333
+numeric_settings_focus,20,13,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+numeric_settings_focus,20,14,24,5,0.3333333333333333,Polylactic acid,0.6666666666666666,Graphene,0.3333333333333333,Melt Mixing,0.75,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.25
+numeric_settings_focus,20,15,5,2,0.8,Poly(ethylene terephthalate),0.8,Montmorillonite,0.8,Melt Mixing,1.0,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,0.8
+numeric_settings_focus,20,16,48,9,0.5,Polystyrene,0.3333333333333333,Montmorillonite,0.3541666666666667,Melt Mixing,0.8958333333333334,mixing > mixing,0.5
+numeric_settings_focus,20,17,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+numeric_settings_focus,20,18,18,5,0.2777777777777778,Nylon 6-6,0.5,Silicon dioxide,0.6111111111111112,In-Situ Polymerization,0.6111111111111112,mixing > drying evaporation > drying evaporation > molding,0.2777777777777778
+numeric_settings_focus,20,19,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+numeric_settings_focus,50,0,1,1,1.0,Silicone rubber,1.0,Zirconium dioxide,1.0,Solution Processing,1.0,mixing > drying evaporation > mixing > molding > drying evaporation,1.0
+numeric_settings_focus,50,1,97,8,0.3402061855670103,Poly(methyl methacrylate),0.7010309278350515,Silicon dioxide,0.9175257731958762,Solution Processing,0.8556701030927835,mixing > drying evaporation > extrusion,0.3402061855670103
+numeric_settings_focus,50,2,206,23,0.10679611650485436,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.2524271844660194,Solution Processing,0.6504854368932039,solvent > mixing > heating > heating,0.0970873786407767
+numeric_settings_focus,50,3,4,1,1.0,Cyclic olefin copolymer,1.0,Barium strontium titanate,0.75,Melt Mixing,1.0,mixing > molding,0.75
+numeric_settings_focus,50,4,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+numeric_settings_focus,50,5,11,2,0.5454545454545454,Polystyrene,1.0,Graphene oxide,0.45454545454545453,Solution Processing,1.0,mixing > molding > heating,0.5454545454545454
+numeric_settings_focus,50,6,31,3,0.5483870967741935,Poly(2-vinyl pyridine),0.9032258064516129,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.3870967741935484,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.5483870967741935
+numeric_settings_focus,50,7,6,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Silver hexafluoroantimonate,0.8333333333333334,Solution Processing,1.0,mixing > drying evaporation,1.0
+numeric_settings_focus,50,8,7,4,0.2857142857142857,Poly(vinylidene fluoride),0.7142857142857143,Barium titanate,0.5714285714285714,Solution Processing,0.8571428571428571,mixing > mixing > mixing > mixing > drying evaporation,0.2857142857142857
+numeric_settings_focus,50,9,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.9090909090909091,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+numeric_settings_focus,50,10,43,4,0.813953488372093,Poly(bisphenol A carbonate),0.9534883720930233,Multi-wall carbon nanotubes,0.9767441860465116,Melt Mixing,0.8837209302325582,drying evaporation > mixing > heating,0.813953488372093
+numeric_settings_focus,50,11,2,2,0.5,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,0.5,Solution Processing,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,0.5
+numeric_settings_focus,50,12,73,11,0.3013698630136986,Poly(methyl methacrylate),0.9452054794520548,Graphite,0.2876712328767123,Solution Processing,0.5068493150684932,mixing > mixing,0.3287671232876712
+numeric_settings_focus,50,13,21,4,0.38095238095238093,Poly(methyl methacrylate),0.7619047619047619,Single-wall carbon nanotubes,0.6190476190476191,Solution Processing,1.0,mixing > heating,0.38095238095238093
+numeric_settings_focus,50,14,13,3,0.46153846153846156,Poly(ethylene glycol),1.0,Cellulose,0.5384615384615384,Solution Processing,1.0,mixing,0.46153846153846156
+numeric_settings_focus,50,15,1,1,1.0,Poly(vinyl butyral),1.0,Graphene,1.0,In-Situ Polymerization,1.0,mixing > mixing > mixing > drying evaporation > heating,1.0
+numeric_settings_focus,50,16,4,1,1.0,Poly(vinyl chloride),1.0,Calcium carbonate,0.75,In-Situ Polymerization,1.0,mixing > mixing > mixing > molding,0.75
+numeric_settings_focus,50,17,10,1,1.0,"tetraglycidyl 4,4'-diaminodiphenyl methane",1.0,Carbon nanofibers,0.5,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.5
+numeric_settings_focus,50,18,12,3,0.5,Polylactic acid,1.0,Titanium dioxide,0.5,Melt Mixing,0.8333333333333334,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.5
+numeric_settings_focus,50,19,10,2,0.7,Polyurethane,1.0,Graphene,0.6,In-Situ Polymerization,0.7,mixing > mixing > mixing > molding > heating,0.7
+numeric_settings_focus,50,20,41,4,0.4634146341463415,Poly(methyl methacrylate),1.0,Aluminium oxide,1.0,In-Situ Polymerization,0.6341463414634146,additive > additive > mixing > heating,0.4634146341463415
+numeric_settings_focus,50,21,4,1,1.0,Poly(ethylene terephthalate),1.0,Montmorillonite,1.0,Melt Mixing,1.0,drying evaporation > extrusion > cooling > drying evaporation > molding > cooling > drying evaporation,1.0
+numeric_settings_focus,50,22,10,3,0.4,Poly(propylene),1.0,Multi-wall carbon nanotubes,0.4,Melt Mixing,0.7,extrusion > mixing,0.5
+numeric_settings_focus,50,23,5,1,1.0,ethylene propylene diene monomer rubber,1.0,Bentonite,0.8,Solution Processing,1.0,mixing > molding,1.0
+numeric_settings_focus,50,24,13,1,1.0,Bisphenol E cyanate ester resin,1.0,Silicon dioxide,0.9230769230769231,Solution Processing,1.0,mixing > mixing > mixing > mixing > additive > mixing > mixing > molding > drying evaporation > heating > heating > heating > cooling > drying evaporation,0.8461538461538461
+numeric_settings_focus,50,25,1,1,1.0,Poly(butylene adipate-co-terephthalate),1.0,Fluorine mica,1.0,Melt Mixing,1.0,mixing > mixing > cooling > molding > cooling,1.0
+numeric_settings_focus,50,26,2,1,1.0,Poly(ethylene),1.0,Zinc oxide,1.0,Melt Mixing,1.0,mixing > heating,1.0
+numeric_settings_focus,50,27,3,1,1.0,Silicon dioxide,1.0,Titanium dioxide,0.6666666666666666,Solution Processing,1.0,solvent > drying evaporation > additive > mixing > heating,1.0
+numeric_settings_focus,50,28,5,2,0.8,Nylon 6-6,0.8,Single-wall carbon nanotubes,0.6,In-Situ Polymerization,0.6,solvent > mixing > mixing,0.6
+numeric_settings_focus,50,29,7,2,0.5714285714285714,Graphene,0.5714285714285714,Graphene,0.8571428571428571,Melt Mixing,1.0,mixing > molding,0.5714285714285714
+numeric_settings_focus,50,30,9,1,1.0,DGEBF Epoxy Resin,1.0,Carbon black,0.4444444444444444,Solution Processing,1.0,mixing,1.0
+numeric_settings_focus,50,31,1,1,1.0,carboxylated acrylonitrile butadiene rubber,1.0,Clay,1.0,Solution Processing,1.0,mixing > additive > drying evaporation,1.0
+numeric_settings_focus,50,32,15,1,1.0,Bisphenol-A-epoxy vinyl ester resin,1.0,Multi-wall carbon nanotubes,0.9333333333333333,Melt Mixing,1.0,mixing > molding > heating > molding,1.0
+numeric_settings_focus,50,33,30,2,0.8,Polystyrene,0.5333333333333333,Montmorillonite,0.4666666666666667,Melt Mixing,1.0,mixing > mixing,0.8
+numeric_settings_focus,50,34,13,3,0.38461538461538464,Nylon 6-6,0.38461538461538464,Silicon dioxide,0.8461538461538461,In-Situ Polymerization,0.6153846153846154,mixing > drying evaporation > drying evaporation > molding,0.38461538461538464
+numeric_settings_focus,50,35,12,2,0.5,Poly(vinyl alcohol),0.5,Silicon dioxide,0.8333333333333334,Other Processing,0.5,mixing > heating > molding > drying evaporation,0.5
+numeric_settings_focus,50,36,12,2,0.5,Poly(vinyl alcohol),1.0,Silicon dioxide,0.8333333333333334,Solution Processing,1.0,solvent > cooling > mixing > additive > mixing > molding,0.5
+numeric_settings_focus,50,37,6,3,0.3333333333333333,Poly(styrene-b-butadiene),0.6666666666666666,Silicon dioxide,0.5,Melt Mixing,0.6666666666666666,mixing,0.6666666666666666
+numeric_settings_focus,50,38,9,3,0.6666666666666666,Poly(ethylene terephthalate),0.6666666666666666,Silicon dioxide,1.0,In-Situ Polymerization,0.8888888888888888,mixing > additive > additive > heating > heating > extrusion,0.6666666666666666
+numeric_settings_focus,50,39,22,2,0.7727272727272727,Poly(vinyl butyral),0.7727272727272727,Titanium dioxide,0.5909090909090909,Melt Mixing,1.0,mixing > molding,0.4090909090909091
+numeric_settings_focus,50,40,5,1,1.0,Cycloaliphatic Epoxy Resin,1.0,Titanium dioxide,0.8,Melt Mixing,1.0,mixing > mixing > molding > heating,1.0
+numeric_settings_focus,50,41,5,1,1.0,Polyphenylsulfone,1.0,Titanium dioxide,0.8,Solution Processing,1.0,mixing > mixing > mixing > molding > drying evaporation,1.0
+numeric_settings_focus,50,42,4,1,1.0,bisphenol-A phthalonitrile resin,1.0,Titanium dioxide,0.75,Solution Processing,1.0,mixing > mixing > heating > molding > molding > molding > molding > molding,1.0
+numeric_settings_focus,50,43,10,1,1.0,Bisphenol-A-epoxy vinyl ester resin,1.0,Graphene,0.9,Melt Mixing,0.6,mixing > mixing > heating > heating > heating,0.6
+numeric_settings_focus,50,44,12,2,0.6666666666666666,poly(lactic acid),0.6666666666666666,Graphene,0.6666666666666666,Melt Mixing,0.6666666666666666,mixing > mixing > mixing > mixing > heating > drying evaporation,0.3333333333333333
+numeric_settings_focus,50,45,2,1,1.0,Cellulose acetate butyrate,1.0,Cellulose,0.5,Solution Processing,1.0,mixing > drying evaporation,1.0
+numeric_settings_focus,50,46,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+numeric_settings_focus,50,47,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+numeric_settings_focus,50,48,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+numeric_settings_focus,50,49,1,1,1.0,Poly(2-hydroxyethyl methacrylate),1.0,unreported,0.0,Solution Processing,1.0,mixing > additive > mixing > mixing > drying evaporation > curing,1.0
+process_only,20,0,61,9,0.21311475409836064,DGEBA Epoxy Resin,0.5081967213114754,Multi-wall carbon nanotubes,0.36065573770491804,Solution Processing,1.0,mixing > mixing > drying evaporation > molding > molding,0.19672131147540983
+process_only,20,1,125,15,0.264,Poly(methyl methacrylate),0.456,Silicon dioxide,0.528,Solution Processing,1.0,mixing > drying evaporation > extrusion,0.264
+process_only,20,2,23,6,0.34782608695652173,poly(lactic acid),0.34782608695652173,Titanium dioxide,0.2608695652173913,Melt Mixing,1.0,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.2608695652173913
+process_only,20,3,188,26,0.10638297872340426,DGEBA Epoxy Resin,0.48936170212765956,Silicon dioxide,0.31382978723404253,Solution Processing,1.0,solvent > mixing > heating > heating,0.10638297872340426
+process_only,20,4,6,2,0.8333333333333334,Poly(methyl methacrylate),0.8333333333333334,Graphene oxide,0.6666666666666666,In-Situ Polymerization,0.8333333333333334,molding,1.0
+process_only,20,5,90,15,0.28888888888888886,Poly(methyl methacrylate),0.18888888888888888,Multi-wall carbon nanotubes,0.2222222222222222,Melt Mixing,1.0,mixing > mixing,0.3
+process_only,20,6,44,6,0.3181818181818182,DGEBA Epoxy Resin,0.7272727272727273,Silicon dioxide,0.29545454545454547,Melt Mixing,1.0,mixing > mixing > mixing > mixing > molding > drying evaporation,0.3181818181818182
+process_only,20,7,69,8,0.5072463768115942,Poly(bisphenol A carbonate),0.5072463768115942,Multi-wall carbon nanotubes,0.6086956521739131,Melt Mixing,1.0,drying evaporation > mixing > heating,0.5072463768115942
+process_only,20,8,9,2,0.7777777777777778,Poly(methyl methacrylate),0.7777777777777778,Aluminium oxide,0.8888888888888888,In-Situ Polymerization,1.0,drying evaporation,0.7777777777777778
+process_only,20,9,74,9,0.32432432432432434,Poly(methyl methacrylate),0.3783783783783784,Graphite,0.16216216216216217,Solution Processing,1.0,mixing,0.4189189189189189
+process_only,20,10,4,2,0.5,DGEBA Epoxy Resin,1.0,Single-wall carbon nanotubes,0.25,Solution Processing,1.0,heating > heating,0.5
+process_only,20,11,4,2,0.75,DGEBA Epoxy Resin,0.5,Titanium dioxide,0.75,In-Situ Polymerization,0.75,solvent,1.0
+process_only,20,12,1,1,1.0,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,1.0,In-Situ Polymerization,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,1.0
+process_only,20,13,64,11,0.1875,Poly(methyl methacrylate),0.375,Montmorillonite,0.265625,In-Situ Polymerization,1.0,solvent > mixing > mixing > drying evaporation > mixing > heating > additive > heating > drying evaporation,0.1875
+process_only,20,14,27,3,0.7037037037037037,Poly(methyl methacrylate),0.7037037037037037,Aluminium oxide,0.7037037037037037,In-Situ Polymerization,1.0,additive > additive > mixing > heating,0.7037037037037037
+process_only,20,15,3,1,1.0,Poly(propylene),1.0,Montmorillonite,1.0,Other Processing,1.0,mixing > cooling > mixing > extrusion > cooling > molding,1.0
+process_only,20,16,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.6363636363636364,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+process_only,20,17,24,4,0.4583333333333333,Poly(methyl methacrylate),0.4583333333333333,Silicon dioxide,0.7916666666666666,Other Processing,1.0,mixing > drying evaporation,0.4583333333333333
+process_only,20,18,4,2,0.75,Polyrotaxane,0.75,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,0.75
+process_only,20,19,1,1,1.0,Poly(ethylene),1.0,Silicon dioxide,1.0,Solution Processing,1.0,additive > solvent > additive > additive > mixing > cooling > heating,1.0
+process_only,50,0,48,7,0.2708333333333333,DGEBA Epoxy Resin,0.5,Multi-wall carbon nanotubes,0.4583333333333333,Solution Processing,1.0,mixing > mixing > drying evaporation > molding > molding,0.25
+process_only,50,1,64,8,0.515625,Poly(methyl methacrylate),0.609375,Silicon dioxide,0.6875,Solution Processing,1.0,mixing > drying evaporation > extrusion,0.515625
+process_only,50,2,5,3,0.4,Polystyrene,0.4,Silicon dioxide,0.6,Melt Mixing,1.0,mixing > drying evaporation > extrusion|output,0.6
+process_only,50,3,38,3,0.5263157894736842,DGEBA Epoxy Resin,0.34210526315789475,Silicon dioxide,0.5263157894736842,Solution Processing,1.0,solvent > mixing > drying evaporation > drying evaporation > molding > heating,0.5263157894736842
+process_only,50,4,6,2,0.8333333333333334,Poly(methyl methacrylate),0.8333333333333334,Graphene oxide,0.6666666666666666,In-Situ Polymerization,0.8333333333333334,molding,1.0
+process_only,50,5,44,7,0.38636363636363635,Poly(vinyl butyral),0.38636363636363635,Multi-wall carbon nanotubes,0.3181818181818182,Melt Mixing,1.0,mixing > molding,0.45454545454545453
+process_only,50,6,44,6,0.3181818181818182,DGEBA Epoxy Resin,0.7272727272727273,Silicon dioxide,0.29545454545454547,Melt Mixing,1.0,mixing > mixing > mixing > mixing > molding > drying evaporation,0.3181818181818182
+process_only,50,7,15,2,0.6666666666666666,DGEBA Epoxy Resin,1.0,Multi-wall carbon nanotubes,0.26666666666666666,Melt Mixing,1.0,additive > mixing > drying evaporation > drying evaporation > mixing > drying evaporation > molding > heating,0.3333333333333333
+process_only,50,8,2,1,1.0,Polyimide,1.0,Silicon dioxide,0.5,In-Situ Polymerization,1.0,solvent > drying evaporation > drying evaporation,1.0
+process_only,50,9,21,2,0.6190476190476191,Bisphenol E cyanate ester resin,0.6190476190476191,Silicon dioxide,0.5714285714285714,Solution Processing,1.0,mixing > mixing > mixing > mixing > additive > mixing > mixing > molding > drying evaporation > heating > heating > heating > cooling > drying evaporation,0.5238095238095238
+process_only,50,10,71,8,0.3380281690140845,Poly(methyl methacrylate),0.39436619718309857,Graphite,0.16901408450704225,Solution Processing,1.0,mixing,0.43661971830985913
+process_only,50,11,28,3,0.6071428571428571,Poly(2-vinyl pyridine),0.8214285714285714,Octa(aminophenyl) polyhedral oligomeric silsesquioxane,0.42857142857142855,Solution Processing,1.0,additive > solvent > additive > solvent > mixing > additive > solvent > mixing > drying evaporation,0.6071428571428571
+process_only,50,12,4,2,0.5,DGEBA Epoxy Resin,1.0,Single-wall carbon nanotubes,0.25,Solution Processing,1.0,heating > heating,0.5
+process_only,50,13,59,5,0.3389830508474576,DGEBA Epoxy Resin,0.9491525423728814,Silicon dioxide,0.3389830508474576,Solution Processing,1.0,solvent > mixing > heating > heating,0.3389830508474576
+process_only,50,14,21,4,0.47619047619047616,"tetraglycidyl 4,4'-diaminodiphenyl methane",0.47619047619047616,Carbon nanofibers,0.23809523809523808,Solution Processing,1.0,mixing > mixing > drying evaporation > heating > heating > heating > heating > heating,0.23809523809523808
+process_only,50,15,3,1,1.0,DGEBA Epoxy Resin,0.6666666666666666,Titanium dioxide,1.0,In-Situ Polymerization,1.0,solvent,1.0
+process_only,50,16,7,3,0.7142857142857143,Poly(bisphenol A carbonate),0.7142857142857143,Multi-wall carbon nanotubes,0.7142857142857143,Solution Processing,1.0,mixing > drying evaporation > mixing > additive > drying evaporation,0.7142857142857143
+process_only,50,17,1,1,1.0,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,Multi-wall carbon nanotubes,1.0,In-Situ Polymerization,1.0,mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > mixing > drying evaporation > drying evaporation > drying evaporation,1.0
+process_only,50,18,26,1,1.0,Poly(methyl methacrylate),0.6923076923076923,Aluminium oxide,0.46153846153846156,Solution Processing,1.0,solvent > mixing > drying evaporation > cooling > cooling,0.9230769230769231
+process_only,50,19,7,2,0.7142857142857143,Poly(ethylene glycol),0.7142857142857143,Silicon dioxide,0.2857142857142857,Solution Processing,1.0,additive > solvent > additive > molding > drying evaporation > heating > molding,0.42857142857142855
+process_only,50,20,11,3,0.5454545454545454,Polystyrene,0.5454545454545454,Silicon dioxide,0.45454545454545453,Solution Processing,1.0,mixing > molding > heating,0.6363636363636364
+process_only,50,21,9,3,0.4444444444444444,Poly(methyl methacrylate),0.4444444444444444,Montmorillonite,0.3333333333333333,In-Situ Polymerization,1.0,mixing > heating > drying evaporation,0.4444444444444444
+process_only,50,22,29,4,0.3103448275862069,DGEBA Epoxy Resin,0.6206896551724138,Montmorillonite,0.27586206896551724,In-Situ Polymerization,1.0,mixing > mixing > molding,0.3448275862068966
+process_only,50,23,1,1,1.0,Polylactic acid,1.0,Cellulose,1.0,Solution Processing,1.0,drying evaporation > additive > mixing > mixing > molding > heating,1.0
+process_only,50,24,7,1,1.0,Poly(methyl methacrylate),1.0,Aluminium oxide,1.0,In-Situ Polymerization,1.0,drying evaporation,1.0
+process_only,50,25,10,2,0.6,Polylactic acid,0.6,Titanium dioxide,0.6,Melt Mixing,1.0,mixing > extrusion|heating zone > cooling > drying evaporation > molding,0.6
+process_only,50,26,19,1,1.0,Poly(methyl methacrylate),1.0,Aluminium oxide,1.0,In-Situ Polymerization,1.0,additive > additive > mixing > heating,1.0
+process_only,50,27,3,1,1.0,Poly(propylene),1.0,Montmorillonite,1.0,Other Processing,1.0,mixing > cooling > mixing > extrusion > cooling > molding,1.0
+process_only,50,28,13,2,0.5384615384615384,DGEBA Epoxy Resin,0.5384615384615384,Single-wall carbon nanotubes,0.46153846153846156,Solution Processing,1.0,solvent > cooling > mixing > additive > mixing > molding,0.46153846153846156
+process_only,50,29,2,1,1.0,DGEBA Epoxy Resin,1.0,Graphite oxide,1.0,In-Situ Polymerization,1.0,mixing > mixing > heating > heating > mixing > mixing > heating > heating,1.0
+process_only,50,30,39,3,0.8974358974358975,Poly(bisphenol A carbonate),0.8974358974358975,Multi-wall carbon nanotubes,0.8974358974358975,Melt Mixing,1.0,drying evaporation > mixing > heating,0.8974358974358975
+process_only,50,31,29,6,0.27586206896551724,DGEBA Epoxy Resin,0.5172413793103449,Graphene,0.4827586206896552,Solution Processing,1.0,mixing > heating,0.3448275862068966
+process_only,50,32,7,2,0.5714285714285714,Poly(propylene),1.0,Multi-wall carbon nanotubes,0.5714285714285714,Melt Mixing,1.0,extrusion > mixing,0.7142857142857143
+process_only,50,33,39,6,0.6666666666666666,Polystyrene,0.41025641025641024,Montmorillonite,0.38461538461538464,Melt Mixing,1.0,mixing > mixing,0.6923076923076923
+process_only,50,34,11,2,0.7272727272727273,Polyurethane,0.7272727272727273,Titanium dioxide,0.6363636363636364,In-Situ Polymerization,1.0,solvent > mixing,0.7272727272727273
+process_only,50,35,15,3,0.4,DGEBA Epoxy Resin,0.6,Graphene,0.3333333333333333,Melt Mixing,1.0,mixing > mixing > heating > heating > heating,0.6
+process_only,50,36,12,2,0.6666666666666666,Poly(methyl methacrylate),0.6666666666666666,Montmorillonite,0.5,In-Situ Polymerization,1.0,mixing > mixing > mixing > drying evaporation > solvent > drying evaporation > molding,0.6666666666666666
+process_only,50,37,16,2,0.6875,Poly(methyl methacrylate),0.6875,Silicon dioxide,0.875,Other Processing,1.0,mixing > drying evaporation,0.6875
+process_only,50,38,12,1,1.0,Poly(methyl methacrylate),1.0,Graphite oxide,0.9166666666666666,In-Situ Polymerization,1.0,solvent > mixing > mixing > drying evaporation > mixing > heating > additive > heating > drying evaporation,1.0
+process_only,50,39,6,1,1.0,Poly(vinyl alcohol),1.0,Silicon dioxide,0.8333333333333334,Other Processing,1.0,mixing > heating > molding > drying evaporation,1.0
+process_only,50,40,2,1,1.0,Poly(butylene terephthalate),1.0,Silicon dioxide,1.0,In-Situ Polymerization,1.0,mixing > molding > cooling,1.0
+process_only,50,41,1,1,1.0,Poly(vinyl acetate),1.0,unreported,0.0,Solution Processing,1.0,solvent,1.0
+process_only,50,42,3,1,1.0,Polyrotaxane,1.0,unreported,0.0,Solution Processing,1.0,solvent > additive > additive > additive > mixing > curing,1.0
+process_only,50,43,2,1,1.0,Polystyrene,1.0,Reduced graphene oxide,1.0,Other Processing,1.0,molding > heating > cooling,0.5
+process_only,50,44,3,1,1.0,Poly(methyl acrylate),1.0,Gold,0.6666666666666666,Solution Processing,1.0,solvent > mixing > mixing,0.6666666666666666
+process_only,50,45,1,1,1.0,Poly(ethylene),1.0,Silicon dioxide,1.0,Solution Processing,1.0,additive > solvent > additive > additive > mixing > cooling > heating,1.0
+process_only,50,46,1,1,1.0,DGEBA Epoxy Resin,1.0,unreported,0.0,Solution Processing,1.0,additive > heating > additive > mixing > curing > curing,1.0
+process_only,50,47,1,1,1.0,Poly(vinylidene fluoride-co-trifluoroethylene-co-chlorotrifluoroethylene),1.0,unreported,0.0,Solution Processing,1.0,additive > heating > heating > drying evaporation > heating,1.0
+process_only,50,48,6,1,1.0,Poly(ethylene terephthalate),1.0,Silicon dioxide,1.0,In-Situ Polymerization,1.0,mixing > additive > additive > heating > heating > extrusion,1.0
+process_only,50,49,8,1,1.0,poly(lactic acid),1.0,Graphene,0.5,Melt Mixing,1.0,drying evaporation > drying evaporation > extrusion > molding,0.25

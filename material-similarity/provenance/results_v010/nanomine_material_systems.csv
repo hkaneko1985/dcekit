@@ -1,0 +1,7 @@
+system_id,system_label,matrix,filler,available_samples,available_papers,selected_samples,selected_papers
+S1,PMMA / SiO2,Poly(methyl methacrylate),Silicon dioxide,60,4,12,4
+S2,PMMA / Al2O3,Poly(methyl methacrylate),Aluminium oxide,46,5,12,5
+S3,DGEBA epoxy / MWCNT,DGEBA Epoxy Resin,Multi-wall carbon nanotubes,44,6,12,6
+S4,PC / MWCNT,Poly(bisphenol A carbonate),Multi-wall carbon nanotubes,40,2,12,2
+S5,DGEBA epoxy / SiO2,DGEBA Epoxy Resin,Silicon dioxide,36,3,12,3
+S6,PS / SiO2,Polystyrene,Silicon dioxide,24,4,12,4

@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "seed": 20260907,
+  "input": {
+    "samples_path": "data/all_samples.csv.gz",
+    "expected_sha256": "de1bab01eee04534ec22f14c678b6c44caf72c319407ccca204939471855d84b",
+    "source_mode": "preregistered all-samples metadata fallback",
+    "opened_tables": ["samples"],
+    "forbidden_tables": ["curves"]
+  },
+  "cohort": {
+    "require_closed_numeric_formula": true,
+    "require_form_or_fabrication_category": true,
+    "exclude_explicit_reference_or_calculation_datatype": true,
+    "minimum_samples_per_sid_before_sampling": 2,
+    "maximum_samples_per_sid": 12,
+    "pilot_target_samples": 5000
+  },
+  "tie_handling": {
+    "row_order": "source-independent SHA-256 hash of (SID, sample_id)",
+    "missingness_control": "exact observation-mask signatures; never split zero-distance ties to match a requested cluster count"
+  },
+  "split": {
+    "development_fraction_by_sid_hash": 0.7,
+    "confirmation_fraction_by_sid_hash": 0.3
+  },
+  "features": {
+    "use_category_values_only": true,
+    "use_free_text_comments": false,
+    "sets": {
+      "F0": ["composition"],
+      "F1": ["composition", "form"],
+      "F2": ["composition", "form", "fabrication"],
+      "F3": ["composition", "form", "fabrication", "purity", "relative_density", "grain_size"]
+    },
+    "primary_missingness_penalty": 0.0
+  },
+  "clustering": {
+    "algorithm": "average-linkage agglomerative clustering on a precomputed mixed distance",
+    "cluster_count_grid": [25, 50, 75, 100, 150],
+    "selection": "maximum development-set silhouette among solutions with largest cluster <= 35%; proxy labels are not consulted"
+  },
+  "evaluation": {
+    "composition_distance_bins": 10,
+    "unlabeled_pair_multiplier": 40,
+    "unlabeled_pair_cap": 250000,
+    "paper_block_bootstrap_repetitions": 1000,
+    "stratified_permutation_repetitions": 1000,
+    "stability_subset_samples": 1600,
+    "stability_repetitions": 20,
+    "exact_composition_distance_tolerance": 1e-08
+  },
+  "go_criteria": {
+    "incremental_log_lift_ci_lower_above_zero_for_F2_or_F3": true,
+    "positive_direction_after_exact_composition_exclusion": true,
+    "positive_direction_at_four_of_five_fixed_resolutions": true,
+    "median_subsample_ari_at_least": 0.7,
+    "maximum_single_paper_absolute_increment_share_below": 0.1,
+    "missingness_only_log_lift_below_F2": true
+  }
+}

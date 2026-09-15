@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-09-14T22:22:44.442603+00:00",
+  "checks": [
+    {
+      "url": "https://materialsmine.org/api/search/filter?search=http&field=identifier&type=samples&page=1&pageSize=1",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://api.github.com/repos/Duke-MatSci/materialsmine/git/trees/5a48d01d21b112aa36c62be22e470cc00620ef74?recursive=1",
+      "status": 200,
+      "bytes": 692006
+    }
+  ],
+  "note": "A failed public route and inspected software files do not establish snapshot data permission or independent availability."
+}

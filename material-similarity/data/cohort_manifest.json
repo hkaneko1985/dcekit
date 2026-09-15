@@ -1,0 +1,14 @@
+[
+  {
+    "path": "data/cohorts/pncextract_breadth_records.jsonl.gz",
+    "bytes": 49478,
+    "sha256": "13e63a7664bbaca59123c81026740884f8924b7070a31f07e647299af59a30a3",
+    "records": 1103
+  },
+  {
+    "path": "data/cohorts/starrydata_phase1_cohort.jsonl.gz",
+    "bytes": 127893,
+    "sha256": "c8604241eb845360baf19b945afde74ecd8c3beffdb7ec094d2e1ab846e62667",
+    "records": 5001
+  }
+]

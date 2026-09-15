@@ -1,0 +1,65 @@
+{
+  "version": "1.1.0",
+  "principle": "No target/property variables, proxy labels, or provenance identifiers may enter similarity features.",
+  "feature_blocks": {
+
+    "composition": {
+      "fields": ["composition", "composition_details"],
+      "transform": "chemistry-aware stoichiometric fractions plus element-aware distance",
+      "required": true
+    },
+    "physical_form": {
+      "sample_info_prefixes": ["Form"],
+      "transform": "normalized controlled vocabulary plus unknown-hot encoding",
+      "required": false
+    },
+    "fabrication": {
+      "sample_info_prefixes": ["FabricationProcess", "FabricationProcess 2", "FabricationProcess 3"],
+      "transform": "ordered-step tokens where available; otherwise normalized multi-hot categories",
+      "required": false
+    },
+    "state_and_morphology": {
+      "sample_info_prefixes": ["Purity", "RelativeDensity", "GrainSize"],
+      "transform": "unit-normalized numeric values; missingness masks control distance availability but do not act as scientific descriptors",
+      "required": false
+    }
+  },
+  "holdout_only": {
+    "MaterialFamily": "exploratory taxonomy sensitivity only; never a confirmatory label",
+    "DataType": "eligibility/exclusion variable",
+    "SID": "same-paper weak positive label",
+    "DOI": "paper identity and bibliographic enrichment key",
+    "institution_id": "cross-paper weak positive label",
+    "author_ids": "sensitivity-only provenance label"
+  },
+  "context_proxy_rules": {
+    "same_paper": "Primary weak-positive support via SID; DOI is a consistency/sensitivity identifier.",
+    "same_institution": "Secondary weak-positive support only across different papers; resolve to normalized organization IDs.",
+    "not_negative": "Different paper, author, or institution means unlabeled, never dissimilar.",
+    "no_expert_labels": "Expert scoring and expert-defined cluster labels are outside the first study."
+  },
+  "hard_exclusions": [
+    "curves table",
+    "prop_x",
+    "prop_y",
+    "unit_x",
+    "unit_y",
+    "x",
+    "y",
+    "measured property names or values",
+    "measurement descriptors",
+    "sample_name free text",
+    "timestamps",
+    "publisher",
+    "project_names"
+  ],
+  "missingness": {
+    "default": "pairwise block masking with denominator renormalization and zero missingness penalty",
+    "sensitivity": [
+      "no missingness penalty",
+      "small asymmetric-missingness penalty",
+      "complete-case subset"
+    ],
+    "warning": "Missingness fingerprints can encode paper, curator, or institution and must not be treated as scientific similarity without a leakage analysis."
+  }
+}

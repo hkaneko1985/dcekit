@@ -1,0 +1,9 @@
+{
+  "files_checked": 11,
+  "reference_files": 11,
+  "rtol": 1e-07,
+  "atol": 1e-08,
+  "passed": true,
+  "differences": [],
+  "scope": "Phase 4 synthesis: eleven outputs from frozen earlier artifacts"
+}

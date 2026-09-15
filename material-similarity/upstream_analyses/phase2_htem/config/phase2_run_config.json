@@ -1,0 +1,23 @@
+{
+  "version": "3.1.0",
+  "seed": 20260909,
+  "paths": {
+    "records": "data/htem_phase2_records.jsonl.gz",
+    "studies": "data/htem_study_links.json",
+    "input_manifest": "data/input_manifest.json",
+    "spec": "config/phase2_spec.json",
+    "results": "results/phase2_results.json",
+    "grid": "results/phase2_grid.csv",
+    "assignments": "results/selected_assignments.jsonl.gz"
+  },
+  "evaluation": {
+    "unlabeled_pair_cap": 250000,
+    "composition_distance_bins": 12,
+    "nonidentical_composition_tolerance": 0.02,
+    "retrieval_top_k": 10,
+    "row_order_seeds": [20260909, 20260919, 20260929],
+    "shuffle_repetitions": 50,
+    "top_configurations_for_diagnostics": 6,
+    "interesting_pairs_per_type": 20
+  }
+}

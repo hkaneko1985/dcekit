@@ -1,0 +1,367 @@
+{
+  "phase": 5,
+  "api_version": "0.1.0",
+  "source_records_available": 832,
+  "validation_records": 183,
+  "validation_papers": 32,
+  "htem_validation": {
+    "source_records_available": 1891,
+    "validation_records": 183,
+    "reported_composite_ari_vs_composition": 0.9097504313448449
+  },
+  "material_system_visualization": {
+    "selection_rule": {
+      "n_systems": 6,
+      "samples_per_system": 12,
+      "minimum_available_samples": 20,
+      "minimum_available_papers": 2,
+      "system_ranking": "descending available sample count, lexical tie-break",
+      "within_system_sampling": "deterministic round-robin across papers"
+    },
+    "selected_records": 72,
+    "selected_unique_papers": 22,
+    "systems": [
+      {
+        "system_id": "S1",
+        "system_label": "PMMA / SiO2",
+        "matrix": "Poly(methyl methacrylate)",
+        "filler": "Silicon dioxide",
+        "available_samples": 60,
+        "available_papers": 4,
+        "selected_samples": 12,
+        "selected_papers": 4
+      },
+      {
+        "system_id": "S2",
+        "system_label": "PMMA / Al2O3",
+        "matrix": "Poly(methyl methacrylate)",
+        "filler": "Aluminium oxide",
+        "available_samples": 46,
+        "available_papers": 5,
+        "selected_samples": 12,
+        "selected_papers": 5
+      },
+      {
+        "system_id": "S3",
+        "system_label": "DGEBA epoxy / MWCNT",
+        "matrix": "DGEBA Epoxy Resin",
+        "filler": "Multi-wall carbon nanotubes",
+        "available_samples": 44,
+        "available_papers": 6,
+        "selected_samples": 12,
+        "selected_papers": 6
+      },
+      {
+        "system_id": "S4",
+        "system_label": "PC / MWCNT",
+        "matrix": "Poly(bisphenol A carbonate)",
+        "filler": "Multi-wall carbon nanotubes",
+        "available_samples": 40,
+        "available_papers": 2,
+        "selected_samples": 12,
+        "selected_papers": 2
+      },
+      {
+        "system_id": "S5",
+        "system_label": "DGEBA epoxy / SiO2",
+        "matrix": "DGEBA Epoxy Resin",
+        "filler": "Silicon dioxide",
+        "available_samples": 36,
+        "available_papers": 3,
+        "selected_samples": 12,
+        "selected_papers": 3
+      },
+      {
+        "system_id": "S6",
+        "system_label": "PS / SiO2",
+        "matrix": "Polystyrene",
+        "filler": "Silicon dioxide",
+        "available_samples": 24,
+        "available_papers": 4,
+        "selected_samples": 12,
+        "selected_papers": 4
+      }
+    ],
+    "material_identity": {
+      "view": "material_identity",
+      "bound": "reported",
+      "n_records": 72,
+      "n_systems": 6,
+      "n_unique_papers": 22,
+      "n_clusters": 6,
+      "ari_vs_exact_material_system": 0.6645628500027362,
+      "nmi_vs_exact_material_system": 0.8310046176870586,
+      "silhouette_exact_material_system": 0.5453413724899292,
+      "knn5_material_system_agreement": 0.9805555555555555,
+      "cross_paper_knn5_material_system_agreement": 0.8972222222222223,
+      "mean_within_system_distance": 0.14173883199691772,
+      "mean_between_system_distance": 0.4602360427379608,
+      "between_within_distance_ratio": 3.247070942054674,
+      "pcoa_two_axis_positive_inertia_fraction": 0.6041061896875815,
+      "pcoa_negative_inertia_fraction": 0.1806873337011453,
+      "mean_uncertainty_width": 0.49514439702033997
+    },
+    "balanced_instance": {
+      "view": "balanced_instance",
+      "bound": "reported",
+      "n_records": 72,
+      "n_systems": 6,
+      "n_unique_papers": 22,
+      "n_clusters": 6,
+      "ari_vs_exact_material_system": 0.18644544808823726,
+      "nmi_vs_exact_material_system": 0.4526484874505346,
+      "silhouette_exact_material_system": 0.2034643143415451,
+      "knn5_material_system_agreement": 0.7055555555555556,
+      "cross_paper_knn5_material_system_agreement": 0.425,
+      "mean_within_system_distance": 0.4241779148578644,
+      "mean_between_system_distance": 0.6181750893592834,
+      "between_within_distance_ratio": 1.4573485976195262,
+      "pcoa_two_axis_positive_inertia_fraction": 0.3484498762026369,
+      "pcoa_negative_inertia_fraction": 0.06326370715463585,
+      "mean_uncertainty_width": 0.2849251329898834
+    },
+    "interpretation": "face_validity_only_not_independent_ground_truth"
+  },
+  "process_method_visualization": {
+    "selection_rule": {
+      "process_methods": [
+        "Solution Processing",
+        "Melt Mixing",
+        "In-Situ Polymerization"
+      ],
+      "single_method_records_only": true,
+      "samples_per_method": 40,
+      "within_method_sampling": "deterministic round-robin across papers",
+      "selection_uses_distances_or_outcomes": false
+    },
+    "selected_records": 120,
+    "selected_unique_papers": 93,
+    "methods": [
+      {
+        "method_id": "M1",
+        "process_method": "Solution Processing",
+        "display_label": "Solution processing",
+        "available_samples": 458,
+        "available_papers": 61,
+        "selected_samples": 40,
+        "selected_papers": 40
+      },
+      {
+        "method_id": "M2",
+        "process_method": "Melt Mixing",
+        "display_label": "Melt mixing",
+        "available_samples": 227,
+        "available_papers": 34,
+        "selected_samples": 40,
+        "selected_papers": 34
+      },
+      {
+        "method_id": "M3",
+        "process_method": "In-Situ Polymerization",
+        "display_label": "In-situ polymerization",
+        "available_samples": 119,
+        "available_papers": 20,
+        "selected_samples": 40,
+        "selected_papers": 20
+      }
+    ],
+    "method_blind_process": {
+      "view": "method_blind_process",
+      "bound": "reported",
+      "n_records": 120,
+      "n_methods": 3,
+      "n_unique_papers": 93,
+      "n_clusters": 3,
+      "process_method_weight": 0.0,
+      "step_type_weight": 0.3,
+      "sequence_weight": 0.45,
+      "settings_weight": 0.25,
+      "ari_vs_process_method": 0.0023187901712281617,
+      "nmi_vs_process_method": 0.059602317358558386,
+      "silhouette_process_method": 0.001008884166367352,
+      "knn5_process_method_agreement": 0.48,
+      "cross_paper_knn5_process_method_agreement": 0.42333333333333334,
+      "permutation_cross_paper_knn5_mean": 0.32804999999999995,
+      "permutation_cross_paper_knn5_q025": 0.2833333333333333,
+      "permutation_cross_paper_knn5_q975": 0.37333333333333335,
+      "permutation_one_sided_p": 0.000999000999000999,
+      "mean_within_method_distance": 0.7286856770515442,
+      "mean_between_method_distance": 0.7540489435195923,
+      "between_within_distance_ratio": 1.034806868402676,
+      "pcoa_two_axis_positive_inertia_fraction": 0.3011775262943425,
+      "pcoa_negative_inertia_fraction": 0.10180327618527348,
+      "mean_uncertainty_width": 0.04828057065606117
+    },
+    "method_aware_process": {
+      "view": "method_aware_process",
+      "bound": "reported",
+      "n_records": 120,
+      "n_methods": 3,
+      "n_unique_papers": 93,
+      "n_clusters": 3,
+      "process_method_weight": 0.25,
+      "step_type_weight": 0.2,
+      "sequence_weight": 0.3,
+      "settings_weight": 0.25,
+      "ari_vs_process_method": 0.9501152132178798,
+      "nmi_vs_process_method": 0.9289450857485844,
+      "silhouette_process_method": 0.2951594591140747,
+      "knn5_process_method_agreement": 0.935,
+      "cross_paper_knn5_process_method_agreement": 0.9316666666666666,
+      "permutation_cross_paper_knn5_mean": 0.32766166666666663,
+      "permutation_cross_paper_knn5_q025": 0.2816666666666667,
+      "permutation_cross_paper_knn5_q975": 0.375,
+      "permutation_one_sided_p": 0.000999000999000999,
+      "mean_within_method_distance": 0.5590201616287231,
+      "mean_between_method_distance": 0.8146268129348755,
+      "between_within_distance_ratio": 1.4572404876443708,
+      "pcoa_two_axis_positive_inertia_fraction": 0.373634963813345,
+      "pcoa_negative_inertia_fraction": 0.1337948025052591,
+      "mean_uncertainty_width": 0.04828057065606117
+    },
+    "per_method_cross_paper_neighbors": [
+      {
+        "view": "method_blind_process",
+        "method_id": "M1",
+        "process_method": "Solution Processing",
+        "cross_paper_knn5_agreement": 0.405
+      },
+      {
+        "view": "method_blind_process",
+        "method_id": "M2",
+        "process_method": "Melt Mixing",
+        "cross_paper_knn5_agreement": 0.555
+      },
+      {
+        "view": "method_blind_process",
+        "method_id": "M3",
+        "process_method": "In-Situ Polymerization",
+        "cross_paper_knn5_agreement": 0.31
+      },
+      {
+        "view": "method_aware_process",
+        "method_id": "M1",
+        "process_method": "Solution Processing",
+        "cross_paper_knn5_agreement": 0.915
+      },
+      {
+        "view": "method_aware_process",
+        "method_id": "M2",
+        "process_method": "Melt Mixing",
+        "cross_paper_knn5_agreement": 0.935
+      },
+      {
+        "view": "method_aware_process",
+        "method_id": "M3",
+        "process_method": "In-Situ Polymerization",
+        "cross_paper_knn5_agreement": 0.945
+      }
+    ],
+    "interpretation": "construct_validity_ablation_not_independent_ground_truth"
+  },
+  "views": [
+    "material_identity",
+    "material_identity_soft",
+    "synthesis_pathway",
+    "experimental_protocol",
+    "balanced_instance"
+  ],
+  "bounds": [
+    "optimistic",
+    "reported",
+    "pessimistic"
+  ],
+  "cluster_count": 20,
+  "cross_paper_consensus_pairs_at_0_8": 120,
+  "representative_pair": [
+    {
+      "view": "material_identity",
+      "rank_left_to_right": 2,
+      "rank_right_to_left": 2,
+      "optimistic": 0.0,
+      "reported": 0.0,
+      "pessimistic": 0.4,
+      "uncertainty_width": 0.4,
+      "common_reported_fraction": 0.6,
+      "one_sided_fraction": 0.0,
+      "structural_difference_fraction": 0.0,
+      "active_weight": 1.0,
+      "excluded_weight": 1.0
+    },
+    {
+      "view": "material_identity_soft",
+      "rank_left_to_right": 2,
+      "rank_right_to_left": 2,
+      "optimistic": 0.0,
+      "reported": 0.0,
+      "pessimistic": 0.4,
+      "uncertainty_width": 0.4,
+      "common_reported_fraction": 0.6,
+      "one_sided_fraction": 0.0,
+      "structural_difference_fraction": 0.0,
+      "active_weight": 1.0,
+      "excluded_weight": 1.0
+    },
+    {
+      "view": "synthesis_pathway",
+      "rank_left_to_right": 5,
+      "rank_right_to_left": 8,
+      "optimistic": 0.12142857142857141,
+      "reported": 0.12142857142857141,
+      "pessimistic": 0.12142857142857141,
+      "uncertainty_width": 0.0,
+      "common_reported_fraction": 1.0,
+      "one_sided_fraction": 0.0,
+      "structural_difference_fraction": 0.0,
+      "active_weight": 1.0,
+      "excluded_weight": 0.0
+    },
+    {
+      "view": "experimental_protocol",
+      "rank_left_to_right": 5,
+      "rank_right_to_left": 8,
+      "optimistic": 0.10032967032967033,
+      "reported": 0.10032967032967033,
+      "pessimistic": 0.10032967032967033,
+      "uncertainty_width": 0.0,
+      "common_reported_fraction": 0.9653846153846154,
+      "one_sided_fraction": 0.0,
+      "structural_difference_fraction": 0.03461538461538462,
+      "active_weight": 1.0,
+      "excluded_weight": 0.0
+    },
+    {
+      "view": "balanced_instance",
+      "rank_left_to_right": 2,
+      "rank_right_to_left": 8,
+      "optimistic": 0.05681318681318681,
+      "reported": 0.07101648351648351,
+      "pessimistic": 0.2568131868131868,
+      "uncertainty_width": 0.2,
+      "common_reported_fraction": 0.7846153846153846,
+      "one_sided_fraction": 0.0,
+      "structural_difference_fraction": 0.015384615384615385,
+      "active_weight": 1.0,
+      "excluded_weight": 0.45
+    }
+  ],
+  "missingness_probe": {
+    "optimistic": 0.0,
+    "reported": 0.0,
+    "pessimistic": 0.5,
+    "uncertainty_width": 0.5,
+    "common_reported_fraction": 0.5,
+    "one_sided_fraction": 0.5,
+    "structural_difference_fraction": 0.0,
+    "active_weight": 2.0,
+    "excluded_weight": 0.0
+  },
+  "invariants": {
+    "no_target_property_field_in_schema": true,
+    "context_ignored_by_distance": true,
+    "no_missing_value_imputation": true,
+    "reported_distance_uses_common_reported_settings": true,
+    "missing_setting_widens_interval": true,
+    "phase4_claim_lock_passed": true
+  }
+}

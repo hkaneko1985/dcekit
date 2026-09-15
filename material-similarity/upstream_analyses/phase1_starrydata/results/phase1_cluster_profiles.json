@@ -1,0 +1,6420 @@
+{
+  "profile_version": "1.0.0",
+  "feature_set": "F2",
+  "clusters": 150,
+  "samples": 5001,
+  "profiles": [
+    {
+      "F2_cluster": 2,
+      "samples": 660,
+      "unique_papers": 135,
+      "top_compositions": [
+        {
+          "value": "Ca3Co4O9",
+          "count": 47,
+          "fraction": 0.07121212121212121
+        },
+        {
+          "value": "ZnO",
+          "count": 12,
+          "fraction": 0.01818181818181818
+        },
+        {
+          "value": "Ca0.9Yb0.1MnO3",
+          "count": 9,
+          "fraction": 0.013636363636363636
+        },
+        {
+          "value": "UO2",
+          "count": 8,
+          "fraction": 0.012121212121212121
+        },
+        {
+          "value": "Ca2.7Bi0.3Co4O9",
+          "count": 6,
+          "fraction": 0.00909090909090909
+        },
+        {
+          "value": "Pr1.85Ce0.15CuO4",
+          "count": 6,
+          "fraction": 0.00909090909090909
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 651,
+          "fraction": 0.9863636363636363
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 230,
+          "fraction": 0.3484848484848485
+        },
+        {
+          "value": "pressuresintering",
+          "count": 69,
+          "fraction": 0.10454545454545454
+        },
+        {
+          "value": "highpressuresynthesis",
+          "count": 16,
+          "fraction": 0.024242424242424242
+        },
+        {
+          "value": "meltgrowth",
+          "count": 10,
+          "fraction": 0.015151515151515152
+        },
+        {
+          "value": "hotdeformed",
+          "count": 5,
+          "fraction": 0.007575757575757576
+        },
+        {
+          "value": "softchemical",
+          "count": 5,
+          "fraction": 0.007575757575757576
+        }
+      ]
+    },
+    {
+      "F2_cluster": 4,
+      "samples": 596,
+      "unique_papers": 113,
+      "top_compositions": [
+        {
+          "value": "CoFe2O4",
+          "count": 85,
+          "fraction": 0.14261744966442952
+        },
+        {
+          "value": "Fe3O4",
+          "count": 37,
+          "fraction": 0.06208053691275168
+        },
+        {
+          "value": "BaFe12O19",
+          "count": 24,
+          "fraction": 0.040268456375838924
+        },
+        {
+          "value": "NiFe2O4",
+          "count": 23,
+          "fraction": 0.03859060402684564
+        },
+        {
+          "value": "NiO",
+          "count": 22,
+          "fraction": 0.03691275167785235
+        },
+        {
+          "value": "Fe2O3",
+          "count": 20,
+          "fraction": 0.03355704697986577
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 590,
+          "fraction": 0.9899328859060402
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "solgel",
+          "count": 158,
+          "fraction": 0.2651006711409396
+        },
+        {
+          "value": "mechanicalalloying",
+          "count": 91,
+          "fraction": 0.15268456375838926
+        },
+        {
+          "value": "hydrothermal",
+          "count": 43,
+          "fraction": 0.07214765100671142
+        },
+        {
+          "value": "softchemical",
+          "count": 33,
+          "fraction": 0.05536912751677853
+        },
+        {
+          "value": "coprecipitation",
+          "count": 22,
+          "fraction": 0.03691275167785235
+        },
+        {
+          "value": "pressuresintering",
+          "count": 7,
+          "fraction": 0.01174496644295302
+        }
+      ]
+    },
+    {
+      "F2_cluster": 8,
+      "samples": 571,
+      "unique_papers": 110,
+      "top_compositions": [
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 40,
+          "fraction": 0.07005253940455342
+        },
+        {
+          "value": "Bi2Te3",
+          "count": 30,
+          "fraction": 0.05253940455341506
+        },
+        {
+          "value": "Bi2Te2.7Se0.3",
+          "count": 16,
+          "fraction": 0.028021015761821366
+        },
+        {
+          "value": "(AgCu)0.995Te0.9Se0.1",
+          "count": 9,
+          "fraction": 0.01576182136602452
+        },
+        {
+          "value": "Bi0.4Sb1.6Te3",
+          "count": 8,
+          "fraction": 0.014010507880910683
+        },
+        {
+          "value": "Te0.98As0.02",
+          "count": 7,
+          "fraction": 0.012259194395796848
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 570,
+          "fraction": 0.9982486865148862
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 214,
+          "fraction": 0.37478108581436076
+        },
+        {
+          "value": "melting",
+          "count": 10,
+          "fraction": 0.017513134851138354
+        },
+        {
+          "value": "sintering",
+          "count": 9,
+          "fraction": 0.01576182136602452
+        },
+        {
+          "value": "meltquench",
+          "count": 6,
+          "fraction": 0.010507880910683012
+        },
+        {
+          "value": "coldpressing",
+          "count": 5,
+          "fraction": 0.008756567425569177
+        },
+        {
+          "value": "hotdeformed",
+          "count": 4,
+          "fraction": 0.0070052539404553416
+        }
+      ]
+    },
+    {
+      "F2_cluster": 18,
+      "samples": 222,
+      "unique_papers": 49,
+      "top_compositions": [
+        {
+          "value": "CoSb3",
+          "count": 20,
+          "fraction": 0.09009009009009009
+        },
+        {
+          "value": "Zn4Sb3",
+          "count": 18,
+          "fraction": 0.08108108108108109
+        },
+        {
+          "value": "FeSb1.84Te0.16",
+          "count": 5,
+          "fraction": 0.02252252252252252
+        },
+        {
+          "value": "(TiN)0.1Co4Sb11.5Te0.5",
+          "count": 4,
+          "fraction": 0.018018018018018018
+        },
+        {
+          "value": "Sr0.0070Ba0.0045Yb0.00354Co0.3596Sb0.5353In0.0018Co0.0360Sb0.05228",
+          "count": 3,
+          "fraction": 0.013513513513513514
+        },
+        {
+          "value": "Co4Sb12",
+          "count": 3,
+          "fraction": 0.013513513513513514
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 221,
+          "fraction": 0.9954954954954955
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 135,
+          "fraction": 0.6081081081081081
+        },
+        {
+          "value": "highpressuresynthesis",
+          "count": 14,
+          "fraction": 0.06306306306306306
+        },
+        {
+          "value": "sintering",
+          "count": 13,
+          "fraction": 0.05855855855855856
+        },
+        {
+          "value": "melting",
+          "count": 6,
+          "fraction": 0.02702702702702703
+        }
+      ]
+    },
+    {
+      "F2_cluster": 46,
+      "samples": 157,
+      "unique_papers": 30,
+      "top_compositions": [
+        {
+          "value": "FePt",
+          "count": 36,
+          "fraction": 0.22929936305732485
+        },
+        {
+          "value": "Nd2Fe14B",
+          "count": 26,
+          "fraction": 0.16560509554140126
+        },
+        {
+          "value": "MnBi",
+          "count": 11,
+          "fraction": 0.07006369426751592
+        },
+        {
+          "value": "Te",
+          "count": 6,
+          "fraction": 0.03821656050955414
+        },
+        {
+          "value": "Fe2VAl",
+          "count": 6,
+          "fraction": 0.03821656050955414
+        },
+        {
+          "value": "MnRh",
+          "count": 6,
+          "fraction": 0.03821656050955414
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 157,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 154,
+          "fraction": 0.9808917197452229
+        }
+      ]
+    },
+    {
+      "F2_cluster": 47,
+      "samples": 141,
+      "unique_papers": 32,
+      "top_compositions": [
+        {
+          "value": "Ba0.5Sr0.5Co0.8Fe0.2O3",
+          "count": 6,
+          "fraction": 0.0425531914893617
+        },
+        {
+          "value": "Sr0.8La0.2MnO3",
+          "count": 4,
+          "fraction": 0.028368794326241134
+        },
+        {
+          "value": "Sr0.4La0.6MnO3",
+          "count": 4,
+          "fraction": 0.028368794326241134
+        },
+        {
+          "value": "Sr0.67La0.33MnO3",
+          "count": 4,
+          "fraction": 0.028368794326241134
+        },
+        {
+          "value": "Gd0.5Sr0.5MnO3",
+          "count": 3,
+          "fraction": 0.02127659574468085
+        },
+        {
+          "value": "Gd0.3Sr0.7MnO3",
+          "count": 3,
+          "fraction": 0.02127659574468085
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "rodshaped",
+          "count": 137,
+          "fraction": 0.9716312056737588
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 111,
+          "fraction": 0.7872340425531915
+        },
+        {
+          "value": "solgel",
+          "count": 4,
+          "fraction": 0.028368794326241134
+        },
+        {
+          "value": "solutioncombustion",
+          "count": 1,
+          "fraction": 0.0070921985815602835
+        }
+      ]
+    },
+    {
+      "F2_cluster": 9,
+      "samples": 125,
+      "unique_papers": 22,
+      "top_compositions": [
+        {
+          "value": "Fe73.5Si3.8C14Mn0.7B4Al4",
+          "count": 6,
+          "fraction": 0.048
+        },
+        {
+          "value": "Fe90Zr9Cu",
+          "count": 5,
+          "fraction": 0.04
+        },
+        {
+          "value": "Fe55Co25P14B6",
+          "count": 5,
+          "fraction": 0.04
+        },
+        {
+          "value": "Nd0.13Fe0.83 B0.04 ",
+          "count": 4,
+          "fraction": 0.032
+        },
+        {
+          "value": "Fe48Co32P14B6",
+          "count": 4,
+          "fraction": 0.032
+        },
+        {
+          "value": "Fe72Al5Ga2P10C6B4Si1",
+          "count": 4,
+          "fraction": 0.032
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "ribbon",
+          "count": 125,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 125,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 44,
+      "samples": 124,
+      "unique_papers": 26,
+      "top_compositions": [
+        {
+          "value": "Dy3Al2",
+          "count": 12,
+          "fraction": 0.0967741935483871
+        },
+        {
+          "value": "La0.75Ce0.25Fe11.05Mn0.455Si1.495",
+          "count": 6,
+          "fraction": 0.04838709677419355
+        },
+        {
+          "value": "La(Fe89Al11)13",
+          "count": 6,
+          "fraction": 0.04838709677419355
+        },
+        {
+          "value": "Ce26Cu74",
+          "count": 6,
+          "fraction": 0.04838709677419355
+        },
+        {
+          "value": "Mg5Al2Sb6",
+          "count": 4,
+          "fraction": 0.03225806451612903
+        },
+        {
+          "value": "Fe28.5Co47.5Ni19Al5Si10",
+          "count": 4,
+          "fraction": 0.03225806451612903
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 124,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 122,
+          "fraction": 0.9838709677419355
+        }
+      ]
+    },
+    {
+      "F2_cluster": 14,
+      "samples": 120,
+      "unique_papers": 25,
+      "top_compositions": [
+        {
+          "value": "La0.67Ba0.33Mn0.9Cr0.1O3",
+          "count": 13,
+          "fraction": 0.10833333333333334
+        },
+        {
+          "value": "La0.7Sr0.3Mn0.9Cu0.1O3",
+          "count": 13,
+          "fraction": 0.10833333333333334
+        },
+        {
+          "value": "CoFe2O4",
+          "count": 11,
+          "fraction": 0.09166666666666666
+        },
+        {
+          "value": "BaFe12O19",
+          "count": 4,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.7Sr0.3MnO3",
+          "count": 3,
+          "fraction": 0.025
+        },
+        {
+          "value": "Ca0.99Gd0.01Mn0.99W0.01O3",
+          "count": 2,
+          "fraction": 0.016666666666666666
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 103,
+          "fraction": 0.8583333333333333
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 38,
+          "fraction": 0.31666666666666665
+        },
+        {
+          "value": "solgel",
+          "count": 34,
+          "fraction": 0.2833333333333333
+        },
+        {
+          "value": "organic",
+          "count": 1,
+          "fraction": 0.008333333333333333
+        }
+      ]
+    },
+    {
+      "F2_cluster": 1,
+      "samples": 116,
+      "unique_papers": 20,
+      "top_compositions": [
+        {
+          "value": "Nd2Fe14B",
+          "count": 38,
+          "fraction": 0.3275862068965517
+        },
+        {
+          "value": "Fe50.56Co46.36V2.92Mn0.12Nb0.04",
+          "count": 12,
+          "fraction": 0.10344827586206896
+        },
+        {
+          "value": "Nd30Fe65B0.9Ce5",
+          "count": 10,
+          "fraction": 0.08620689655172414
+        },
+        {
+          "value": "Fe",
+          "count": 10,
+          "fraction": 0.08620689655172414
+        },
+        {
+          "value": "NdPrFe14BH2.7",
+          "count": 7,
+          "fraction": 0.0603448275862069
+        },
+        {
+          "value": "Nd6.4Pr6.6Fe77Co4.39Ga0.27B5.39",
+          "count": 6,
+          "fraction": 0.05172413793103448
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 116,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 36,
+          "fraction": 0.3103448275862069
+        },
+        {
+          "value": "melting",
+          "count": 36,
+          "fraction": 0.3103448275862069
+        },
+        {
+          "value": "softchemical",
+          "count": 9,
+          "fraction": 0.07758620689655173
+        }
+      ]
+    },
+    {
+      "F2_cluster": 12,
+      "samples": 111,
+      "unique_papers": 25,
+      "top_compositions": [
+        {
+          "value": "NiFe2O4",
+          "count": 12,
+          "fraction": 0.10810810810810811
+        },
+        {
+          "value": "Fe3O4",
+          "count": 9,
+          "fraction": 0.08108108108108109
+        },
+        {
+          "value": "(ZrO2)0.92(Y2O3)0.08",
+          "count": 8,
+          "fraction": 0.07207207207207207
+        },
+        {
+          "value": "La0.67Sr0.33MnO3",
+          "count": 6,
+          "fraction": 0.05405405405405406
+        },
+        {
+          "value": "Ni48.37Fe3.23O48.39",
+          "count": 6,
+          "fraction": 0.05405405405405406
+        },
+        {
+          "value": "LaMnO3",
+          "count": 6,
+          "fraction": 0.05405405405405406
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 110,
+          "fraction": 0.990990990990991
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 66,
+          "fraction": 0.5945945945945946
+        },
+        {
+          "value": "sintering",
+          "count": 7,
+          "fraction": 0.06306306306306306
+        },
+        {
+          "value": "vaporgrowth",
+          "count": 2,
+          "fraction": 0.018018018018018018
+        },
+        {
+          "value": "fluxgrowth",
+          "count": 1,
+          "fraction": 0.009009009009009009
+        },
+        {
+          "value": "calcination",
+          "count": 1,
+          "fraction": 0.009009009009009009
+        }
+      ]
+    },
+    {
+      "F2_cluster": 7,
+      "samples": 92,
+      "unique_papers": 20,
+      "top_compositions": [
+        {
+          "value": "PbSe",
+          "count": 8,
+          "fraction": 0.08695652173913043
+        },
+        {
+          "value": "Ag2Se",
+          "count": 5,
+          "fraction": 0.05434782608695652
+        },
+        {
+          "value": "Cu2CdSnSe4",
+          "count": 4,
+          "fraction": 0.043478260869565216
+        },
+        {
+          "value": "YbAgCu4",
+          "count": 3,
+          "fraction": 0.03260869565217391
+        },
+        {
+          "value": "SnSe",
+          "count": 3,
+          "fraction": 0.03260869565217391
+        },
+        {
+          "value": "CuAgSe",
+          "count": 3,
+          "fraction": 0.03260869565217391
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 92,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 49,
+          "fraction": 0.532608695652174
+        },
+        {
+          "value": "meltgrowth",
+          "count": 3,
+          "fraction": 0.03260869565217391
+        }
+      ]
+    },
+    {
+      "F2_cluster": 10,
+      "samples": 90,
+      "unique_papers": 18,
+      "top_compositions": [
+        {
+          "value": "Cu2Se",
+          "count": 5,
+          "fraction": 0.05555555555555555
+        },
+        {
+          "value": "(Cu2S)0.90(Cu5FeS4)0.10",
+          "count": 4,
+          "fraction": 0.044444444444444446
+        },
+        {
+          "value": "(Cu2S)0.99(Cu5FeS4)0.01",
+          "count": 4,
+          "fraction": 0.044444444444444446
+        },
+        {
+          "value": "(Cu2S)0.95(Cu5FeS4)0.05",
+          "count": 4,
+          "fraction": 0.044444444444444446
+        },
+        {
+          "value": "Cu22Fe8Ge4S32",
+          "count": 4,
+          "fraction": 0.044444444444444446
+        },
+        {
+          "value": "Cu1.96Se",
+          "count": 2,
+          "fraction": 0.022222222222222223
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 90,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "highpressuresynthesis",
+          "count": 18,
+          "fraction": 0.2
+        },
+        {
+          "value": "sintering",
+          "count": 4,
+          "fraction": 0.044444444444444446
+        }
+      ]
+    },
+    {
+      "F2_cluster": 42,
+      "samples": 80,
+      "unique_papers": 17,
+      "top_compositions": [
+        {
+          "value": "Cu26V2Sn6S32",
+          "count": 7,
+          "fraction": 0.0875
+        },
+        {
+          "value": "Bi2O2Se",
+          "count": 5,
+          "fraction": 0.0625
+        },
+        {
+          "value": "Cu4Sn7S16",
+          "count": 4,
+          "fraction": 0.05
+        },
+        {
+          "value": "FeS2",
+          "count": 3,
+          "fraction": 0.0375
+        },
+        {
+          "value": "Pb5Bi6Se14",
+          "count": 2,
+          "fraction": 0.025
+        },
+        {
+          "value": "V0.02MoS2",
+          "count": 2,
+          "fraction": 0.025
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 80,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 57,
+          "fraction": 0.7125
+        }
+      ]
+    },
+    {
+      "F2_cluster": 16,
+      "samples": 66,
+      "unique_papers": 10,
+      "top_compositions": [
+        {
+          "value": "Nd0.651Y0.049Sr0.3MnO3",
+          "count": 11,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Sr0.67La0.33Fe11.7Zn0.1Co0.2O19",
+          "count": 5,
+          "fraction": 0.07575757575757576
+        },
+        {
+          "value": "Bi3.85Mn0.15O4S3",
+          "count": 4,
+          "fraction": 0.06060606060606061
+        },
+        {
+          "value": "Bi3.9Mn0.1O4S3",
+          "count": 4,
+          "fraction": 0.06060606060606061
+        },
+        {
+          "value": "Bi3.875Mn0.125O4S3",
+          "count": 4,
+          "fraction": 0.06060606060606061
+        },
+        {
+          "value": "SrFe12O19",
+          "count": 4,
+          "fraction": 0.06060606060606061
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 55,
+          "fraction": 0.8333333333333334
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 65,
+          "fraction": 0.9848484848484849
+        }
+      ]
+    },
+    {
+      "F2_cluster": 28,
+      "samples": 66,
+      "unique_papers": 10,
+      "top_compositions": [
+        {
+          "value": "La0.78Ca0.195MnO3.01",
+          "count": 12,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "La0.66Sr0.34MnO3",
+          "count": 12,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "La0.67Ba0.33Mn0.9Sn0.1O3",
+          "count": 11,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Bi0.95Nd0.05Fe0.97Mn0.03O3",
+          "count": 4,
+          "fraction": 0.06060606060606061
+        },
+        {
+          "value": "Bi0.5Sr0.5FeO3",
+          "count": 3,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "BaFe12O19",
+          "count": 3,
+          "fraction": 0.045454545454545456
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "plate",
+          "count": 31,
+          "fraction": 0.4696969696969697
+        },
+        {
+          "value": "disc",
+          "count": 15,
+          "fraction": 0.22727272727272727
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 66,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 6,
+      "samples": 59,
+      "unique_papers": 10,
+      "top_compositions": [
+        {
+          "value": "Tl9LaTe6",
+          "count": 2,
+          "fraction": 0.03389830508474576
+        },
+        {
+          "value": "Ru0.25In0.75",
+          "count": 2,
+          "fraction": 0.03389830508474576
+        },
+        {
+          "value": "Al66Ga4Pd21Re9",
+          "count": 2,
+          "fraction": 0.03389830508474576
+        },
+        {
+          "value": "Ru0.15In0.85",
+          "count": 1,
+          "fraction": 0.01694915254237288
+        },
+        {
+          "value": "FeGa3",
+          "count": 1,
+          "fraction": 0.01694915254237288
+        },
+        {
+          "value": "Al67Ga4Pd19Re10",
+          "count": 1,
+          "fraction": 0.01694915254237288
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 59,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 53,
+          "fraction": 0.8983050847457628
+        }
+      ]
+    },
+    {
+      "F2_cluster": 25,
+      "samples": 55,
+      "unique_papers": 14,
+      "top_compositions": [
+        {
+          "value": "Bi 0.42Sb1.51Te3.05Se0.02",
+          "count": 6,
+          "fraction": 0.10909090909090909
+        },
+        {
+          "value": "TiNiSn",
+          "count": 4,
+          "fraction": 0.07272727272727272
+        },
+        {
+          "value": "Bi0.9Sb0.1",
+          "count": 3,
+          "fraction": 0.05454545454545454
+        },
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 3,
+          "fraction": 0.05454545454545454
+        },
+        {
+          "value": "Cu0.01Bi2Te2.7Se0.3(SiO2)0.09",
+          "count": 2,
+          "fraction": 0.03636363636363636
+        },
+        {
+          "value": "Ti0.92Ta0.08CoSb",
+          "count": 1,
+          "fraction": 0.01818181818181818
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 55,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "highpressuresynthesis",
+          "count": 52,
+          "fraction": 0.9454545454545454
+        }
+      ]
+    },
+    {
+      "F2_cluster": 56,
+      "samples": 54,
+      "unique_papers": 9,
+      "top_compositions": [
+        {
+          "value": "Mg3Sb2",
+          "count": 4,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "Mg0.71Sn0.29",
+          "count": 2,
+          "fraction": 0.037037037037037035
+        },
+        {
+          "value": "MgAg0.97Sb0.99",
+          "count": 2,
+          "fraction": 0.037037037037037035
+        },
+        {
+          "value": "Mg0.68Sn0.32",
+          "count": 1,
+          "fraction": 0.018518518518518517
+        },
+        {
+          "value": "Mg3.1975La0.0025Sb1.5Bi0.5",
+          "count": 1,
+          "fraction": 0.018518518518518517
+        },
+        {
+          "value": "Mg0.67Sn0.33",
+          "count": 1,
+          "fraction": 0.018518518518518517
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 54,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 34,
+          "fraction": 0.6296296296296297
+        }
+      ]
+    },
+    {
+      "F2_cluster": 3,
+      "samples": 44,
+      "unique_papers": 9,
+      "top_compositions": [
+        {
+          "value": "AgSbTe2",
+          "count": 3,
+          "fraction": 0.06818181818181818
+        },
+        {
+          "value": "Bi0.3Sb1.7Te3",
+          "count": 3,
+          "fraction": 0.06818181818181818
+        },
+        {
+          "value": "Bi0.3Sb1.675In0.025Te3",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "Bi0.3Sb1.625In0.075Te3",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "CuGaTe2",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "Bi0.3Sb1.650In0.050Te3",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 43,
+          "fraction": 0.9772727272727273
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 36,
+          "fraction": 0.8181818181818182
+        }
+      ]
+    },
+    {
+      "F2_cluster": 30,
+      "samples": 44,
+      "unique_papers": 9,
+      "top_compositions": [
+        {
+          "value": "CoFe2O4",
+          "count": 11,
+          "fraction": 0.25
+        },
+        {
+          "value": "HoMnO3",
+          "count": 6,
+          "fraction": 0.13636363636363635
+        },
+        {
+          "value": "DyMnO3",
+          "count": 5,
+          "fraction": 0.11363636363636363
+        },
+        {
+          "value": "Ba2TiSi2O8",
+          "count": 5,
+          "fraction": 0.11363636363636363
+        },
+        {
+          "value": "TmMnO3",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "GdFeO",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 44,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 22,
+          "fraction": 0.5
+        },
+        {
+          "value": "fluxgrowth",
+          "count": 2,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "sintering",
+          "count": 1,
+          "fraction": 0.022727272727272728
+        }
+      ]
+    },
+    {
+      "F2_cluster": 82,
+      "samples": 41,
+      "unique_papers": 7,
+      "top_compositions": [
+        {
+          "value": "(FeSi2)0.75(Si0.8Ge0.2)0.25",
+          "count": 12,
+          "fraction": 0.2926829268292683
+        },
+        {
+          "value": "Fe0.98Co0.02Si2",
+          "count": 5,
+          "fraction": 0.12195121951219512
+        },
+        {
+          "value": "MnSi1.733",
+          "count": 5,
+          "fraction": 0.12195121951219512
+        },
+        {
+          "value": "Fe28.49Co0.59Si70.5",
+          "count": 5,
+          "fraction": 0.12195121951219512
+        },
+        {
+          "value": "Fe0.95Cr0.05Si2.1",
+          "count": 1,
+          "fraction": 0.024390243902439025
+        },
+        {
+          "value": "Fe0.95Co0.05Si2.1",
+          "count": 1,
+          "fraction": 0.024390243902439025
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 40,
+          "fraction": 0.975609756097561
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 36,
+          "fraction": 0.8780487804878049
+        }
+      ]
+    },
+    {
+      "F2_cluster": 34,
+      "samples": 40,
+      "unique_papers": 11,
+      "top_compositions": [
+        {
+          "value": "Mg2Si0.4Sn0.6",
+          "count": 4,
+          "fraction": 0.1
+        },
+        {
+          "value": "Mg2Si0.98 Pb0.01Sb0.01",
+          "count": 3,
+          "fraction": 0.075
+        },
+        {
+          "value": "(Si0.88Ge0.12)0.925(FeSi2)0.05Ag0.025",
+          "count": 3,
+          "fraction": 0.075
+        },
+        {
+          "value": "MnSi1.75",
+          "count": 2,
+          "fraction": 0.05
+        },
+        {
+          "value": "Mg2Si",
+          "count": 2,
+          "fraction": 0.05
+        },
+        {
+          "value": "Si",
+          "count": 2,
+          "fraction": 0.05
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 40,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "highpressuresynthesis",
+          "count": 34,
+          "fraction": 0.85
+        }
+      ]
+    },
+    {
+      "F2_cluster": 35,
+      "samples": 39,
+      "unique_papers": 10,
+      "top_compositions": [
+        {
+          "value": "Fe2VAl0.9Si0.1",
+          "count": 4,
+          "fraction": 0.10256410256410256
+        },
+        {
+          "value": "KAg3Se2",
+          "count": 3,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "Fe2V1.04Al0.96",
+          "count": 2,
+          "fraction": 0.05128205128205128
+        },
+        {
+          "value": "Fe2V0.96Al1.04",
+          "count": 2,
+          "fraction": 0.05128205128205128
+        },
+        {
+          "value": "Nd2Fe14B",
+          "count": 2,
+          "fraction": 0.05128205128205128
+        },
+        {
+          "value": "Fe2V0.9Al1.1",
+          "count": 2,
+          "fraction": 0.05128205128205128
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 39,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 34,
+          "fraction": 0.8717948717948718
+        }
+      ]
+    },
+    {
+      "F2_cluster": 81,
+      "samples": 39,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "ZrTe5",
+          "count": 5,
+          "fraction": 0.1282051282051282
+        },
+        {
+          "value": "HfTe5",
+          "count": 4,
+          "fraction": 0.10256410256410256
+        },
+        {
+          "value": "CdTe",
+          "count": 2,
+          "fraction": 0.05128205128205128
+        },
+        {
+          "value": "Nb4Si(Te0.95Sb0.05)4",
+          "count": 1,
+          "fraction": 0.02564102564102564
+        },
+        {
+          "value": "TlIn0.9Ga0.1Te2",
+          "count": 1,
+          "fraction": 0.02564102564102564
+        },
+        {
+          "value": "TlIn0.1Ga0.9Te2",
+          "count": 1,
+          "fraction": 0.02564102564102564
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 39,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 17,
+          "fraction": 0.4358974358974359
+        },
+        {
+          "value": "fluxgrowth",
+          "count": 3,
+          "fraction": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "F2_cluster": 0,
+      "samples": 38,
+      "unique_papers": 7,
+      "top_compositions": [
+        {
+          "value": "Ce0.3La0.7Ru2Al10",
+          "count": 2,
+          "fraction": 0.05263157894736842
+        },
+        {
+          "value": "Ru2NbAl",
+          "count": 2,
+          "fraction": 0.05263157894736842
+        },
+        {
+          "value": "Ce16.7Ni11.8Co3.8Al67.7",
+          "count": 1,
+          "fraction": 0.02631578947368421
+        },
+        {
+          "value": "Ce(Ga0.9Al0.1)2",
+          "count": 1,
+          "fraction": 0.02631578947368421
+        },
+        {
+          "value": "Ru1.62Fe0.38NbAl",
+          "count": 1,
+          "fraction": 0.02631578947368421
+        },
+        {
+          "value": "HoGa2",
+          "count": 1,
+          "fraction": 0.02631578947368421
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 33,
+          "fraction": 0.868421052631579
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 35,
+          "fraction": 0.9210526315789473
+        }
+      ]
+    },
+    {
+      "F2_cluster": 33,
+      "samples": 34,
+      "unique_papers": 11,
+      "top_compositions": [
+        {
+          "value": "Bi2Te3",
+          "count": 8,
+          "fraction": 0.23529411764705882
+        },
+        {
+          "value": "PbTe",
+          "count": 8,
+          "fraction": 0.23529411764705882
+        },
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 7,
+          "fraction": 0.20588235294117646
+        },
+        {
+          "value": "Bi0.45Sb1.55Te2.94Se0.11",
+          "count": 2,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Sb2Te3",
+          "count": 2,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Bi2Te2.8Se0.2",
+          "count": 1,
+          "fraction": 0.029411764705882353
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 34,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 14,
+          "fraction": 0.4117647058823529
+        },
+        {
+          "value": "filmgrowth",
+          "count": 3,
+          "fraction": 0.08823529411764706
+        },
+        {
+          "value": "hydrothermal",
+          "count": 2,
+          "fraction": 0.058823529411764705
+        }
+      ]
+    },
+    {
+      "F2_cluster": 13,
+      "samples": 32,
+      "unique_papers": 6,
+      "top_compositions": [
+        {
+          "value": "CuGaTe2",
+          "count": 8,
+          "fraction": 0.25
+        },
+        {
+          "value": "PbTe",
+          "count": 2,
+          "fraction": 0.0625
+        },
+        {
+          "value": "(PbTe)100",
+          "count": 1,
+          "fraction": 0.03125
+        },
+        {
+          "value": "Pb0.59Sn0.4Na0.01Te",
+          "count": 1,
+          "fraction": 0.03125
+        },
+        {
+          "value": "(SnTe)0.4(PbTe)0.6",
+          "count": 1,
+          "fraction": 0.03125
+        },
+        {
+          "value": "Pb1Te1.03Mg0.02Na0.02",
+          "count": 1,
+          "fraction": 0.03125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 26,
+          "fraction": 0.8125
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 28,
+          "fraction": 0.875
+        }
+      ]
+    },
+    {
+      "F2_cluster": 23,
+      "samples": 32,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Ag2WO4",
+          "count": 8,
+          "fraction": 0.25
+        },
+        {
+          "value": "YbMnO3",
+          "count": 5,
+          "fraction": 0.15625
+        },
+        {
+          "value": "Se59.49Cd38.89Ni1.62",
+          "count": 4,
+          "fraction": 0.125
+        },
+        {
+          "value": "Se59.25Cd33.49Ni7.27",
+          "count": 4,
+          "fraction": 0.125
+        },
+        {
+          "value": "CdSe",
+          "count": 3,
+          "fraction": 0.09375
+        },
+        {
+          "value": "Zn0.97Fe0.03O",
+          "count": 2,
+          "fraction": 0.0625
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 32,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "softchemical",
+          "count": 32,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 20,
+      "samples": 30,
+      "unique_papers": 8,
+      "top_compositions": [
+        {
+          "value": "Fe78Si9B13",
+          "count": 4,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "Fe62Co9.5Nd3Dy0.5B25",
+          "count": 4,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "Nd 29.8 Pr 0.2 Fe 64.6 Co 4 Ga 0.46 B 0.94",
+          "count": 3,
+          "fraction": 0.1
+        },
+        {
+          "value": "Co43Fe20Ta5.5B31.5",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "Fe62Co9.5Er3.5B25",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "Fe80V3B17",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "ribbon",
+          "count": 30,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltquench",
+          "count": 14,
+          "fraction": 0.4666666666666667
+        }
+      ]
+    },
+    {
+      "F2_cluster": 24,
+      "samples": 30,
+      "unique_papers": 8,
+      "top_compositions": [
+        {
+          "value": "Fe66.40Cr18.54Ni11.07Mo1.45Mn1.25Cu0.40Si0.68C0.18Co0.01P0.01S0.01",
+          "count": 7,
+          "fraction": 0.23333333333333334
+        },
+        {
+          "value": "(Fe80Nb6B14)0.92Tb0.08",
+          "count": 6,
+          "fraction": 0.2
+        },
+        {
+          "value": "Fe60Co8Zr10Mo5W2B15",
+          "count": 4,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "(Fe80Nb6B14)0.94Tb0.06",
+          "count": 3,
+          "fraction": 0.1
+        },
+        {
+          "value": "Fe67Co9.5Nd3Dy0.5B20",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "(Fe0.75B0.15Si0.10)99Zr1",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 30,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "stripcast",
+          "count": 4,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "pressuresintering",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "meltquench",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "organic",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "mechanicalalloying",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        }
+      ]
+    },
+    {
+      "F2_cluster": 65,
+      "samples": 30,
+      "unique_papers": 7,
+      "top_compositions": [
+        {
+          "value": "La0.8Sr0.2(Ga0.8Fe0.2)0.8Mg0.2O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.95Na0.05FeO3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.8Sr0.2(Ga0.7Fe0.3)0.8Mg0.2O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.8Sr0.2(Ga0.9Co0.1)0.8Mg0.2O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.3Sr0.7Fe0.9Cr0.1O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "La0.8Sr0.2(Ga0.9Fe0.1)0.8Mg0.2O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disk",
+          "count": 25,
+          "fraction": 0.8333333333333334
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 25,
+          "fraction": 0.8333333333333334
+        },
+        {
+          "value": "solgel",
+          "count": 3,
+          "fraction": 0.1
+        }
+      ]
+    },
+    {
+      "F2_cluster": 85,
+      "samples": 30,
+      "unique_papers": 11,
+      "top_compositions": [
+        {
+          "value": "BaFe12O19",
+          "count": 6,
+          "fraction": 0.2
+        },
+        {
+          "value": "Fe2O3",
+          "count": 3,
+          "fraction": 0.1
+        },
+        {
+          "value": "La0.6Sr0.4Co0.2Fe0.8O3",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "Ni0.9Sr0.1Fe2O4",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "Ni0.7Co0.3Fe2O4",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        {
+          "value": "Ni0.7Co0.3Fe1.96Sm0.04O4",
+          "count": 1,
+          "fraction": 0.03333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 21,
+          "fraction": 0.7
+        },
+        {
+          "value": "cylinder",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "plate",
+          "count": 2,
+          "fraction": 0.06666666666666667
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 29,
+          "fraction": 0.9666666666666667
+        }
+      ]
+    },
+    {
+      "F2_cluster": 63,
+      "samples": 29,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Mn0.31Si0.69",
+          "count": 6,
+          "fraction": 0.20689655172413793
+        },
+        {
+          "value": "Si0.5Ge0.5",
+          "count": 6,
+          "fraction": 0.20689655172413793
+        },
+        {
+          "value": "SiGe",
+          "count": 5,
+          "fraction": 0.1724137931034483
+        },
+        {
+          "value": "(SiB0.0004)100(Si0.8Ge0.2)20",
+          "count": 4,
+          "fraction": 0.13793103448275862
+        },
+        {
+          "value": "SiGeO",
+          "count": 3,
+          "fraction": 0.10344827586206896
+        },
+        {
+          "value": "Cr0.35Si0.65",
+          "count": 2,
+          "fraction": 0.06896551724137931
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 29,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 25,
+          "fraction": 0.8620689655172413
+        }
+      ]
+    },
+    {
+      "F2_cluster": 5,
+      "samples": 28,
+      "unique_papers": 6,
+      "top_compositions": [
+        {
+          "value": "As1.975Bi0.025Te3",
+          "count": 2,
+          "fraction": 0.07142857142857142
+        },
+        {
+          "value": "As1.965Bi0.035Te3",
+          "count": 2,
+          "fraction": 0.07142857142857142
+        },
+        {
+          "value": "Mo0.2Nb0.8Te2",
+          "count": 1,
+          "fraction": 0.03571428571428571
+        },
+        {
+          "value": "(PbBi3.98Cd0.02Te7)0.999Cu1",
+          "count": 1,
+          "fraction": 0.03571428571428571
+        },
+        {
+          "value": "Cu2CdSn0.975In0.025Se4",
+          "count": 1,
+          "fraction": 0.03571428571428571
+        },
+        {
+          "value": "Mo0.4Nb0.6Te2",
+          "count": 1,
+          "fraction": 0.03571428571428571
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 28,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltquench",
+          "count": 28,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 75,
+      "samples": 28,
+      "unique_papers": 6,
+      "top_compositions": [
+        {
+          "value": "B1.6Pb0.4Sr2Ca2Cu3O10",
+          "count": 7,
+          "fraction": 0.25
+        },
+        {
+          "value": "TiO2",
+          "count": 4,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Sr0.4CoO2",
+          "count": 3,
+          "fraction": 0.10714285714285714
+        },
+        {
+          "value": "Ca0.4CoO2",
+          "count": 3,
+          "fraction": 0.10714285714285714
+        },
+        {
+          "value": "Al0.04ZnO",
+          "count": 2,
+          "fraction": 0.07142857142857142
+        },
+        {
+          "value": "Al0.005ZnO",
+          "count": 1,
+          "fraction": 0.03571428571428571
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "epitaxialfilm",
+          "count": 28,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 20,
+          "fraction": 0.7142857142857143
+        }
+      ]
+    },
+    {
+      "F2_cluster": 41,
+      "samples": 27,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Ni45.4Mn41.5In13.1",
+          "count": 11,
+          "fraction": 0.4074074074074074
+        },
+        {
+          "value": "Ni50Mn36Sb14",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "Ni50Mn36Sn14",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "Ni50Mn36Sb12Ge2",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "Ni50Mn36Sb12Al2",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "NiTi0.3Zr0.35Hf0.35Sn",
+          "count": 1,
+          "fraction": 0.037037037037037035
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 21,
+          "fraction": 0.7777777777777778
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 27,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 45,
+      "samples": 27,
+      "unique_papers": 7,
+      "top_compositions": [
+        {
+          "value": "UCo0.5Sb2",
+          "count": 4,
+          "fraction": 0.14814814814814814
+        },
+        {
+          "value": "FeSb2",
+          "count": 3,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "RuSb2",
+          "count": 3,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "EuZn2Sb2",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "YbZn2Sb2",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "CaZn2Sb2",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 27,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "fluxgrowth",
+          "count": 23,
+          "fraction": 0.8518518518518519
+        }
+      ]
+    },
+    {
+      "F2_cluster": 80,
+      "samples": 27,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "NaCo2O4",
+          "count": 4,
+          "fraction": 0.14814814814814814
+        },
+        {
+          "value": "NaCo1.9Fe0.1O4",
+          "count": 3,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "NaCo1.6Fe0.4O4",
+          "count": 3,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "NaCo1.4Fe0.6O4",
+          "count": 3,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "(Nd)0.05(Lu0.14Gd0.86)0.95VO4",
+          "count": 2,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "value": "Bi2Sr2Co2O8",
+          "count": 1,
+          "fraction": 0.037037037037037035
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 27,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 12,
+          "fraction": 0.4444444444444444
+        }
+      ]
+    },
+    {
+      "F2_cluster": 55,
+      "samples": 26,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "CeAu2Si2",
+          "count": 7,
+          "fraction": 0.2692307692307692
+        },
+        {
+          "value": "CeIrSi3",
+          "count": 6,
+          "fraction": 0.23076923076923078
+        },
+        {
+          "value": "Yb(Rh0.22Co0.78)2Si2",
+          "count": 1,
+          "fraction": 0.038461538461538464
+        },
+        {
+          "value": "Yb(Rh0.805Co0.195)2Si2",
+          "count": 1,
+          "fraction": 0.038461538461538464
+        },
+        {
+          "value": "CoSi0.84Si0.16",
+          "count": 1,
+          "fraction": 0.038461538461538464
+        },
+        {
+          "value": "Ba7.8Al5.3Ga7.4Si33.3",
+          "count": 1,
+          "fraction": 0.038461538461538464
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 26,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 11,
+          "fraction": 0.4230769230769231
+        }
+      ]
+    },
+    {
+      "F2_cluster": 49,
+      "samples": 25,
+      "unique_papers": 7,
+      "top_compositions": [
+        {
+          "value": "Bi2Te3",
+          "count": 4,
+          "fraction": 0.16
+        },
+        {
+          "value": "Co0.76Te",
+          "count": 4,
+          "fraction": 0.16
+        },
+        {
+          "value": "Bi2Te2.8Se0.2",
+          "count": 1,
+          "fraction": 0.04
+        },
+        {
+          "value": "Bi1.91Mn0.09Te3",
+          "count": 1,
+          "fraction": 0.04
+        },
+        {
+          "value": "Bi2Te2.7Se0.3",
+          "count": 1,
+          "fraction": 0.04
+        },
+        {
+          "value": "Bi1.98Mn0.02Te3",
+          "count": 1,
+          "fraction": 0.04
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 22,
+          "fraction": 0.88
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 17,
+          "fraction": 0.68
+        }
+      ]
+    },
+    {
+      "F2_cluster": 51,
+      "samples": 24,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Pr0.7Ca0.3Mn0.8Cr0.2O3",
+          "count": 10,
+          "fraction": 0.4166666666666667
+        },
+        {
+          "value": "CoFe1.7Mo0.3O4",
+          "count": 3,
+          "fraction": 0.125
+        },
+        {
+          "value": "CoFe1.95Mo0.05O4",
+          "count": 2,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Pr0.7Ca0.3MnO3",
+          "count": 2,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "CoFe1.85Mo0.15O4",
+          "count": 2,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "CoFe1.8Mo0.2O4",
+          "count": 2,
+          "fraction": 0.08333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disk",
+          "count": 24,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 24,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 27,
+      "samples": 22,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "CoZr2",
+          "count": 6,
+          "fraction": 0.2727272727272727
+        },
+        {
+          "value": "Co0.846Ni0.154Zr2",
+          "count": 3,
+          "fraction": 0.13636363636363635
+        },
+        {
+          "value": "Co0.71Ni0.29Zr2",
+          "count": 3,
+          "fraction": 0.13636363636363635
+        },
+        {
+          "value": "Zr30.3Ni28.8Co9.6Sn31.3",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "Zr31.0Ni34.2Co2.4Sn32.4",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "Zr31.4Ni30.1Ir6.1Sn32.4",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 10,
+          "fraction": 0.45454545454545453
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 22,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 48,
+      "samples": 22,
+      "unique_papers": 4,
+      "top_compositions": [
+        {
+          "value": "CePtSn",
+          "count": 4,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "CeRhSn",
+          "count": 2,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "LaRhSn",
+          "count": 2,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "SnSe0.97Cl0.03",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "ZrNiSn",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        },
+        {
+          "value": "SnSe0.96Cl0.04",
+          "count": 1,
+          "fraction": 0.045454545454545456
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 22,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 20,
+          "fraction": 0.9090909090909091
+        }
+      ]
+    },
+    {
+      "F2_cluster": 22,
+      "samples": 21,
+      "unique_papers": 4,
+      "top_compositions": [
+        {
+          "value": "FeSe",
+          "count": 11,
+          "fraction": 0.5238095238095238
+        },
+        {
+          "value": "Cu3SbSe3",
+          "count": 1,
+          "fraction": 0.047619047619047616
+        },
+        {
+          "value": "WSe2",
+          "count": 1,
+          "fraction": 0.047619047619047616
+        },
+        {
+          "value": "Ca3Co2O6",
+          "count": 1,
+          "fraction": 0.047619047619047616
+        },
+        {
+          "value": "WSe1.9",
+          "count": 1,
+          "fraction": 0.047619047619047616
+        },
+        {
+          "value": "WSe1.96",
+          "count": 1,
+          "fraction": 0.047619047619047616
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 21,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 17,
+          "fraction": 0.8095238095238095
+        }
+      ]
+    },
+    {
+      "F2_cluster": 43,
+      "samples": 20,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "C",
+          "count": 13,
+          "fraction": 0.65
+        },
+        {
+          "value": "C6H7N",
+          "count": 3,
+          "fraction": 0.15
+        },
+        {
+          "value": "C14H14O5S2",
+          "count": 2,
+          "fraction": 0.1
+        },
+        {
+          "value": "(C6H7N)94.94(C3N4)5.06",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "((C6H7N)94.94(C3N4)5.06)2.39(C)97.61",
+          "count": 1,
+          "fraction": 0.05
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 20,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "softchemical",
+          "count": 5,
+          "fraction": 0.25
+        },
+        {
+          "value": "organic",
+          "count": 1,
+          "fraction": 0.05
+        }
+      ]
+    },
+    {
+      "F2_cluster": 53,
+      "samples": 20,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Bi85Sb15",
+          "count": 6,
+          "fraction": 0.3
+        },
+        {
+          "value": "Bi0.85Sb0.15",
+          "count": 2,
+          "fraction": 0.1
+        },
+        {
+          "value": "Bi0.67Sb0.33",
+          "count": 2,
+          "fraction": 0.1
+        },
+        {
+          "value": "Bi85Sb11Ag4",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "Bi85Sb14.5Ge0.5",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "Bi85Sb13Ag2",
+          "count": 1,
+          "fraction": 0.05
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 20,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 10,
+          "fraction": 0.5
+        },
+        {
+          "value": "pressuresintering",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "meltgrowth",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "hotdeformed",
+          "count": 1,
+          "fraction": 0.05
+        }
+      ]
+    },
+    {
+      "F2_cluster": 92,
+      "samples": 20,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "(Bi0.2Sb0.8)2Te3",
+          "count": 7,
+          "fraction": 0.35
+        },
+        {
+          "value": "La3Te3.20Sb0.80",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "La3Te3.40Sb0.60",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "La2.99Te4",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "La3Te3.35Bi0.65",
+          "count": 1,
+          "fraction": 0.05
+        },
+        {
+          "value": "La2.72Te4",
+          "count": 1,
+          "fraction": 0.05
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 20,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 17,
+          "fraction": 0.85
+        }
+      ]
+    },
+    {
+      "F2_cluster": 71,
+      "samples": 17,
+      "unique_papers": 4,
+      "top_compositions": [
+        {
+          "value": " Nd16Fe71B13",
+          "count": 12,
+          "fraction": 0.7058823529411765
+        },
+        {
+          "value": "Nd7Fe81B12",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Fe91Zr9",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "MnBi",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Nd7Fe81Ti2B10",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Nd7Fe79Zr2B12",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 17,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 17,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 77,
+      "samples": 17,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "FeV0.24Nb0.40Hf0.16Ti0.2Sb",
+          "count": 2,
+          "fraction": 0.11764705882352941
+        },
+        {
+          "value": "FeV0.49Nb0.15Hf0.16Ti0.2Sb",
+          "count": 2,
+          "fraction": 0.11764705882352941
+        },
+        {
+          "value": "FeV0.39Nb0.25Hf0.16Ti0.2Sb",
+          "count": 2,
+          "fraction": 0.11764705882352941
+        },
+        {
+          "value": "FeSb1.95In0.05Se4",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "Nb26.7Ti6.7Fe33.3Sb33.3",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        },
+        {
+          "value": "FeSb2Se4",
+          "count": 1,
+          "fraction": 0.058823529411764705
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 17,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "highpressuresynthesis",
+          "count": 7,
+          "fraction": 0.4117647058823529
+        }
+      ]
+    },
+    {
+      "F2_cluster": 54,
+      "samples": 16,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Ce(Cu0.4Co0.6)2Ge2",
+          "count": 2,
+          "fraction": 0.125
+        },
+        {
+          "value": "Pr0.55Ce0.45Pt4Ge12",
+          "count": 1,
+          "fraction": 0.0625
+        },
+        {
+          "value": "CePt4Ge12",
+          "count": 1,
+          "fraction": 0.0625
+        },
+        {
+          "value": "Pr0.125Ce0.875Pt4Ge12",
+          "count": 1,
+          "fraction": 0.0625
+        },
+        {
+          "value": "Pr0.9Ce0.1Pt4Ge12",
+          "count": 1,
+          "fraction": 0.0625
+        },
+        {
+          "value": "Ce(Cu0.6Co0.4)2Ge2",
+          "count": 1,
+          "fraction": 0.0625
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 16,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 9,
+          "fraction": 0.5625
+        }
+      ]
+    },
+    {
+      "F2_cluster": 50,
+      "samples": 15,
+      "unique_papers": 4,
+      "top_compositions": [
+        {
+          "value": "SmFeAsO0.8F0.2",
+          "count": 3,
+          "fraction": 0.2
+        },
+        {
+          "value": "SmFeAsO0.88F0.12",
+          "count": 3,
+          "fraction": 0.2
+        },
+        {
+          "value": "(Th0.94U0.06)3As4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "FeAs2",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Th3As4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "GdFeAsO",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 15,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 5,
+          "fraction": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "F2_cluster": 62,
+      "samples": 15,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Zr3Ni2.9Co0.1Sb4",
+          "count": 2,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "Zr3Ni1.7Pt0.6Co0.1Sb4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "ZrHf2Ni2.7Cu0.3Sb4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Zr3Ni1.7Pt1.2Co0.1Sb4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Zr3Ni3Sb4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Zr3Ni2.6Pt0.3Co0.1Sb4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 15,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 123,
+      "samples": 15,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Ba8Al16Si30",
+          "count": 2,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "MnSi1.7",
+          "count": 2,
+          "fraction": 0.13333333333333333
+        },
+        {
+          "value": "Ba7.9Al12.6Si33.4",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Mn3Ga0.85Zn0.15C",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "(Mn0.80Fe0.20)Si1.7",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        },
+        {
+          "value": "Mn3GaC",
+          "count": 1,
+          "fraction": 0.06666666666666667
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 15,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 13,
+          "fraction": 0.8666666666666667
+        }
+      ]
+    },
+    {
+      "F2_cluster": 73,
+      "samples": 13,
+      "unique_papers": 5,
+      "top_compositions": [
+        {
+          "value": "Bi0.45Sb1.55Te3",
+          "count": 2,
+          "fraction": 0.15384615384615385
+        },
+        {
+          "value": "Sb2Te2.4Se0.6",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "Sb2Te2Se",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "TlGdSe2",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "Tl9GdTe6",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 11,
+          "fraction": 0.8461538461538461
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 12,
+          "fraction": 0.9230769230769231
+        }
+      ]
+    },
+    {
+      "F2_cluster": 79,
+      "samples": 13,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "CeCu2.02Si1.98",
+          "count": 3,
+          "fraction": 0.23076923076923078
+        },
+        {
+          "value": "SrSi2",
+          "count": 2,
+          "fraction": 0.15384615384615385
+        },
+        {
+          "value": "Sr0.86Ba0.14Si2",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "Sr0.93Ba0.07Si2",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "YbCu2Si2",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        },
+        {
+          "value": "EuCu2Si2",
+          "count": 1,
+          "fraction": 0.07692307692307693
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 11,
+          "fraction": 0.8461538461538461
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 13,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 26,
+      "samples": 12,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Co67Ni33",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Co74Ni26",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Co72Ni28",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Co71Ni29",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "Ni44.3Fe13.9Cr41.8",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Ni36.9Fe26.7Cr36.3",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "fluxgrowth",
+          "count": 8,
+          "fraction": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "F2_cluster": 60,
+      "samples": 12,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Fe2O3",
+          "count": 3,
+          "fraction": 0.25
+        },
+        {
+          "value": "MnFe2O4",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": " Fe3O4",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Sr3Co2Fe24O41",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Sr3Co0.5Zn1.5Fe24O41",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Sr3Co1.5Zn0.5Fe24O41",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "plate",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "softchemical",
+          "count": 10,
+          "fraction": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "F2_cluster": 68,
+      "samples": 12,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "YAgSb2",
+          "count": 3,
+          "fraction": 0.25
+        },
+        {
+          "value": "LaAgSb2",
+          "count": 3,
+          "fraction": 0.25
+        },
+        {
+          "value": "FeSb2",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "CeAgSb2",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        },
+        {
+          "value": "DyAgSb2",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "F2_cluster": 72,
+      "samples": 12,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "(Ce0.75La0.25)Ru2",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "(Ce0.8Nd0.2)Ru2",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Th2Ru2Sn",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "(Ce0.9Nd0.1)Ru2",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "CeRu2",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "(Ce0.6Nd0.4)Ru2",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 95,
+      "samples": 12,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "RuCl3",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 98,
+      "samples": 12,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ge0.88Sb0.12Te",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "GeTe",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Ge0.90Sb0.1Te",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Ge0.9Sb0.1Te0.89Se0.11",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Ge0.92Sb0.08Te",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        },
+        {
+          "value": "Ge0.90Sb0.10Te0.88Se0.12",
+          "count": 1,
+          "fraction": 0.08333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 122,
+      "samples": 12,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "GaNCr3",
+          "count": 4,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "GaN2.5Mn0.5",
+          "count": 3,
+          "fraction": 0.25
+        },
+        {
+          "value": "GaNCr1.5Mn1.5",
+          "count": 3,
+          "fraction": 0.25
+        },
+        {
+          "value": "GaNCr2Mn",
+          "count": 2,
+          "fraction": 0.16666666666666666
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 12,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 29,
+      "samples": 11,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "CrN",
+          "count": 2,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "Cr0.95V0.05N",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Cr0.9Mo0.1N",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Cr0.99Mo0.01N",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Cr0.99W0.01N",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Cr0.97Mo0.01W0.02N",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 4,
+          "fraction": 0.36363636363636365
+        }
+      ]
+    },
+    {
+      "F2_cluster": 31,
+      "samples": 11,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Ce0.9CoFe3Sb12",
+          "count": 7,
+          "fraction": 0.6363636363636364
+        },
+        {
+          "value": "BP",
+          "count": 2,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "B",
+          "count": 2,
+          "fraction": 0.18181818181818182
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 36,
+      "samples": 11,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "YB66",
+          "count": 4,
+          "fraction": 0.36363636363636365
+        },
+        {
+          "value": "Tm0.9Yb.1B12",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "TmB12",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Tm0.2Yb0.8B12",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Tm0.95Yb0.05B12",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "YB66C0.6",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 5,
+          "fraction": 0.45454545454545453
+        },
+        {
+          "value": "bulk",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 37,
+      "samples": 11,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ni45Co5Mn37.5In12.5",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 52,
+      "samples": 11,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Mg2Si0.5Sn0.5",
+          "count": 3,
+          "fraction": 0.2727272727272727
+        },
+        {
+          "value": "Mg2Si0.8Sn0.2",
+          "count": 2,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "Mg2Si0.8Sn0.2Pr0.002",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Mg2Si0.8Sn0.2Pr0.006",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "(Mg2Si0.8Sn0.2)99.84(SiO2)0.16",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Mg2Si0.8Sn0.2Pr0.01",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 7,
+          "fraction": 0.6363636363636364
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 7,
+          "fraction": 0.6363636363636364
+        }
+      ]
+    },
+    {
+      "F2_cluster": 88,
+      "samples": 11,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Co80Ni20",
+          "count": 2,
+          "fraction": 0.18181818181818182
+        },
+        {
+          "value": "Co60Ni40",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Co100",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Co20Ni80",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Ni100",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        },
+        {
+          "value": "Co10Ni90",
+          "count": 1,
+          "fraction": 0.09090909090909091
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "hydrothermal",
+          "count": 11,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 96,
+      "samples": 10,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Nd65Fe10Co15Al10",
+          "count": 1,
+          "fraction": 0.1
+        },
+        {
+          "value": "Al68Mn23Si9",
+          "count": 1,
+          "fraction": 0.1
+        },
+        {
+          "value": "Al69Mn23Si8",
+          "count": 1,
+          "fraction": 0.1
+        },
+        {
+          "value": "Al70Mn23Si7",
+          "count": 1,
+          "fraction": 0.1
+        },
+        {
+          "value": "Al73Mn5.5Fe12.5Si9",
+          "count": 1,
+          "fraction": 0.1
+        },
+        {
+          "value": "Nd65Co25Al10",
+          "count": 1,
+          "fraction": 0.1
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 10,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltquench",
+          "count": 10,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 39,
+      "samples": 9,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(Bi2S3)0.995(BiCl3)0.005",
+          "count": 3,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "(Bi2S2.94Se0.06)0.995(BiCl3)0.005",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "(Bi2S3)0.99(BiCl3)",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Bi2S3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "(Bi2S3)0.9975(BiCl3)0.0025",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "(Bi2S2.88Se0.12)0.995(BiCl3)0.005",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "plate",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 57,
+      "samples": 9,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Ca5In0.98Zn0.02Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Ca5In2Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Ca5In0.8Zn0.2Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr5In1.9Zn0.1Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr5In1.975Zn0.025Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr5In2Sb6",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 86,
+      "samples": 9,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ba8Cu4.8Ga1Ge40.2",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 90,
+      "samples": 9,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Ni70Mn30",
+          "count": 6,
+          "fraction": 0.6666666666666666
+        },
+        {
+          "value": "Ni",
+          "count": 2,
+          "fraction": 0.2222222222222222
+        },
+        {
+          "value": "CoCrFeNiMn",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 7,
+          "fraction": 0.7777777777777778
+        },
+        {
+          "value": "softchemical",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "F2_cluster": 97,
+      "samples": 9,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Sr(Zr0.9Yb0.05Gd0.05)O2.95",
+          "count": 3,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "SrTiO3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr0.875Pr0.125TiO3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr0.85Pr0.15TiO3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr0.825Pr0.175TiO3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Sr0.9Pr0.1TiO3",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "coating",
+          "count": 3,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "disc",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 5,
+          "fraction": 0.5555555555555556
+        }
+      ]
+    },
+    {
+      "F2_cluster": 102,
+      "samples": 9,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Tl4TiS4",
+          "count": 3,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "Ru0.45Mn0.55Si1.5",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Ru0.5Mn0.5Si1.5",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "CoSi0.88Al0.12",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Ru0.15Mn0.85Si1.5",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Ru0.25Mn0.75Si1.5",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 106,
+      "samples": 9,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "UNi4B",
+          "count": 2,
+          "fraction": 0.2222222222222222
+        },
+        {
+          "value": "LuNi2B2",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Lu0.925Yb0.075Ni2B2",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Lu0.66Yb0.34Ni2B2",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Lu0.1Yb0.9Ni2B2",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        },
+        {
+          "value": "Lu0.2Yb0.8Ni2B2",
+          "count": 1,
+          "fraction": 0.1111111111111111
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 9,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 2,
+          "fraction": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "F2_cluster": 21,
+      "samples": 8,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "La2.4Ce13.6Fe78B6",
+          "count": 2,
+          "fraction": 0.25
+        },
+        {
+          "value": "La4Ce12Fe78B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ce16Fe78B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "La8Ce8Fe78B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "La1.8Ce10.2Fe82B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "La5.6Ce10.416Fe78B6",
+          "count": 1,
+          "fraction": 0.125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "cylinder",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 64,
+      "samples": 8,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 6,
+          "fraction": 0.75
+        },
+        {
+          "value": "(Bi0.3Sb0.7)2Te3",
+          "count": 2,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "device",
+          "count": 6,
+          "fraction": 0.75
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "organic",
+          "count": 2,
+          "fraction": 0.25
+        }
+      ]
+    },
+    {
+      "F2_cluster": 69,
+      "samples": 8,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Sm2Fe17N0.86",
+          "count": 2,
+          "fraction": 0.25
+        },
+        {
+          "value": "Sm25.60Co49.93Fe15.56Cu5.91Zr3.00",
+          "count": 2,
+          "fraction": 0.25
+        },
+        {
+          "value": "Pr9.76Dy2Fe82B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Pr11.76Fe82B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Pr10.76Dy1Fe82B6",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Pr8.76Dy3Fe82B6",
+          "count": 1,
+          "fraction": 0.125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "plate",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 6,
+          "fraction": 0.75
+        }
+      ]
+    },
+    {
+      "F2_cluster": 70,
+      "samples": 8,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(Ge0.93Ti0.01Bi0.06Te)Cu0.015",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ge0.99Ti0.01Te",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "(Ge0.93Ti0.01Bi0.06Te)Cu0.01",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ge0.95Ti0.01Bi0.04Te",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "GeTe",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "(Ge0.93Ti0.01Bi0.06Te)Cu0.005",
+          "count": 1,
+          "fraction": 0.125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 8,
+          "fraction": 1.0
+        },
+        {
+          "value": "sintering",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 83,
+      "samples": 8,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "YbAl3",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "sheet",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 107,
+      "samples": 8,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ca3Co3.9Fe0.1O9",
+          "count": 2,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ca3Co3.95Cu0.05O9",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ca3Co4O9",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ca3Co3.9Cu0.1O9",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ca3Co3.95Fe0.05O9",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ca3Co3.9Mn0.1O9",
+          "count": 1,
+          "fraction": 0.125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "coldpressing",
+          "count": 7,
+          "fraction": 0.875
+        }
+      ]
+    },
+    {
+      "F2_cluster": 110,
+      "samples": 8,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "CeYMgNi2",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ce0.05La0.95Co10Fe2Si\t",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "CeCo0.8Cu0.2Si",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Sm3Zn2Co3",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "Ce0.5Y0.5MgNi4",
+          "count": 1,
+          "fraction": 0.125
+        },
+        {
+          "value": "SmZn",
+          "count": 1,
+          "fraction": 0.125
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "rod",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 8,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 38,
+      "samples": 7,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "C",
+          "count": 2,
+          "fraction": 0.2857142857142857
+        },
+        {
+          "value": "(C14H14O5S2)74.76(Cu2SnSe3 )25.24",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(C14H14O5S2)80.44(Bi0.5Sb1.5Te3 )19.56",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(C14H14O5S2)75.93(Bi2S3)24.07",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "CsC24(C2H4)1.4",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "C14H14O5S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 7,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "softchemical",
+          "count": 3,
+          "fraction": 0.42857142857142855
+        }
+      ]
+    },
+    {
+      "F2_cluster": 59,
+      "samples": 7,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(Zn0.87In0.13)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(Zn0.90In0.10)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(Zn0.78In0.22)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(Zn0.92In0.08)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(Zn0.98In0.02)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "(Zn0.95In0.05)O",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 7,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "calcination",
+          "count": 7,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 100,
+      "samples": 7,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ti1.015S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Ti1.01S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Ti1.005S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Ti1.05S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Ti1.025S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Ti1.02S2",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 7,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 7,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 115,
+      "samples": 7,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Bi2Te3",
+          "count": 2,
+          "fraction": 0.2857142857142857
+        },
+        {
+          "value": "Bi0.442Te0.558",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Bi0.392Te0.608",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "BiTe",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Bi0.39Te0.61",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        },
+        {
+          "value": "Bi0.42Te0.58",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "wire",
+          "count": 6,
+          "fraction": 0.8571428571428571
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 1,
+          "fraction": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "F2_cluster": 40,
+      "samples": 6,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Sm12Co76Cu9Ti3",
+          "count": 3,
+          "fraction": 0.5
+        },
+        {
+          "value": "Sm12Co88",
+          "count": 3,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 89,
+      "samples": 6,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "[C(NH2)3]Cu(HCOO)3",
+          "count": 3,
+          "fraction": 0.5
+        },
+        {
+          "value": "YBCO",
+          "count": 2,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "[C(NH2)3]Zn(HCOO)3",
+          "count": 1,
+          "fraction": 0.16666666666666666
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 119,
+      "samples": 6,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Ge",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 130,
+      "samples": 6,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Mg3Bi0.33",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "fluxgrowth",
+          "count": 6,
+          "fraction": 1.0
+        },
+        {
+          "value": "melting",
+          "count": 6,
+          "fraction": 1.0
+        },
+        {
+          "value": "vaporgrowth",
+          "count": 6,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 11,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "PbTe",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Pb0.98Bi0.02Te",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Pb0.99Bi0.01Te",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Pb0.985Bi0.015Te",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Pb0.995Bi0.005Te",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "softchemical",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 15,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Nd12.5Fe76.1Co5.5B5.9",
+          "count": 2,
+          "fraction": 0.4
+        },
+        {
+          "value": "Nd14.4Fe77.5B8",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Nd14.4Fe80B5.5",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Nd14.4Fe79B6.5",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "button",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 58,
+      "samples": 5,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "CaTi0.7Fe0.3O3",
+          "count": 2,
+          "fraction": 0.4
+        },
+        {
+          "value": "BaTiO3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "La0.5Mg0.5TiO3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "CaTi0.9Fe0.1O3",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disc",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 3,
+          "fraction": 0.6
+        }
+      ]
+    },
+    {
+      "F2_cluster": 78,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Bi85Sb15C0.33",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi85Sb15",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi85Sb15C0.65",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi85Sb15C1.3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi85Sb15C0.98",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 93,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Bi1.95Sn0.05S3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi1.995Sn0.005S3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi1.985Sn0.015S3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi2S3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi1.975Sn0.025S3",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 108,
+      "samples": 5,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "SnSe",
+          "count": 4,
+          "fraction": 0.8
+        },
+        {
+          "value": "Bi2Se3",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ]
+    },
+    {
+      "F2_cluster": 111,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "((Bi0.2Sb0.8)2Te3)98.46Te1.54",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "((Bi0.2Sb0.8)2Te3)99.74Te0.26",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "(Bi0.2Sb0.8)2Te3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "((Bi0.2Sb0.8)2Te3)97.46Te2.54",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "((Bi0.2Sb0.8)2Te3)99.48Te0.52",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "ribbon",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltquench",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 112,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ce1.8Zr0.2Fe12Co2B",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "LaCeFe12.7Co1.3B",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "La0.9Ce0.9Zr0.2Fe12.7Co1.3B",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "La0.95Ce0.95Zr0.1Fe12.7Co1.3B",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Ce1.9Zr0.1Fe12Co2B",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bonded",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 116,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ni",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "electrolysis",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 128,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "YBa2Cu3O6.7",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "YBa2Cu3O6.73",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "YBa2Cu3O6.76",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "YBa2Cu3O6.64",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "YBa2Cu3O6.67",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disk",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 136,
+      "samples": 5,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(Sb0.88Bi0.12)2Te3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Bi2Te3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "(Sb0.93Bi0.07)2Te3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "Sb2Te3",
+          "count": 1,
+          "fraction": 0.2
+        },
+        {
+          "value": "(Sb0.76Bi0.24)2Te3",
+          "count": 1,
+          "fraction": 0.2
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "epitaxialfilm",
+          "count": 5,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 17,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "BaCoF4",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 19,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Co",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 67,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "GdCd",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "PrCd",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "TbCd",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "NdCd",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 76,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "CaMnO3",
+          "count": 2,
+          "fraction": 0.5
+        },
+        {
+          "value": "Ca0.95Bi0.05MnO3",
+          "count": 2,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "rodshaped",
+          "count": 2,
+          "fraction": 0.5
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "calcination",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 87,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Cu2Se",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 94,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Gd5Si2Ge2",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Gd5Si1.7Ge2.3",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Gd5Si2.2Ge1.8",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Gd5Si2.3Ge1.7",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 103,
+      "samples": 4,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Sb2Te3",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 3,
+          "fraction": 0.75
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ]
+    },
+    {
+      "F2_cluster": 113,
+      "samples": 4,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "La6Pd12In5",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ce2Pd2.05Sn0.95",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ce6Pd12In5",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ce2Ni2Sn",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 118,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "ErPdBi",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "ErPdSb",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "GdPdBi",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "GdPdSb",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 126,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Bi0.95Sb0.05",
+          "count": 2,
+          "fraction": 0.5
+        },
+        {
+          "value": "Bi",
+          "count": 2,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "wire",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 127,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "YbAgCu4",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "ribbon",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 137,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "ZrNi1.01Pb0.38Sn0.6Bi0.02",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "ZrNi1.03Pb0.38Sn0.6Bi0.02",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "ZrNi1.07Pb0.38Sn0.6Bi0.02",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "ZrNiPb0.38Sn0.6Bi0.02",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 4,
+          "fraction": 1.0
+        },
+        {
+          "value": "melting",
+          "count": 4,
+          "fraction": 1.0
+        },
+        {
+          "value": "pressuresintering",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 140,
+      "samples": 4,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "BaFe12O19",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ba0.6La0.4Fe12O19",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ba0.4La0.6Fe12O19",
+          "count": 1,
+          "fraction": 0.25
+        },
+        {
+          "value": "Ba0.8La0.2Fe12O19",
+          "count": 1,
+          "fraction": 0.25
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "tablet",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 4,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 32,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "SiC",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "wire",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 74,
+      "samples": 3,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Ca5Si3",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "Ce0.9La0.1Fe4P12",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "Sr5Si3",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "fluxgrowth",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 91,
+      "samples": 3,
+      "unique_papers": 3,
+      "top_compositions": [
+        {
+          "value": "Bi0.44Te0.66Sb1.56Te2.34",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "Ni0.05Bi2Te3",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "Sb2Te2.8Se0.2",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "orientedbulk",
+          "count": 2,
+          "fraction": 0.6666666666666666
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 99,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Nd2Fe14B",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "highpressuresynthesis",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 101,
+      "samples": 3,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "(YBa2Cu3O7)4(La0.67Ca0.33MnO3)1",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "(YBa2Cu3O7)8(La0.67Ca0.33MnO3)1",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "(HSC6H4OH)39.14(Sb2Te3)60.86",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "multilayerfilm",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 109,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Bi1.4Rh3I9",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 131,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "TbZn",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "LuZn",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "GdZn",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 133,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(La0.7Ca0.3MnO3)0.6331(Mn3O4)0.3669",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "(La0.7Ca0.3MnO3)0.2006(Mn3O4)0.7994",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        },
+        {
+          "value": "(La0.7Ca0.3MnO3)0.9691(Mn3O4)0.0309",
+          "count": 1,
+          "fraction": 0.3333333333333333
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "composite",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 143,
+      "samples": 3,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "ThCoGa4",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 3,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 61,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "CuI",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "AgI",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 66,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Si80Ge20B2",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "Si80Ge20P2",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "device",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 84,
+      "samples": 2,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "Na1.7Ag0.2Co1.8O4",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "NdBa0.94La0.06Co2O5.55",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "orientedbulk",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ]
+    },
+    {
+      "F2_cluster": 105,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Mn0.03Bi1.97Se3",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "Mn0.15Bi1.85Se3",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "module",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "meltgrowth",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 114,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "NdFeB",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disc",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 117,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "La3Zn4P6.6Br0.8",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "La3Zn4P6Cl",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "singlecrystal",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "pressuresintering",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 120,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "HfNiSn",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "TiNiSn",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "film",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 121,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Bi0.5Sb1.5Te3",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "orientedbulk",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "hotdeformed",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 124,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "SbBiTe",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "SbBi",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "vaporgrowth",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 125,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ce3Co4Sn13",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 134,
+      "samples": 2,
+      "unique_papers": 2,
+      "top_compositions": [
+        {
+          "value": "LaRhIn",
+          "count": 1,
+          "fraction": 0.5
+        },
+        {
+          "value": "CeRhSb",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 135,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "MoS2",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "hydrothermal",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 138,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "MnSi1.7",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "epitaxialfilm",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 1,
+          "fraction": 0.5
+        }
+      ]
+    },
+    {
+      "F2_cluster": 142,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Co69.25Fe4.25B10.5Si13Nb3",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "wire",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 144,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "NbCo1.1Sn",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bulk",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 148,
+      "samples": 2,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "MnB",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "plate",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 2,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 104,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Y2.8La0.2Fe5O12",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "bonded",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "solgel",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 129,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "NaYF4",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "powder",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "hydrothermal",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 132,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Ba0.6Sr0.4Fe10MnTiO19",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "ribbon",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "mechanicalalloying",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 139,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(TbAs)0.0636InGaAs",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "epitaxialfilm",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "filmgrowth",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 141,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "YBCO",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "polycrystal",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": []
+    },
+    {
+      "F2_cluster": 145,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "MgFe2O4",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "coprecipitation",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 146,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Nb4SiTe4",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 147,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "(Bi2S2.25Se0.75)0.995(BiCl3)0.005",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "disk",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "melting",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    },
+    {
+      "F2_cluster": 149,
+      "samples": 1,
+      "unique_papers": 1,
+      "top_compositions": [
+        {
+          "value": "Fe1.9656Ti0.0344",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_forms": [
+        {
+          "value": "pellet",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ],
+      "top_fabrication_categories": [
+        {
+          "value": "sintering",
+          "count": 1,
+          "fraction": 1.0
+        }
+      ]
+    }
+  ],
+  "warning": "Profiles are descriptive and were not used to select or validate the clusters."
+}

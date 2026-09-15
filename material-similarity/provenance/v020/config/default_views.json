@@ -1,0 +1,41 @@
+{
+  "note": "用途別の例であり、最良重みではない",
+  "views": {
+    "composition": {
+      "soft_identity": false,
+      "facet_weights": {"composition": 1.0}
+    },
+    "material_identity": {
+      "soft_identity": false,
+      "facet_weights": {"composition": 0.4, "material_identity": 0.6}
+    },
+    "material_identity_soft": {
+      "soft_identity": true,
+      "facet_weights": {"composition": 0.4, "material_identity": 0.6}
+    },
+    "synthesis_pathway": {
+      "soft_identity": false,
+      "facet_weights": {"process_method": 0.25, "step_type": 0.25, "sequence": 0.5}
+    },
+    "experimental_protocol": {
+      "soft_identity": true,
+      "facet_weights": {
+        "process_method": 0.15,
+        "step_type": 0.15,
+        "sequence": 0.25,
+        "settings": 0.45
+      }
+    },
+    "balanced_instance": {
+      "soft_identity": true,
+      "facet_weights": {
+        "composition": 0.2,
+        "material_identity": 0.25,
+        "process_method": 0.1,
+        "step_type": 0.1,
+        "sequence": 0.15,
+        "settings": 0.2
+      }
+    }
+  }
+}

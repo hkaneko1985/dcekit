@@ -1,0 +1,16 @@
+{
+  "samples": 1103,
+  "papers": 217,
+  "same_paper_pairs": 4838,
+  "clusterings": 126,
+  "loading_reporting": {
+    "one": 1016,
+    "neither": 78,
+    "both": 9
+  },
+  "reported_lift": {
+    "min": 1.0084462023045577,
+    "median": 5.8379164633187575,
+    "max": 17.612660241117798
+  }
+}

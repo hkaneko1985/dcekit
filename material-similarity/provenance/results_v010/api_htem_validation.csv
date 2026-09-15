@@ -1,0 +1,7 @@
+view,bound,n_records,n_clusters,ari_vs_reported_composition,mean_uncertainty_width,mean_common_reported_fraction
+htem_composition,optimistic,183,20,1.0,0.0,1.0
+htem_composition,reported,183,20,1.0,0.0,1.0
+htem_composition,pessimistic,183,20,1.0,0.0,1.0
+htem_composition_settings,optimistic,183,20,0.7878963415728287,0.29270467162132263,0.7072953581809998
+htem_composition_settings,reported,183,20,0.9097504313448449,0.29270467162132263,0.7072953581809998
+htem_composition_settings,pessimistic,183,20,0.4843430070943803,0.29270467162132263,0.7072953581809998

@@ -1,0 +1,33 @@
+{
+  "query_records": 120,
+  "article_groups": 93,
+  "scale_source_records": 832,
+  "mask_fraction": 0.0,
+  "query_repetitions": 1,
+  "query_rows": 7200,
+  "summary_conditions": 60,
+  "eligible_directed_pairs_per_condition": [
+    14222
+  ],
+  "records_without_reported_settings": [
+    "l242-s4-narayanan-2006"
+  ],
+  "empty_masks_in_existing_25_50_75_percent_experiment": 9,
+  "observed_baseline_ranges": {
+    "material_identity": {
+      "minimum_upper_distance": 0.6572316887841861,
+      "maximum_common_coverage": 0.5142857142857142
+    },
+    "experimental_protocol": {
+      "minimum_upper_distance": 0.2019767441860465,
+      "maximum_common_coverage": 0.925
+    },
+    "balanced_instance": {
+      "minimum_upper_distance": 0.4203044074666856,
+      "maximum_common_coverage": 0.6071428571428572
+    }
+  },
+  "rules_and_views": "unchanged config/interval_utility.json; R3 descriptive baseline",
+  "reference": "documented unmasked pair distance; no physical target",
+  "scope": "pairwise decisions only; no cluster-membership or stability guarantee"
+}

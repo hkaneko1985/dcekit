@@ -1,0 +1,53 @@
+[1/3] -m unittest discover -s tests -v
+test_cluster_consensus (test_analysis.AnalysisTests.test_cluster_consensus) ... ok
+test_clustering_and_neighbors_are_deterministic (test_analysis.AnalysisTests.test_clustering_and_neighbors_are_deterministic) ... ok
+test_mutual_neighbor_consensus (test_analysis.AnalysisTests.test_mutual_neighbor_consensus) ... ok
+test_interleaving_does_not_mask_unrelated_step (test_mask_correspondence.CanonicalMaskTests.test_interleaving_does_not_mask_unrelated_step) ... ok
+test_keys_identical_to_distance_flattening (test_mask_correspondence.CanonicalMaskTests.test_keys_identical_to_distance_flattening) ... ok
+test_mask_preserves_step_order_repeats_and_provenance (test_mask_correspondence.CanonicalMaskTests.test_mask_preserves_step_order_repeats_and_provenance) ... ok
+test_missing_side_is_not_in_bilateral_intersection (test_mask_correspondence.CanonicalMaskTests.test_missing_side_is_not_in_bilateral_intersection) ... ok
+test_bilateral_missingness_fixed_universe (test_revision.MissingnessAlignmentTests.test_bilateral_missingness_fixed_universe) ... ok
+test_empty_explicit_scales_not_refitted (test_revision.MissingnessAlignmentTests.test_empty_explicit_scales_not_refitted) ... ok
+test_sequence_alignment_symmetry_with_insertion (test_revision.MissingnessAlignmentTests.test_sequence_alignment_symmetry_with_insertion) ... ok
+test_conflicting_units (test_revision.NormalizationTests.test_conflicting_units) ... ok
+test_explicit_angular_units (test_revision.NormalizationTests.test_explicit_angular_units) ... ok
+test_explicit_time_units (test_revision.NormalizationTests.test_explicit_time_units) ... ok
+test_fraction_aliases (test_revision.NormalizationTests.test_fraction_aliases) ... ok
+test_numeric_chemical_prefix (test_revision.NormalizationTests.test_numeric_chemical_prefix) ... ok
+test_quantity_not_unit_substring (test_revision.NormalizationTests.test_quantity_not_unit_substring) ... ok
+test_temperature_conversion (test_revision.NormalizationTests.test_temperature_conversion) ... ok
+setUpClass (test_revision.SourceRegressionTests) ... skipped 'Acquire the NanoMine source snapshot to run source regressions'
+test_composition_is_scale_invariant (test_schema_and_distance.SchemaAndDistanceTests.test_composition_is_scale_invariant) ... ok
+test_context_is_not_a_distance_feature (test_schema_and_distance.SchemaAndDistanceTests.test_context_is_not_a_distance_feature) ... ok
+test_joint_nonapplicability_does_not_create_similarity (test_schema_and_distance.SchemaAndDistanceTests.test_joint_nonapplicability_does_not_create_similarity) ... ok
+test_known_absent_step_and_unreported_sequence_are_different (test_schema_and_distance.SchemaAndDistanceTests.test_known_absent_step_and_unreported_sequence_are_different) ... ok
+test_missing_setting_does_not_change_common_reported_distance (test_schema_and_distance.SchemaAndDistanceTests.test_missing_setting_does_not_change_common_reported_distance) ... ok
+test_nonsequential_process_settings_are_supported (test_schema_and_distance.SchemaAndDistanceTests.test_nonsequential_process_settings_are_supported) ... ok
+test_pairwise_matrices_are_symmetric_and_bounded (test_schema_and_distance.SchemaAndDistanceTests.test_pairwise_matrices_are_symmetric_and_bounded) ... ok
+test_reported_value_requires_value (test_schema_and_distance.SchemaAndDistanceTests.test_reported_value_requires_value) ... ok
+test_sequence_preserves_order_and_repetition (test_schema_and_distance.SchemaAndDistanceTests.test_sequence_preserves_order_and_repetition) ... ok
+test_undefined_reported_requires_explicit_policy (test_schema_and_distance.SchemaAndDistanceTests.test_undefined_reported_requires_explicit_policy) ... ok
+test_weight_views_are_sensitivity_views_not_optimized (test_schema_and_distance.SchemaAndDistanceTests.test_weight_views_are_sensitivity_views_not_optimized) ... ok
+test_api_summary_counts_and_version (test_validation_artifacts.ValidationArtifactTests.test_api_summary_counts_and_version) ... ok
+test_audit_manifest_scope (test_validation_artifacts.ValidationArtifactTests.test_audit_manifest_scope) ... ok
+test_available_frozen_inputs_match_manifest (test_validation_artifacts.ValidationArtifactTests.test_available_frozen_inputs_match_manifest) ... ok
+test_htem_csv_summary_agree (test_validation_artifacts.ValidationArtifactTests.test_htem_csv_summary_agree) ... /workspace/scratch/03e8fc24b9ff/revision_r3/release_staging/github/material-similarity/tests/test_validation_artifacts.py:17: ResourceWarning: unclosed file <_io.TextIOWrapper name='/workspace/scratch/03e8fc24b9ff/revision_r3/release_staging/github/material-similarity/results/api_htem_validation.csv' mode='r' encoding='UTF-8'>
+  r=next(x for x in csv.DictReader((ROOT/'results/api_htem_validation.csv').open()) if x['view']=='htem_composition_settings' and x['bound']=='reported')
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_no_control_characters (test_validation_artifacts.ValidationArtifactTests.test_no_control_characters) ... ok
+test_representative_pair_summary_agree (test_validation_artifacts.ValidationArtifactTests.test_representative_pair_summary_agree) ... /workspace/scratch/03e8fc24b9ff/revision_r3/release_staging/github/material-similarity/tests/test_validation_artifacts.py:21: ResourceWarning: unclosed file <_io.TextIOWrapper name='/workspace/scratch/03e8fc24b9ff/revision_r3/release_staging/github/material-similarity/results/representative_pair_views.csv' mode='r' encoding='UTF-8'>
+  r=list(csv.DictReader((ROOT/'results/representative_pair_views.csv').open()))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_retrospective_scope (test_validation_artifacts.ValidationArtifactTests.test_retrospective_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.063s
+
+OK (skipped=1)
+[2/3] src/make_figures.py --results-dir results
+Wrote Figures 2-4 and S1-S3 in PNG and SVG formats to /workspace/scratch/03e8fc24b9ff/revision_r3/release_staging/github/material-similarity/outputs/figures
+[3/3] src/make_revision_figures.py --results-dir results/revision
+Wrote Figures 5–7
+Completed saved-table checks/figures only; no data analysis rerun.

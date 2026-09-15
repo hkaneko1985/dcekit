@@ -1,0 +1,5 @@
+dataset,earlier_records,record_inputs_included,included_records,earlier_context_groups,file,snapshot,license_status,reproduction
+HTEM,1891,True,1891,17,data/upstream/htem_phase2_records.jsonl.gz,2026-09-07,HTEM full notice retained,Phase 2 code/grid; common API
+NanoMine,832,True,832,119,data/upstream/nanomine_phase3_records.jsonl.gz,2026-09-10 normalized snapshot,NOASSERTION for API data; software license excludes API data,Phase 3 code/grid; common API
+Starrydata,5001,True,5001,947,data/cohorts/starrydata_phase1_cohort.jsonl.gz,2026-09-06 source recorded upstream,Starrydata project use rules and attribution,selected features/assignments and historical code; full-source CSV missing
+PNCExtract,1103,True,1103,217,data/cohorts/pncextract_breadth_records.jsonl.gz,46a8175f1371048ae3d381bbc6e01e5922321794,source Apache-2.0 notice retained,normalized-cohort breadth runner
