@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+"""
+FTCP-VAE Training and Evaluation Pipeline
+
+Author: Issa Onishi
+Created: October 1, 2026
+"""
 
 import tensorflow as tf
 from tensorflow.keras import Model, Input
@@ -15,7 +21,6 @@ class DecoderPattern:
         "0" -> Baseline spec (Conv2DTranspose x3)
         "1" -> Modified kernel size and stride (Conv2DTranspose x3)
         "2" -> One additional Conv2DTranspose layer (Conv2DTranspose x4)
-        "3" -> Fine-grained upsampling counterpart of CNN encoder pattern 3
     """
 
     def __init__(self, network_pattern="1", cnn_pattern="0",
@@ -53,10 +58,7 @@ class DecoderPattern:
         xd = latent_inputs
 
         # ==================== Fully connected layers (selected by network_pattern) ====================
-        if self.network_pattern == "0":
-            xd = Dense(1024, activation="relu")(xd)
-
-        elif self.network_pattern in ["1", "2"]:
+        if self.network_pattern in ["0", "1", "2"]:
             pass # no FC layer between z and Conv2DTranspose
 
         elif self.network_pattern == "3":
@@ -104,14 +106,6 @@ class DecoderPattern:
                 (self.max_filters // 4, (3, 1), (2, 1)),
                 (self.max_filters // 8, (3, 1), (1, 1)),
                 (self.channel_dim,      (3, 1), (1, 1)),
-            ]
-
-        elif self.cnn_pattern == "3":
-            # Fine-grained upsampling counterpart of CNN3
-            conv_params = [
-                (self.max_filters // 2, (3, 1), (1, 1)),
-                (self.max_filters // 4, (3, 1), (2, 1)),
-                (self.channel_dim,      (5, 1), (2, 1)),
             ]
 
         else:

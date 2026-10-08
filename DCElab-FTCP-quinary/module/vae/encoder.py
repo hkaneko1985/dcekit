@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+"""
+FTCP-VAE Training and Evaluation Pipeline
+
+Author: Issa Onishi
+Created: October 1, 2026
+"""
 
 from tensorflow.keras import Model, Input
 from tensorflow.keras.layers import (
@@ -15,7 +21,6 @@ class EncoderPattern:
         "0" -> Baseline spec (Conv1D x3)
         "1" -> Modified kernel size and stride (Conv1D x3)
         "2" -> One additional Conv1D layer (Conv1D x4)
-        "3" -> Fine-grained receptive field expansion (Conv1D x3)
     """
 
     def __init__(self, network_pattern="1", cnn_pattern="0",
@@ -69,13 +74,6 @@ class EncoderPattern:
                 (self.max_filters // 2, 3, 2),
                 (self.max_filters,      3, 1),
             ]
-        elif self.cnn_pattern == "3":
-            # Fine-grained receptive field expansion (no extra layers)
-            conv_params = [
-                (self.max_filters // 4, 5, 2),
-                (self.max_filters // 2, 3, 2),
-                (self.max_filters,      3, 1),
-            ]
         else:
             raise ValueError(f"Invalid cnn_pattern: {self.cnn_pattern}")
 
@@ -116,7 +114,7 @@ class EncoderPattern:
             x = Dense(2048, activation="sigmoid")(x)
             x = Dense(1024, activation="sigmoid")(x)
             latent_dim = 512
-
+        
         else:
             raise ValueError(f"Invalid network_pattern: {self.network_pattern}")
 

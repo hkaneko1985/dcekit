@@ -1,3 +1,8 @@
+# Modified from data.py of PV-Lab/FTCP (https://github.com/PV-Lab/FTCP),
+# licensed under the Apache License 2.0. Changes made in this work: data_query
+# rewritten for the current Materials Project API (mp_api); FTCP_represent
+# is unchanged.
+
 import joblib, json
 import numpy as np
 import pandas as pd
@@ -6,16 +11,21 @@ from tqdm import tqdm
 tqdm = partial(tqdm, position=0, leave=True)
 from sklearn.preprocessing import OneHotEncoder
 from pymatgen.core import Structure
-#from mp_api.client import MPRester
 
-'''
+
 def data_query(mp_api_key, max_elms=3, min_elms=3, max_sites=20, include_te=False):
+    '''
     The function queries data from Materials Project.
+
+    Note: the dataset used in the paper
+    (data_query_3_5_elements_property_nsites_below_112.csv) is distributed
+    separately (see README.md); this function is not needed to reproduce the
+    results. It requires the mp_api package (pip install mp-api).
 
     Parameters
     ----------
     mp_api_key : str
-        The API key for Mateirals Project.
+        The API key for Materials Project.
     max_elms : int, optional
         Maximum number of components/elements for crystals to be queried.
         The default is 3.
@@ -23,68 +33,76 @@ def data_query(mp_api_key, max_elms=3, min_elms=3, max_sites=20, include_te=Fals
         Minimum number of components/elements for crystals to be queried.
         The default is 3.
     max_sites : int, optional
-        Maximum number of components/elements for crystals to be queried.
+        Maximum number of sites per unit cell for crystals to be queried.
         The default is 20.
     include_te : bool, optional
-        DESCRIPTION. The default is False.
+        Whether to append thermoelectric properties. The default is False.
 
     Returns
     -------
     dataframe : pandas dataframe
-        Dataframe returned by MPDataRetrieval.
-    
+        Dataframe of the queried materials (one row per material).
+    '''
+    # Imported here so that the rest of this module can be used without mp_api
+    from mp_api.client import MPRester
+
     with MPRester(mp_api_key) as mpr:
         # Query materials with specified criteria
         docs = mpr.materials.summary.search(
             energy_above_hull=(0.0, 0.08),
-            fields=["material_id", "formula_pretty", "band_gap", 
-                   "energy_above_hull", "structure", "spacegroup"]
+            fields=["material_id", "formula_pretty", "formation_energy_per_atom",
+                    "band_gap", "energy_above_hull", "structure", "symmetry"]
         )
-    
+
     # Convert search results to dataframe
     data_list = []
     op = tqdm(docs)
     for doc in op:
         op.set_description('converting API results to dataframe ...')
-        
+
         structure = doc.structure
         nelements = len(structure.composition.elements)
         nsites = len(structure)
-        
+
         # Filter by nelements and nsites criteria
         if nelements < min_elms or nelements > max_elms or nsites > max_sites:
             continue
-        
+
+        # Skip materials without formation energy or band gap
+        if doc.formation_energy_per_atom is None or doc.band_gap is None:
+            continue
+
         # Convert structure to CIF string
-        cif_str = structure.to('cif')
-        
+        cif_str = structure.to(fmt='cif')
+
         data_dict = {
             'material_id': doc.material_id,
-            'formation_energy_per_atom': doc.energy_above_hull if hasattr(doc, 'energy_above_hull') else None,
-            'band_gap': doc.band_gap if hasattr(doc, 'band_gap') else None,
+            'formation_energy_per_atom': doc.formation_energy_per_atom,
+            'band_gap': doc.band_gap,
             'pretty_formula': doc.formula_pretty,
             'e_above_hull': doc.energy_above_hull,
             'elements': list(structure.composition.elements),
             'cif': cif_str,
-            'spacegroup_number': doc.spacegroup.number if hasattr(doc, 'spacegroup') and doc.spacegroup else None
+            'spacegroup.number': doc.symmetry.number if doc.symmetry else None
         }
         data_list.append(data_dict)
-    
+
     dataframe = pd.DataFrame(data_list)
     dataframe['ind'] = np.arange(len(dataframe))
-    
+
     if include_te:
         # Read thermoelectric properties from https://datadryad.org/stash/dataset/doi:10.5061/dryad.gn001
         te = pd.read_csv('data/thermoelectric_prop.csv', index_col=0)
         te = te.dropna()
         # Get compound index that has both ground-state and thermoelectric properties
+        dataframe.index = list(dataframe['material_id'])
         ind = dataframe.index.intersection(te.index)
         # Concatenate thermoelectric properties to corresponding compounds
         dataframe = pd.concat([dataframe, te.loc[ind,:]], axis=1)
         dataframe['Seebeck'] = dataframe['Seebeck'].apply(np.abs)
-    
+
     return dataframe
-'''
+
 
 def FTCP_represent(dataframe, max_elms=3, max_sites=20, return_Nsites=False):
     '''

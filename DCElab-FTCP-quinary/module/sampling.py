@@ -1,3 +1,6 @@
+# Modified from sampling.py of PV-Lab/FTCP (https://github.com/PV-Lab/FTCP),
+# licensed under the Apache License 2.0. Modified in this work.
+
 import joblib, os
 import numpy as np
 from tqdm import tqdm
@@ -10,6 +13,7 @@ def get_info(ftcp_designs,
              max_sites=20, 
              elm_str=joblib.load('data/element.pkl'),
              to_CIF=True,
+             cif_dir='designed_CIFs',
              check_uniqueness=True,
              mp_api_key=None,
              ):
@@ -122,7 +126,7 @@ def get_info(ftcp_designs,
         ind = list(np.arange(len(pred_formula)))
     
     if to_CIF:
-        os.makedirs('designed_CIFs', exist_ok=True)
+        os.makedirs(cif_dir, exist_ok=True)
         
         op = tqdm(ind)
         for i, j in enumerate(op):
@@ -132,7 +136,7 @@ def get_info(ftcp_designs,
                 crystal = spacegroup.crystal(pred_formula[j],
                                              basis=pred_site_coor[j],
                                              cellpar=pred_latt[j])
-                write('designed_CIFs/'+str(i)+'.cif', crystal)
+                write(os.path.join(cif_dir, str(i)+'.cif'), crystal)
             except:
                 pass
     

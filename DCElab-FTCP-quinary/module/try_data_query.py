@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# Adapted from data_query in data.py of PV-Lab/FTCP
+# (https://github.com/PV-Lab/FTCP), licensed under the Apache License 2.0,
+# for the current Materials Project API (mp_api).
 """
 Created on Fri Jul 11 10:10:08 2025
 
@@ -15,10 +18,10 @@ from pymatgen.core import Structure
 
 tqdm = partial(tqdm, position=0, leave=True)
 
-mp_api_key = 'mFnrpK7kHHooGFO3KTwP347xQ5nts0Kd'
-max_elms=4
+mp_api_key = 'YOUR_API_KEY'
+max_elms=5
 min_elms=3
-max_sites=40
+max_sites=112
 include_te=False
 
 with MPRester(mp_api_key) as mpr:
@@ -61,5 +64,5 @@ if include_te:
     df = pd.concat([df, te.loc[ind]], axis=1)
 
 df['cif'] = df['cif'].apply(lambda s: s.to(fmt="cif"))
-df.to_csv('data_query_3_4_elements_property.csv')
+df.to_csv('data_query_3_5_elements_property_nsites_below_112.csv')
 

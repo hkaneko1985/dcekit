@@ -103,6 +103,28 @@ def elem_acc(X_o, X_r, max_elms, n_elm):
     return float(np.mean(accs))
 
 
+def elem_acc_valid(X_o, X_r, max_elms, n_elm):
+    """Element classification accuracy over VALID element slots only.
+
+    A slot i of a structure is valid if the ORIGINAL structure actually has an
+    element there, i.e. its one-hot column X_o[:, :n_elm, i] is non-zero.
+    Zero-padded slots (e.g. the 4th/5th slot of a ternary structure) are
+    excluded: for them argmax returns index 0 for both original and
+    reconstruction, which would otherwise be counted as a (trivial) match.
+    Returns the pooled accuracy over all valid (structure, slot) pairs.
+    """
+    correct, total = 0, 0
+    for i in range(max_elms):
+        valid = X_o[:, :n_elm, i].max(axis=1) > 0.5
+        if not np.any(valid):
+            continue
+        t = np.argmax(X_o[valid, :n_elm, i], axis=1)
+        p = np.argmax(X_r[valid, :n_elm, i], axis=1)
+        correct += int(np.sum(t == p))
+        total   += int(valid.sum())
+    return float(correct / total) if total > 0 else float("nan")
+
+
 def extract_lattice_coords(X_dn, n_elm, max_sites):
     """Extract lattice constants, angles, and fractional site coordinates from FTCP tensor."""
     abc  = X_dn[:, n_elm,           :3]
@@ -316,7 +338,15 @@ def build_and_load(cfg, X_test, y_test, base_dir, data_name):
         optimizer=tf.keras.optimizers.Adam(5e-4),
         loss=lambda yt, yp: 0.0,
     )
-    vae.load_weights(wp, by_name=True)
+    # Fix: load by TOPOLOGY (layer order), not by name. The Dense layers in the
+    # encoder (patterns 0,3,4,5,6) are unnamed, so Keras auto-names them
+    # dense, dense_1, ... using a process-wide counter. During training (01) several
+    # models are built in one process, so the saved names are dense_8, dense_12, ...
+    # whereas here (fresh counter after clear_session) they are dense, dense_1, ...
+    # With by_name=True those layers were silently skipped and kept their RANDOM
+    # initial weights, giving garbage reconstructions for any model that was not the
+    # first one built in its training process.
+    vae.load_weights(wp)
     return vae
 
 
@@ -339,23 +369,22 @@ def get_model_display_name(run_tag, conv_tag, best_tag):
 # ===========================================================================
 # CIF generation
 # ===========================================================================
-
 def write_single_cif_from_ftcp(ftcp_one, out_path, max_elms, max_sites, elm_str):
     """Generate a CIF file from a single FTCP design vector via get_info."""
-    if os.path.exists("designed_CIFs"):
-        shutil.rmtree("designed_CIFs")
-    get_info(
-        ftcp_designs=ftcp_one[np.newaxis, ...],
-        max_elms=max_elms,
-        max_sites=max_sites,
-        elm_str=elm_str,
-        to_CIF=True,
-        check_uniqueness=False,
-    )
-    src = os.path.join("designed_CIFs", "0.cif")
-    if not os.path.exists(src):
-        raise FileNotFoundError("designed_CIFs/0.cif was not created")
-    shutil.move(src, out_path)
+    with tempfile.TemporaryDirectory() as tmp:
+        get_info(
+            ftcp_designs=ftcp_one[np.newaxis, ...],
+            max_elms=max_elms,
+            max_sites=max_sites,
+            elm_str=elm_str,
+            to_CIF=True,
+            cif_dir=tmp,
+            check_uniqueness=False,
+        )
+        src = os.path.join(tmp, "0.cif")
+        if not os.path.exists(src):
+            raise FileNotFoundError("0.cif was not created")
+        shutil.move(src, out_path)
 
 
 def generate_ranked_cif_pairs(X_recon, score_df, out_dir, prefix,
