@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-FTCP-VAE Training and Evaluation Pipeline
 
-Author: Issa Onishi
-Created: October 1, 2026
-"""
-
-import os, sys, time, random, gc, tracemalloc
+import os, sys, time, random
 import tensorflow as tf
 import numpy as np
 import pandas as pd
@@ -256,26 +250,12 @@ class FTCP_VAE(Model):
     # exact internal mechanism either - but decorating train_step with
     # @tf.function is the concrete, standard fix that all of them converge
     # on, and it is exactly what Keras' own compiled path already does.
-    # This also matches "計算の蓄積": each epoch, this step was being
+    # This also matches the observed accumulation of computation over epochs: each epoch, this step was being
     # re-traced/re-interpreted by Python from scratch; @tf.function traces
     # it once (per input shape) and reuses the compiled graph, so the
     # per-batch cost should stay flat instead of climbing.
     @tf.function
     def train_step(self, data):
-        # Diagnostic only (temporary): a plain Python print() inside a
-        # @tf.function-decorated method executes ONLY while TensorFlow is
-        # tracing/building the graph, never on the replayed compiled calls
-        # afterward. So if @tf.function is doing its job, this line should
-        # print at most a small, fixed number of times total (one per
-        # distinct input shape/dtype it sees - normally 1, or 2 if the
-        # last, smaller batch of an epoch has a different shape) and then
-        # stop appearing for the rest of the run. If it keeps printing on
-        # every single batch/epoch instead, that means train_step is being
-        # re-traced constantly and @tf.function is not actually preventing
-        # the per-call Python/graph-build overhead - which would explain
-        # why the previous @tf.function fix did not stop epoch time from
-        # growing on Admin. Remove this line once the question is settled.
-        print("[Diag] train_step is being TRACED now (should be rare, not every batch)")
         if self.supervised:
             x, y = data
         else:
@@ -337,12 +317,11 @@ class FTCP_VAE(Model):
             batch_size = min(32, n_samples)
 
         # Fix (correction of the earlier .cache() fix, which did NOT work):
-        # the diagnostic run on Admin showed epoch time still climbing
+        # epoch time was still climbing
         # (122s -> 128s -> 135s -> 153s...) even with .cache() AND
-        # @tf.function on train_step, while tracemalloc/gc showed
-        # essentially flat Python-level memory and the "[Diag] TRACED"
-        # print appeared only at the very start of the run (no repeated
-        # retracing). So neither eager-mode overhead nor a Python-level
+        # @tf.function on train_step, while Python-level memory stayed
+        # essentially flat and there was no repeated
+        # retracing. So neither eager-mode overhead nor a Python-level
         # leak was the cause. But the log itself keeps showing, every
         # single epoch:
         #   "Allocation of 5872013312 exceeds 10% of system memory"
@@ -371,15 +350,6 @@ class FTCP_VAE(Model):
         for cb in callbacks:
             cb.set_model(self)
             cb.on_train_begin({})
-
-        # Diagnostic only (temporary): track Python-level allocated memory
-        # (tracemalloc, stdlib, works on Windows) and the live Python object
-        # count (gc) once per epoch. This is to directly observe whether
-        # something is actually accumulating epoch over epoch (memory leak /
-        # growing object graph), rather than guessing again. Remove once the
-        # question is settled.
-        if not tracemalloc.is_tracing():
-            tracemalloc.start()
 
         for epoch in range(self.start_epoch, epochs):
             for cb in callbacks:
@@ -423,19 +393,6 @@ class FTCP_VAE(Model):
                   f"recon={logs_scalar['recon_loss']:.6f}, "
                   f"KL={logs_scalar['kl_loss']:.6f}, "
                   f"prop={logs_scalar['prop_loss']:.6f}")
-
-            # Diagnostic only (temporary): see comment near tracemalloc.start()
-            # above. gc.collect() is called first so the object count reflects
-            # genuinely-unreachable-but-not-yet-freed garbage too (a classic
-            # symptom of reference cycles that the generational GC struggles
-            # to reclaim promptly in long eager-mode loops).
-            gc.collect()
-            _current_mem, _peak_mem = tracemalloc.get_traced_memory()
-            print(
-                f"[Diag] epoch {epoch+1}: elapsed={elapsed:.1f}s, "
-                f"tracemalloc current={_current_mem/1e6:.1f}MB peak={_peak_mem/1e6:.1f}MB, "
-                f"gc_objects={len(gc.get_objects())}"
-            )
 
             self.history_rows.append({
                 "epoch":      epoch + 1,

@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-FTCP-VAE Training and Evaluation Pipeline
-
-Author: Issa Onishi
-Created: October 1, 2026
-"""
 
 from tensorflow.keras import Model, Input
 from tensorflow.keras.layers import (

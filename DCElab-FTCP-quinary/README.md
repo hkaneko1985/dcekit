@@ -43,6 +43,8 @@ The following files are newly written or substantially modified in this work:
 | `04_narrow_inverse_design_claims.py` | Coordination number, space group, and unit cell volume analyses (Figures S2–S4) |
 | `05_structure_match_rate.py` | StructureMatcher-based structure match rate (Section 3.4) |
 | `module/FTCP.py` | VAE model with modular encoder/decoder and supervised/unsupervised switching |
+| `module/FTCP_update.py` | Corrected version of `module/FTCP.py`: the regression head is also updated, saved, and loaded |
+| `module/ftcp_select.py` | Selects `module/FTCP.py` or `module/FTCP_update.py` according to `update_regressor_weights` |
 | `module/vae/encoder.py` | New: CNN pattern × network pattern encoder builder |
 | `module/vae/decoder.py` | New: CNN pattern × network pattern decoder builder |
 | `module/result_analysis.py` | New: analysis utilities |
@@ -64,6 +66,8 @@ The following files are newly written or substantially modified in this work:
 │   ├── sampling.py                     # CIF generation (from PV-Lab/FTCP)
 │   ├── try_data_query.py               # Data query utility (from PV-Lab/FTCP)
 │   ├── FTCP.py                         # FTCP_VAE model and LossHistoryCallback
+│   ├── FTCP_update.py                  # Corrected FTCP.py (regression head also updated)
+│   ├── ftcp_select.py                  # Selects FTCP.py / FTCP_update.py
 │   ├── result_analysis.py              # Analysis utilities used by 02–05
 │   └── vae/
 │       ├── encoder.py                  # EncoderPattern class
@@ -156,6 +160,7 @@ Key settings at the top of `01_main.py`:
 
 ```python
 data_name               = 'data_query_3_5_elements_property_nsites_below_112'
+update_regressor_weights = False          # see the note below (keep identical in 01, 02, 03)
 network_pattern_numbers = ["0", "1", "2", "3", "4", "5", "6"]
 cnn_patterns            = ['0', '1', '2']
 supervised_modes        = [True, False]   # SVAE and USVAE
@@ -167,6 +172,17 @@ coeff_prop              = 10              # lambda (0 for USVAE)
 restart_flag            = True            # resume from saved weights if available
 code_test               = False           # True: quick 100-sample smoke test
 ```
+
+`update_regressor_weights` selects the `FTCP_VAE` implementation (see `module/ftcp_select.py`):
+
+| Value | Module | Regression head (y_hat) of the SVAE |
+|-------|--------|-------------------------------------|
+| `True` | `module/FTCP_update.py` | Updated by the optimizer; saved to and loaded from `VAE_weight_pattern*_regression.keras` |
+| `False` | `module/FTCP.py` | Not updated by the optimizer (it is not included in the trainable variables of the model) and not saved |
+
+The same value must be set in `01_main.py`, `02_evaluate_all_models.py`, and `03_compare_conventional_vs_best.py`; weights trained with one setting must be evaluated with the same setting. The USVAE has no regression head and is not affected. Both settings write to the same output directories, so keep the results of each setting in separate directories.
+
+The results reported in the main text of the manuscript were obtained with `update_regressor_weights = False`.
 
 The data are split into training (70%, 54,098), validation (10%, 7,729), and test (20%, 15,457) sets. The min-max scalers for the FTCP tensors and the target properties are fitted on the training set only and applied to all three sets without refitting. The split indices and scalers are saved and reused by scripts 02–05.
 
@@ -181,30 +197,29 @@ data_query_3_5_elements_property_nsites_below_112_result/
     ├── SVAE_result/
     │   ├── recon_result/            # FTCP_evaluation_pattern*.csv (validation),
     │   │                            # FTCP_evaluation_TEST_pattern*.csv (test, not used for selection)
-    │   └── learning_log/            # loss CSVs and model weights (VAE_weight_pattern*)
+    │   └── learning_log/            # loss CSVs and model weights (VAE_weight_pattern*;
+    │                                # with update_regressor_weights = True, also VAE_weight_pattern*_regression.keras)
     └── USVAE_result/
         └── ...
 ```
 
 ### Step 2: Evaluation of all models and model selection (`02_evaluate_all_models.py`)
 
-Evaluates all 42 models on the validation and test sets, separately for the 3–4-element and 5-element subsets, and selects the best SVAE and the best USVAE using **validation-set metrics only** (sum of the ranks of element accuracy, lattice constant MAPE, lattice angle MAPE, and atomic coordinate MAE). The test set is never used for selection.
+Set `update_regressor_weights` (top of the script) to the value used in `01_main.py`. Evaluates all 42 models on the validation and test sets, separately for the 3–4-element and 5-element subsets, and selects the best SVAE and the best USVAE using **validation-set metrics only** (sum of the ranks of element accuracy, lattice constant MAPE, lattice angle MAPE, and atomic coordinate MAE). The test set is never used for selection.
 
 Outputs (`result_for_paper/`):
 
 | File | Content |
 |------|---------|
 | `TableS1_val_3to4elements.csv`, `TableS2_val_5elements.csv` | Validation results of all 42 models (manuscript Tables S1, S2; Table 3 is taken from S2) |
-| `TableS3_test_3to4elements.csv`, `TableS4_test_5elements.csv` | Test results of all 42 models (source of manuscript Tables 4–6 for the selected models) |
+| `test_3to4elements_all_models.csv`, `test_5elements_all_models.csv` | Test results of all 42 models (source of manuscript Tables 4–6 for the selected models) |
 | `*_element_acc_valid_slots.csv` | Element accuracy counted over occupied slots only |
 | `model_ranking_svae.csv`, `model_ranking_usvae.csv` | Ranking used for model selection |
 | `best_model.json` | Selected models (conventional, best SVAE, best USVAE) |
 
-> The file names `TableS3`/`TableS4` are internal names; these test-set tables are not reproduced as supplementary tables in the manuscript.
-
 ### Step 3: Conventional vs. proposed model (`03_compare_conventional_vs_best.py`)
 
-Compares the conventional model (CNN 0, pattern 0, SVAE) with the proposed model (CNN 1, pattern 2, SVAE) on the test set.
+Compares the conventional model (CNN 0, pattern 0, SVAE) with the proposed model (CNN 1, pattern 2, SVAE) on the test set. Set `update_regressor_weights` (top of the script) to the value used in `01_main.py`.
 
 | Output (`result_for_paper/`) | Manuscript |
 |------|------------|
@@ -271,6 +286,7 @@ Define the dense layers between the convolutional output and the latent space z.
 | Scaling | Min-max scalers fitted on the training set only |
 | Random seed | 42 (Python, NumPy, TensorFlow) |
 | Optimizer | Adam, learning rate 5e-4 |
+| Regression head (SVAE) | Updated and saved with `update_regressor_weights = True`; not updated with `False` (main-text results: `False`; see Step 1) |
 | Learning rate schedule | ReduceLROnPlateau (monitor='loss', factor=0.3, patience=4, min_lr=1e-6); set to 1e-4 at epoch 50 and 5e-5 at epoch 100 |
 | Epochs / batch size | 200 / 256 |
 | Loss weights | beta = 2; lambda = 10 (SVAE), 0 (USVAE) |

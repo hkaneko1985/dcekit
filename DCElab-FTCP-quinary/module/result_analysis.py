@@ -19,7 +19,7 @@ import tensorflow as tf
 from itertools import product
 from pymatgen.core import Structure
 from sklearn import metrics as sk_metrics
-from module.FTCP import FTCP_VAE
+from module.ftcp_select import select_ftcp
 from module.sampling import get_info
 
 
@@ -310,8 +310,13 @@ def _weight_path(cfg, base_dir, data_name):
     return os.path.join(log_dir, candidates[0])
 
 
-def build_and_load(cfg, X_test, y_test, base_dir, data_name):
-    """Build FTCP_VAE model structure and load saved weights."""
+def build_and_load(cfg, X_test, y_test, base_dir, data_name, update_regressor_weights):
+    """Build FTCP_VAE model structure and load saved weights.
+
+    update_regressor_weights must be the same value that was used in 01_main.py
+    when the weights were trained (see module/ftcp_select.py).
+    """
+    _, FTCP_VAE = select_ftcp(update_regressor_weights)
     wp         = _weight_path(cfg, base_dir, data_name)
     supervised = (cfg["vae_type"] == "SVAE")
     if not os.path.exists(wp):
@@ -546,7 +551,7 @@ def plot_best_worst_tables(df_ranked, out_csv):
 
 
 # ===========================================================================
-# Result aggregation and best model detection (from 結果まとめ.py)
+# Result aggregation and best model detection
 # ===========================================================================
 
 def aggregate_results(base_dir, data_name, cnn_patterns, superviseds, network_pattern_numbers):

@@ -3,7 +3,7 @@
 FTCP-VAE Training and Evaluation Pipeline
 
 Author: Issa Onishi
-Created: October 1, 2026
+Created: September 18, 2025
 """
 
 import os, re, glob, warnings, joblib, itertools
@@ -45,6 +45,11 @@ MAX_SITES    = 112
 RANDOM_STATE = 21
 PROP         = ["formation_energy_per_atom", "band_gap"]
 
+# True: also update/save the regression head (y_hat) weights (corrected);
+# False: leave them un-updated (same as the original FTCP implementation by Ren et al.)
+# Keep this value identical in 01, 02 and 03.
+update_regressor_weights = False
+
 # Number of samples per n_elements for the 100-sample CIF set
 N_PER_NELEM = {3: 35, 4: 35, 5: 30}
 
@@ -79,11 +84,8 @@ plt.rcParams.update({
     "axes.titlesize":   FS["title"],
 })
 
-try:
-    import seaborn as sns
-    sns.set_style("ticks")
-except ImportError:
-    pass
+import seaborn as sns
+sns.set_style("ticks")
 
 
 # ===========================================================================
@@ -230,7 +232,7 @@ for tag in all_eval_tags:
     cfg = tag_to_cfg(tag)
     print(f"\n  Evaluating: {tag}")
     try:
-        vae          = build_and_load(cfg, X_test, y_test, BASE_DIR, DATA_NAME)
+        vae          = build_and_load(cfg, X_test, y_test, BASE_DIR, DATA_NAME, update_regressor_weights)
         X_recon_norm = predict_recon(vae, cfg, X_test, y_test)
         X_recon      = inv_minmax(X_recon_norm, scaler_X)
         abc_r, ang_r, coor_r = extract_lattice_coords(X_recon, Ntotal_elms, MAX_SITES)
@@ -275,12 +277,12 @@ pd.DataFrame(rows).to_csv(os.path.join(OUT_ROOT, "breakdown_3-4_vs_5.csv"), inde
 print(f"\n  Saved pivot CSVs and breakdown CSV to {OUT_ROOT}")
 
 # Figure S1 (2 x 3 panels). The values are taken from the test-set tables
-# written by 02_evaluate_all_models.py (TableS3/TableS4), i.e. the same
+# written by 02_evaluate_all_models.py (test_*_all_models.csv), i.e. the same
 # source as Tables 4-6 of the manuscript, so that the figure and the tables
 # show identical numbers. (The former per-metric PNGs bd_*.png are no longer
 # generated because they are not used in the manuscript.)
-_s3 = pd.read_csv(os.path.join(OUT_ROOT, "TableS3_test_3to4elements.csv"))
-_s4 = pd.read_csv(os.path.join(OUT_ROOT, "TableS4_test_5elements.csv"))
+_test_3to4 = pd.read_csv(os.path.join(OUT_ROOT, "test_3to4elements_all_models.csv"))
+_test_5 = pd.read_csv(os.path.join(OUT_ROOT, "test_5elements_all_models.csv"))
 
 def _table_row(df, tag):
     c = tag_to_cfg(tag)
@@ -289,7 +291,7 @@ def _table_row(df, tag):
          & (df["network pattern"].astype(str) == str(c["pattern"])))
     return df[m].iloc[0]
 
-_S1_METRICS = [  # (column in TableS3/S4, y-axis label)
+_S1_METRICS = [  # (column in the test-set tables, y-axis label)
     ("Element acc.",            "Element accuracy"),
     ("Atom coord. MAE",         "Site coordinate MAE (frac)"),
     ("Lattice angle MAPE (%)",  "Lattice angle MAPE (%)"),
@@ -297,8 +299,8 @@ _S1_METRICS = [  # (column in TableS3/S4, y-axis label)
     ("MAE Ef (eV/atom)",        "MAE Ef (eV/atom)"),
     ("MAE Eg (eV)",             "MAE Eg (eV)"),
 ]
-_conv = [_table_row(_s3, conv_tag), _table_row(_s4, conv_tag)]
-_prop = [_table_row(_s3, best_tag), _table_row(_s4, best_tag)]
+_conv = [_table_row(_test_3to4, conv_tag), _table_row(_test_5, conv_tag)]
+_prop = [_table_row(_test_3to4, best_tag), _table_row(_test_5, best_tag)]
 with plt.rc_context({"font.size": 10}):
     fig, axs = plt.subplots(2, 3, figsize=(15, 8.8))
     x, w = np.arange(2), 0.35
@@ -388,7 +390,7 @@ if best_tag not in recon_cache:
     print(f"\n  Loading {best_tag} for downstream analyses ...")
     cfg_best_tmp = tag_to_cfg(best_tag)
     try:
-        vae_tmp                = build_and_load(cfg_best_tmp, X_test, y_test, BASE_DIR, DATA_NAME)
+        vae_tmp                = build_and_load(cfg_best_tmp, X_test, y_test, BASE_DIR, DATA_NAME, update_regressor_weights)
         Xrn_tmp                = predict_recon(vae_tmp, cfg_best_tmp, X_test, y_test)
         recon_cache[best_tag]  = inv_minmax(Xrn_tmp, scaler_X)
         latent_cache[best_tag] = vae_tmp.compress_to_latent(X_test, verbose=0)

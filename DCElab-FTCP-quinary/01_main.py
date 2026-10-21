@@ -3,7 +3,7 @@
 FTCP-VAE Training and Evaluation Pipeline
 
 Author: Issa Onishi
-Created: October 1, 2026
+Created: September 18, 2025
 """
 
 import os
@@ -21,8 +21,6 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import ReduceLROnPlateau, LearningRateScheduler
 from module.data import FTCP_represent
 from module.utils import pad, minmax_fit, minmax_transform, inv_minmax
-from module.FTCP import LossHistoryCallback, FTCP_VAE
-
 
 # =============================================================================
 # Experiment settings
@@ -31,6 +29,14 @@ data_name = 'data_query_3_5_elements_property_nsites_below_112'
 
 # Structural parameters for 3–5-element compounds
 max_elms, min_elms, max_sites = 5, 3, 112
+
+# True: also update/save the regression head (y_hat) weights (corrected);
+# False: leave them un-updated (same as the original FTCP implementation by Ren et al.)
+# Keep this value identical in 01, 02 and 03.
+update_regressor_weights = False
+
+from module.ftcp_select import select_ftcp
+LossHistoryCallback, FTCP_VAE = select_ftcp(update_regressor_weights)
 
 # Specify the CNN model to be trained and the network architecture
 network_pattern_numbers = ["0", "1", "2", "3", "4", "5", "6"]

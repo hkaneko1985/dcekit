@@ -3,7 +3,7 @@
 FTCP-VAE Training and Evaluation Pipeline
 
 Author: Issa Onishi
-Created: October 1, 2026
+Created: September 18, 2025
 """
 
 import os, re, glob, json, warnings

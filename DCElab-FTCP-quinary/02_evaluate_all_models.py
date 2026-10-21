@@ -3,7 +3,7 @@
 FTCP-VAE Training and Evaluation Pipeline
 
 Author: Issa Onishi
-Created: October 1, 2026
+Created: September 18, 2025
 """
 
 import os
@@ -36,6 +36,11 @@ DATA_NAME = "data_query_3_5_elements_property_nsites_below_112"
 MAX_ELMS  = 5
 MAX_SITES = 112
 PROP      = ["formation_energy_per_atom", "band_gap"]
+
+# True: also update/save the regression head (y_hat) weights (corrected);
+# False: leave them un-updated (same as the original FTCP implementation by Ren et al.)
+# Keep this value identical in 01, 02 and 03.
+update_regressor_weights = False
 
 cnn_patterns_all        = ["0", "1", "2"]
 superviseds_all         = ["SVAE", "USVAE"]
@@ -182,7 +187,7 @@ for cnn, sup, net in itertools.product(cnn_patterns_all, superviseds_all, networ
 
     computed_rows = None
     try:
-        vae = build_and_load(cfg, X_test, y_test, BASE_DIR, DATA_NAME)
+        vae = build_and_load(cfg, X_test, y_test, BASE_DIR, DATA_NAME, update_regressor_weights)
 
         recon = {}
         for dname, d in DATASETS.items():
@@ -225,8 +230,8 @@ for cnn, sup, net in itertools.product(cnn_patterns_all, superviseds_all, networ
 TABLE_FILENAMES = {
     "val_3to4":  "TableS1_val_3to4elements.csv",
     "val_5":     "TableS2_val_5elements.csv",
-    "test_3to4": "TableS3_test_3to4elements.csv",
-    "test_5":    "TableS4_test_5elements.csv",
+    "test_3to4": "test_3to4elements_all_models.csv",
+    "test_5":    "test_5elements_all_models.csv",
 }
 
 for key, fname in TABLE_FILENAMES.items():
@@ -265,11 +270,16 @@ print(f"  Saved: {agg_path}  (shape {result_all.shape})")
 result_svae  = result_all[result_all.index.str.contains(" SVAE ")]
 result_usvae = result_all[result_all.index.str.contains(" USVAE ")]
 
-best_svae_tag,  ranking_svae_df  = find_best_cfg(result_svae)
-best_usvae_tag, ranking_usvae_df = find_best_cfg(result_usvae)
-
+best_svae_tag, ranking_svae_df = find_best_cfg(result_svae)
 ranking_svae_df.to_csv(os.path.join(OUT_ROOT, "model_ranking_svae.csv"))
-ranking_usvae_df.to_csv(os.path.join(OUT_ROOT, "model_ranking_usvae.csv"))
+
+# If no USVAE model was evaluated (superviseds_all without "USVAE"), the USVAE
+# selection is skipped and best_usvae_tag is None; 03 then omits the "Best USVAE" row.
+if len(result_usvae) > 0:
+    best_usvae_tag, ranking_usvae_df = find_best_cfg(result_usvae)
+    ranking_usvae_df.to_csv(os.path.join(OUT_ROOT, "model_ranking_usvae.csv"))
+else:
+    best_usvae_tag = None
 
 print(f"\n  Best SVAE model detected (= \"Proposed\", matches Table 3):  {best_svae_tag}")
 print(f"  Best USVAE model detected (independent search, Tables 4/5): {best_usvae_tag}")

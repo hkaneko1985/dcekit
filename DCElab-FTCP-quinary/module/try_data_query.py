@@ -56,7 +56,7 @@ with MPRester(mp_api_key) as mpr:
 
     df['ind'] = np.arange(len(df))
 
-# 熱電特性 Seebeck 係数を MP から取得したデータと結合する
+# Merge with the thermoelectric (Seebeck coefficient) data obtained from MP
 if include_te:
     te = pd.read_csv('data/thermoelectric_prop.csv', index_col=0).dropna()
     df.index = list(df['material_id'])

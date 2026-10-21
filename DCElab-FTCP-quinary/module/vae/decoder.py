@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-FTCP-VAE Training and Evaluation Pipeline
-
-Author: Issa Onishi
-Created: October 1, 2026
-"""
 
 import tensorflow as tf
 from tensorflow.keras import Model, Input
