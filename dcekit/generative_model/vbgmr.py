@@ -648,8 +648,8 @@ class VBGMR(BayesianGaussianMixture):
         bo_number_of_selecting_samples = 1  # 選択するサンプル数
         bo_regression_method = 'gpr_one_kernel'  # gpr_one_kernel', 'gpr_kernels'
         bo_kernel_number = 2  # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-        acquisition_function = 'PI'  # 'PTR', 'PI', 'EI', 'MI'
-        target_range = [1, 2]  # PTR
+        acquisition_function = 'PTR'  # 'PTR', 'PI', 'EI', 'MI'
+        target_range = [1, 100]  # PTR
         relaxation = 0.01  # EI, PI
         delta = 10 ** -6  # MI
         
