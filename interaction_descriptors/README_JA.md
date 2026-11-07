@@ -4,11 +4,13 @@
 
 著者は **Hiromasa Kaneko（金子弘昌）** です。対応原稿は *Reusable interaction-aware descriptors from frozen property models for materials prediction* です。
 
-## DCEKitへの配置
+## DCEKitの公開先
 
-推奨ディレクトリ名は **`interaction_descriptors`** です。ZIPを展開するとこの名前のフォルダが1つできます。[DCEKit](https://github.com/hkaneko1985/dcekit)のリポジトリ直下へ、フォルダごと追加してください。既存のライブラリ本体である内側の`dcekit/`には入れません。
+研究コードは[DCEKitのinteraction_descriptorsディレクトリ](https://github.com/hkaneko1985/dcekit/tree/master/interaction_descriptors)で公開されています。2026年11月7日に確認した公開版は[コミット0d8d31e9d061208f85d3ef4d8de9dc587c43ca89](https://github.com/hkaneko1985/dcekit/tree/0d8d31e9d061208f85d3ef4d8de9dc587c43ca89/interaction_descriptors)です。
 
-詳細な配置方法、DCEKitのREADMEへのリンク案、公開後の記録方法は[DCEKIT_INTEGRATION.md](DCEKIT_INTEGRATION.md)にあります。このZIPは公開用候補であり、GitHubへのアップロードは別途行います。
+公開143ファイルのうち119件は確認済みZIPとバイト単位で同一です。残るCSV24件は改行形式がCRLFからLFになっただけで、数値・文字列は同一です。この改行変更に伴うチェックサム一覧の修正と確認範囲を[PUBLICATION_STATUS.md](PUBLICATION_STATUS.md)に記録しています。修正候補の作成・確認にあたり、GitHubへの追加書き込みは行っていません。
+
+配置先はDCEKitリポジトリ直下の **`interaction_descriptors/`** です。既存のライブラリ本体である内側の`dcekit/`には入れません。配置とインストールの補足は[DCEKIT_INTEGRATION.md](DCEKIT_INTEGRATION.md)を参照してください。
 
 ## 最初の実行
 
@@ -69,6 +71,6 @@ python scripts/verify_synthetic.py --output example_output/synthetic_validation.
 
 ## 引用・研究費
 
-本研究コードを引用する場合は、ディレクトリ内の[CITATION.cff](CITATION.cff)を参照してください。これはDCEKit全体とは別に、本研究コードを示す引用情報です。公開後には実際のコミットを記録し、論文にも同じ版を記載します。
+本研究コードを引用する場合は、ディレクトリ内の[CITATION.cff](CITATION.cff)を参照してください。これはDCEKit全体とは別に、本研究コードを示す引用情報です。確認済みの公開コミットと固定URLは[PUBLICATION_STATUS.md](PUBLICATION_STATUS.md)に記録しています。
 
 研究費：JSPS KAKENHI **24K08152、24K01234**。

@@ -1,16 +1,20 @@
 # Interaction-aware descriptors
 
 [日本語ガイド](README_JA.md) · [DCEKit integration](DCEKIT_INTEGRATION.md) ·
-[Reproduction commands](PIPELINE.md) · [Release review](RELEASE_NOTES.md)
+[Reproduction commands](PIPELINE.md) · [Release review](RELEASE_NOTES.md) ·
+[Publication status](PUBLICATION_STATUS.md)
 
 Reusable, frozen composition-to-descriptor functions for materials property
 prediction. The accompanying manuscript is **Reusable interaction-aware descriptors from frozen property models for materials prediction**,
 by **Hiromasa Kaneko** (ORCID [0000-0001-8367-6476](https://orcid.org/0000-0001-8367-6476)).
 
-**Hosting plan:** place this complete `interaction_descriptors/` directory at the
-root of [DCEKit](https://github.com/hkaneko1985/dcekit), alongside its existing
-research directories. This archive is the locally reviewed publication candidate;
-no remote commit, public release tag, software DOI or manuscript DOI is asserted.
+**Public code:** this research directory is hosted in
+[DCEKit](https://github.com/hkaneko1985/dcekit/tree/master/interaction_descriptors).
+The verified initial public baseline is
+[commit 0d8d31e9d061208f85d3ef4d8de9dc587c43ca89](https://github.com/hkaneko1985/dcekit/tree/0d8d31e9d061208f85d3ef4d8de9dc587c43ca89/interaction_descriptors).
+The public-file review and subsequent checksum metadata correction are documented
+in [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md). No public release tag,
+software DOI or manuscript DOI is asserted.
 The author code is supplied under MIT; see [LICENSE](LICENSE).
 The code license does not license third-party source data or trained weights.
 Those assets are intentionally external pending source-specific redistribution

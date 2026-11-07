@@ -1,0 +1,3 @@
+# Keep tracked text and publication checksums stable across operating systems.
+* text=auto eol=lf
+*.csv text eol=lf
