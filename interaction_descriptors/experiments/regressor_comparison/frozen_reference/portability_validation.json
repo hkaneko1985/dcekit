@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "Fresh preparation in an unprepared code checkout using only stage51 fusion/ and sources/; no v33/v44 archives",
+  "input_files_reproduced_byte_identical": 13,
+  "v49_numerical_block_checked": true,
+  "v33_ast_comparison_performed_in_portability_check": false,
+  "new_predictions_or_fits": 0,
+  "returncode": 0,
+  "stdout": "PREPARED 500 jobs; 198 verified selector records; protocol 6af2259a1a46b7b55296c2c34dcbf67955cb5879421d458e14da00f647a999e7"
+}

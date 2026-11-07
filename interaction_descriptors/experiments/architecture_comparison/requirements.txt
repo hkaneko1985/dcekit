@@ -1,0 +1,8 @@
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+Boruta==0.4.3
+joblib==1.5.3
+threadpoolctl==3.6.0
+# Used only when verify_fusion51.py imports the original six-regressor module.
+lightgbm==4.6.0

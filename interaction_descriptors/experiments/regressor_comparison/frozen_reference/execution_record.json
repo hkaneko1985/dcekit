@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "Completed stage52 main study run; separate parity refits explicitly counted",
+  "main_study": {
+    "expected_new_jobs": 500,
+    "completed_new_jobs": 500,
+    "new_outer_fits": 1800,
+    "new_inner_partitions": 4800,
+    "new_inner_candidate_fits": 50880,
+    "new_prediction_events": 62700,
+    "new_selector_fits": 0,
+    "unique_reused_selectors": 198,
+    "selector_applications_across_new_regressors": 990,
+    "reused_krr_jobs": 100,
+    "reused_krr_outer_fits": 360,
+    "reused_krr_prediction_events": 12540,
+    "combined_summary_rows": 144,
+    "complete": true,
+    "protocol_sha256": "73966263b7b2191296a1e61251fb73422b2be5fea884ea088c41f3b9f52e8f3d",
+    "input_manifest_sha256": "3cfeb5dbfe5120de83abd090d987c391fba90c529c445ce0aefd425e842741bf",
+    "by_regressor": {
+      "PLS": {
+        "jobs": 100,
+        "elapsed_job_seconds": 6.686541278999357
+      },
+      "LASSO": {
+        "jobs": 100,
+        "elapsed_job_seconds": 99.08828717000506
+      },
+      "SVR": {
+        "jobs": 100,
+        "elapsed_job_seconds": 22.199572100002115
+      },
+      "LightGBM": {
+        "jobs": 100,
+        "elapsed_job_seconds": 275.60597175300427
+      },
+      "GBDT": {
+        "jobs": 100,
+        "elapsed_job_seconds": 567.9929261840025
+      }
+    },
+    "invocation_wall_seconds": 201.26211684499958,
+    "failures_in_invocation": 0
+  },
+  "verification_outer_refits": 5,
+  "verification_prediction_events": 215,
+  "numerical_diagnostics": {
+    "max_lasso_dual_gap": 7.768074722821113e-08,
+    "lasso_dual_qp_uses": 1791,
+    "candidate_or_outer_fits_with_warnings": 1622,
+    "total_warning_messages": 6475
+  },
+  "lasso_fits_total": 5160,
+  "dual_qp_unsuccessful_flag_count": 588,
+  "max_accepted_gap_for_unsuccessful_flag": 3.2093534179417864e-12,
+  "run_log_sha256": "f33f4879e8e619028c794659caa893c3c9ef5a26400088355f6f791029155ae5",
+  "verification_log_sha256": "b173caf6c041ad0c1e22302e1d5eba324d14e91cae3ed8eb42cb4e99f8d9ef12",
+  "scientific_numerics_modified": false,
+  "failed_study_jobs": 0,
+  "metadata_only_note": "After the completed run, status reaggregation was adjusted to retain timing; fresh preparation was made portable using bundled byte-identical numerics without v33/v44 archives. An unavailable v33 AST check is recorded as not checked. No numerical routine, input, protocol, or study result was changed.",
+  "final_runner_sha256": "7f2e4722a5ea7caa7d95392f1671a6f9a1eecc605f1b8d38809dcde20955e5a9"
+}

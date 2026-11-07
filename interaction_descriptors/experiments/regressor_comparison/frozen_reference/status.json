@@ -1,0 +1,42 @@
+{
+  "expected_new_jobs": 500,
+  "completed_new_jobs": 500,
+  "new_outer_fits": 1800,
+  "new_inner_partitions": 4800,
+  "new_inner_candidate_fits": 50880,
+  "new_prediction_events": 62700,
+  "new_selector_fits": 0,
+  "unique_reused_selectors": 198,
+  "selector_applications_across_new_regressors": 990,
+  "reused_krr_jobs": 100,
+  "reused_krr_outer_fits": 360,
+  "reused_krr_prediction_events": 12540,
+  "combined_summary_rows": 144,
+  "complete": true,
+  "protocol_sha256": "73966263b7b2191296a1e61251fb73422b2be5fea884ea088c41f3b9f52e8f3d",
+  "input_manifest_sha256": "3cfeb5dbfe5120de83abd090d987c391fba90c529c445ce0aefd425e842741bf",
+  "by_regressor": {
+    "PLS": {
+      "jobs": 100,
+      "elapsed_job_seconds": 6.686541278999357
+    },
+    "LASSO": {
+      "jobs": 100,
+      "elapsed_job_seconds": 99.08828717000506
+    },
+    "SVR": {
+      "jobs": 100,
+      "elapsed_job_seconds": 22.199572100002115
+    },
+    "LightGBM": {
+      "jobs": 100,
+      "elapsed_job_seconds": 275.60597175300427
+    },
+    "GBDT": {
+      "jobs": 100,
+      "elapsed_job_seconds": 567.9929261840025
+    }
+  },
+  "invocation_wall_seconds": 201.26211684499958,
+  "failures_in_invocation": 0
+}

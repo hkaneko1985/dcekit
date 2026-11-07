@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/scratch/a2023f46b931/stage51/fusion/venv/bin/python",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "dependency_environment": "venv inherits system numpy/scipy/sklearn; not a clean dependency reinstall",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "Boruta": "0.4.3",
+    "lightgbm": "4.6.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  }
+}

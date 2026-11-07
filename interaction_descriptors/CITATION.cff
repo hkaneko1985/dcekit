@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the interaction_descriptors research directory in DCEKit, cite this software. Manuscript publication details will be added when available."
+type: software
+title: "Interaction-aware descriptors for materials property prediction"
+version: 0.1.0
+repository-code: "https://github.com/hkaneko1985/dcekit"
+authors:
+  - family-names: Kaneko
+    given-names: Hiromasa
+    orcid: "https://orcid.org/0000-0001-8367-6476"
+license: MIT
+abstract: "Frozen NumPy inference, full-composition and complete-pair descriptors, a Kohler-type boundary extension, and scoped research reproduction commands. Prepared for the interaction_descriptors research directory within DCEKit."

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "main_numeric_cells": 177,
+  "supplement_numeric_cells": 60,
+  "total_checked_cells": 237,
+  "mismatches": [],
+  "scope": "Exact displayed numeric cell text for Tables 2\u20138/S1/S3 against final v51 DOCX files; static Tables 1/S2 are copied authored text."
+}

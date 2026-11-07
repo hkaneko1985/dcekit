@@ -1,0 +1,28 @@
+{
+  "stage": 53,
+  "status": "PASS",
+  "tests_run": 6,
+  "test_cases": [
+    "test_zero_rows_are_not_reported_as_zero_property_error",
+    "test_property_difference_uses_only_compatible_rows",
+    "test_exact_compatible_rows_pass",
+    "test_mask_mismatch_fails_without_compatible_rows",
+    "test_latent_mismatch_fails_without_compatible_rows",
+    "test_missing_latent_difference_is_rejected"
+  ],
+  "test_file": "tests_pipeline/test_source_fit_diagnostics.py",
+  "test_file_sha256": "b6d9e10ea7ca23736c46ea2b0e52975c7ae23c06e981a38d9648e42cb46f8b09",
+  "source_fit_file": "scripts/source_fit52.py",
+  "source_fit_sha256": "5a1cd4f9363f12138044a2fff8bf20dca8b1ac2ca36318d2a4a5b1c77d0aa4de",
+  "scope": "Pure NumPy diagnostics for no applicable target rows and ordinary compatible rows; no model fitting or target prediction experiment.",
+  "trigger": "The archived oxide design has zero applicable rows for one of its 24 source-mask columns (column index 21).",
+  "zero_row_result": {
+    "modeled_property_comparison": "not_applicable_no_compatible_rows",
+    "modeled_property_comparison_rows": 0,
+    "max_modeled_property_difference": null
+  },
+  "mask_and_latent_mismatch_checks_retained": true,
+  "new_model_fits": 0,
+  "source_training_numerical_procedure_changed": false,
+  "command": "python -m unittest discover -s tests_pipeline -v"
+}

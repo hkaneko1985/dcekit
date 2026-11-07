@@ -1,0 +1,17 @@
+{
+  "status": "Locally reviewed candidate for the interaction_descriptors research directory in existing DCEKit",
+  "public_repository_created": false,
+  "remote_created": false,
+  "external_messages_sent": false,
+  "raw_data_or_weight_files_present": [],
+  "MIT_license_scope": "Author code only; external source assets retain separate distribution conditions",
+  "core_dependencies": [
+    "numpy"
+  ],
+  "core_scope": "frozen v49 inference, complete pair outputs, Kohler boundary extension; no source training",
+  "additional_pipeline_scope": "Recovered original source training recipes; one exact source fit verified; scoped figure/table and downstream entry points. See pipeline_status.json.",
+  "intended_host_repository": "https://github.com/hkaneko1985/dcekit",
+  "intended_repository_relative_directory": "interaction_descriptors",
+  "research_directory_published_by_this_work": false,
+  "current_publication_review": "verification/publication_review53.json"
+}

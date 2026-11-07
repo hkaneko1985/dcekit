@@ -1,0 +1,6 @@
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+torch==2.10.0+cpu
+lightgbm==4.6.0
+rdkit==2025.9.4

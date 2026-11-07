@@ -1,0 +1,66 @@
+{
+  "author": "Hiromasa Kaneko",
+  "status": "Locally reviewed DCEKit research-directory publication candidate",
+  "scope": "Reusable v49 frozen inference and generic boundary operators; core ancestry is recorded here. One original source fit and historical figure/table routes are verified separately in pipeline_status.json.",
+  "references": [
+    {
+      "project_relative_path": "stage51/input_spec/composition_input_spec.py",
+      "sha256": "5d9d3e2922a3585bd77dfb8695a54e4bc5b247e63c6a2144195ee3b6b8a741e7"
+    },
+    {
+      "project_relative_path": "stage51/input_spec/test_composition_input_spec.py",
+      "sha256": "77ec2c82cb512e830defa53fcc9de3c4862fb2f7d1c28d8c93784cb6c2024ba5"
+    },
+    {
+      "project_relative_path": "stage51/archives/Interaction_Descriptors_Output_Forms_v33/code/extension.py",
+      "sha256": "d362cfed23c53fccd9950df2459cd7bafedb766e9209bc50c62ca69efe17fb8f"
+    },
+    {
+      "project_relative_path": "stage51/archives/Interaction_Descriptors_Output_Forms_v33/code/descriptors33.py",
+      "sha256": "6cd1db8815712dbe00007c6f02b58373c50a0c97b0286fb361047f3e1e66cf87"
+    },
+    {
+      "project_relative_path": "stage51/archives/Interaction_Descriptors_Learning_Curves_v44_20261106/code/bank43.py",
+      "sha256": "ebc820c8e7122e19b90957f5ad5ba569cd1ec6bc36e0e4abc5cc055d339cd1cb"
+    },
+    {
+      "project_relative_path": "stage51/sources/v49_replay.py",
+      "sha256": "e68e694b583c7d386133d82cb289cdcda09e83a9e419a54ffd4f03a820701bd4"
+    },
+    {
+      "project_relative_path": "stage51/sources/v48_manuscript.docx",
+      "sha256": "82c90d838dd80465f2525f24d4977a5845e7cd427d20da535ceab7a54aaa09b2"
+    },
+    {
+      "project_relative_path": "stage51/sources/v48_supplement.docx",
+      "sha256": "daa1712ef78cbe3854a7f04391390da77f96852a5cd6be00f0cced528f69e875"
+    },
+    {
+      "project_relative_path": "stage51/input_spec/observed_source_support.py",
+      "sha256": "e80ab423293251e85ff5d6c9a05fc7b1e751d2cf981512238fe3715105ef1ff0"
+    },
+    {
+      "project_relative_path": "stage51/input_spec/test_observed_source_support.py",
+      "sha256": "43222d64e5e0faeec77efd0684267240177ae54ddc12f34ea90e20cbcaa44399"
+    }
+  ],
+  "copied_unmodified": {
+    "src/interaction_descriptors/composition.py": "stage51/input_spec/composition_input_spec.py",
+    "scripts/replay_v49.py": "stage51/sources/v49_replay.py"
+  },
+  "new_implementation": [
+    "src/interaction_descriptors/frozen.py",
+    "src/interaction_descriptors/extension.py",
+    "src/interaction_descriptors/cli.py"
+  ],
+  "adapted_import_only": {
+    "tests/test_composition_input_spec.py": "stage51/input_spec/test_composition_input_spec.py",
+    "src/interaction_descriptors/observed_support.py": "stage51/input_spec/observed_source_support.py",
+    "tests/test_observed_source_support.py": "stage51/input_spec/test_observed_source_support.py"
+  },
+  "release_review": "verification/publication_review53.json",
+  "core_corrections_v53": [
+    "Direct evaluation of both normalized pair fractions preserves positive trace constituents",
+    "Explicit name validation rejects bare-string components and coordinate names"
+  ]
+}

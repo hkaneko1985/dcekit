@@ -1,0 +1,170 @@
+{
+  "scope": "whole-latent descriptor regeneration only; not source training or downstream replay",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "hashes": {
+    "v49_frozen_bank.npz": "e4a47d98becfdb408264f6ebc20abc8add9aa51b982944db1afce00683c3e859",
+    "v49_model_cards.json": "de17024b8984e5ce87107a8dfebef52e39e5d00a07e52bc6938b22a90b726452",
+    "steel_v46_replay_inputs.npz": "d48e6ad2481e106cb11a2799f41fd07c3dc98c2dcd05beb7f5d175b595609950"
+  },
+  "tolerance": 1e-10,
+  "checks": [
+    {
+      "kind": "NN",
+      "seed": 101,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 6.217248937900877e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "NN",
+      "seed": 202,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "NN",
+      "seed": 303,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YAE",
+      "seed": 101,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YAE",
+      "seed": 202,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 1.7763568394002505e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YAE",
+      "seed": 303,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YVAE",
+      "seed": 101,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 5.329070518200751e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YVAE",
+      "seed": 202,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "YVAE",
+      "seed": 303,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.6645352591003757e-15,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "random",
+      "seed": 101,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 1.6431300764452317e-14,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "random",
+      "seed": 202,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 1.9539925233402755e-14,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    },
+    {
+      "kind": "random",
+      "seed": 303,
+      "shape": [
+        312,
+        192
+      ],
+      "max_absolute_difference": 2.0872192862952943e-14,
+      "masks_identical": true,
+      "source_count": 24,
+      "coordinate_count": 192,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,111 @@
+{
+  "release": "v52",
+  "overall": "SCOPED_PATHS_VERIFIED_NOT_FULL_END_TO_END",
+  "source_training": {
+    "status": "ONE_EXACT_FINAL_FIT_VERIFIED",
+    "source": "mp_decomp",
+    "kind": "NN",
+    "source_seed": 101,
+    "actual_training_seed": 360101,
+    "source_rows": 455,
+    "source_columns": 68,
+    "epochs": 200,
+    "arrays_exact": 27,
+    "max_difference": 0,
+    "target_rows_exact": 143,
+    "source_oof_fits": 0,
+    "all_source_bank_retrained": false,
+    "raw_reconstruction_rerun": false
+  },
+  "source_recovery": {
+    "status": "ORIGINAL_TRAINERS_AND_INPUTS_RECOVERED",
+    "trainers": [
+      "reference/source_bank/train36.py",
+      "reference/source_bank/train38.py"
+    ],
+    "shared_implementation": "reference/source_bank/source_common.py",
+    "source_preparation": "Recovered original recipes; unexecuted in stage52"
+  },
+  "historical_figures": {
+    "figures_1_to_6": "Original scripts executed; all six PNGs byte-identical",
+    "figure7": "36-value data-equivalent redraw; original render script missing",
+    "figure8": "Final plot wrapper executed; PNG and comparison exports byte-identical to manuscript build"
+  },
+  "tables": {
+    "exported_table_units": 16,
+    "main_tables": 9,
+    "supplement_units": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5a",
+      "S5b",
+      "S5c"
+    ],
+    "legacy_numeric_cells_verified": 237,
+    "new_table9_numeric_cells_verified": 90,
+    "new_si_matrix_numeric_cells_verified": 144,
+    "grid_definitions_verified": 6,
+    "new_export_all_display_cells_verified": 343
+  },
+  "steel_audit": {
+    "saved_metrics_exact": 126,
+    "latent_matrices_exact": 12,
+    "fixed_descriptor_columns_exact": 18,
+    "new_target_fits": 0
+  },
+  "wrapper_preparation": {
+    "status": "PASS",
+    "paths": [
+      {
+        "path": "architecture_prepare_smoke",
+        "manifest_equal": true,
+        "all_input_bytes_equal": true,
+        "new_predictive_fits": 0,
+        "input_manifest_entries": 13,
+        "numerical_input_files": 13
+      },
+      {
+        "path": "comparison_prepare_smoke",
+        "manifest_equal": true,
+        "all_input_bytes_equal": true,
+        "new_predictive_fits": 0,
+        "input_manifest_entries": 39,
+        "numerical_input_files": 13
+      }
+    ],
+    "verified_selector_identities": 198,
+    "new_selector_fits": 0,
+    "note": "Fresh isolated wrapper preparation; original 100/500-job experiments were not refitted by this smoke."
+  },
+  "six_regressor_study": {
+    "completed_new_jobs": 500,
+    "new_outer_fits": 1800,
+    "new_prediction_events": 62700,
+    "reused_krr_jobs": 100,
+    "summary_cells": 144,
+    "new_selector_fits": 0,
+    "reused_selector_identities": 198,
+    "full_study_repeated_by_pipeline_smoke": false
+  },
+  "release_state": {
+    "public_tree_contains_raw_data_or_weights": false,
+    "github_remote_created": false,
+    "asset_download_urls_assigned": false,
+    "intended_host_repository": "https://github.com/hkaneko1985/dcekit",
+    "intended_directory": "interaction_descriptors",
+    "published_by_this_work": false
+  },
+  "limitations": [
+    "All-source raw reconstruction and retraining not executed",
+    "Original source OOF diagnostics not repeated",
+    "All historical downstream fitting branches not rerun",
+    "Original Figure 7 rendering script not recovered",
+    "Earlier polymer and low-component source encoders remain separate from the v49 FrozenBank",
+    "Third-party data/weight distribution requires source-specific decisions",
+    "No new independent validation cohort"
+  ],
+  "publication_preparation_stage": "v53 DCEKit research directory",
+  "publication_review": "verification/publication_review53.json"
+}

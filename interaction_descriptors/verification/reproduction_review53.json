@@ -1,0 +1,472 @@
+{
+  "stage": 53,
+  "status": "PASS",
+  "date": "2026-11-07",
+  "scope": "Standalone public tree relocated under a DCEKit-like path containing spaces, run from a different current directory; existing aggregate regeneration and source-free checks only.",
+  "new_model_fits": 0,
+  "command_checks": 20,
+  "checks": [
+    {
+      "name": "tables",
+      "returncode": 0,
+      "expected_success": true,
+      "no_traceback": true,
+      "pass": true
+    },
+    {
+      "name": "regressor_tables",
+      "returncode": 0,
+      "expected_success": true,
+      "no_traceback": true,
+      "pass": true
+    },
+    {
+      "name": "figure8",
+      "returncode": 0,
+      "expected_success": true,
+      "no_traceback": true,
+      "pass": true
+    },
+    {
+      "name": "synthetic_example",
+      "returncode": 0,
+      "expected_success": true,
+      "no_traceback": true,
+      "pass": true
+    },
+    {
+      "name": "synthetic_tests",
+      "returncode": 0,
+      "expected_success": true,
+      "no_traceback": true,
+      "pass": true
+    },
+    {
+      "name": "missing_architecture",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "missing_comparison",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "missing_source-fit",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "missing_steel-audit",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "missing_historical",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "missing_summary",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "pass": true
+    },
+    {
+      "name": "preserve_plot",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "preserve_tables",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "preserve_regressor_tables",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "preserve_synthetic_report",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "preserve_shipped_verification",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "separate_architecture",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "separate_comparison",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "separate_source-fit",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    },
+    {
+      "name": "separate_steel-audit",
+      "returncode": 1,
+      "expected_success": false,
+      "no_traceback": true,
+      "no_partial_output": true,
+      "existing_file_unchanged": true,
+      "pass": true
+    }
+  ],
+  "table_exports": [
+    {
+      "file": "Table_1_scope.csv",
+      "sha256": "44b5764c9807ec73020882765c0b715ad5aabae1f14c0d817b59d32acfb9bac8",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_2_departure_skill.csv",
+      "sha256": "62e2e07e6f9ff2a64402951f5750307bd177cd0c8b10537aad561c1660f3e6c3",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_3_polymer_transfer.csv",
+      "sha256": "7983cdc58e96c379f8c26e9dfdf8275410eb8003fc7192ff07ef10e6b8809f79",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_4_fixed_transfer.csv",
+      "sha256": "6bb7a545c3d0e31f11dbc96c70f36e5ab7b44b4929110b44bfa540c8dcace653",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_5_adaptive_heads.csv",
+      "sha256": "b3e0a18b587543444236889661681680ecfe7401123d93d374747326f147b385",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_6_learning_curves.csv",
+      "sha256": "a81705d0958cfe62f493815baabb6bc508e3d54cddd954ff5928fd9e214771fe",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_7_steel.csv",
+      "sha256": "8c24cd8762bbcbc8694d7b25e852819a92e36ece7bdb0abeeb5dcbe3d5be54ec",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_8_architecture_KRR.csv",
+      "sha256": "1cfdf1c127f5e9d72861c314e45bacce8c97b58389aafa0ad2a2542e01024018",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S1_source_catalogue.csv",
+      "sha256": "a01bfffb0635a4acd4d03aac049636870241cddb1eddc134998d6a3593754a9e",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S2_distribution_notes.csv",
+      "sha256": "0f99b330b207c2cf9479afab89bb4fd0bd88af0d76662a2125b2c560b4169857",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S3_selected_coordinates.csv",
+      "sha256": "72e31592ff4bd3c8245458858900f22aa01ab1cff9cc163417e502cf2d1b36d2",
+      "byte_equal": true
+    },
+    {
+      "file": "numeric_map.csv",
+      "sha256": "40a511f54234bfc75956360dd0ae4fa2020269853fda9eed8b3b656935bd8946",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_9_regressor_comparison.csv",
+      "sha256": "7b2368c2c047eb447585ed65aba556d41323dbc9556c42aa81862671e694d851",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S4_regressor_grids.csv",
+      "sha256": "62ed43ac4a7f9fad9aa3a498b372c1b49c9b08cff6fa8ed0fda0a18647c898df",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S5a_polymer_modulus.csv",
+      "sha256": "afe28e624a62864dd56fe282884f8aa5a2529661533f50868fc097bd92b8637d",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S5b_metals_volume.csv",
+      "sha256": "890821fed57e7366b15fcb69d8f01b9257d93dfab71b82ba7b1cc061d51b8739",
+      "byte_equal": true
+    },
+    {
+      "file": "Table_S5c_oxides_formation.csv",
+      "sha256": "8d896dafba6ae095d8a6f9ae57d9abd7ee98f40a90f6ae3edc1a4f4987afe1f8",
+      "byte_equal": true
+    }
+  ],
+  "figure8_outputs": [
+    {
+      "file": "Figure_8_Regressor_Comparison_v52.png",
+      "sha256": "a74b43480e5c3420520e972a462d3e3a41728235e449c956db164e03ff0d0194",
+      "byte_equal": true
+    },
+    {
+      "file": "regressor_comparison_table.csv",
+      "sha256": "c9b3600f61c0abd4717acb217a8bfb97233bc23641b8e2e3c3969f254d11fe4c",
+      "byte_equal": true
+    },
+    {
+      "file": "regressor_comparison_analysis.json",
+      "sha256": "4e2b7681370f41bbb9b132adfca0ffa33c1c5154fd8054c7647e3bc27e1d4750",
+      "byte_equal": true
+    },
+    {
+      "file": "figure8_metadata.json",
+      "sha256": "1d4d61580aa0f888b700bd7c009f2fd2f66a6b8f315e387d3c3d266b4e7329e7",
+      "byte_equal": true
+    }
+  ],
+  "synthetic_tests": {
+    "count": 16,
+    "passed": true,
+    "tested_source": "src/interaction_descriptors/",
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "shipped_synthetic_record_unchanged": true,
+  "original_code_and_aggregate_identities": [
+    {
+      "path": "publication/inputs/heldout_summary_v41.csv",
+      "sha256": "0e20d28893253aae7fa55b43e0c5dab64f8c615039991812a4b95eb0ee78e75f",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/polymer_controls_v40.csv",
+      "sha256": "8048324fcb0c35a635dae9ba253507535048b252a20d79b3e604bc64d3336797",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/polymer_neural_v33.csv",
+      "sha256": "3b3e535b6de1c5fdf5ad75da71ae21d2ccdc7e4109cf69ca0e517a9b2cc0ccd7",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/transfer_summary_v42.csv",
+      "sha256": "30f3ed434ac75880f17fd3bacf6c39f162172101238dd34eca6787e89190d27a",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/learning_summary_v44.csv",
+      "sha256": "ba1f830311aea913aceaf2c1b6c19f37a67b005e0b6ef767189682f256b86885",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/steel_summary_v46.csv",
+      "sha256": "ee045ab447d3dabb72ea9feebecec927e2f562a891ffd7dd57bfebc1eec4ee64",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/architecture_summary_v51.csv",
+      "sha256": "cae0f065e45b847a07a82afbf483f70bd55ca65806f247bce51e082577762643",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/selector_counts_v51.csv",
+      "sha256": "7e886e08c489dce8f673a73c85bfc3e96ad26db529cfe820d318cb654c4402a6",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/source_catalog_v38.csv",
+      "sha256": "6f8da5f20bb485dde9b6b8dc5c62f1f1b19080265fe9159466c45428ac98567a",
+      "matches": true
+    },
+    {
+      "path": "reference/figures/make_figures40.py",
+      "sha256": "79ce04b5fa47cde0e600261d9cbc49ce86906d2a278d5154e016e2f2e1758bc4",
+      "matches": true
+    },
+    {
+      "path": "reference/figures/figures41.py",
+      "sha256": "48b009c9ab15b0047e1b356c158bbd159064171d67d18630571ed59912f69990",
+      "matches": true
+    },
+    {
+      "path": "reference/figures/run41.py",
+      "sha256": "26a0abf421be0be4afb58b09685a549e999cd1eed2223d288694bce6f3a37e1b",
+      "matches": true
+    },
+    {
+      "path": "reference/figures/figures42.py",
+      "sha256": "60458fc5f15ee23a2023a9a5d9493215df884652b365b8deddbed1f9fdd4a775",
+      "matches": true
+    },
+    {
+      "path": "reference/figures/figures44.py",
+      "sha256": "cc0827de5d81e24e66f29d11395a50ed7a83c7ff9a40c63d3f4a96a4f404a1c5",
+      "matches": true
+    },
+    {
+      "path": "publication/inputs/source_catalog_counts_verified52.csv",
+      "sha256": "0c290140a203566ec90060cba08e5c354403eba286893f9cc1811a54e0d6978d",
+      "matches": true
+    },
+    {
+      "path": "scripts/plot_regressor_comparison52.py",
+      "sha256": "f04c7c62008d32de4692bf884b858c5352029b7cc004a105fae3cf9cc7f32ee5",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/environment_v36.json",
+      "sha256": "f288701b16a331d2988efc16836a233a7f67d10cd86f948f86218c05d579a3b1",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/requirements_v36.txt",
+      "sha256": "77adbde1292690e159a67fb3fbc632638ef420a58dd77b2c7d254711999906dd",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/environment_v38.json",
+      "sha256": "730509bfff4b834fb86262fb9b93fd34a4b74029da28666cfdc4f43270a0b082",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/requirements_v38.txt",
+      "sha256": "c96770cc91489f84737ef856dd3a83e8d61f7c9efa947a8ebb65993b8b148cfb",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/source_common.py",
+      "sha256": "c9bab561d996a7f3d5a7f913c9849a1121d91b717a177782a34ee32b67be9a55",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/train36.py",
+      "sha256": "4985ea443397c740eb4a286baaa518a415268c78e298a8d47bbbe77a988f35b6",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/train38.py",
+      "sha256": "33c56297b8fbea03baaae4adf29b44474184ac9b8b607d4315f01ce173a612c9",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/prepare36.py",
+      "sha256": "85142d6c234efd1b384c03038212219bd4b1412265defd4465b2d4ddc67c323f",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/prepare35.py",
+      "sha256": "dcc50a528e2aa0b8805a1bf2ce74d1930dde7ff1fe75a88035a333f2aa8f2ca7",
+      "matches": true
+    },
+    {
+      "path": "reference/source_bank/verify_inputs38.py",
+      "sha256": "e4e69b8abe1d3a204d76bc8d483ba6f0ba017e78de56b273dc4225bd7cddd373",
+      "matches": true
+    }
+  ],
+  "archived_regression_and_steel_runner_unchanged": true,
+  "modified_entry_points_sha256": {
+    "scripts/reproduce.py": "4ba9e0d3dc6e4d73cb55b53b36922164c54f3a4ad0717fbab9204dffbacc102c",
+    "scripts/source_fit52.py": "5a1cd4f9363f12138044a2fff8bf20dca8b1ac2ca36318d2a4a5b1c77d0aa4de",
+    "scripts/verify_synthetic.py": "c888544f0c2720f9c5d9c8ea26283a9d76d5601cfae97accea6874da616b096e",
+    "PIPELINE.md": "f776c3d45d87354fea3728fd180257274bd615b688b5d210eb65b17a848d9c94",
+    "REPLAY.md": "7ddf9882a5e05d5810dddc638bdf4bb40fa4e6a8ecf9325abc3b3c8f58bac141",
+    "tests_pipeline/test_source_fit_diagnostics.py": "b6d9e10ea7ca23736c46ea2b0e52975c7ae23c06e981a38d9648e42cb46f8b09"
+  },
+  "resolved_issues": [
+    "Nonempty plot destination is rejected before overwriting files",
+    "External missing inputs are rejected before partial working directories are created",
+    "Synthetic verification writes a separately named user report and tests this checkout",
+    "DCEKit placement and external path examples are explicit",
+    "A source with zero compatible target rows records an inapplicable property comparison without an empty-array maximum; mask and latent parity remain required"
+  ],
+  "limits": [
+    "No external-data source training, full-bank fitting or predictive regression was executed in this audit",
+    "No actual Windows runtime was used; checked Linux paths with spaces and documented Windows interpreter differences",
+    "No GitHub remote was changed"
+  ],
+  "post_smoke_diagnostic_correction": {
+    "initial_smoke_source_fit_sha256": "a749ecacaa888d12c24aaf56977af2076aab533782fbd4825af029e55842f750",
+    "final_source_fit_sha256": "5a1cd4f9363f12138044a2fff8bf20dca8b1ac2ca36318d2a4a5b1c77d0aa4de",
+    "note": "The 20 public entry-point checks preceded this final diagnostic-only correction. The added 6 pure-diagnostic tests cover the changed post-fit comparison logic. Existing core tests and recorded figure/table outputs were not rerun because their code and inputs are unchanged.",
+    "diagnostic_validation": {
+      "stage": 53,
+      "status": "PASS",
+      "tests_run": 6,
+      "test_cases": [
+        "test_zero_rows_are_not_reported_as_zero_property_error",
+        "test_property_difference_uses_only_compatible_rows",
+        "test_exact_compatible_rows_pass",
+        "test_mask_mismatch_fails_without_compatible_rows",
+        "test_latent_mismatch_fails_without_compatible_rows",
+        "test_missing_latent_difference_is_rejected"
+      ],
+      "test_file": "tests_pipeline/test_source_fit_diagnostics.py",
+      "test_file_sha256": "b6d9e10ea7ca23736c46ea2b0e52975c7ae23c06e981a38d9648e42cb46f8b09",
+      "source_fit_file": "scripts/source_fit52.py",
+      "source_fit_sha256": "5a1cd4f9363f12138044a2fff8bf20dca8b1ac2ca36318d2a4a5b1c77d0aa4de",
+      "scope": "Pure NumPy diagnostics for no applicable target rows and ordinary compatible rows; no model fitting or target prediction experiment.",
+      "trigger": "The archived oxide design has zero applicable rows for one of its 24 source-mask columns (column index 21).",
+      "zero_row_result": {
+        "modeled_property_comparison": "not_applicable_no_compatible_rows",
+        "modeled_property_comparison_rows": 0,
+        "max_modeled_property_difference": null
+      },
+      "mask_and_latent_mismatch_checks_retained": true,
+      "new_model_fits": 0,
+      "source_training_numerical_procedure_changed": false,
+      "command": "python -m unittest discover -s tests_pipeline -v"
+    }
+  }
+}

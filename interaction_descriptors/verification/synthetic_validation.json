@@ -1,0 +1,30 @@
+{
+  "scope": "synthetic mathematical identities and input/missingness contracts",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "tests_run": 16,
+  "tested_package": "src/interaction_descriptors/__init__.py",
+  "test_cases": [
+    "test_composition_input_spec.InputContractTests.test_column_permutation_and_absent_component_zero",
+    "test_composition_input_spec.InputContractTests.test_empty_batch_is_not_reported_as_audit_success",
+    "test_composition_input_spec.InputContractTests.test_fraction_basis_requires_explicit_conversion",
+    "test_composition_input_spec.InputContractTests.test_invalid_numeric_compositions_are_rejected",
+    "test_composition_input_spec.InputContractTests.test_json_records_input_compatibility_not_empirical_support",
+    "test_composition_input_spec.InputContractTests.test_schema_must_preserve_named_columns",
+    "test_composition_input_spec.InputContractTests.test_sum_tolerance_does_not_normalize_values",
+    "test_composition_input_spec.InputContractTests.test_unsupported_positive_is_blocked_including_trace_amount",
+    "test_descriptors.DescriptorTests.test_component_and_coordinate_schemas_reject_bare_strings",
+    "test_descriptors.DescriptorTests.test_frozen_source_order_and_fraction_contract",
+    "test_descriptors.DescriptorTests.test_pure_and_binary_agreement_for_nonlinear_network",
+    "test_descriptors.DescriptorTests.test_quadratic_exactness",
+    "test_descriptors.DescriptorTests.test_trace_fraction_survives_pair_normalization",
+    "test_descriptors.DescriptorTests.test_unsupported_is_preserved_and_distinct_from_absent",
+    "test_observed_source_support.ObservedSupportTests.test_invalid_source_rows_are_not_accepted_as_evidence",
+    "test_observed_source_support.ObservedSupportTests.test_vocabulary_is_not_observed_support_and_traces_are_preserved"
+  ],
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "tested_package_path_normalized_for_publication": true,
+  "execution_context": "Extracted public-code ZIP with separate editable installation; see zip_installation_validation53.json"
+}

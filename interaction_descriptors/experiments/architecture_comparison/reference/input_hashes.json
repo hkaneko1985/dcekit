@@ -1,0 +1,15 @@
+{
+  "inputs/metadata.json": "0d8286c5cdeaaae6b2d002656146e1003cd30dd36ae8378a76acdbc59cdeda75",
+  "inputs/metals_volume__101.npz": "79153baa25821ec3c1694a895c0c98f59b911e603ac0c0c840cc13eb71ac4913",
+  "inputs/metals_volume__202.npz": "cadf78e2e7ba8b9eaa4437439ff28015e7c52e6b981e3911254202d628368223",
+  "inputs/metals_volume__303.npz": "4a324e9f9c9a35f3e7e789e18fcbcbdff292a5c736c8622c3865a17f66561d77",
+  "inputs/metals_volume_splits.json": "19da30e34b923be4cf68607b901e5272298e095f003419ab5e0ca7a3ff6784a6",
+  "inputs/oxides_formation__101.npz": "5a09eaf4425e8e9a580858d1d4558f4c8dec5e6277e83fd0ac5ba066b7092d44",
+  "inputs/oxides_formation__202.npz": "d54a815e2fcf55482da1293cc999ff9b04716e88c30c15cf62ca0219a9aec8f5",
+  "inputs/oxides_formation__303.npz": "0d5f567dacb38afc6d956137d8a7264f6a04f87728861793d9100c94fccbf224",
+  "inputs/oxides_formation_splits.json": "9e922ba3c34547a12eb780bea1cdfcbdd0cee058188a58bc83ea2f6279c4cf51",
+  "inputs/polymer_modulus__101.npz": "65d752b44de352675f23352f9cadc0fbabd70017683d9fb336b23c6aa3df8492",
+  "inputs/polymer_modulus__202.npz": "bda8ddace6d241a012809aa9325b6235fb04f702d991f6fdc8e3024265e295ae",
+  "inputs/polymer_modulus__303.npz": "8ece2d43928a7336f0bc705255571c6056f9b5daa0bd4d914b367a5b69cdbb7a",
+  "inputs/polymer_modulus_splits.json": "7ce4ae50ecf38db6f4d4bd58083728c48d0ff0a713228b94c208f12abc632e63"
+}

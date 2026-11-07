@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "original_assets_unchanged": true,
+  "original_scripts_executed": 4,
+  "main_figures_1_to_6_rebuilt": 6,
+  "figure7": "data-equivalent redraw; original render script not recovered",
+  "new_training_or_prediction_fits": 0,
+  "input_assets": [
+    {
+      "archive": "v40",
+      "path": "evidence/polymer_curves40.csv",
+      "sha256": "77d08a906b065d22e9a848df9cb805430527c4447b6df9041ffef523274a3acd"
+    },
+    {
+      "archive": "v40",
+      "path": "evidence/observed_source_departures40.csv",
+      "sha256": "abc073039da6065c92ffb2aa252de32f5d761c53163d3bb00588cddc21cde5cd"
+    },
+    {
+      "archive": "v40",
+      "path": "evidence/paired_comparison40.csv",
+      "sha256": "8048324fcb0c35a635dae9ba253507535048b252a20d79b3e604bc64d3336797"
+    },
+    {
+      "archive": "v40",
+      "path": "evidence/model_nonadditivity40.csv",
+      "sha256": "31a7792e7aa97b5f1f82785dc96f36ce59f736174b42dbb1c3816b379f1272f9"
+    },
+    {
+      "archive": "v41",
+      "path": "results/summary.csv",
+      "sha256": "0e20d28893253aae7fa55b43e0c5dab64f8c615039991812a4b95eb0ee78e75f"
+    },
+    {
+      "archive": "v41",
+      "path": "results/transfer_summary.csv",
+      "sha256": "56df6cfb41715a3254234387218c964f8f0b16f0a1f3dfeb2ded55f128475d8d"
+    },
+    {
+      "archive": "v41",
+      "path": "data/source_stress.npz",
+      "sha256": "94a7d92c2e15e54f48f32a56cc6ca0ca8fcc72167a4522fcef493fda63118f3d"
+    },
+    {
+      "archive": "v41",
+      "path": "data/splits.json",
+      "sha256": "6d35224098c0702291de89fd14b62983b9320f242cdb999ec0d05b97ad37a299"
+    },
+    {
+      "archive": "v41",
+      "path": "models/stress/stress_002/NN/seed_101.npz",
+      "sha256": "475f628f49c0f82ea071d2eda8179816b8d63570827b234e2458aa4070d0f21c"
+    },
+    {
+      "archive": "v41",
+      "path": "models/stress/stress_002/NN/seed_202.npz",
+      "sha256": "fc0550df07984f9d4e1e2fe37af6cd263b77b8613e7d7af7d7ac3ee600b1aad8"
+    },
+    {
+      "archive": "v41",
+      "path": "models/stress/stress_002/NN/seed_303.npz",
+      "sha256": "9408676ea8785585594aaf7ef974588fcb86008aab96b9c6f83ee8a28deedfca"
+    },
+    {
+      "archive": "v42",
+      "path": "results/summary.csv",
+      "sha256": "30f3ed434ac75880f17fd3bacf6c39f162172101238dd34eca6787e89190d27a"
+    },
+    {
+      "archive": "v44",
+      "path": "results/summary.csv",
+      "sha256": "ba1f830311aea913aceaf2c1b6c19f37a67b005e0b6ef767189682f256b86885"
+    }
+  ],
+  "products": [
+    {
+      "figure": 1,
+      "file": "Figure_1_historical.png",
+      "sha256": "de3d2456457dc58078ddaf266c47d7a757cb1deeb59a95a6083c651a55fb64ae",
+      "original_script": "reference/figures/figures41.py"
+    },
+    {
+      "figure": 1,
+      "file": "Figure_1_historical.svg",
+      "sha256": "3a7d4e54293a130d0b3e7fb822c7292ff3598e2215912a62c4ba46223ed13d20",
+      "original_script": "reference/figures/figures41.py"
+    },
+    {
+      "figure": 2,
+      "file": "Figure_2_historical.png",
+      "sha256": "6374e1f5c992d69aeb5d3517a13b43d00c4345cb4f05163d374be5edf30a0dbe",
+      "original_script": "reference/figures/figures41.py"
+    },
+    {
+      "figure": 2,
+      "file": "Figure_2_historical.svg",
+      "sha256": "01d3fa5c5c21a11a46683c00e8970907d235ca3b9394ffd2d4710aa2448bb9d5",
+      "original_script": "reference/figures/figures41.py"
+    },
+    {
+      "figure": 3,
+      "file": "Figure_3_historical.png",
+      "sha256": "ed1cecca187c0d832ec919d8e2183e64ed9484ade86c81dd797ee7d37595b902",
+      "original_script": "reference/figures/make_figures40.py"
+    },
+    {
+      "figure": 3,
+      "file": "Figure_3_historical.svg",
+      "sha256": "44fe692b32afb44df3b8b45434663a7f9e361e8cde4dd68391cccbfa298ce8ed",
+      "original_script": "reference/figures/make_figures40.py"
+    },
+    {
+      "figure": 4,
+      "file": "Figure_4_historical.png",
+      "sha256": "7973a8611045168e931cb9897082a20f6e20fbd5f53d261a8570832050eb52cd",
+      "original_script": "reference/figures/figures42.py"
+    },
+    {
+      "figure": 4,
+      "file": "Figure_4_historical.svg",
+      "sha256": "530d60037e8d263384cfb1c36cca5451598ee03c905d69d7d9dba98da7b387e7",
+      "original_script": "reference/figures/figures42.py"
+    },
+    {
+      "figure": 5,
+      "file": "Figure_5_historical.png",
+      "sha256": "894f0a9647834dbb468c39b58c50b8a4034b687858293c9f91d88a90db5e52de",
+      "original_script": "reference/figures/figures44.py"
+    },
+    {
+      "figure": 5,
+      "file": "Figure_5_historical.svg",
+      "sha256": "46b4b04c9a7f1654d41fff2d80f261e066de84ad1847eee78ca2d7b3430bdf64",
+      "original_script": "reference/figures/figures44.py"
+    },
+    {
+      "figure": 6,
+      "file": "Figure_6_historical.png",
+      "sha256": "8030167facbf31227e713bbbc99eabae87b7ed585e604846f4efcf4a1ddae79b",
+      "original_script": "reference/figures/figures44.py"
+    },
+    {
+      "figure": 6,
+      "file": "Figure_6_historical.svg",
+      "sha256": "7c21eb9d2149f3df613cb18acee769b4b049e664c8abf636b488133069dd9b36",
+      "original_script": "reference/figures/figures44.py"
+    }
+  ],
+  "elapsed_seconds": 6.724882268000329,
+  "rendering_note": "Numerical inputs and original scripts are fixed; PNG/SVG byte identity across rendering libraries is not assumed."
+}

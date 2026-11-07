@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "total_display_cells": 343,
+  "table9_numeric_cells": 90,
+  "si_matrix_numeric_cells": 144,
+  "table_s4_grid_definitions": 6,
+  "mismatches": [],
+  "scope": "All displayed cells for Table 9 and SI S4/S5a\u2013c against v52 DOCX files."
+}

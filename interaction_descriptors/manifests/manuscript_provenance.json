@@ -1,0 +1,290 @@
+{
+  "manuscript": "v52",
+  "entries": [
+    {
+      "item": "Figure 1",
+      "inputs": [
+        "external:v41/results/summary.csv",
+        "external:v41/results/transfer_summary.csv",
+        "external:v41/data/source_stress.npz",
+        "external:v41/data/splits.json",
+        "external:v41/models/stress/stress_002/NN/seed_101.npz",
+        "external:v41/models/stress/stress_002/NN/seed_202.npz",
+        "external:v41/models/stress/stress_002/NN/seed_303.npz"
+      ],
+      "entry_point": "reference/figures/figures41.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 2",
+      "inputs": [
+        "external:v41/results/summary.csv",
+        "external:v41/results/transfer_summary.csv",
+        "external:v41/data/source_stress.npz",
+        "external:v41/data/splits.json",
+        "external:v41/models/stress/stress_002/NN/seed_101.npz",
+        "external:v41/models/stress/stress_002/NN/seed_202.npz",
+        "external:v41/models/stress/stress_002/NN/seed_303.npz"
+      ],
+      "entry_point": "reference/figures/figures41.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 3",
+      "inputs": [
+        "external:v40/evidence/polymer_curves40.csv",
+        "external:v40/evidence/observed_source_departures40.csv",
+        "external:v40/evidence/paired_comparison40.csv",
+        "external:v40/evidence/model_nonadditivity40.csv"
+      ],
+      "entry_point": "reference/figures/make_figures40.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 4",
+      "inputs": [
+        "external:v42/results/summary.csv"
+      ],
+      "entry_point": "reference/figures/figures42.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 5",
+      "inputs": [
+        "external:v44/results/summary.csv"
+      ],
+      "entry_point": "reference/figures/figures44.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 6",
+      "inputs": [
+        "external:v44/results/summary.csv"
+      ],
+      "entry_point": "reference/figures/figures44.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_ORIGINAL_RENDER_PNG_EXACT",
+      "verification": "verification/historical_figure_render52.json",
+      "scope": "Exact original figure regenerated; underlying full model-fitting experiment not repeated in this pipeline check."
+    },
+    {
+      "item": "Figure 7",
+      "inputs": [
+        "publication/inputs/steel_summary_v46.csv"
+      ],
+      "entry_point": "scripts/plot_steel_results.py",
+      "command": "historical-figures",
+      "status": "VERIFIED_DATA_EQUIVALENT_REDRAW",
+      "verification": "verification/steel_figure_redraw52.json",
+      "scope": "36 original aggregate values; original rendering script not recovered, no pixel-identity claim."
+    },
+    {
+      "item": "Figure 8",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/summary.csv"
+      ],
+      "entry_point": "scripts/plot_regressor_comparison52.py",
+      "command": "plot-comparison",
+      "status": "VERIFIED_WRAPPER_PNG_AND_EXPORTS_EXACT",
+      "verification": "verification/figure8_wrapper52.json",
+      "scope": "144-cell input validated; all eight conditions available, relative error plotted for seven against the common basis; no fitting."
+    },
+    {
+      "item": "Table 1",
+      "inputs": [
+        "publication/static_tables.json"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_STATIC_TEXT_EXPORT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Authored evaluation-scope statements, not an independent data acquisition."
+    },
+    {
+      "item": "Table 2",
+      "inputs": [
+        "publication/inputs/heldout_summary_v41.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Held-out departure skill from saved results."
+    },
+    {
+      "item": "Table 3",
+      "inputs": [
+        "publication/inputs/polymer_controls_v40.csv",
+        "publication/inputs/polymer_neural_v33.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Matched KRR controls; neural results independently agree with v33."
+    },
+    {
+      "item": "Table 4",
+      "inputs": [
+        "publication/inputs/transfer_summary_v42.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Historical composition/fixed baseline; differs from later mask-aware B."
+    },
+    {
+      "item": "Table 5",
+      "inputs": [
+        "publication/inputs/transfer_summary_v42.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Recorded frozen/adaptive-head results."
+    },
+    {
+      "item": "Table 6",
+      "inputs": [
+        "publication/inputs/learning_summary_v44.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Recorded target-label learning curves."
+    },
+    {
+      "item": "Table 7",
+      "inputs": [
+        "publication/inputs/steel_summary_v46.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Archived steel results; separately checked against saved predictions."
+    },
+    {
+      "item": "Table 8",
+      "inputs": [
+        "publication/inputs/architecture_summary_v51.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Original KRR architecture comparison; no predictive fits in table export."
+    },
+    {
+      "item": "Table S1",
+      "inputs": [
+        "publication/inputs/source_catalog_v38.csv",
+        "publication/inputs/source_catalog_counts_verified52.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "24 saved X matrices independently verify counts and maximum active components."
+    },
+    {
+      "item": "Table S2",
+      "inputs": [
+        "publication/static_tables.json"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_STATIC_TEXT_EXPORT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Retained distribution notes; no new comprehensive legal/license review."
+    },
+    {
+      "item": "Table S3",
+      "inputs": [
+        "publication/inputs/selector_counts_v51.csv"
+      ],
+      "entry_point": "scripts/export_publication_tables.py",
+      "command": "tables",
+      "status": "VERIFIED_DISPLAY_NUMERIC_EXACT",
+      "verification": "verification/table_numeric_validation52.json",
+      "scope": "Outer-fold confirmed-coordinate counts from saved selection records."
+    },
+    {
+      "item": "Table 9",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/summary.csv"
+      ],
+      "entry_point": "scripts/export_regressor_tables52.py",
+      "command": "regressor-tables",
+      "status": "VERIFIED_DISPLAY_EXACT",
+      "verification": "verification/regressor_table_numeric_validation52.json",
+      "scope": "90 displayed error cells; best single architecture is the descriptive minimum among NN/YAE/YVAE."
+    },
+    {
+      "item": "Table S4",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/protocol.json"
+      ],
+      "entry_point": "scripts/export_regressor_tables52.py",
+      "command": "regressor-tables",
+      "status": "VERIFIED_DISPLAY_EXACT",
+      "verification": "verification/regressor_table_numeric_validation52.json",
+      "scope": "Six candidate grids reconstructed from their frozen full Cartesian-product dictionaries."
+    },
+    {
+      "item": "Table S5a",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/summary.csv"
+      ],
+      "entry_point": "scripts/export_regressor_tables52.py",
+      "command": "regressor-tables",
+      "status": "VERIFIED_DISPLAY_EXACT",
+      "verification": "verification/regressor_table_numeric_validation52.json",
+      "scope": "48 acrylate modulus cells; two decimal places."
+    },
+    {
+      "item": "Table S5b",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/summary.csv"
+      ],
+      "entry_point": "scripts/export_regressor_tables52.py",
+      "command": "regressor-tables",
+      "status": "VERIFIED_DISPLAY_EXACT",
+      "verification": "verification/regressor_table_numeric_validation52.json",
+      "scope": "48 metal-volume cells; five decimal places."
+    },
+    {
+      "item": "Table S5c",
+      "inputs": [
+        "experiments/regressor_comparison/frozen_reference/summary.csv"
+      ],
+      "entry_point": "scripts/export_regressor_tables52.py",
+      "command": "regressor-tables",
+      "status": "VERIFIED_DISPLAY_EXACT",
+      "verification": "verification/regressor_table_numeric_validation52.json",
+      "scope": "48 oxide-formation cells; five decimal places."
+    }
+  ],
+  "main_figures": 8,
+  "main_tables": 9,
+  "supplement_table_units": 7,
+  "source_training_note": "Only the preselected single source fit was executed; complete upstream training is not implied by figure/table coverage."
+}

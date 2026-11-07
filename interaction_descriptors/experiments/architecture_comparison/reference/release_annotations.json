@@ -1,0 +1,83 @@
+{
+  "status": "Postrun release annotations; frozen input arrays/protocol/hashes unchanged",
+  "polymer_composition_columns": [
+    {
+      "saved_input_name": "component_0",
+      "actual_name": "IDA",
+      "index": 0
+    },
+    {
+      "saved_input_name": "component_1",
+      "actual_name": "IBOA",
+      "index": 1
+    },
+    {
+      "saved_input_name": "component_2",
+      "actual_name": "PEGDA",
+      "index": 2
+    }
+  ],
+  "polymer_fraction_basis": "mass fraction",
+  "polymer_column_evidence": "Original acrylate.csv header and apply33.py; full three-column fractions normalized in historical preprocessing match X after mapping 1-based raw row IDs (including | merged IDs), not original_rows subset indices",
+  "composition_identity_max_abs_difference": 4.257416641451073e-11,
+  "coverage": [
+    {
+      "case": "polymer_modulus",
+      "repeat": 0,
+      "total_target_rows": 49,
+      "test_prediction_events": 101,
+      "distinct_test_rows": 47,
+      "never_tested_rows": [
+        10,
+        15
+      ],
+      "never_tested_ids": [
+        "27",
+        "32"
+      ],
+      "metric_aggregation": "mean of six region-level RMSEs"
+    },
+    {
+      "case": "metals_volume",
+      "repeat": 0,
+      "total_target_rows": 143,
+      "test_prediction_events": 143,
+      "distinct_test_rows": 143,
+      "never_tested_rows": [],
+      "never_tested_ids": [],
+      "metric_aggregation": "pooled row-level RMSE within repeat"
+    },
+    {
+      "case": "metals_volume",
+      "repeat": 1,
+      "total_target_rows": 143,
+      "test_prediction_events": 143,
+      "distinct_test_rows": 143,
+      "never_tested_rows": [],
+      "never_tested_ids": [],
+      "metric_aggregation": "pooled row-level RMSE within repeat"
+    },
+    {
+      "case": "oxides_formation",
+      "repeat": 0,
+      "total_target_rows": 120,
+      "test_prediction_events": 120,
+      "distinct_test_rows": 120,
+      "never_tested_rows": [],
+      "never_tested_ids": [],
+      "metric_aggregation": "pooled row-level RMSE within repeat"
+    },
+    {
+      "case": "oxides_formation",
+      "repeat": 1,
+      "total_target_rows": 120,
+      "test_prediction_events": 120,
+      "distinct_test_rows": 120,
+      "never_tested_rows": [],
+      "never_tested_ids": [],
+      "metric_aggregation": "pooled row-level RMSE within repeat"
+    }
+  ],
+  "comparison_basis": "historically normalized complete IDA/IBOA/PEGDA fractions",
+  "raw_source_records_checked": 50
+}

@@ -1,0 +1,83 @@
+{
+  "v40": {
+    "script": "reference/figures/make_figures40.py",
+    "script_sha256": "79ce04b5fa47cde0e600261d9cbc49ce86906d2a278d5154e016e2f2e1758bc4",
+    "extra_code": [],
+    "assets": {
+      "evidence/polymer_curves40.csv": "77d08a906b065d22e9a848df9cb805430527c4447b6df9041ffef523274a3acd",
+      "evidence/observed_source_departures40.csv": "abc073039da6065c92ffb2aa252de32f5d761c53163d3bb00588cddc21cde5cd",
+      "evidence/paired_comparison40.csv": "8048324fcb0c35a635dae9ba253507535048b252a20d79b3e604bc64d3336797",
+      "evidence/model_nonadditivity40.csv": "31a7792e7aa97b5f1f82785dc96f36ce59f736174b42dbb1c3816b379f1272f9"
+    }
+  },
+  "v41": {
+    "script": "reference/figures/figures41.py",
+    "script_sha256": "48b009c9ab15b0047e1b356c158bbd159064171d67d18630571ed59912f69990",
+    "extra_code": [
+      "run41.py"
+    ],
+    "assets": {
+      "results/summary.csv": "0e20d28893253aae7fa55b43e0c5dab64f8c615039991812a4b95eb0ee78e75f",
+      "results/transfer_summary.csv": "56df6cfb41715a3254234387218c964f8f0b16f0a1f3dfeb2ded55f128475d8d",
+      "data/source_stress.npz": "94a7d92c2e15e54f48f32a56cc6ca0ca8fcc72167a4522fcef493fda63118f3d",
+      "data/splits.json": "6d35224098c0702291de89fd14b62983b9320f242cdb999ec0d05b97ad37a299",
+      "models/stress/stress_002/NN/seed_101.npz": "475f628f49c0f82ea071d2eda8179816b8d63570827b234e2458aa4070d0f21c",
+      "models/stress/stress_002/NN/seed_202.npz": "fc0550df07984f9d4e1e2fe37af6cd263b77b8613e7d7af7d7ac3ee600b1aad8",
+      "models/stress/stress_002/NN/seed_303.npz": "9408676ea8785585594aaf7ef974588fcb86008aab96b9c6f83ee8a28deedfca"
+    }
+  },
+  "v42": {
+    "script": "reference/figures/figures42.py",
+    "script_sha256": "60458fc5f15ee23a2023a9a5d9493215df884652b365b8deddbed1f9fdd4a775",
+    "extra_code": [],
+    "assets": {
+      "results/summary.csv": "30f3ed434ac75880f17fd3bacf6c39f162172101238dd34eca6787e89190d27a"
+    }
+  },
+  "v44": {
+    "script": "reference/figures/figures44.py",
+    "script_sha256": "cc0827de5d81e24e66f29d11395a50ed7a83c7ff9a40c63d3f4a96a4f404a1c5",
+    "extra_code": [],
+    "assets": {
+      "results/summary.csv": "ba1f830311aea913aceaf2c1b6c19f37a67b005e0b6ef767189682f256b86885"
+    }
+  },
+  "main_figures": [
+    {
+      "figure": 1,
+      "group": "v41",
+      "generated": "Fig41_1_departure_skill",
+      "caption": "Held-out source departure skill"
+    },
+    {
+      "figure": 2,
+      "group": "v41",
+      "generated": "Fig41_3_heldout_example",
+      "caption": "Held-out IBOA/PEGDA stress departure"
+    },
+    {
+      "figure": 3,
+      "group": "v40",
+      "generated": "Fig5_classical_controls40",
+      "caption": "Matched polymer KRR source feature comparisons"
+    },
+    {
+      "figure": 4,
+      "group": "v42",
+      "generated": "KRR_metals_volume",
+      "caption": "Fixed single/all-source metal KRR"
+    },
+    {
+      "figure": 5,
+      "group": "v44",
+      "generated": "Learning_KRR_metals_volume",
+      "caption": "Metal KRR learning curve"
+    },
+    {
+      "figure": 6,
+      "group": "v44",
+      "generated": "Learning_KRR_oxides_formation",
+      "caption": "Oxide KRR learning curve"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "integrity": {
+    "status": "PASS",
+    "jobs": 500,
+    "outer_fits": 1800,
+    "inner_partitions": 4800,
+    "prediction_events": 62700,
+    "reused_selector_applications": 990,
+    "retained_base_checks": 990,
+    "finite_predictions": true,
+    "test_rows_and_labels_match": true,
+    "split_order_preserved": true,
+    "training_only_selection": true,
+    "numerical_diagnostics": {
+      "max_lasso_dual_gap": 7.768074722821113e-08,
+      "lasso_dual_qp_uses": 1791,
+      "candidate_or_outer_fits_with_warnings": 1622,
+      "total_warning_messages": 6475
+    }
+  },
+  "original_nested_loop_parity": {
+    "status": "PASS",
+    "scope": "separate original nested() control flow for one full-concatenation outer fold per new regressor",
+    "extra_verification_outer_refits": 5,
+    "extra_verification_prediction_events": 215,
+    "tolerance": 1e-07,
+    "checks": [
+      {
+        "regressor": "PLS",
+        "candidate_grid_size": 4,
+        "predictions": 43,
+        "max_prediction_difference": 4.263256414560601e-14,
+        "max_inner_grid_mse_difference": 7.105427357601002e-15,
+        "config_identical": true
+      },
+      {
+        "regressor": "LASSO",
+        "candidate_grid_size": 5,
+        "predictions": 43,
+        "max_prediction_difference": 7.105427357601002e-15,
+        "max_inner_grid_mse_difference": 1.3345768934414082e-11,
+        "config_identical": true
+      },
+      {
+        "regressor": "SVR",
+        "candidate_grid_size": 32,
+        "predictions": 43,
+        "max_prediction_difference": 3.090860900556436e-13,
+        "max_inner_grid_mse_difference": 2.3092638912203256e-14,
+        "config_identical": true
+      },
+      {
+        "regressor": "LightGBM",
+        "candidate_grid_size": 6,
+        "predictions": 43,
+        "max_prediction_difference": 0.0,
+        "max_inner_grid_mse_difference": 0.0,
+        "config_identical": true
+      },
+      {
+        "regressor": "GBDT",
+        "candidate_grid_size": 6,
+        "predictions": 43,
+        "max_prediction_difference": 0.0,
+        "max_inner_grid_mse_difference": 0.0,
+        "config_identical": true
+      }
+    ]
+  },
+  "historical_polymer_controls": {
+    "status": "PASS",
+    "jobs": 70,
+    "prediction_events": 7070,
+    "max_absolute_difference": 5.8048499340657145e-09,
+    "tolerance": 1e-07,
+    "scope": "all available polymer baseline and single-family conditions; inorganic five-regressor stage52 conditions are newly fitted"
+  },
+  "input_hashes_unchanged_after_verification": true
+}

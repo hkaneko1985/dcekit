@@ -1,0 +1,42 @@
+{
+  "comparisons": [
+    {
+      "figure": 1,
+      "regenerated_png_sha256": "de3d2456457dc58078ddaf266c47d7a757cb1deeb59a95a6083c651a55fb64ae",
+      "v51_embedded_png_sha256": "de3d2456457dc58078ddaf266c47d7a757cb1deeb59a95a6083c651a55fb64ae",
+      "png_byte_identical": true
+    },
+    {
+      "figure": 2,
+      "regenerated_png_sha256": "6374e1f5c992d69aeb5d3517a13b43d00c4345cb4f05163d374be5edf30a0dbe",
+      "v51_embedded_png_sha256": "6374e1f5c992d69aeb5d3517a13b43d00c4345cb4f05163d374be5edf30a0dbe",
+      "png_byte_identical": true
+    },
+    {
+      "figure": 3,
+      "regenerated_png_sha256": "ed1cecca187c0d832ec919d8e2183e64ed9484ade86c81dd797ee7d37595b902",
+      "v51_embedded_png_sha256": "ed1cecca187c0d832ec919d8e2183e64ed9484ade86c81dd797ee7d37595b902",
+      "png_byte_identical": true
+    },
+    {
+      "figure": 4,
+      "regenerated_png_sha256": "7973a8611045168e931cb9897082a20f6e20fbd5f53d261a8570832050eb52cd",
+      "v51_embedded_png_sha256": "7973a8611045168e931cb9897082a20f6e20fbd5f53d261a8570832050eb52cd",
+      "png_byte_identical": true
+    },
+    {
+      "figure": 5,
+      "regenerated_png_sha256": "894f0a9647834dbb468c39b58c50b8a4034b687858293c9f91d88a90db5e52de",
+      "v51_embedded_png_sha256": "894f0a9647834dbb468c39b58c50b8a4034b687858293c9f91d88a90db5e52de",
+      "png_byte_identical": true
+    },
+    {
+      "figure": 6,
+      "regenerated_png_sha256": "8030167facbf31227e713bbbc99eabae87b7ed585e604846f4efcf4a1ddae79b",
+      "v51_embedded_png_sha256": "8030167facbf31227e713bbbc99eabae87b7ed585e604846f4efcf4a1ddae79b",
+      "png_byte_identical": true
+    }
+  ],
+  "byte_identical_pngs": 6,
+  "scope": "6 original scripts-derived main figures; Figure7 is a new data-equivalent redraw"
+}

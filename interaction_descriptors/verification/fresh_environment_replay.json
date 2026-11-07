@@ -1,0 +1,53 @@
+{
+  "stage": 51,
+  "status": "PASS",
+  "fresh_environment_replay_completed": true,
+  "mode": "representative",
+  "source_training_rerun": false,
+  "archived_runner_modified": false,
+  "runner_sha256": "e68e694b583c7d386133d82cb289cdcda09e83a9e419a54ffd4f03a820701bd4",
+  "requirements_sha256": "88665fb15a1107d2ccb62e686a8092a28802d087e261bf374e03d8cd12136d5b",
+  "freshly_installed_packages": {
+    "numpy": true,
+    "scipy": true,
+    "sklearn": true,
+    "lightgbm": true,
+    "rdkit": true,
+    "joblib": true,
+    "threadpoolctl": true,
+    "PIL": true
+  },
+  "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]",
+  "note": "This wrapper attests the fresh installation; the untouched v49 runner intentionally retains its own false attestation flag.",
+  "elapsed_seconds": 38.79103446006775,
+  "verification": {
+    "release": "v49",
+    "mode": "representative",
+    "status": "PASS",
+    "new_materials": 0,
+    "new_source_training": 0,
+    "new_performance_conditions": 0,
+    "fresh_environment_reproduction_verified": false,
+    "metric_audit": {
+      "saved_prediction_events": 56160,
+      "jobs": 180,
+      "metrics_checked": 126,
+      "max_metric_difference": 0.0,
+      "outer_splits": 6
+    },
+    "feature_regeneration": {
+      "models_evaluated": 60,
+      "feature_arrays": 12,
+      "max_feature_difference": 0.0,
+      "fixed18_max_difference": 0.0
+    },
+    "replay": {
+      "configuration_repeat_jobs": 6,
+      "outer_fits": 18,
+      "prediction_events": 1872,
+      "max_prediction_difference": 0.0
+    },
+    "input_files_unchanged": true,
+    "numerical_block_sha256": "3b41f51ee849ffbbbf86c3e3303b74d8faee11955f10c06305e422f4fe28714c"
+  }
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+example_output/
+private_data/
+private_models/
+# No third-party raw data or trained weights in the proposed public code release.
+*.npz
+*.npy
+*.pt
+*.pth
+*.pkl
+*.zip

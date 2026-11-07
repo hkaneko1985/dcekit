@@ -1,0 +1,36 @@
+{
+  "scope": "Caller-supplied private assets; not bundled or licensed by the code MIT license",
+  "public_download_url": null,
+  "files": [
+    {
+      "filename": "v49_frozen_bank.npz",
+      "bytes": 12530771,
+      "sha256": "e4a47d98becfdb408264f6ebc20abc8add9aa51b982944db1afce00683c3e859",
+      "redistribution": "external; source-specific authorization/terms required"
+    },
+    {
+      "filename": "v49_model_cards.json",
+      "bytes": 400531,
+      "sha256": "de17024b8984e5ce87107a8dfebef52e39e5d00a07e52bc6938b22a90b726452",
+      "redistribution": "external; source-specific authorization/terms required"
+    },
+    {
+      "filename": "steel_v46_replay_inputs.npz",
+      "bytes": 1250462,
+      "sha256": "d48e6ad2481e106cb11a2799f41fd07c3dc98c2dcd05beb7f5d175b595609950",
+      "redistribution": "external; source-specific authorization/terms required"
+    },
+    {
+      "filename": "steel_v46_oof_predictions.csv",
+      "bytes": 5573790,
+      "sha256": "b4d259535a1c4d6568f52889274191ec0e01e852e75dff23d86c93b8ea48ff44",
+      "redistribution": "external; source-specific authorization/terms required"
+    },
+    {
+      "filename": "steel_v46_summary.csv",
+      "bytes": 6296,
+      "sha256": "ee045ab447d3dabb72ea9feebecec927e2f562a891ffd7dd57bfebc1eec4ee64",
+      "redistribution": "external; source-specific authorization/terms required"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "expected_configuration_repeats": 100,
+  "completed_configuration_repeats": 100,
+  "outer_fits": 360,
+  "inner_partitions": 960,
+  "inner_grid_candidate_predictions": 28800,
+  "selector_fits": 198,
+  "prediction_events": 12540,
+  "complete": true,
+  "protocol_sha256": "0fa5cdaf697ab33d7a5dbaa20f5411c37366915bdb8eac9cf4e54d25055b1431",
+  "input_manifest_sha256": "271d83bc2a4655ed4a6d0e527f4bb762ba15cdf7bd573be9232e747875e8ee6d",
+  "run_wall_seconds": 464.98221127600004
+}

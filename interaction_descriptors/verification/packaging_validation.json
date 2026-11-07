@@ -1,0 +1,58 @@
+{
+  "scope": "wheel build, local --no-deps installation to separate directory, installed-package synthetic CLI",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "torch_required": false,
+  "network_downloads_performed": false,
+  "source_module_checks": [
+    {
+      "module": "__init__.py",
+      "source_sha256": "1185f3eaccd11d61a1a9df027d26b112fbd8663d93ef40c4ea9af951b4707777",
+      "installed_sha256": "1185f3eaccd11d61a1a9df027d26b112fbd8663d93ef40c4ea9af951b4707777",
+      "match": true
+    },
+    {
+      "module": "__main__.py",
+      "source_sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "installed_sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "match": true
+    },
+    {
+      "module": "cli.py",
+      "source_sha256": "06776995bce81984d6d99cd2d88c911bda610d1455269ec8661de2326f47af1f",
+      "installed_sha256": "06776995bce81984d6d99cd2d88c911bda610d1455269ec8661de2326f47af1f",
+      "match": true
+    },
+    {
+      "module": "composition.py",
+      "source_sha256": "5d9d3e2922a3585bd77dfb8695a54e4bc5b247e63c6a2144195ee3b6b8a741e7",
+      "installed_sha256": "5d9d3e2922a3585bd77dfb8695a54e4bc5b247e63c6a2144195ee3b6b8a741e7",
+      "match": true
+    },
+    {
+      "module": "extension.py",
+      "source_sha256": "5540d92abdc8db8ab75794c253cd3c462c09e6ebcf1094316fc00476400aadeb",
+      "installed_sha256": "5540d92abdc8db8ab75794c253cd3c462c09e6ebcf1094316fc00476400aadeb",
+      "match": true
+    },
+    {
+      "module": "frozen.py",
+      "source_sha256": "1a702e6d71ceed7bf367330242d22b46030933c475209675f6c8b2767a3620d0",
+      "installed_sha256": "1a702e6d71ceed7bf367330242d22b46030933c475209675f6c8b2767a3620d0",
+      "match": true
+    },
+    {
+      "module": "observed_support.py",
+      "source_sha256": "d6668cf8ba9511f6179a4ecbe6c486951f78023dc68e4c5e1ea912943ba8cb06",
+      "installed_sha256": "d6668cf8ba9511f6179a4ecbe6c486951f78023dc68e4c5e1ea912943ba8cb06",
+      "match": true
+    }
+  ],
+  "synthetic_rows": 4,
+  "synthetic_source_supported_rows": 3,
+  "synthetic_pair_blocks": 6,
+  "pure_binary_max_error": 0.0,
+  "passed": true,
+  "stage_verified": 51,
+  "stage52_scope": "Core files unchanged; pipeline script/path validation is recorded separately in pipeline_packaging52.json."
+}

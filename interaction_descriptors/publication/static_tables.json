@@ -1,0 +1,77 @@
+{
+  "Table_1_scope": [
+    [
+      "Test family",
+      "Source information",
+      "Target / evaluation"
+    ],
+    [
+      "Whole-composition transfer",
+      "22 or 24 independently fitted property tasks",
+      "143 metal and 120 oxide compositions; five shared-material tasks"
+    ],
+    [
+      "Acrylate formulations",
+      "16\u201317 pure/binary formulations per property; target property excluded",
+      "49 ternary formulations (47 for hardness); six directional holdouts"
+    ],
+    [
+      "Metal superconductors",
+      "1,637 pure/binary compositions for the same property",
+      "208 ternary and 142 quaternary compositions; element-set holdouts"
+    ],
+    [
+      "Held-out binary responses",
+      "Models refitted without each test ratio",
+      "54 polymer property\u2013ratio cases and 137 metal pairs in three repetitions"
+    ],
+    [
+      "Learning-curve analysis",
+      "Same frozen 24-task bank",
+      "16, 32 and 64 nested target labels; unchanged evaluation sets"
+    ],
+    [
+      "Steel confirmation",
+      "Same frozen 24-task bank; five applicable sources; no steel-strength source",
+      "312 experimental records; custom composition-grouped cross-validation; 64 target labels per outer fit"
+    ]
+  ],
+  "Table_S2_distribution_notes": [
+    [
+      "Material/data family",
+      "Verified public statement",
+      "Remaining release check"
+    ],
+    [
+      "Matbench steels / Citrine parent",
+      "Official metadata identifies formula input, MPa, 312 rows, parent and expected hash. Foundry\u2019s same-parent mirror card displays CC BY 4.0.",
+      "Matbench/mirror are not independent cohorts; preserve parent attribution. Original-study/processing identifiers are absent. Do not apply the mirror statement indiscriminately to unrelated upstream files."
+    ],
+    [
+      "UCI superconductivity",
+      "UCI record explicitly displays CC BY 4.0 and identifies its SuperCon origin.",
+      "Map the archived normalized/aggregated tables to that edition and document transformations."
+    ],
+    [
+      "Acrylate photopolymers",
+      "Jain et al.\u00a0article identity and full authors were checked; an author/publisher record reports CC BY 4.0.",
+      "Resolve the exact supplementary-data version and transformation chain for the saved formulation table before bundling it."
+    ],
+    [
+      "Petousis dielectric data",
+      "Publisher page states CC BY 4.0 for the work and CC0 for associated Data Descriptor metadata.",
+      "Do not equate metadata licensing with every downloaded upstream property table; document the matminer subset."
+    ],
+    [
+      "JARVIS / ColabFit archived subset",
+      "ColabFit card identifies the 2021-08-18 distribution, DOI and upstream Figshare record, but displays license: unknown.",
+      "Resolve the exact distribution terms before including raw or derived row-level data in a public bundle. Keep source identifiers and acquisition/reconstruction instructions meanwhile."
+    ],
+    [
+      "Other MP/OQMD/AFLOW source subsets and learned weights",
+      "Source catalogue and archived transformations are retained.",
+      "Edition-specific data terms and the authors\u2019 code/model release choice remain to be finalized; this integration did not audit every upstream record."
+    ]
+  ],
+  "note": "Authored scope/distribution statements copied from v51 manuscript/SI; these are not a new provenance/legal audit."
+}

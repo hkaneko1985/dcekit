@@ -1,0 +1,28 @@
+{
+  "krr_numerical_parity": {
+    "grid_max_abs_difference": 0.0,
+    "final_fit_max_abs_difference": 0.0,
+    "inherited_regression_sha256": "3b41f51ee849ffbbbf86c3e3303b74d8faee11955f10c06305e422f4fe28714c"
+  },
+  "heldout_perturbation": {
+    "training_rows": 10,
+    "changed_validation_and_test_rows": 39,
+    "selector_decisions_identical": true,
+    "hit_counts_identical": true,
+    "protected_base_preserved": true
+  },
+  "selection_audit": {
+    "selector_fits_audited": 198,
+    "zero_confirmed_base_only_fits": 10,
+    "no_heldout_rows_used": true,
+    "only_confirmed_learned_coordinates": true,
+    "base_always_retained": true
+  },
+  "historical_prediction_replay": {
+    "configuration_repeats": 70,
+    "prediction_events": 8778,
+    "max_abs_difference": 6.944674169062637e-09,
+    "tolerance": 1e-07,
+    "scope": "saved historical predictions with current Python3.12, same NumPy/SciPy/scikit-learn versions; not full source-model re-execution"
+  }
+}

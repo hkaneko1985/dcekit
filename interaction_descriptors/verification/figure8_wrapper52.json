@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "full_input_cells": 144,
+  "plot_cells": 126,
+  "new_model_fits": 0,
+  "checks": [
+    {
+      "file": "Figure_8_Regressor_Comparison_v52.png",
+      "wrapper_sha256": "a74b43480e5c3420520e972a462d3e3a41728235e449c956db164e03ff0d0194",
+      "manuscript_sha256": "a74b43480e5c3420520e972a462d3e3a41728235e449c956db164e03ff0d0194",
+      "byte_identical": true
+    },
+    {
+      "file": "regressor_comparison_table.csv",
+      "wrapper_sha256": "c9b3600f61c0abd4717acb217a8bfb97233bc23641b8e2e3c3969f254d11fe4c",
+      "manuscript_sha256": "c9b3600f61c0abd4717acb217a8bfb97233bc23641b8e2e3c3969f254d11fe4c",
+      "byte_identical": true
+    },
+    {
+      "file": "regressor_comparison_analysis.json",
+      "wrapper_sha256": "4e2b7681370f41bbb9b132adfca0ffa33c1c5154fd8054c7647e3bc27e1d4750",
+      "manuscript_sha256": "4e2b7681370f41bbb9b132adfca0ffa33c1c5154fd8054c7647e3bc27e1d4750",
+      "byte_identical": true
+    },
+    {
+      "file": "figure8_metadata.json",
+      "wrapper_sha256": "1d4d61580aa0f888b700bd7c009f2fd2f66a6b8f315e387d3c3d266b4e7329e7",
+      "manuscript_sha256": "1d4d61580aa0f888b700bd7c009f2fd2f66a6b8f315e387d3c3d266b4e7329e7",
+      "byte_identical": true
+    }
+  ]
+}

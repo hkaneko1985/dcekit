@@ -1,0 +1,20 @@
+{
+  "probe_type": "Package-marker topology probe; not a full DCEKit build",
+  "setuptools_find_packages_before": [
+    "dcekit",
+    "dcekit.generative_model",
+    "dcekit.validation"
+  ],
+  "setuptools_find_packages_after": [
+    "dcekit",
+    "dcekit.generative_model",
+    "dcekit.validation"
+  ],
+  "unchanged": true,
+  "new_project_explicit_src_packages": [
+    "interaction_descriptors"
+  ],
+  "project_top_level_init_present": false,
+  "project_src_init_present": false,
+  "requires_distinct_install": true
+}

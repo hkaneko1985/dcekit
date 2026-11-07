@@ -1,0 +1,315 @@
+{
+  "stage": "51",
+  "status": "additional development-cohort analysis, not independent confirmation",
+  "frozen_utc": "2026-11-07T00:13:55.393497+00:00",
+  "timing_pilot": "One training-only selector timing pilot with 19 iterations; no prediction errors were used to choose the protocol",
+  "cases": {
+    "polymer_modulus": {
+      "n": 49,
+      "unit": "MPa",
+      "representation": "boundary_latent",
+      "base": "X + D",
+      "composition_dim": 3,
+      "fixed_dim": 9,
+      "mask_dim": 0,
+      "learned_dim_per_kind": 24,
+      "combined_learned_dim": 72,
+      "repeats": 1,
+      "outer_folds_per_repeat": 6,
+      "aggregation": "unweighted mean of six region-held-out fold metrics",
+      "source_exclusion": "other source properties only; modulus source omitted in inherited v33 features",
+      "source_properties": [
+        "stress",
+        "strain",
+        "hardness"
+      ],
+      "train_sizes": [
+        30,
+        32,
+        33
+      ],
+      "test_sizes": [
+        16,
+        17,
+        19
+      ]
+    },
+    "metals_volume": {
+      "n": 143,
+      "unit": "angstrom^3/atom",
+      "representation": "whole_composition_latent",
+      "base": "X + D + 24 source applicability masks",
+      "composition_dim": 60,
+      "fixed_dim": 18,
+      "mask_dim": 24,
+      "learned_dim_per_kind": 192,
+      "combined_learned_dim": 576,
+      "repeats": 2,
+      "outer_folds_per_repeat": 3,
+      "aggregation": "pooled held-out predictions within each repeat, then mean across repeats and source seeds",
+      "source_exclusion": "inherited v38/v44 bank excludes target-cohort compositions according to source catalog; no source refit",
+      "source_tasks": [
+        "mp_decomp",
+        "mp_formation",
+        "mp_gap",
+        "mp_bulk",
+        "mp_shear",
+        "mp_anisotropy",
+        "mp_hull",
+        "oqmd_gap",
+        "oqmd_energy",
+        "oqmd_formation",
+        "oqmd_volume",
+        "aflow_gap",
+        "aflow_energy",
+        "aflow_bulk",
+        "aflow_shear",
+        "aflow_debye",
+        "aflow_kappa",
+        "aflow_expansion",
+        "petousis_electronic",
+        "petousis_total",
+        "petousis_gap",
+        "supercon_Tc",
+        "supercon_all_Tc",
+        "expt_gap"
+      ],
+      "train_sizes": [
+        64
+      ],
+      "test_sizes": [
+        42,
+        43,
+        49,
+        51,
+        52
+      ]
+    },
+    "oxides_formation": {
+      "n": 120,
+      "unit": "eV/atom",
+      "representation": "whole_composition_latent",
+      "base": "X + D + 24 source applicability masks",
+      "composition_dim": 39,
+      "fixed_dim": 18,
+      "mask_dim": 24,
+      "learned_dim_per_kind": 192,
+      "combined_learned_dim": 576,
+      "repeats": 2,
+      "outer_folds_per_repeat": 3,
+      "aggregation": "pooled held-out predictions within each repeat, then mean across repeats and source seeds",
+      "source_exclusion": "inherited v38/v44 bank excludes target-cohort compositions according to source catalog; no source refit",
+      "source_tasks": [
+        "mp_decomp",
+        "mp_formation",
+        "mp_gap",
+        "mp_bulk",
+        "mp_shear",
+        "mp_anisotropy",
+        "mp_hull",
+        "oqmd_gap",
+        "oqmd_energy",
+        "oqmd_formation",
+        "oqmd_volume",
+        "aflow_gap",
+        "aflow_energy",
+        "aflow_bulk",
+        "aflow_shear",
+        "aflow_debye",
+        "aflow_kappa",
+        "aflow_expansion",
+        "petousis_electronic",
+        "petousis_total",
+        "petousis_gap",
+        "supercon_Tc",
+        "supercon_all_Tc",
+        "expt_gap"
+      ],
+      "train_sizes": [
+        64
+      ],
+      "test_sizes": [
+        39,
+        40,
+        41
+      ]
+    }
+  },
+  "source_seeds": [
+    101,
+    202,
+    303
+  ],
+  "final_regressor": "KRR",
+  "krr_grid": [
+    {
+      "ell": 0.25,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 0.25,
+      "alpha": 0.01
+    },
+    {
+      "ell": 0.25,
+      "alpha": 0.1
+    },
+    {
+      "ell": 0.25,
+      "alpha": 1.0
+    },
+    {
+      "ell": 0.25,
+      "alpha": 10.0
+    },
+    {
+      "ell": 0.5,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 0.5,
+      "alpha": 0.01
+    },
+    {
+      "ell": 0.5,
+      "alpha": 0.1
+    },
+    {
+      "ell": 0.5,
+      "alpha": 1.0
+    },
+    {
+      "ell": 0.5,
+      "alpha": 10.0
+    },
+    {
+      "ell": 1.0,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 1.0,
+      "alpha": 0.01
+    },
+    {
+      "ell": 1.0,
+      "alpha": 0.1
+    },
+    {
+      "ell": 1.0,
+      "alpha": 1.0
+    },
+    {
+      "ell": 1.0,
+      "alpha": 10.0
+    },
+    {
+      "ell": 2.0,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 2.0,
+      "alpha": 0.01
+    },
+    {
+      "ell": 2.0,
+      "alpha": 0.1
+    },
+    {
+      "ell": 2.0,
+      "alpha": 1.0
+    },
+    {
+      "ell": 2.0,
+      "alpha": 10.0
+    },
+    {
+      "ell": 4.0,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 4.0,
+      "alpha": 0.01
+    },
+    {
+      "ell": 4.0,
+      "alpha": 0.1
+    },
+    {
+      "ell": 4.0,
+      "alpha": 1.0
+    },
+    {
+      "ell": 4.0,
+      "alpha": 10.0
+    },
+    {
+      "ell": 8.0,
+      "alpha": 0.0001
+    },
+    {
+      "ell": 8.0,
+      "alpha": 0.01
+    },
+    {
+      "ell": 8.0,
+      "alpha": 0.1
+    },
+    {
+      "ell": 8.0,
+      "alpha": 1.0
+    },
+    {
+      "ell": 8.0,
+      "alpha": 10.0
+    }
+  ],
+  "krr_kernel": "exp(-sum((a-b)^2)/(p * 2 * ell^2)) after training-only standardization",
+  "krr_fit": "training y centered/scaled; alpha added to kernel diagonal",
+  "comparison_sets": [
+    "composition",
+    "basis",
+    "NN",
+    "YAE",
+    "YVAE",
+    "random",
+    "fusion",
+    "fusion_boruta"
+  ],
+  "baseline_seeds": "not duplicated across source seeds",
+  "concatenation": "append NN, YAE, YVAE latent coordinates in this order at a matched source seed; no latent averaging",
+  "protected_columns": "all original X, D and applicability mask columns remain in the candidate basis; numerical constant columns are filtered within each fit as in saved prep",
+  "boruta": {
+    "implementation": "BorutaPy 0.4.3",
+    "parameters": {
+      "n_estimators": 128,
+      "max_iter": 100,
+      "perc": 100,
+      "alpha": 0.05,
+      "two_step": true,
+      "early_stopping": false
+    },
+    "random_forest": {
+      "n_estimators": 128,
+      "max_depth": 5,
+      "max_features": "sqrt",
+      "n_jobs": 1,
+      "criterion": "squared_error",
+      "min_samples_leaf": 1,
+      "bootstrap": true
+    },
+    "selection": "statistically confirmed learned coordinates only; unresolved and rejected learned coordinates excluded",
+    "fitting": "full base+latent candidate matrix, training-only constant removal/standardization; fit separately inside every inner fold and once on outer training",
+    "zero_selected": "use base only; no forced coordinate fallback",
+    "logging": "statistical confirmed/unresolved/rejected, weak rough-fix flag, hit counts, full coordinate decisions",
+    "random_seed": "510000 + case_index*10000 + source_seed*10 + repeat*100 + outer_fold*10 + inner_index; outer refit inner_index=9"
+  },
+  "selection_order": "configuration fixed before target prediction errors from this stage were computed",
+  "source_overlap": "retain historical target-specific exclusions; do not apply latest bank to original Tc/gap targets",
+  "scope_limits": [
+    "KRR-only additional comparison; original six-regressor benchmark remains unchanged",
+    "source models and full source-training data were not retrained/re-audited",
+    "same saved development cohorts and splits are reused",
+    "polymer boundary route and inorganic whole-composition route are evaluated separately",
+    "no claim that latent coordinates identify causal microscopic interactions"
+  ]
+}

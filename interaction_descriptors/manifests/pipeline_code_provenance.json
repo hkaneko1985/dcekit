@@ -1,0 +1,122 @@
+[
+  {
+    "public_file": "publication/inputs/heldout_summary_v41.csv",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Heldout_v41_20261105/results/summary.csv",
+    "sha256": "0e20d28893253aae7fa55b43e0c5dab64f8c615039991812a4b95eb0ee78e75f",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/polymer_controls_v40.csv",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Paper_v40_20261105/evidence/paired_comparison40.csv",
+    "sha256": "8048324fcb0c35a635dae9ba253507535048b252a20d79b3e604bc64d3336797",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/polymer_neural_v33.csv",
+    "source_file": "stage51/archives/Interaction_Descriptors_Output_Forms_v33/results/summary.csv",
+    "sha256": "3b3e535b6de1c5fdf5ad75da71ae21d2ccdc7e4109cf69ca0e517a9b2cc0ccd7",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/transfer_summary_v42.csv",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Transfer_Comparison_v42_20261105/results/summary.csv",
+    "sha256": "30f3ed434ac75880f17fd3bacf6c39f162172101238dd34eca6787e89190d27a",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/learning_summary_v44.csv",
+    "source_file": "stage51/archives/Interaction_Descriptors_Learning_Curves_v44_20261106/results/summary.csv",
+    "sha256": "ba1f830311aea913aceaf2c1b6c19f37a67b005e0b6ef767189682f256b86885",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/steel_summary_v46.csv",
+    "source_file": "stage51/sources/steel_v46_summary.csv",
+    "sha256": "ee045ab447d3dabb72ea9feebecec927e2f562a891ffd7dd57bfebc1eec4ee64",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/architecture_summary_v51.csv",
+    "source_file": "stage51/fusion/results/summary.csv",
+    "sha256": "cae0f065e45b847a07a82afbf483f70bd55ca65806f247bce51e082577762643",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/selector_counts_v51.csv",
+    "source_file": "stage51/fusion/results/selection_summary.csv",
+    "sha256": "7e886e08c489dce8f673a73c85bfc3e96ad26db529cfe820d318cb654c4402a6",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "publication/inputs/source_catalog_v38.csv",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Expanded_Sources_v38/data/source_catalog.csv",
+    "sha256": "6f8da5f20bb485dde9b6b8dc5c62f1f1b19080265fe9159466c45428ac98567a",
+    "content_type": "aggregate results or source catalogue metadata; no row-level target table or trained weight"
+  },
+  {
+    "public_file": "reference/figures/make_figures40.py",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Paper_v40_20261105/code/make_figures40.py",
+    "sha256": "79ce04b5fa47cde0e600261d9cbc49ce86906d2a278d5154e016e2f2e1758bc4",
+    "content_type": "unchanged original figure/inference code"
+  },
+  {
+    "public_file": "reference/figures/figures41.py",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Heldout_v41_20261105/code/figures41.py",
+    "sha256": "48b009c9ab15b0047e1b356c158bbd159064171d67d18630571ed59912f69990",
+    "content_type": "unchanged original figure/inference code"
+  },
+  {
+    "public_file": "reference/figures/run41.py",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Heldout_v41_20261105/code/run41.py",
+    "sha256": "26a0abf421be0be4afb58b09685a549e999cd1eed2223d288694bce6f3a37e1b",
+    "content_type": "unchanged original figure/inference code"
+  },
+  {
+    "public_file": "reference/figures/figures42.py",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Transfer_Comparison_v42_20261105/code/figures42.py",
+    "sha256": "60458fc5f15ee23a2023a9a5d9493215df884652b365b8deddbed1f9fdd4a775",
+    "content_type": "unchanged original figure/inference code"
+  },
+  {
+    "public_file": "reference/figures/figures44.py",
+    "source_file": "stage51/archives/Interaction_Descriptors_Learning_Curves_v44_20261106/code/figures44.py",
+    "sha256": "cc0827de5d81e24e66f29d11395a50ed7a83c7ff9a40c63d3f4a96a4f404a1c5",
+    "content_type": "unchanged original figure/inference code"
+  },
+  {
+    "public_file": "publication/inputs/source_catalog_counts_verified52.csv",
+    "source_file": "24 original v38 sources/{source}.npz X/elements arrays",
+    "sha256": "0c290140a203566ec90060cba08e5c354403eba286893f9cc1811a54e0d6978d",
+    "content_type": "Derived counts and per-source input hashes only; no composition/property rows"
+  },
+  {
+    "public_file": "scripts/plot_regressor_comparison52.py",
+    "source_file": "stage52/plot_regressor_comparison52.py",
+    "sha256": "f04c7c62008d32de4692bf884b858c5352029b7cc004a105fae3cf9cc7f32ee5",
+    "content_type": "Exact final stage52 manuscript plot/export code"
+  },
+  {
+    "public_file": "reference/source_bank/environment_v36.json",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_MultiSource_Bank_v36/environment.json",
+    "sha256": "f288701b16a331d2988efc16836a233a7f67d10cd86f948f86218c05d579a3b1",
+    "content_type": "Unchanged original environment/dependency record"
+  },
+  {
+    "public_file": "reference/source_bank/requirements_v36.txt",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_MultiSource_Bank_v36/requirements.txt",
+    "sha256": "77adbde1292690e159a67fb3fbc632638ef420a58dd77b2c7d254711999906dd",
+    "content_type": "Unchanged original environment/dependency record"
+  },
+  {
+    "public_file": "reference/source_bank/environment_v38.json",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Expanded_Sources_v38/environment.json",
+    "sha256": "730509bfff4b834fb86262fb9b93fd34a4b74029da28666cfdc4f43270a0b082",
+    "content_type": "Unchanged original environment/dependency record"
+  },
+  {
+    "public_file": "reference/source_bank/requirements_v38.txt",
+    "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Expanded_Sources_v38/requirements.txt",
+    "sha256": "c96770cc91489f84737ef856dd3a83e8d61f7c9efa947a8ebb65993b8b148cfb",
+    "content_type": "Unchanged original environment/dependency record"
+  }
+]

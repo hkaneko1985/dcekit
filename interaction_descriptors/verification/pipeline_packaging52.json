@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "python_sources": 39,
+  "manuscript_provenance_entries": 24,
+  "public_data_or_weight_files": 0,
+  "original_training_and_plot_code_hashes_verified": true,
+  "synthetic_tests": 14,
+  "synthetic_test_errors": 0,
+  "figure8_wrapper_byte_identical": true,
+  "issues": []
+}

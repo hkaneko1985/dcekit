@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interaction-descriptors"
+version = "0.1.0"
+description = "Frozen interaction-aware descriptors for composition-based materials modeling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Hiromasa Kaneko"}]
+dependencies = ["numpy>=1.24,<3"]
+
+[project.urls]
+Repository = "https://github.com/hkaneko1985/dcekit"
+
+[project.scripts]
+interaction-descriptors = "interaction_descriptors.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,250 @@
+{
+  "stage": 53,
+  "date": "2026-11-07",
+  "status": "PASS",
+  "scope": [
+    "complete composition alignment",
+    "strict unsupported-positive handling",
+    "observed-component support masks",
+    "fixed-schema all-pair indexing",
+    "Kohler-type extension and endpoint reference",
+    "NumPy frozen NN/YAE/deterministic YVAE mean inference",
+    "output scaling and order",
+    "existing synthetic contracts and two concrete regression fixes"
+  ],
+  "findings": [
+    {
+      "id": "CORE53-01",
+      "status": "RESOLVED",
+      "severity": "numerical correctness at trace boundary",
+      "location": "extension.py normalized pair and endpoint weights",
+      "cause": "Computing the second pair fraction as 1 - (x_i/s) erased a positive trace constituent when the first fraction rounded to 1.0.",
+      "before": {
+        "X": [
+          [
+            1.0,
+            1e-20
+          ]
+        ],
+        "continuous_function": "1e20 * x_A * x_B",
+        "whole": [
+          [
+            1.0
+          ]
+        ],
+        "boundary": [
+          [
+            0.0
+          ]
+        ],
+        "last_evaluated_pair": [
+          [
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "fix": "Compute t_i=x_i/s and t_j=x_j/s directly, and use both in the pair input and endpoint subtraction.",
+      "after": {
+        "input": [
+          [
+            1.0,
+            1e-20
+          ],
+          [
+            1e-20,
+            1.0
+          ]
+        ],
+        "last_evaluated_pair": [
+          [
+            1.0,
+            1e-20
+          ],
+          [
+            1e-20,
+            1.0
+          ]
+        ],
+        "whole": [
+          [
+            1.0
+          ],
+          [
+            1.0
+          ]
+        ],
+        "boundary": [
+          [
+            1.0
+          ],
+          [
+            1.0
+          ]
+        ],
+        "pair_raw": [
+          [
+            [
+              1.0
+            ]
+          ],
+          [
+            [
+              1.0
+            ]
+          ]
+        ],
+        "max_absolute_binary_difference": 0.0,
+        "both_orientations_retain_positive_trace": true
+      },
+      "regression_test": "test_trace_fraction_survives_pair_normalization"
+    },
+    {
+      "id": "CORE53-02",
+      "status": "RESOLVED",
+      "severity": "API schema validation",
+      "location": "extension.py component and coordinate schema validation",
+      "cause": "Preconverting components to tuple caused a bare string such as Fe to be silently interpreted as component names F and e.",
+      "before": {
+        "argument": "components=Fe (bare string)",
+        "accepted_components": [
+          "F",
+          "e"
+        ],
+        "row_supported": [
+          true
+        ]
+      },
+      "fix": "Use the same _names validator as audit_and_align before conversion; apply it to coordinate_names as well.",
+      "after": [
+        {
+          "components": "Fe",
+          "coordinate_names": [
+            "z"
+          ],
+          "exception": "CompositionInputError",
+          "message": "components must be a sequence of component names"
+        },
+        {
+          "components": [
+            "Fe",
+            "Ni"
+          ],
+          "coordinate_names": "z",
+          "exception": "CompositionInputError",
+          "message": "coordinate_names must be a sequence of component names"
+        }
+      ],
+      "regression_test": "test_component_and_coordinate_schemas_reject_bare_strings"
+    }
+  ],
+  "compatibility": {
+    "api_signatures_and_array_shapes_unchanged": true,
+    "correctly_supplied_name_sequences_accepted": true,
+    "malformed_bare_string_schemas_now_rejected": true,
+    "whole_latent_inference_implementation_unchanged": true,
+    "four_row_toy_comparison": [
+      {
+        "array": "whole",
+        "shape": [
+          4,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "array": "vertices",
+        "shape": [
+          4,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "array": "unary",
+        "shape": [
+          4,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "array": "pair_raw",
+        "shape": [
+          4,
+          6,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "array": "pair_excess",
+        "shape": [
+          4,
+          6,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 1.3660947373317356e-17
+      },
+      {
+        "array": "boundary",
+        "shape": [
+          4,
+          3
+        ],
+        "nan_mask_unchanged": true,
+        "max_absolute_difference": 5.551115123125783e-17
+      }
+    ],
+    "ordinary_pair_effect": "Possible floating-point rounding changes, measured maximum boundary difference 5.551115123125783e-17 in the four-row deterministic example.",
+    "archived_experiments_and_model_weights_modified": false,
+    "historical_manuscript_metrics_recomputed": false
+  },
+  "white_box_conclusions": [
+    "The common composition schema preserves every declared column and positive fraction; no clipping, silent conversion or renormalization is performed.",
+    "Any unsupported positive constituent invalidates a whole-source row, including arbitrarily small positive inputs representable as floats.",
+    "All unordered pairs remain in column-index order. Absent pairs use zero plus an activity mask; active unsupported pairs use NaN plus support metadata.",
+    "Source vocabulary, supplied-source positive observation and supplied pair occurrence are distinct records; none is represented as a guarantee of physical applicability.",
+    "The corrected pair evaluator uses the same fixed callable and modeled output scale for whole, pure and pair inputs.",
+    "FrozenModel matches the original two-SiLU-trunk, latent-mean and head computation. Source preprocessing/latent scaling and property affine unstandardization use saved parameters.",
+    "YVAE inference uses posterior mean deterministically; independent source/seed latent axes are not averaged.",
+    "Property output preserves the modeled log/log1p scale where applicable; no implicit nonlinear inverse or head-after-boundary operation is introduced.",
+    "FrozenBank pins the v49 schema, source-archive identity, catalogue/card order and source vocabulary; legacy polymer checkpoints remain outside this loader."
+  ],
+  "tests": {
+    "initial_existing_tests": 14,
+    "final_tests": 16,
+    "final_result": "PASS",
+    "final_failures": 0,
+    "final_errors": 0,
+    "test_cases": [
+      "test_composition_input_spec.InputContractTests.test_column_permutation_and_absent_component_zero",
+      "test_composition_input_spec.InputContractTests.test_empty_batch_is_not_reported_as_audit_success",
+      "test_composition_input_spec.InputContractTests.test_fraction_basis_requires_explicit_conversion",
+      "test_composition_input_spec.InputContractTests.test_invalid_numeric_compositions_are_rejected",
+      "test_composition_input_spec.InputContractTests.test_json_records_input_compatibility_not_empirical_support",
+      "test_composition_input_spec.InputContractTests.test_schema_must_preserve_named_columns",
+      "test_composition_input_spec.InputContractTests.test_sum_tolerance_does_not_normalize_values",
+      "test_composition_input_spec.InputContractTests.test_unsupported_positive_is_blocked_including_trace_amount",
+      "test_descriptors.DescriptorTests.test_component_and_coordinate_schemas_reject_bare_strings",
+      "test_descriptors.DescriptorTests.test_frozen_source_order_and_fraction_contract",
+      "test_descriptors.DescriptorTests.test_pure_and_binary_agreement_for_nonlinear_network",
+      "test_descriptors.DescriptorTests.test_quadratic_exactness",
+      "test_descriptors.DescriptorTests.test_trace_fraction_survives_pair_normalization",
+      "test_descriptors.DescriptorTests.test_unsupported_is_preserved_and_distinct_from_absent",
+      "test_observed_source_support.ObservedSupportTests.test_invalid_source_rows_are_not_accepted_as_evidence",
+      "test_observed_source_support.ObservedSupportTests.test_vocabulary_is_not_observed_support_and_traces_are_preserved"
+    ],
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "reviewed_files": {
+    "src/interaction_descriptors/extension.py": "337eb10d9e3acecb50f192e152b3e8d002e863db518a322240ff9fde9b801447",
+    "tests/test_descriptors.py": "e8bfe6065f84bd13fc2756e35c54c9cee47b8fa0fa44c7b37c4dee179b192cfe"
+  }
+}

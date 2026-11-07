@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "paths": [
+    {
+      "path": "architecture_prepare_smoke",
+      "manifest_equal": true,
+      "all_input_bytes_equal": true,
+      "new_predictive_fits": 0,
+      "input_manifest_entries": 13,
+      "numerical_input_files": 13
+    },
+    {
+      "path": "comparison_prepare_smoke",
+      "manifest_equal": true,
+      "all_input_bytes_equal": true,
+      "new_predictive_fits": 0,
+      "input_manifest_entries": 39,
+      "numerical_input_files": 13
+    }
+  ],
+  "verified_selector_identities": 198,
+  "new_selector_fits": 0,
+  "note": "Fresh isolated wrapper preparation; original 100/500-job experiments were not refitted by this smoke."
+}

@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "source_fit_count": 1,
+  "source_oof_fits": 0,
+  "source": "mp_decomp",
+  "kind": "NN",
+  "source_seed": 101,
+  "actual_training_seed": 360101,
+  "epochs": 200,
+  "parameter_and_scaling_arrays_checked": 27,
+  "max_parameter_scaling_difference": 0.0,
+  "all_parameter_arrays_exact": true,
+  "parameter_checks": [
+    {
+      "array": "decoder.0.bias",
+      "shape": [
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "decoder.0.weight",
+      "shape": [
+        16,
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "decoder.2.bias",
+      "shape": [
+        32
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "decoder.2.weight",
+      "shape": [
+        32,
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "decoder.4.bias",
+      "shape": [
+        68
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "decoder.4.weight",
+      "shape": [
+        68,
+        32
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "head.0.bias",
+      "shape": [
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "head.0.weight",
+      "shape": [
+        16,
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "head.2.bias",
+      "shape": [
+        1
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "head.2.weight",
+      "shape": [
+        1,
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "logvar.bias",
+      "shape": [
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "logvar.weight",
+      "shape": [
+        8,
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "mu.bias",
+      "shape": [
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "mu.weight",
+      "shape": [
+        8,
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "p_mean",
+      "shape": [],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "p_sd",
+      "shape": [],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "simplex",
+      "shape": [],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "trunk.0.bias",
+      "shape": [
+        32
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "trunk.0.weight",
+      "shape": [
+        32,
+        68
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "trunk.2.bias",
+      "shape": [
+        16
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "trunk.2.weight",
+      "shape": [
+        16,
+        32
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "x_mean",
+      "shape": [
+        68
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "x_sd",
+      "shape": [
+        68
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "y_mean",
+      "shape": [],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "y_sd",
+      "shape": [],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "z_mean",
+      "shape": [
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    },
+    {
+      "array": "z_sd",
+      "shape": [
+        8
+      ],
+      "max_absolute_difference": 0.0,
+      "exact_array_equal": true
+    }
+  ],
+  "target_feature_check": {
+    "target": "metals",
+    "rows": 143,
+    "compatible_rows": 143,
+    "latent_coordinates": 8,
+    "mask_equal": true,
+    "max_latent_difference": 0.0,
+    "max_standardized_property_difference": 0.0,
+    "max_modeled_property_difference": 0.0
+  },
+  "original_assets_unchanged": true,
+  "source_training_code_modified": false,
+  "target_training_rerun": false,
+  "fresh_environment_claim": "See separate environment installation evidence; this script alone does not attest installation.",
+  "elapsed_seconds": 0.7649806710005578,
+  "environment": {
+    "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  }
+}

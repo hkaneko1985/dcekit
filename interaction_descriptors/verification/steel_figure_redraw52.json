@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "plotted_aggregate_values": 36,
+  "new_model_fits": 0,
+  "source_sha256": "ee045ab447d3dabb72ea9feebecec927e2f562a891ffd7dd57bfebc1eec4ee64",
+  "rendering": "new rendering of original aggregate data; pixel identity to original Figure7 not claimed",
+  "matplotlib": "3.10.8"
+}
