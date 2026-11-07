@@ -1,0 +1,213 @@
+{
+  "stage": 55,
+  "status": "PASS",
+  "checked_at_utc": "2026-11-07T03:27:49.667820+00:00",
+  "scope": "Local dependency-contract maintenance and focused compatibility validation, not a full security audit or full-study reproduction.",
+  "remote_security_update_published": false,
+  "authenticated_dependabot_alerts_inspected": false,
+  "dependabot_alert_resolution_verified": false,
+  "public_baseline": {
+    "commit": "46f59b074bcaa2994070ad88c9a77253930da2fe",
+    "files": 146,
+    "all_git_blob_identities_match_reviewed_v54_candidate": true,
+    "missing_or_additional_files": []
+  },
+  "notification_scope": {
+    "manifest": "interaction_descriptors/requirements-replay.txt",
+    "package_display_labels": [
+      "pillow",
+      "Pillow"
+    ],
+    "critical_entries": 2,
+    "advisory_ids_supplied_in_notification": false,
+    "candidate_advisory_mapping_to_actual_alerts_confirmed": false
+  },
+  "public_advisories_affecting_previous_pin": [
+    {
+      "ghsa": "GHSA-v9pv-5gc8-w2m6",
+      "cve": "CVE-2026-96639",
+      "severity": "critical",
+      "github_db_affected": ">= 11.0.0, < 13.0.0",
+      "first_patched_version": "13.0.0",
+      "pinned_12_3_0_affected": true,
+      "brief": "Multi-frame image loading can retain mismatched native storage when pixel mode changes, leading to memory corruption.",
+      "applicability_to_specific_email_alert": "Plausible strong candidate only; private alert ID not observed.",
+      "url": "https://github.com/advisories/GHSA-v9pv-5gc8-w2m6"
+    },
+    {
+      "ghsa": "GHSA-5x8w-8jj5-q52h",
+      "cve": "CVE-2026-112398",
+      "severity": "critical",
+      "github_db_affected": "<= 12.3.0",
+      "first_patched_version": "13.0.0",
+      "pinned_12_3_0_affected": true,
+      "brief": "Crafted FPX images can cause JPEG decoding buffer overflow; the reported FPX opening path requires the optional olefile package.",
+      "applicability_to_specific_email_alert": "Plausible strong candidate only; private alert ID not observed.",
+      "url": "https://github.com/advisories/GHSA-5x8w-8jj5-q52h"
+    }
+  ],
+  "maintenance": {
+    "previous_pillow": "12.3.0",
+    "current_pillow": "13.0.0",
+    "current_requirements": [
+      "requirements-replay.txt",
+      "requirements-plot.txt"
+    ],
+    "strict_replay_check": "scripts/replay_v49.py: EXPECTED_VERSIONS",
+    "other_seven_replay_pins_unchanged": true,
+    "core_dependencies": [
+      "numpy>=1.24,<3"
+    ],
+    "core_python": ">=3.10",
+    "replay_python": "3.13",
+    "pillow13_requires_python": ">=3.11",
+    "historical_environment_records_preserved": true
+  },
+  "static_comparison": {
+    "replay_all_nodes_except_docstring_and_expected_versions_equal": true,
+    "replay_numerical_block_equal": true,
+    "replay_numerical_block_sha256": "3b41f51ee849ffbbbf86c3e3303b74d8faee11955f10c06305e422f4fe28714c",
+    "replay_input_hashes_equal": true,
+    "core_all_files_byte_identical": true,
+    "historical_verification_files_byte_identical": true,
+    "public_data_all_csvs_byte_identical": true
+  },
+  "validation_environment": {
+    "python": "3.13.5",
+    "method": "Separate copies of previously recorded isolated virtual environments. Only Pillow was upgraded in the replay copy; the plot copy already contained Pillow 13.0.0.",
+    "fresh_dependency_installation_attested": false,
+    "replay_versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "lightgbm": "4.6.0",
+      "rdkit": "2025.9.4",
+      "joblib": "1.5.3",
+      "threadpoolctl": "3.6.0",
+      "Pillow": "13.0.0"
+    },
+    "replay_pip_check": "PASS",
+    "plot_pip_check": "PASS",
+    "replay_preflight_ready": true,
+    "replay_isolated_from_system_packages": true,
+    "replay_dependencies_resolved_within_prefix": true,
+    "original_replay_environment_versions_unchanged": true,
+    "plot_versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "torch": "2.10.0+cpu",
+      "matplotlib": "3.10.8",
+      "Pillow": "13.0.0"
+    }
+  },
+  "replay_verification": {
+    "release": "v49",
+    "mode": "representative",
+    "status": "PASS",
+    "new_materials": 0,
+    "new_source_training": 0,
+    "new_performance_conditions": 0,
+    "fresh_environment_reproduction_verified": false,
+    "metric_audit": {
+      "saved_prediction_events": 56160,
+      "jobs": 180,
+      "metrics_checked": 126,
+      "max_metric_difference": 0.0,
+      "outer_splits": 6
+    },
+    "feature_regeneration": {
+      "models_evaluated": 60,
+      "feature_arrays": 12,
+      "max_feature_difference": 0.0,
+      "fixed18_max_difference": 0.0
+    },
+    "replay": {
+      "configuration_repeat_jobs": 6,
+      "outer_fits": 18,
+      "prediction_events": 1872,
+      "max_prediction_difference": 0.0
+    },
+    "input_files_unchanged": true,
+    "numerical_block_sha256": "3b41f51ee849ffbbbf86c3e3303b74d8faee11955f10c06305e422f4fe28714c"
+  },
+  "plot_verification": {
+    "comparisons": [
+      {
+        "asset": "Figure7 PNG",
+        "new_sha256": "fb672686ed4ef63ddec86099fa4accfe60411d606bddc93af1f411ac9bd7cdc0",
+        "baseline_sha256": "fb672686ed4ef63ddec86099fa4accfe60411d606bddc93af1f411ac9bd7cdc0",
+        "bytes_equal": true,
+        "dimensions": [
+          1700,
+          980
+        ],
+        "baseline_dimensions": [
+          1700,
+          980
+        ],
+        "rgba_pixels_equal": true,
+        "maximum_channel_difference": 0
+      },
+      {
+        "asset": "Figure7 CSV",
+        "new_sha256": "4c702a61fb9e6a2c59457d56052ed9203d834560077c8e1ca58785a727b934ef",
+        "baseline_sha256": "4c702a61fb9e6a2c59457d56052ed9203d834560077c8e1ca58785a727b934ef",
+        "bytes_equal": true,
+        "row_count": 36,
+        "parsed_rows_equal": true
+      },
+      {
+        "asset": "Figure8 PNG",
+        "new_sha256": "a74b43480e5c3420520e972a462d3e3a41728235e449c956db164e03ff0d0194",
+        "baseline_sha256": "a74b43480e5c3420520e972a462d3e3a41728235e449c956db164e03ff0d0194",
+        "bytes_equal": true,
+        "dimensions": [
+          1995,
+          2115
+        ],
+        "baseline_dimensions": [
+          1995,
+          2115
+        ],
+        "rgba_pixels_equal": true,
+        "maximum_channel_difference": 0
+      },
+      {
+        "asset": "Figure8 CSV",
+        "new_sha256": "c9b3600f61c0abd4717acb217a8bfb97233bc23641b8e2e3c3969f254d11fe4c",
+        "baseline_sha256": "c9b3600f61c0abd4717acb217a8bfb97233bc23641b8e2e3c3969f254d11fe4c",
+        "bytes_equal": true,
+        "row_count": 18,
+        "parsed_rows_equal": true
+      }
+    ],
+    "interpretation": "Figure 7 is compared with the verified stage52 redraw; Figure 8 with the stage54 public-input redraw. The plot environment already used Pillow 13.0.0, so this is compatibility with the new explicit pin, not a measured Pillow 12.3.0-to-13.0.0 rendering comparison.",
+    "new_model_fits": 0
+  },
+  "not_executed": [
+    "Fresh pip installation of all replay dependencies into an empty venv",
+    "Current bootstrap_clean51.py full fresh-install workflow",
+    "Full540-fit replay",
+    "Complete source-bank retraining",
+    "Six-regressor500-job extension",
+    "All historical Figure1\u20136 routes",
+    "Authenticated GitHub Dependabot alert inspection/rescan",
+    "Full vulnerability audit of every library"
+  ],
+  "limits": [
+    "The email does not identify exact advisory IDs.",
+    "Successful numerical compatibility checks do not demonstrate absence of security vulnerabilities.",
+    "Existing scientific results and their historical environment records remain distinct from this maintenance verification.",
+    "The representative replay used the external recorded input assets. These assets are not added to the public directory.",
+    "Stored prediction reaggregation is distinct from refitting all historical models."
+  ],
+  "sources": [
+    "https://github.com/advisories/GHSA-v9pv-5gc8-w2m6",
+    "https://github.com/advisories/GHSA-5x8w-8jj5-q52h",
+    "https://pillow.readthedocs.io/en/stable/releasenotes/13.0.0.html",
+    "https://pypi.org/project/pillow/13.0.0/",
+    "https://packaging.python.org/en/latest/specifications/name-normalization/",
+    "https://docs.github.com/en/code-security/how-tos/manage-security-alerts/manage-dependabot-alerts/view-dependabot-alerts"
+  ]
+}

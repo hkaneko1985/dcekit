@@ -1,0 +1,4 @@
+numpy==2.3.5
+matplotlib==3.10.8
+# Current plotting environment; Pillow 13 requires Python >=3.11.
+Pillow==13.0.0
