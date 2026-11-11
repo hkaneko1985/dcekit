@@ -380,7 +380,7 @@
     "bytes": 32
   },
   "requirements-replay.txt": {
-    "sha256": "88665fb15a1107d2ccb62e686a8092a28802d087e261bf374e03d8cd12136d5b",
+    "sha256": "f8ed4d101e5b78aa239575972f52acfa2351758068af051fcd1e3c3ec3485fd1",
     "bytes": 129
   },
   "requirements-source.txt": {
@@ -416,7 +416,7 @@
     "bytes": 3081
   },
   "scripts/replay_v49.py": {
-    "sha256": "e68e694b583c7d386133d82cb289cdcda09e83a9e419a54ffd4f03a820701bd4",
+    "sha256": "c30809cbc6f8db9e09b7bf0d0ec92fd5b83a488ddbacc855b864e5c8c791f8b8",
     "bytes": 20571
   },
   "scripts/reproduce.py": {

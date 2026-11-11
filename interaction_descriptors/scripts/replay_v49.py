@@ -23,7 +23,7 @@ from collections import defaultdict
 from pathlib import Path
 
 EXPECTED_INPUTS = {'steel_v46_replay_inputs.npz': 'd48e6ad2481e106cb11a2799f41fd07c3dc98c2dcd05beb7f5d175b595609950', 'steel_v46_oof_predictions.csv': 'b4d259535a1c4d6568f52889274191ec0e01e852e75dff23d86c93b8ea48ff44', 'steel_v46_summary.csv': 'ee045ab447d3dabb72ea9feebecec927e2f562a891ffd7dd57bfebc1eec4ee64', 'v49_frozen_bank.npz': 'e4a47d98becfdb408264f6ebc20abc8add9aa51b982944db1afce00683c3e859'}
-EXPECTED_VERSIONS = {'numpy': '2.3.5', 'scipy': '1.17.0', 'scikit-learn': '1.8.0', 'lightgbm': '4.6.0', 'rdkit': '2025.9.4', 'joblib': '1.5.3', 'threadpoolctl': '3.6.0', 'Pillow': '12.3.0'}
+EXPECTED_VERSIONS = {'numpy': '2.3.5', 'scipy': '1.17.0', 'scikit-learn': '1.8.0', 'lightgbm': '4.6.0', 'rdkit': '2025.9.4', 'joblib': '1.5.3', 'threadpoolctl': '3.6.0', 'Pillow': '13.0.0'}
 
 MODULES={'numpy':'numpy','scipy':'scipy','scikit-learn':'sklearn','lightgbm':'lightgbm',
          'rdkit':'rdkit','joblib':'joblib','threadpoolctl':'threadpoolctl','Pillow':'PIL'}

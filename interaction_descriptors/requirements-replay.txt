@@ -5,4 +5,4 @@ lightgbm==4.6.0
 rdkit==2025.9.4
 joblib==1.5.3
 threadpoolctl==3.6.0
-Pillow==12.3.0
+Pillow==13.0.0
