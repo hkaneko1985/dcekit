@@ -104,8 +104,9 @@
   {
     "public_file": "reference/source_bank/requirements_v36.txt",
     "source_file": "stage52/pipeline/archives/Interaction_Descriptors_MultiSource_Bank_v36/requirements.txt",
-    "sha256": "77adbde1292690e159a67fb3fbc632638ef420a58dd77b2c7d254711999906dd",
-    "content_type": "Unchanged original environment/dependency record"
+    "sha256": "59248f843befddb280ce5da8b508cf25148fc811c4b5fc2d03bf761a61240df8",
+    "content_type": "Original requirements with the CPU PyTorch pin updated for CVE-2025-3000",
+    "source_sha256": "77adbde1292690e159a67fb3fbc632638ef420a58dd77b2c7d254711999906dd"
   },
   {
     "public_file": "reference/source_bank/environment_v38.json",
@@ -116,7 +117,8 @@
   {
     "public_file": "reference/source_bank/requirements_v38.txt",
     "source_file": "stage52/pipeline/archives/Interaction_Descriptors_Expanded_Sources_v38/requirements.txt",
-    "sha256": "c96770cc91489f84737ef856dd3a83e8d61f7c9efa947a8ebb65993b8b148cfb",
-    "content_type": "Unchanged original environment/dependency record"
+    "sha256": "35aceecd5b0908272d7391c4455705f564a614435e97e8dea544ed3755bba779",
+    "content_type": "Original requirements with the CPU PyTorch pin updated for CVE-2025-3000",
+    "source_sha256": "c96770cc91489f84737ef856dd3a83e8d61f7c9efa947a8ebb65993b8b148cfb"
   }
 ]

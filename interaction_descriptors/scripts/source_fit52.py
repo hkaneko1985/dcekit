@@ -109,8 +109,8 @@ def main() -> int:
                 "scipy": scipy.__version__, "scikit_learn": sklearn.__version__,
                 "torch": torch.__version__}
     if (np.__version__, scipy.__version__, sklearn.__version__, torch.__version__) != (
-            "2.3.5", "1.17.0", "1.8.0", "2.10.0+cpu"):
-        raise SystemExit("Use the original pinned CPU source-fit dependencies; see PIPELINE.md.")
+            "2.3.5", "1.17.0", "1.8.0", "2.13.0+cpu"):
+        raise SystemExit("Use the pinned source-fit dependencies with PyTorch 2.13.0+cpu; see PIPELINE.md.")
     spec = importlib.util.spec_from_file_location("archived_source_common52", code_path)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None

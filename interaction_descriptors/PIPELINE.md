@@ -20,6 +20,7 @@ invoked by an absolute script path from another current directory.
 | Path | Executed verification | Scope limit |
 |---|---|---|
 | Source training → target descriptors | Original `mp_decomp`, NN, source seed 101, actual seed 360101, 200 epochs; all 27 parameter/scaling arrays and all 143 metal-row descriptor/prediction outputs exactly equal | One final source fit; no source out-of-fold diagnostics or full-bank retraining |
+| Source-fit compatibility with patched PyTorch | The same fit on Linux (CPython 3.13.5) with PyTorch 2.13.0+cpu passed the existing absolute tolerance of 1e-8 against the archived data. Maximum differences were 4.47e-15 across 27 parameter/scaling arrays, 2.13e-14 for latent and standardized outputs and 6.22e-15 for modeled properties across 143 metal rows. The applicability mask matched exactly. | One representative fit. The locally repeated 2.10.0+cpu and 2.13.0+cpu runs yielded identical output arrays on that host. |
 | Frozen steel audit | All 126 saved metrics exact; 12 latent matrices and fixed 18 descriptors exact; original files unchanged | Zero new target fits in this stage52 audit; the separate stage51 representative replay performed 18 fits |
 | Historical Figures 1–6 | Four unchanged plot scripts executed on hash-verified original inputs; all six PNGs byte-identical to the v51 manuscript images | Rendering is from recorded results; source/target estimation underlying every figure was not rerun |
 | Figure 7 | New rendering of the 36 original aggregate values | Original rendering script was not recovered; pixel identity is not claimed |
@@ -41,22 +42,26 @@ identity checks use the standard library. For plots:
 python -m pip install -r requirements-plot.txt
 ```
 
-The verified source fit used Python 3.13.5, NumPy 2.3.5, SciPy 1.17.0,
-scikit-learn 1.8.0, and CPU PyTorch 2.10.0+cpu in an isolated environment without
-system-site inheritance. Create a separate environment with that Python version:
+The original source-fit verification used Python 3.13.5, NumPy 2.3.5,
+SciPy 1.17.0, scikit-learn 1.8.0, and PyTorch 2.10.0+cpu. The maintained
+source-fit command uses PyTorch 2.13.0+cpu to address
+[CVE-2025-3000](https://github.com/advisories/GHSA-rrmf-rvhw-rf47).
+Create a separate environment with Python 3.13.5:
 
 ```bash
 python3.13 -m venv /work/source_env
 /work/source_env/bin/python -m pip install -r requirements-source.txt
-/work/source_env/bin/python -m pip install torch==2.10.0+cpu --index-url https://download.pytorch.org/whl/cpu
+/work/source_env/bin/python -m pip install torch==2.13.0+cpu --index-url https://download.pytorch.org/whl/cpu
 /work/source_env/bin/python -m pip check
 ```
 
 The original environment records are retained as
-`reference/source_bank/environment_v36.json` and `environment_v38.json`. The
-new interpreter used the same Python release with a different recorded compiler
-build; the exact numerical parity reported above is measured, rather than assumed
-from a claim of an identical operating-system image.
+`reference/source_bank/environment_v36.json` and `environment_v38.json`.
+The original requirements can be inspected at
+[commit ebc3138](https://github.com/hkaneko1985/dcekit/tree/ebc3138c22358b11e56a6f6700435223a2a698cb/interaction_descriptors/reference/source_bank).
+The maintained `requirements_v36.txt` and `requirements_v38.txt` use
+2.13.0+cpu. Install the CPU wheel from the official index as shown above
+before applying either requirements file.
 
 Install `requirements-plot.txt` there as well to execute the original historical
 plots. Figure 2 imports the archived PyTorch model definition even though its
